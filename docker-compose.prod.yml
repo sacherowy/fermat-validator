@@ -4,27 +4,27 @@
 services:
   db:
     image: postgres:16-alpine
-    container_name: omj-db
+    container_name: fermat-db
     restart: unless-stopped
     environment:
-      POSTGRES_USER: ${POSTGRES_USER:-omj}
+      POSTGRES_USER: ${POSTGRES_USER:-fermat}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required}
-      POSTGRES_DB: ${POSTGRES_DB:-omj}
+      POSTGRES_DB: ${POSTGRES_DB:-fermat}
     volumes:
       # Bind mount for direct access on VM
       - ./data/postgres:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-omj} -d ${POSTGRES_DB:-omj}"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-fermat} -d ${POSTGRES_DB:-fermat}"]
       interval: 10s
       timeout: 5s
       retries: 5
     # Not exposed to host - only accessible within Docker network
     networks:
-      - omj-network
+      - fermat-network
 
   api:
-    image: ghcr.io/rsokolowski/omj-validator-api:latest
-    container_name: omj-api
+    image: ghcr.io/rsokolowski/fermat-validator-api:latest
+    container_name: fermat-api
     restart: unless-stopped
     depends_on:
       db:
@@ -42,10 +42,10 @@ services:
       start_period: 40s
     environment:
       # Database
-      DATABASE_URL: postgresql://${POSTGRES_USER:-omj}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-omj}
+      DATABASE_URL: postgresql://${POSTGRES_USER:-fermat}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-fermat}
 
       # Public URL for OAuth callbacks (required for Docker deployment)
-      FRONTEND_URL: ${FRONTEND_URL:-https://omj-validator.pl}
+      FRONTEND_URL: ${FRONTEND_URL:-https://fermat-validator.pl}
 
       # Authentication
       AUTH_DISABLED: ${AUTH_DISABLED:-false}
@@ -83,15 +83,16 @@ services:
     volumes:
       # Persist uploads - bind mount for direct access on VM
       - ./data/uploads:/app/data/uploads
+      - ./config:/app/config
     ports:
       # Non-standard port for Nginx proxy
       - "127.0.0.1:8100:8100"
     networks:
-      - omj-network
+      - fermat-network
 
   frontend:
-    image: ghcr.io/rsokolowski/omj-validator-frontend:latest
-    container_name: omj-frontend
+    image: ghcr.io/rsokolowski/fermat-validator-frontend:latest
+    container_name: fermat-frontend
     restart: unless-stopped
     depends_on:
       api:
@@ -106,11 +107,11 @@ services:
       FASTAPI_URL: http://api:8100
     # No host port - accessed via nginx only
     networks:
-      - omj-network
+      - fermat-network
 
   nginx:
     image: nginx:alpine
-    container_name: omj-nginx
+    container_name: fermat-nginx
     restart: unless-stopped
     depends_on:
       - api
@@ -120,8 +121,8 @@ services:
     ports:
       - "127.0.0.1:3100:3100"
     networks:
-      - omj-network
+      - fermat-network
 
 networks:
-  omj-network:
+  fermat-network:
     driver: bridge

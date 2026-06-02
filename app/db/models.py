@@ -1,4 +1,4 @@
-"""SQLAlchemy ORM models for OMJ Validator.
+"""SQLAlchemy ORM models for FerMat Validator.
 
 These models define the database schema. For API serialization,
 use the Pydantic models in app/models.py.

@@ -25,7 +25,7 @@ const PAGE_HEADER_STYLES = {
  * />
  *
  * // With breadcrumb (renders above title)
- * <PageHeader title="OMJ 2024" subtitle="Wybierz etap">
+ * <PageHeader title="FerMat 2024" subtitle="Wybierz etap">
  *   <Breadcrumb items={breadcrumbItems} />
  * </PageHeader>
  * ```

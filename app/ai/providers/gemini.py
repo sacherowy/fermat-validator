@@ -15,6 +15,7 @@ from ...config import settings
 from ...models import SubmissionResult
 from ..parsing import parse_ai_response
 from ..prompt_builder import build_prompt
+from ..scoring_config import get_max_points
 from ..factory import AIProviderError
 
 try:
@@ -93,7 +94,7 @@ RESPONSE_JSON_SCHEMA = {
     "properties": {
         "score": {
             "type": "integer",
-            "description": "Score according to OMJ criteria (0, 2, 5, or 6 for etap2/3; 0, 1, or 3 for etap1)"
+            "description": "Score from 0 to max_points for this task (integer)"
         },
         "feedback": {
             "type": "string",
@@ -193,15 +194,16 @@ class GeminiProvider:
         output_cost = (output_tokens / 1_000_000) * pricing["output"]
         return input_cost + output_cost
 
-    def _load_prompt(self, etap: str = "etap2") -> str:
+    def _load_prompt(self, etap: str = "etap2", task_number: int = 1, max_points: int = 4) -> str:
         """Build complete prompt for given etap using prompt builder.
 
         The prompt is composed from:
         - Base instructions (role, language)
         - Etap-specific scoring criteria
         - Abuse detection instructions and JSON format
+        - Dynamic scoring scale line
         """
-        return build_prompt(etap)
+        return build_prompt(etap, task_number=task_number, max_points=max_points)
 
     def get_timeout(self) -> int:
         """Return timeout in seconds for Gemini API."""
@@ -382,8 +384,8 @@ class GeminiProvider:
             task_pdf_path: Path to the task PDF
             solution_pdf_path: Path to the official solution PDF (for reference)
             image_paths: Paths to uploaded images of student's solution
-            task_number: The task number (1-7 for etap1, 1-5 for etap2/etap3)
-            etap: The competition stage ("etap1", "etap2", or "etap3")
+            task_number: The task number (1-10 for etap1/etap2)
+            etap: The competition stage ("etap1" or "etap2")
 
         Returns:
             SubmissionResult with score and feedback
@@ -391,12 +393,15 @@ class GeminiProvider:
         uploaded_files = []
         start_time = time.time()
 
+        # Resolve max_points from YAML-driven scoring config
+        max_points = get_max_points(etap, task_number)
+
         # Log request metadata
         image_sizes = [p.stat().st_size for p in image_paths if p.exists()]
         total_image_size_kb = sum(image_sizes) / 1024
         logger.info(
             f"[Gemini Request] model={self._model_name}, etap={etap}, "
-            f"task={task_number}, images={len(image_paths)}, "
+            f"task={task_number}, max_points={max_points}, images={len(image_paths)}, "
             f"total_image_size={total_image_size_kb:.1f}KB"
         )
 
@@ -407,7 +412,7 @@ class GeminiProvider:
             )
 
             # Build content (pass image_paths for Gemini 3 per-part resolution)
-            prompt_text = self._load_prompt(etap)
+            prompt_text = self._load_prompt(etap, task_number=task_number, max_points=max_points)
             content_parts = self._build_content_parts(
                 prompt_text, uploaded_files, task_number, has_solution_pdf, len(image_paths),
                 image_paths=image_paths,
@@ -483,8 +488,8 @@ class GeminiProvider:
                     "Nie udało się odczytać rozwiązania. Spróbuj ponownie."
                 )
 
-            # Use shared parsing utility with etap-specific scoring
-            return parse_ai_response(response_text, provider_name="Gemini", etap=etap)
+            # Use shared parsing utility with YAML-driven max_points
+            return parse_ai_response(response_text, provider_name="Gemini", max_points=max_points)
 
         except AIProviderError:
             raise
@@ -540,8 +545,8 @@ class GeminiProvider:
             task_pdf_path: Path to the task PDF
             solution_pdf_path: Path to the official solution PDF (for reference)
             image_paths: Paths to uploaded images of student's solution
-            task_number: The task number (1-7 for etap1, 1-5 for etap2/etap3)
-            etap: The competition stage ("etap1", "etap2", or "etap3")
+            task_number: The task number (1-10 for etap1/etap2)
+            etap: The competition stage ("etap1" or "etap2")
             on_thinking: Callback for thinking text chunks
             on_feedback: Callback for feedback text chunks
             on_upload_complete: Callback when file upload is complete (before AI analysis)
@@ -552,12 +557,15 @@ class GeminiProvider:
         uploaded_files = []
         start_time = time.time()
 
+        # Resolve max_points from YAML-driven scoring config
+        max_points = get_max_points(etap, task_number)
+
         # Log request metadata
         image_sizes = [p.stat().st_size for p in image_paths if p.exists()]
         total_image_size_kb = sum(image_sizes) / 1024
         logger.info(
             f"[Gemini Stream Request] model={self._model_name}, etap={etap}, "
-            f"task={task_number}, images={len(image_paths)}, "
+            f"task={task_number}, max_points={max_points}, images={len(image_paths)}, "
             f"total_image_size={total_image_size_kb:.1f}KB"
         )
 
@@ -568,7 +576,7 @@ class GeminiProvider:
             )
 
             # Build content (pass image_paths for Gemini 3 per-part resolution)
-            prompt_text = self._load_prompt(etap)
+            prompt_text = self._load_prompt(etap, task_number=task_number, max_points=max_points)
             content_parts = self._build_content_parts(
                 prompt_text, uploaded_files, task_number, has_solution_pdf, len(image_paths),
                 image_paths=image_paths,
@@ -787,8 +795,8 @@ class GeminiProvider:
                     "Nie udało się odczytać rozwiązania. Spróbuj ponownie."
                 )
 
-            # Parse the response
-            result = parse_ai_response(feedback_text, provider_name="Gemini", etap=etap)
+            # Parse the response with YAML-driven max_points
+            result = parse_ai_response(feedback_text, provider_name="Gemini", max_points=max_points)
 
             # Add thinking to scoring_meta
             if result.scoring_meta is None:

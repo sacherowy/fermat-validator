@@ -59,7 +59,7 @@ from .models import SubmissionResult, TaskCategory, TaskStatus
 from .progress import build_progress_data, get_all_categories, get_prerequisite_statuses, compute_user_progress
 from .skills import get_skills_by_ids
 
-app = FastAPI(title="OMJ Validator", description="Walidator rozwiązań OMJ")
+app = FastAPI(title="FerMat Validator", description="Walidator rozwiązań FerMat")
 
 # Determine if we're in split deployment mode (frontend on different domain)
 is_split_deployment = bool(settings.frontend_url)

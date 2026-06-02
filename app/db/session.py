@@ -1,4 +1,4 @@
-"""Database session management for OMJ Validator.
+"""Database session management for FerMat Validator.
 
 Provides SQLAlchemy engine, session factory, and FastAPI dependency
 for database access.

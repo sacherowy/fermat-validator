@@ -4,28 +4,28 @@
 services:
   db:
     image: postgres:16-alpine
-    container_name: omj-postgres
+    container_name: fermat-postgres
     environment:
-      POSTGRES_USER: omj
-      POSTGRES_PASSWORD: omj
-      POSTGRES_DB: omj
+      POSTGRES_USER: fermat
+      POSTGRES_PASSWORD: fermat
+      POSTGRES_DB: fermat
     ports:
       - "5433:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U omj -d omj"]
+      test: ["CMD-SHELL", "pg_isready -U fermat -d fermat"]
       interval: 5s
       timeout: 5s
       retries: 5
     networks:
-      - omj-network
+      - fermat-network
 
   api:
     build:
       context: .
       dockerfile: Dockerfile.dev
-    container_name: omj-api
+    container_name: fermat-api
     depends_on:
       db:
         condition: service_healthy
@@ -37,7 +37,7 @@ services:
       start_period: 10s
     environment:
       # Database (use internal Docker network)
-      DATABASE_URL: postgresql://omj:omj@db:5432/omj
+      DATABASE_URL: postgresql://fermat:fermat@db:5432/fermat
 
       # Authentication disabled for local dev (no external OAuth URL)
       AUTH_DISABLED: ${AUTH_DISABLED:-true}
@@ -81,18 +81,19 @@ services:
       - ./data/skills.json:/app/data/skills.json
       - ./static:/app/static
       - ./templates:/app/templates
+      - ./config:/app/config
       # Persist uploads
       - ./data/uploads:/app/data/uploads
     ports:
       - "8000:8000"
     networks:
-      - omj-network
+      - fermat-network
 
   frontend:
     build:
       context: ./frontend
       dockerfile: Dockerfile.dev
-    container_name: omj-frontend
+    container_name: fermat-frontend
     depends_on:
       api:
         condition: service_healthy
@@ -109,10 +110,10 @@ services:
     ports:
       - "3000:3000"
     networks:
-      - omj-network
+      - fermat-network
 
 networks:
-  omj-network:
+  fermat-network:
     driver: bridge
 
 volumes:

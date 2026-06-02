@@ -5,7 +5,7 @@ from enum import Enum
 
 
 class TaskCategory(str, Enum):
-    """Mathematical categories for OMJ tasks."""
+    """Mathematical categories for FerMat tasks."""
     ALGEBRA = "algebra"  # Systems of equations, algebraic identities, inequalities
     GEOMETRIA = "geometria"  # Plane geometry: triangles, quadrilaterals, circles
     TEORIA_LICZB = "teoria_liczb"  # Divisibility, primes, digits, diophantine equations

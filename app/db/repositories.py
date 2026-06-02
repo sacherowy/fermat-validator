@@ -1,4 +1,4 @@
-"""Repository pattern for data access in OMJ Validator.
+"""Repository pattern for data access in FerMat Validator.
 
 Repositories abstract database operations and convert between
 SQLAlchemy models and Pydantic models.

@@ -1,14 +1,15 @@
-"""Prompt construction for AI providers with abuse detection.
+"""Prompt construction for FerMat AI providers with abuse detection.
 
 This module provides a clean API for building complete prompts by combining:
 - Base prompt (role and language instructions)
 - Etap-specific scoring criteria
 - Abuse detection instructions and JSON format
+- Dynamic scoring scale line
 
 Usage:
     from app.ai.prompt_builder import build_prompt
 
-    prompt = build_prompt("etap2")  # Returns complete prompt for etap2
+    prompt = build_prompt("etap2", task_number=3, max_points=4)
 """
 
 import logging
@@ -25,7 +26,6 @@ ABUSE_PROMPT_FILE = "gemini_prompt_abuse.txt"
 SCORING_PROMPT_FILES = {
     "etap1": "gemini_prompt_scoring_etap1.txt",
     "etap2": "gemini_prompt_scoring_etap2.txt",
-    "etap3": "gemini_prompt_scoring_etap3.txt",
 }
 
 
@@ -53,17 +53,20 @@ def _load_prompt_file(file_path: Path) -> str:
         raise
 
 
-def build_prompt(etap: str = "etap2") -> str:
+def build_prompt(etap: str = "etap2", task_number: int = 1, max_points: int = 4) -> str:
     """
     Build complete prompt for given etap with abuse detection.
 
-    The prompt is assembled from three components:
+    The prompt is assembled from four components:
     1. Base instructions (role, language)
     2. Etap-specific scoring criteria
     3. Abuse detection instructions and JSON format
+    4. Dynamic scoring scale line
 
     Args:
-        etap: Competition stage ("etap1", "etap2", or "etap3")
+        etap: Competition stage ("etap1" or "etap2")
+        task_number: Task number (used for context, not currently interpolated)
+        max_points: Maximum points for this task (appended as scoring instruction)
 
     Returns:
         Complete prompt text ready for AI provider
@@ -83,8 +86,11 @@ def build_prompt(etap: str = "etap2") -> str:
     scoring = _load_prompt_file(prompts_dir / SCORING_PROMPT_FILES[etap])
     abuse = _load_prompt_file(prompts_dir / ABUSE_PROMPT_FILE)
 
-    # Combine in order: base → scoring → abuse (includes JSON format)
-    return f"{base}\n\n{scoring}\n\n{abuse}"
+    # Dynamic scoring scale instruction
+    scale_line = f"Oceń rozwiązanie w skali 0–{max_points} punktów (liczba całkowita)."
+
+    # Combine in order: base → scoring → abuse → scale
+    return f"{base}\n\n{scoring}\n\n{abuse}\n\n{scale_line}"
 
 
 def validate_prompts() -> list[str]:

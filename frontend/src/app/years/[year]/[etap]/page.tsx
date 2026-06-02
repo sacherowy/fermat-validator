@@ -14,9 +14,8 @@ interface EtapPageProps {
 }
 
 const ETAP_DESCRIPTIONS: Record<string, string> = {
-  etap1: "eliminacji szkolnych",
-  etap2: "etapu wojewódzkiego",
-  etap3: "finału ogólnopolskiego",
+  etap1: "Etapu I",
+  etap2: "Etapu II",
 };
 
 export async function generateMetadata({ params }: EtapPageProps): Promise<Metadata> {
@@ -24,8 +23,8 @@ export async function generateMetadata({ params }: EtapPageProps): Promise<Metad
   const etapName = ETAP_NAMES[etap] || etap;
   const etapDesc = ETAP_DESCRIPTIONS[etap] || etapName;
   return {
-    title: `${etapName} ${year} – zadania OMJ`,
-    description: `Lista zadań z ${etapDesc} Olimpiady Matematycznej Juniorów ${year}. Rozwiąż zadania i sprawdź swoje rozwiązania z pomocą AI.`,
+    title: `${etapName} ${year} – zadania FerMat`,
+    description: `Lista zadań z ${etapDesc} Konkursu Matematycznego FerMat ${year}. Rozwiąż zadania i sprawdź swoje rozwiązania z pomocą AI.`,
     alternates: { canonical: `/years/${year}/${etap}` },
   };
 }

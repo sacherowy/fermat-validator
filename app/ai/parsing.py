@@ -1,4 +1,4 @@
-"""Shared response parsing utilities for AI providers."""
+"""Shared response parsing utilities for FerMat AI providers."""
 
 import json
 import logging
@@ -8,11 +8,6 @@ from typing import Optional
 from ..models import SubmissionResult, IssueType
 
 logger = logging.getLogger(__name__)
-
-# Valid OMJ scores by etap
-VALID_SCORES_ETAP1 = {0, 1, 3}  # Etap 1: 0, 1, 3 points
-VALID_SCORES_ETAP2 = {0, 2, 5, 6}  # Etap 2: 0, 2, 5, 6 points
-VALID_SCORES_ETAP3 = {0, 2, 5, 6}  # Etap 3 (finał): 0, 2, 5, 6 points (same as etap2)
 
 # User-friendly feedback for detected issues
 WRONG_TASK_FEEDBACK = (
@@ -27,44 +22,17 @@ INJECTION_FEEDBACK = (
 )
 
 
-def normalize_omj_score(score: int, etap: str = "etap2") -> int:
-    """
-    Normalize any score to valid OMJ scores for the given etap.
-
-    Etap 1: 0, 1, 3 points
-    Etap 2/3: 0, 2, 5, 6 points
+def clamp_score(score: int, max_points: int) -> int:
+    """Clamp score to the valid range [0, max_points].
 
     Args:
-        score: Raw score from AI provider
-        etap: Competition stage ("etap1", "etap2", or "etap3")
+        score: Raw score from AI provider.
+        max_points: Maximum allowed score for this task.
 
     Returns:
-        Normalized score matching OMJ criteria for the etap
+        Score clamped to [0, max_points].
     """
-    if etap == "etap1":
-        valid_scores = VALID_SCORES_ETAP1
-        if score in valid_scores:
-            return score
-        # Normalize to etap1 scale (0, 1, 3)
-        if score <= 0:
-            return 0
-        elif score <= 2:
-            return 1
-        else:
-            return 3
-    else:
-        valid_scores = VALID_SCORES_ETAP2
-        if score in valid_scores:
-            return score
-        # Normalize to etap2 scale (0, 2, 5, 6)
-        if score <= 1:
-            return 0
-        elif score <= 3:
-            return 2
-        elif score <= 5:
-            return 5
-        else:
-            return 6
+    return max(0, min(max_points, score))
 
 
 def _extract_json_from_text(text: str) -> Optional[dict]:
@@ -180,7 +148,7 @@ def _extract_json_from_text(text: str) -> Optional[dict]:
 
 
 def parse_ai_response(
-    response_text: str, provider_name: str = "", etap: str = "etap2"
+    response_text: str, provider_name: str = "", max_points: int = 4
 ) -> SubmissionResult:
     """
     Parse AI response to extract score, feedback, and abuse detection.
@@ -199,7 +167,7 @@ def parse_ai_response(
     Args:
         response_text: Raw text response from AI provider
         provider_name: Optional provider name for error messages (e.g., "Gemini")
-        etap: Competition stage for score normalization ("etap1", "etap2", or "etap3")
+        max_points: Maximum allowed score for this task (used to clamp AI output)
 
     Returns:
         SubmissionResult with score, feedback, and abuse detection fields
@@ -259,8 +227,8 @@ def parse_ai_response(
             logger.warning(f"Injection attempt detected (confidence: {abuse_score}%)")
 
         else:
-            # Normal submission - normalize score to valid OMJ values
-            score = normalize_omj_score(score, etap)
+            # Normal submission — clamp score to [0, max_points]
+            score = clamp_score(score, max_points)
 
         return SubmissionResult(
             score=score,

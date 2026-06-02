@@ -212,7 +212,7 @@ Now I'll verify each step of the calculation...
 Checking if all required parts of the solution are present...
 
 **Determining the Score**
-Based on my analysis, I will now assign a score according to the OMJ rubric..."""
+Based on my analysis, I will now assign a score according to the FerMat rubric..."""
 
 
 def get_response_json(scenario: ScenarioType, task_number: int = 1) -> dict:

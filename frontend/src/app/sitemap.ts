@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export const dynamic = "force-dynamic";
 
-const SITE_URL = "https://omj-validator.pl";
+import { SITE_URL } from "@/lib/utils/constants";
 
 interface SitemapTask {
   year: string;

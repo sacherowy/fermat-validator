@@ -1,6 +1,6 @@
-# OMJ Validator
+# FerMat Validator
 
-Aplikacja webowa do sprawdzania rozwiązań zadań z Olimpiady Matematycznej Juniorów. Uczniowie mogą przesyłać zdjęcia swoich odręcznych rozwiązań, które są analizowane przez AI na podstawie oficjalnych zadań PDF i kryteriów oceniania.
+Aplikacja webowa do sprawdzania rozwiązań zadań z Konkursu Matematycznego FerMat organizowanego przez SP 221 w Warszawie. Uczniowie mogą przesyłać zdjęcia swoich odręcznych rozwiązań, które są analizowane przez AI na podstawie oficjalnych zadań PDF i kryteriów oceniania.
 
 ## Zrzuty ekranu
 
@@ -10,9 +10,9 @@ Aplikacja webowa do sprawdzania rozwiązań zadań z Olimpiady Matematycznej Jun
 
 ## Funkcje
 
-- Przeglądanie 20 lat zadań OMJ/OMG (2005-2025)
+- Przeglądanie zadań FerMat z wielu edycji (etap1 i etap2)
 - Przesyłanie odręcznych rozwiązań do oceny przez AI
-- Punktacja zgodna z oficjalnymi kryteriami OMJ (0, 2, 5, 6 pkt dla etapu 2; 0, 1, 3 dla etapu 1)
+- Punktacja konfigurowana przez YAML (`config/scoring.yml`)
 - System progresywnych wskazówek pomagających w nauce
 - Renderowanie LaTeX dla notacji matematycznej
 - Metadane zadań: poziom trudności i kategorie
@@ -25,11 +25,10 @@ pip install -r requirements.txt
 
 # Skopiuj i skonfiguruj środowisko
 cp .env.example .env
-# Edytuj .env - ustaw AUTH_KEY i GEMINI_API_KEY
+# Edytuj .env — ustaw GEMINI_API_KEY
 
 # Uruchom serwer
 ./start.sh
-# Lub: uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
 ## Konfiguracja
@@ -38,25 +37,47 @@ Zmienne środowiskowe (`.env`):
 
 | Zmienna | Opis |
 |---------|------|
-| `AUTH_KEY` | Klucz dostępu do aplikacji |
 | `GEMINI_API_KEY` | Klucz API Google Gemini do analizy rozwiązań |
-| `GEMINI_MODEL` | Model do użycia (domyślnie: `gemini-3-pro-preview`) |
+| `GEMINI_MODEL` | Model do użycia (domyślnie: `gemini-2.0-flash`) |
 | `AI_PROVIDER` | Dostawca AI (obecnie tylko `gemini`) |
+
+Konfiguracja punktacji (`config/scoring.yml`):
+
+```yaml
+etap1:
+  task_groups:
+    - tasks: [1, 2, 3, 4, 5]
+      max_points: 2
+    - tasks: [6, 7, 8, 9, 10]
+      max_points: 4
+
+etap2:
+  task_groups:
+    - tasks: [1, 2, 3, 4, 5]
+      max_points: 2
+    - tasks: [6, 7, 8, 9, 10]
+      max_points: 4
+```
+
+## Pobieranie zadań
+
+```bash
+# Pobierz zadania FerMat ze sp221.edu.pl
+python download_fermat.py --dry-run   # podgląd bez pobierania
+python download_fermat.py             # pobierz wszystkie edycje
+python download_fermat.py --year 2024 # pobierz konkretny rok
+```
 
 ## Źródła materiałów
 
-Projekt wykorzystuje materiały konkursowe **Olimpiady Matematycznej Juniorów (OMJ)**.
+Projekt wykorzystuje materiały konkursowe **Konkursu Matematycznego FerMat**.
 
-- **Organizator**: [Stowarzyszenie na rzecz Edukacji Matematycznej (SEM)](https://sem.edu.pl)
-- **Oficjalna strona**: [omj.edu.pl](https://omj.edu.pl)
-- **Finansowanie**: Ministerstwo Edukacji Narodowej
+- **Organizator**: [SP 221 – Szkoła Podstawowa nr 221 w Warszawie](https://sp221.edu.pl)
 
-Zadania i rozwiązania konkursowe (pliki PDF w katalogu `tasks/`) są własnością © Stowarzyszenie na rzecz Edukacji Matematycznej. Materiały te są publicznie dostępne na stronie [omj.edu.pl/zadania](https://omj.edu.pl/zadania) w celach edukacyjnych.
+Zadania konkursowe (pliki PDF w katalogu `tasks/`) są własnością SP 221. Materiały są udostępniane w celach edukacyjnych.
 
-**Ten projekt jest niezależnym narzędziem edukacyjnym i nie jest powiązany z SEM ani OMJ.**
+**Ten projekt jest niezależnym narzędziem edukacyjnym i nie jest oficjalnie powiązany z organizatorem.**
 
 ## Licencja
 
-Licencja MIT - szczegóły w pliku [LICENSE](LICENSE).
-
-Materiały konkursowe OMJ (pliki PDF) zachowują swoje oryginalne prawa autorskie zgodnie z powyższymi informacjami.
+Licencja MIT — szczegóły w pliku [LICENSE](LICENSE).

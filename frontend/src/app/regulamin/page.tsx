@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
 import { Box, Typography, Paper, Link as MuiLink } from "@mui/material";
 import Link from "next/link";
-import { APP_NAME, CONTACT_EMAIL } from "@/lib/utils/constants";
+import { APP_NAME, CONTACT_EMAIL, SITE_URL } from "@/lib/utils/constants";
 
 export const metadata: Metadata = {
   title: "Regulamin",
   description:
-    "Regulamin serwisu Trener OMJ – zasady korzystania, polityka prywatności, prawa autorskie.",
+    "Regulamin serwisu FerMat Validator – zasady korzystania, polityka prywatności, prawa autorskie.",
   alternates: { canonical: "/regulamin" },
 };
+
+const SITE_DOMAIN = SITE_URL.replace("https://", "").replace("http://", "");
 
 export default function RegulaminPage() {
   return (
@@ -39,18 +41,19 @@ export default function RegulaminPage() {
             Niniejszy regulamin określa zasady korzystania z serwisu {APP_NAME}{" "}
             dostępnego pod adresem{" "}
             <MuiLink
-              href="https://omj-validator.pl"
+              href={SITE_URL}
               target="_blank"
               rel="noopener"
             >
-              omj-validator.pl
+              {SITE_DOMAIN}
             </MuiLink>
             .
           </Typography>
           <Typography paragraph>
             Serwis {APP_NAME} jest niekomercyjnym projektem edukacyjnym,
-            stworzonym w celu pomocy uczniom w przygotowaniu do Olimpiady
-            Matematycznej Juniorów (OMJ).
+            stworzonym w celu pomocy uczniom w przygotowaniu do Konkursu
+            Matematycznego FerMat organizowanego przez Szkołę Podstawową nr 221
+            w Warszawie (SP 221).
           </Typography>
           <Typography paragraph>
             Korzystanie z serwisu jest bezpłatne i wymaga akceptacji niniejszego
@@ -63,24 +66,24 @@ export default function RegulaminPage() {
             <strong>
               Serwis ma charakter wyłącznie edukacyjny i pomocniczy.
             </strong>{" "}
-            Nie jest oficjalnym narzędziem Olimpiady Matematycznej Juniorów ani
-            nie jest powiązany z organizatorami OMJ.
+            Nie jest oficjalnym narzędziem Konkursu Matematycznego FerMat.
+            Oceny wystawiane przez serwis mają charakter treningowy.
           </Typography>
           <Typography paragraph>
             <strong>
               Treści zadań, wskazówki, powiązania między zadaniami oraz oceny
-              rozwiązań są generowane przez sztuczną inteligencję (AI) i mogą
-              zawierać błędy.
+              rozwiązań są generowane lub weryfikowane przez sztuczną
+              inteligencję (AI) i mogą zawierać błędy.
             </strong>{" "}
             Oceny wystawiane przez serwis nie mają charakteru oficjalnego i nie
             powinny być traktowane jako ostateczna weryfikacja poprawności
             rozwiązania.
           </Typography>
           <Typography paragraph>
-            Oryginalne treści zadań w formacie PDF pochodzą z oficjalnych
-            materiałów Olimpiady Matematycznej Juniorów dostępnych na stronie{" "}
-            <MuiLink href="https://omj.edu.pl" target="_blank" rel="noopener">
-              omj.edu.pl
+            Oryginalne treści zadań w formacie PDF pochodzą z materiałów
+            Konkursu Matematycznego FerMat udostępnianych przez{" "}
+            <MuiLink href="https://sp221.edu.pl" target="_blank" rel="noopener">
+              SP 221
             </MuiLink>
             .
           </Typography>
@@ -175,7 +178,7 @@ export default function RegulaminPage() {
             Kod źródłowy serwisu {APP_NAME} jest udostępniony na licencji MIT i
             dostępny w repozytorium{" "}
             <MuiLink
-              href="https://github.com/rsokolowski/omj-validator"
+              href="https://github.com/rsokolowski/fermat-validator"
               target="_blank"
               rel="noopener"
             >
@@ -184,8 +187,8 @@ export default function RegulaminPage() {
             .
           </Typography>
           <Typography paragraph>
-            Treści zadań są własnością Olimpiady Matematycznej Juniorów i są
-            wykorzystywane w celach edukacyjnych.
+            Treści zadań są własnością SP 221 i Konkursu Matematycznego FerMat
+            i są wykorzystywane w celach edukacyjnych.
           </Typography>
         </Section>
 
@@ -221,7 +224,7 @@ export default function RegulaminPage() {
             textAlign: "center",
           }}
         >
-          Ostatnia aktualizacja: grudzień 2025
+          Ostatnia aktualizacja: czerwiec 2026
         </Typography>
       </Paper>
 

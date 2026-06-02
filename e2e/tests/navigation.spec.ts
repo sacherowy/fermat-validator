@@ -11,7 +11,7 @@ test.describe('Navigation', () => {
   test.describe('Unauthenticated user', () => {
     test('can view home page', async ({ page }) => {
       await page.goto('/');
-      await expect(page).toHaveTitle(/OMJ/);
+      await expect(page).toHaveTitle(/FerMat/);
     });
 
     test('can view years list', async ({ page }) => {
@@ -68,7 +68,7 @@ test.describe('Navigation', () => {
 
     test('can view home page', async ({ page }) => {
       await page.goto('/');
-      await expect(page).toHaveTitle(/OMJ/);
+      await expect(page).toHaveTitle(/FerMat/);
     });
 
     test('can navigate through year -> etap -> task', async ({ page }) => {

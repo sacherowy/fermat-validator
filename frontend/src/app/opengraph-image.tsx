@@ -1,11 +1,13 @@
 import { ImageResponse } from "next/og";
-import { APP_NAME, APP_DESCRIPTION } from "@/lib/utils/constants";
+import { APP_NAME, APP_DESCRIPTION, SITE_URL } from "@/lib/utils/constants";
 
 export const alt = APP_NAME;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default function OpengraphImage() {
+  const domain = SITE_URL.replace("https://", "").replace("http://", "");
+
   return new ImageResponse(
     (
       <div
@@ -32,7 +34,7 @@ export default function OpengraphImage() {
             letterSpacing: "-0.02em",
           }}
         >
-          Trener OMJ
+          FerMat Validator
         </div>
         <div
           style={{
@@ -43,7 +45,7 @@ export default function OpengraphImage() {
             letterSpacing: "-0.03em",
           }}
         >
-          Olimpiada Matematyczna Juniorów
+          Konkurs Matematyczny FerMat
         </div>
         <div
           style={{
@@ -65,11 +67,11 @@ export default function OpengraphImage() {
             gap: 16,
           }}
         >
-          <span>340+ zadań</span>
-          <span>·</span>
           <span>Ocena AI</span>
           <span>·</span>
-          <span>omj-validator.pl</span>
+          <span>Wskazówki</span>
+          <span>·</span>
+          <span>{domain}</span>
         </div>
       </div>
     ),

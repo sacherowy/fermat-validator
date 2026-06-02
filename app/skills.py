@@ -1,5 +1,5 @@
 """
-Skills data module for OMJ Validator.
+Skills data module for FerMat Validator.
 
 Loads skills.json at module import time and provides
 functions to look up skill information.

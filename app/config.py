@@ -32,7 +32,7 @@ class Settings(BaseSettings):
     admin_emails: Optional[str] = None  # e.g., "admin1@gmail.com,admin2@gmail.com"
 
     # Option 2: Google Groups API (requires Workspace Admin + Domain-Wide Delegation)
-    google_group_email: str = "omj-validator-alpha@googlegroups.com"
+    google_group_email: str = ""  # Set GOOGLE_GROUP_EMAIL env var for FerMat group
     google_service_account_json: Optional[str] = None  # JSON string or file path
 
     # Session - MUST be set explicitly in production for multi-worker consistency
@@ -137,7 +137,7 @@ class Settings(BaseSettings):
         if self.database_url:
             return self.database_url
         # Default to local PostgreSQL (via Docker on port 5433)
-        return "postgresql://omj:omj@localhost:5433/omj"
+        return "postgresql://fermat:fermat@localhost:5433/fermat"
 
 
 settings = Settings()

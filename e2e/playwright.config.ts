@@ -1,7 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 
 /**
- * E2E Test Configuration for OMJ Validator
+ * E2E Test Configuration for FerMat Validator
  *
  * Tests run against containerized services:
  * - Frontend: http://localhost:3200
