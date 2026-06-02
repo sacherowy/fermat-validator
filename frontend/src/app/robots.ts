@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/admin/", "/my-solutions", "/login"],
     },
-    sitemap: "https://omj-validator.pl/sitemap.xml",
+    sitemap: "https://fermat-validator.pl/sitemap.xml",
   };
 }

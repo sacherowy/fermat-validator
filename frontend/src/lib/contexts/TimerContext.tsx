@@ -30,7 +30,7 @@ interface TimerContextValue {
 
 const TimerContext = createContext<TimerContextValue | null>(null);
 
-const STORAGE_KEY = "omj-practice-timer";
+const STORAGE_KEY = "fermat-practice-timer";
 
 export function TimerProvider({ children }: { children: ReactNode }) {
   const [isHydrated, setIsHydrated] = useState(false);

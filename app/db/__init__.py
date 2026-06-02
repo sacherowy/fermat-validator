@@ -1,4 +1,4 @@
-"""Database package for OMJ Validator.
+"""Database package for FerMat Validator.
 
 Provides SQLAlchemy models, session management, and repository pattern
 for data access.

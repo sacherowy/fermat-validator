@@ -1,5 +1,5 @@
 """
-Progress tracking and recommendation engine for OMJ Validator.
+Progress tracking and recommendation engine for FerMat Validator.
 
 Computes user progress across all tasks, determines task status
 (locked/unlocked/mastered), and generates diverse recommendations.

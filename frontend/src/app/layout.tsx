@@ -41,12 +41,12 @@ export const metadata: Metadata = {
     follow: true,
   },
   keywords: [
-    "olimpiada matematyczna juniorów",
-    "OMJ",
+    "FerMat",
+    "konkurs matematyczny FerMat",
     "matematyka",
     "zadania matematyczne",
-    "olimpiada matematyczna",
-    "przygotowanie do olimpiady",
+    "konkurs matematyczny SP 221",
+    "przygotowanie do konkursu",
     "zadania z matematyki",
     "konkurs matematyczny",
   ],
@@ -72,7 +72,7 @@ export default function RootLayout({
     name: APP_NAME,
     url: SITE_URL,
     description:
-      "Niekomercyjny projekt edukacyjny pomagający uczniom przygotować się do Olimpiady Matematycznej Juniorów",
+      "Niekomercyjny projekt edukacyjny pomagający uczniom przygotować się do Konkursu Matematycznego FerMat organizowanego przez SP 221 w Warszawie",
   };
 
   return (

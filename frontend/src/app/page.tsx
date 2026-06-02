@@ -74,7 +74,7 @@ function HeroSection() {
             color: "primary.main",
           }}
         >
-          Olimpiady Matematycznej
+          Konkursu FerMat
         </Box>
       </Typography>
 
@@ -149,10 +149,10 @@ function HeroSection() {
 
 function StatsBanner() {
   const stats = [
-    { value: "340+", label: "zadań" },
-    { value: "20+", label: "lat archiwum" },
+    { value: "180+", label: "zadań" },
+    { value: "9+", label: "edycji" },
     { value: "6", label: "kategorii" },
-    { value: "3", label: "etapy" },
+    { value: "2", label: "etapy" },
   ];
 
   return (
@@ -211,7 +211,7 @@ function HowItWorksSection() {
       icon: <CameraAlt sx={{ fontSize: 40 }} />,
       title: "1. Wybierz zadanie",
       description:
-        "Przeglądaj archiwum ponad 340 zadań z wielu lat olimpiady. Filtruj po kategorii i poziomie trudności.",
+        "Przeglądaj archiwum zadań Konkursu FerMat z wielu edycji. Filtruj po kategorii i poziomie trudności.",
       href: "/years",
     },
     {
@@ -224,7 +224,7 @@ function HowItWorksSection() {
       icon: <CheckCircle sx={{ fontSize: 40 }} />,
       title: "3. Otrzymaj feedback",
       description:
-        "AI oceni Twoje rozwiązanie zgodnie z oficjalnymi kryteriami i wskaże błędy do poprawy.",
+        "AI oceni Twoje rozwiązanie zgodnie z kryteriami FerMat i wskaże błędy do poprawy.",
     },
   ];
 
@@ -378,7 +378,7 @@ function HowItWorksSection() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/omj-demo.gif"
+            src="/images/fermat-demo.gif"
             alt="Demo pokazujący jak korzystać z aplikacji"
             style={{
               display: "block",
@@ -398,7 +398,7 @@ function FeaturesSection() {
       icon: <Psychology sx={{ fontSize: 32 }} />,
       title: "Ocena AI",
       description:
-        "Sztuczna inteligencja analizuje Twoje rozwiązanie i porównuje z oficjalnymi kryteriami punktacji OMJ.",
+        "Sztuczna inteligencja analizuje Twoje rozwiązanie i porównuje z kryteriami punktacji Konkursu FerMat.",
       color: "#2563eb",
       bgColor: "#dbeafe",
     },
@@ -420,9 +420,9 @@ function FeaturesSection() {
     },
     {
       icon: <EmojiEvents sx={{ fontSize: 32 }} />,
-      title: "Oficjalna punktacja",
+      title: "Punktacja FerMat",
       description:
-        "Oceny zgodne z systemem OMJ: 0, 2, 5 lub 6 punktów. Przygotuj się jak na prawdziwą olimpiadę.",
+        "Oceny zgodne z systemem FerMat. Przygotuj się jak na prawdziwy konkurs.",
       color: "#7c3aed",
       bgColor: "#f3e8ff",
     },
@@ -736,7 +736,7 @@ function FinalCTASection() {
           lineHeight: 1.6,
         }}
       >
-        Ponad 340 zadań z 20 lat Olimpiady Matematycznej Juniorów czeka na Ciebie.
+        Zadania Konkursu Matematycznego FerMat z wielu edycji czekają na Ciebie.
         Bezpłatnie.
       </Typography>
       <Link href="/years" style={{ textDecoration: "none" }}>

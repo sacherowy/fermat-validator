@@ -17,8 +17,8 @@ interface YearPageProps {
 export async function generateMetadata({ params }: YearPageProps): Promise<Metadata> {
   const { year } = await params;
   return {
-    title: `OMJ ${year} – zadania`,
-    description: `Zadania Olimpiady Matematycznej Juniorów z roku ${year}. Wybierz etap zawodów: eliminacje szkolne, etap wojewódzki lub finał ogólnopolski.`,
+    title: `FerMat ${year} – zadania`,
+    description: `Zadania Konkursu Matematycznego FerMat z edycji ${year}. Wybierz etap zawodów: Etap I lub Etap II.`,
     alternates: { canonical: `/years/${year}` },
   };
 }
@@ -81,8 +81,8 @@ export default async function YearPage({ params }: YearPageProps) {
   return (
     <Box>
       <PageHeader
-        title={`OMJ ${year}`}
-        subtitle="Wybierz etap zawodów - od eliminacji szkolnych do finału"
+        title={`FerMat ${year}`}
+        subtitle="Wybierz etap zawodów"
       >
         <Breadcrumb items={breadcrumbItems} />
       </PageHeader>

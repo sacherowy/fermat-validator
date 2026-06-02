@@ -17,7 +17,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from app.db.models import Base, UserDB
 
-DATABASE_URL = os.environ.get("DATABASE_URL", "postgresql://e2e:e2e@localhost:5432/omj_e2e")
+DATABASE_URL = os.environ.get("DATABASE_URL", "postgresql://e2e:e2e@localhost:5432/fermat_e2e")
 
 # Test users - must match e2e/tests/utils/auth.ts TEST_USERS
 # Note: UserDB only has google_sub, email, name, created_at, updated_at

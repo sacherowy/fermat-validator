@@ -6,9 +6,9 @@ import { YearsResponse } from "@/lib/types";
 import { PageHeader } from "@/components/layout/PageHeader";
 
 export const metadata: Metadata = {
-  title: "Archiwum zadań OMJ",
+  title: "Archiwum zadań FerMat",
   description:
-    "Przeglądaj archiwum zadań Olimpiady Matematycznej Juniorów z lat 2005-2025. Ponad 340 zadań z trzech etapów zawodów.",
+    "Przeglądaj archiwum zadań Konkursu Matematycznego FerMat. Zadania z dwóch etapów zawodów z wielu edycji.",
   alternates: { canonical: "/years" },
 };
 
@@ -21,7 +21,7 @@ async function getYears(): Promise<YearsResponse> {
 export default async function YearsPage() {
   const data = await getYears();
 
-  // Calculate edition number (OMG/OMJ started in 2005 as first edition)
+  // Calculate edition number
   const toRoman = (num: number): string => {
     const romanNumerals: [number, string][] = [
       [1000, "M"], [900, "CM"], [500, "D"], [400, "CD"],
@@ -42,8 +42,8 @@ export default async function YearsPage() {
   return (
     <Box>
       <PageHeader
-        title="Olimpiada Matematyczna Juniorów"
-        subtitle="Wybierz rok, aby zobaczyć zadania"
+        title="Konkurs Matematyczny FerMat"
+        subtitle="Wybierz edycję, aby zobaczyć zadania"
       />
 
       <Grid container spacing={2}>

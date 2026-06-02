@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: TaskPageProps): Promise<Metad
       description,
       alternates: { canonical: `/task/${year}/${etap}/${num}` },
       openGraph: {
-        title: `Zadanie ${num} – ${etapName} ${year} | OMJ`,
+        title: `Zadanie ${num} – ${etapName} ${year} | FerMat`,
         description,
       },
     };

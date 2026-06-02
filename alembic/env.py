@@ -1,4 +1,4 @@
-"""Alembic environment configuration for OMJ Validator.
+"""Alembic environment configuration for FerMat Validator.
 
 This module is run by Alembic to perform migrations.
 It reads the database URL from app/config.py and imports

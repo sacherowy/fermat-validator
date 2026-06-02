@@ -12,7 +12,7 @@ import { LoginPrompt } from "@/components/common/LoginPrompt";
 export const metadata: Metadata = {
   title: "Nauka – ścieżka rozwoju",
   description:
-    "Śledź swoje postępy w rozwiązywaniu zadań OMJ. Rekomendacje zadań, statystyki i filtrowanie po kategoriach: algebra, geometria, teoria liczb, kombinatoryka.",
+    "Śledź swoje postępy w rozwiązywaniu zadań Konkursu FerMat. Rekomendacje zadań, statystyki i filtrowanie po kategoriach: algebra, geometria, teoria liczb, kombinatoryka.",
   alternates: { canonical: "/progress" },
 };
 

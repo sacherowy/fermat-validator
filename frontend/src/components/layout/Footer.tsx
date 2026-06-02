@@ -50,7 +50,7 @@ export function Footer() {
             </Typography>
             <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
               {APP_NAME} to niekomercyjny projekt edukacyjny pomagający w
-              przygotowaniu do Olimpiady Matematycznej Juniorów.
+              przygotowaniu do Konkursu Matematycznego FerMat organizowanego przez SP 221 w Warszawie.
             </Typography>
             <Typography variant="body2" color="text.secondary">
               Autor:{" "}
@@ -75,15 +75,15 @@ export function Footer() {
             </Typography>
             <Box sx={{ display: "flex", flexDirection: "column", gap: 0.75 }}>
               <MuiLink
-                href="https://omj.edu.pl"
+                href="https://sp221.edu.pl"
                 target="_blank"
                 rel="noopener"
                 sx={{ color: "text.secondary", fontSize: "0.875rem" }}
               >
-                Oficjalna strona OMJ
+                SP 221 – organizator FerMat
               </MuiLink>
               <MuiLink
-                href="https://github.com/rsokolowski/omj-validator"
+                href="https://github.com/rsokolowski/fermat-validator"
                 target="_blank"
                 rel="noopener"
                 sx={{
