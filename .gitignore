@@ -58,3 +58,7 @@ test-results/
 *.bak
 tmp/
 temp/
+
+# Claude Code and Speckit tooling
+.claude/
+.specify/
