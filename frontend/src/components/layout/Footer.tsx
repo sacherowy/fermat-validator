@@ -55,12 +55,12 @@ export function Footer() {
             <Typography variant="body2" color="text.secondary">
               Autor:{" "}
               <MuiLink
-                href="https://github.com/rsokolowski"
+                href="https://github.com/sacherowy"
                 target="_blank"
                 rel="noopener"
                 sx={{ color: "primary.main" }}
               >
-                Rafał Sokołowski
+                Pawel Michalak
               </MuiLink>
             </Typography>
           </Box>
