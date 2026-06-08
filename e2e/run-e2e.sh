@@ -23,7 +23,7 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
-echo -e "${GREEN}OMJ Validator E2E Tests${NC}"
+echo -e "${GREEN}FerMat Validator E2E Tests${NC}"
 echo "================================"
 
 # Check if Docker is running
