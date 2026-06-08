@@ -1,33 +1,30 @@
 {
   "number": 4,
-  "title": "Trapez i równość sum odcinków",
-  "content": "Dany jest trapez $ABCD$ o podstawach $AB$ oraz $CD$. Punkty $P$ i $Q$ leżą odpowiednio na odcinkach $AB$ i $CD$, przy czym $AQ = BQ$ oraz $CP = DP$. Wykaż, że $AP + DQ = BP + CQ$.",
+  "title": "Pole kwadratu $KYBX$",
+  "content": "Część wspólna kwadratów $ABCD$ i $KLMN$ jest kwadratem $KYBX$ (zobacz rysunek obok). Punkty $P$ i $Q$ są środkami kwadratów $ABCD$ i $KLMN$. Przekątna $AC$ ma długość $7\\ \\text{cm}$, a przekątna $NL$ ma długość $9\\ \\text{cm}$. Długość odcinka $PQ$ jest równa $5\\ \\text{cm}$. Oblicz pole kwadratu $KYBX$.",
   "pdf": {
-    "tasks": "tasks/2025/etap2/21omj-2etap.pdf",
-    "solutions": "tasks/2025/etap2/21omj-2r.pdf",
-    "statistics": "tasks/2025/etap2/21omj-2st.pdf"
+    "tasks": "tasks/2025/etap2/tasks.pdf"
   },
-  "difficulty": 3,
+  "difficulty": 4,
   "categories": [
     "geometria"
   ],
   "hints": [
-    "Narysuj trapez i zaznacz punkty $P$ i $Q$. Co oznacza warunek $AQ = BQ$? Punkt $Q$ jest równo oddalony od $A$ i $B$, więc leży na szczególnej prostej związanej z $AB$. Podobnie pomyśl o $P$.",
-    "Skoro $Q$ jest równo oddalony od końców $AB$, to leży na symetralnej $AB$. Analogicznie $P$ leży na symetralnej $CD$. Wykorzystaj równoległość podstaw i rozważ rzuty prostopadłe punktów na podstawy.",
-    "Zrzutuj $Q$ prostopadle na $AB$ — rzut trafia w środek $AB$. Podobnie rzut $P$ trafia w środek $CD$. Spróbuj wyrazić długości $AP$, $BP$, $CQ$, $DQ$ przez położenia punktów na podstawach.",
-    "Oznacz $|AB|=a$, $|CD|=c$. Wprowadź oś prostopadłą do podstaw przez środek $AB$ i mierz położenia $P$, $Q$, $C$, $D$ względem niej. Zapisz $AP+DQ$ i $BP+CQ$ — sprawdź, że oba wyrażenia upraszczają się do tej samej sumy."
+    "Co jest dane? Dwie przekątne kwadratów, położenia ich środków $P$ i $Q$ oraz odległość $PQ$. Narysuj oba kwadraty i zaznacz środki. Przypomnij sobie: jak daleko jest środek kwadratu od jego wierzchołka, gdy znasz długość przekątnej?",
+    "Zauważ, że oba kwadraty mają boki równoległe (ich częścią wspólną jest kwadrat). Zastanów się, czy ważne punkty: środek $P$, wierzchołek $B$, wierzchołek $K$ oraz środek $Q$ nie leżą przypadkiem na jednej prostej, idącej wzdłuż wspólnego kierunku przekątnych.",
+    "Spróbuj pokazać, że punkty $P$, $B$, $K$, $Q$ leżą na jednej prostej. Odcinek $PB$ to połowa przekątnej $AC$, a odcinek $QK$ to połowa przekątnej $NL$. Odcinek $BK$ jest przekątną szukanego kwadratu $KYBX$. Jak te trzy odcinki układają się względem $PQ$?",
+    "Ułóż równanie: idąc po prostej od $P$ do $Q$ przechodzisz przez wierzchołek $B$ i wierzchołek $K$. Wyraź $PQ$ przez połowy przekątnych oraz przekątną $BK$ małego kwadratu. Gdy znajdziesz długość przekątnej $BK$, pole kwadratu policzysz jako $\\frac{(\\text{przekątna})^2}{2}$."
   ],
   "skills_required": [
-    "perpendicular_bisector",
-    "trapezoid_parallelogram",
-    "isosceles_triangle"
+    "area_methods",
+    "pythagorean_theorem"
   ],
   "skills_gained": [
-    "perpendicular_bisector",
+    "area_methods",
     "coordinate_geometry"
   ],
   "prerequisites": [
-    "2017_etap1_4",
-    "2019_etap2_2"
+    "2024_etap2_4",
+    "2024_etap1_8"
   ]
 }

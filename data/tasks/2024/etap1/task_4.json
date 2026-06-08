@@ -1,28 +1,30 @@
 {
   "number": 4,
-  "title": "100 kamieni czerwonych i niebieskich",
-  "content": "Sto kamieni leży w jednym rzędzie. Wśród nich jest 50 kamieni czerwonych i 50 kamieni niebieskich. Wykaż, że można tak usunąć po 25 kamieni każdego koloru, aby pomiędzy dowolnymi dwoma kamieniami tego samego koloru nie pozostał ani jeden kamień innego koloru.",
+  "title": "Zadanie 4 — sumy miar kątów",
+  "content": "Jeśli do sumy miar kątów wewnętrznych trójkąta dodamy sumę miar kątów czworokąta, to otrzymamy\n\n(a) sumę miar kątów trzech trójkątów;\n\n(b) sumę miar kątów pięciokąta;\n\n(c) liczbę podzielną przez $12$.",
   "pdf": {
-    "tasks": "tasks/2024/etap1/20omj-1etap.pdf",
-    "solutions": "tasks/2024/etap1/20omj-1etap-r.pdf",
-    "statistics": null
+    "tasks": "tasks/2024/etap1/tasks.pdf"
   },
-  "difficulty": 3,
+  "difficulty": 2,
   "categories": [
-    "kombinatoryka",
-    "logika"
+    "geometria"
   ],
   "hints": [
-    "Zauważ, że aby spełnić warunki zadania, wystarczy znaleźć punkt podziału rzędu na dwie części: w lewej wybierzemy 25 kamieni jednego koloru, a w prawej 25 drugiego.",
-    "Sprawdź najprostszy możliwy podział: dokładnie w połowie rzędu (po 50. kamieniu). Zastosuj Zasadę Szufladkową: co możesz powiedzieć o liczbie kamieni czerwonych i niebieskich w pierwszej pięćdziesiątce?",
-    "Załóżmy, że w pierwszej połowie jest co najmniej 25 kamieni czerwonych (jeśli nie, to jest $\\ge 25$ niebieskich). Wybieramy te czerwone z lewej strony. Co musimy teraz znaleźć w drugiej połowie?",
-    "Skorzystaj z bilansu: łącznie jest 50 kamieni niebieskich. Skoro w pierwszej połowie dominują czerwone (jest ich $\\ge 25$), to niebieskich jest tam co najwyżej 25. Ile zatem niebieskich kamieni musi znajdować się w drugiej połowie?"
+    "Najpierw przypomnij sobie: ile wynosi suma miar kątów wewnętrznych w trójkącie, a ile w czworokącie? Zapisz obie liczby.",
+    "To zadanie z trzema podpunktami — każdy sprawdzaj osobno. Policz najpierw sumę z treści (trójkąt plus czworokąt), a potem porównaj ją z tym, co podane jest w punktach (a), (b) i (c).",
+    "Sumę miar kątów wielokąta o $n$ bokach można policzyć, dzieląc go na trójkąty wychodzące z jednego wierzchołka. Ile trójkątów powstanie w pięciokącie?",
+    "Po obliczeniu sumy z treści sprawdź każdy podpunkt: czy trzy trójkąty dają tyle samo? Czy pięciokąt daje tyle samo? Czy otrzymaną liczbę da się podzielić przez $12$ bez reszty? Zastanów się, czy prawdziwy jest tylko jeden, czy może więcej podpunktów."
   ],
-  "prerequisites": [],
   "skills_required": [
-    "extremal_principle"
+    "angle_chasing",
+    "basic_operations"
   ],
   "skills_gained": [
-    "constructive_proof"
+    "angle_chasing",
+    "divisibility_arguments"
+  ],
+  "prerequisites": [
+    "2024_etap1_5",
+    "2025_etap1_3"
   ]
 }

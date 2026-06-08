@@ -1,30 +1,32 @@
 {
   "number": 7,
-  "title": "Prostopadłościan z $AC' = AB + AD$",
-  "content": "Dany jest prostopadłościan $ABCDA'B'C'D'$ o wierzchołkach oznaczonych jak na rysunku, w którym $AC' = AB + AD$. Niech $P$ będzie takim punktem na odcinku $AC'$, że $AP = AB$ oraz $C'P = AD$. Udowodnij, że $\\angle BPB' = 90^\\circ$.",
+  "title": "Zadanie 7 — miary kątów trapezu",
+  "content": "Istnieje taki trapez, że\n\n(a) miara tylko jednego jego kąta jest liczbą naturalną;\n\n(b) miary dokładnie dwóch jego kątów są liczbami naturalnymi;\n\n(c) miary dokładnie trzech jego kątów są liczbami naturalnymi.",
   "pdf": {
-    "tasks": "tasks/2024/etap1/20omj-1etap.pdf",
-    "solutions": "tasks/2024/etap1/20omj-1etap-r.pdf",
-    "statistics": null
+    "tasks": "tasks/2024/etap1/tasks.pdf"
   },
   "difficulty": 3,
   "categories": [
     "geometria"
   ],
   "hints": [
-    "Oznacz krawędzie prostopadłościanu: $a=AB$, $b=AD$, $c=AA'$. Wykorzystaj twierdzenie Pitagorasa dla przekątnej prostopadłościanu i daną w zadaniu równość, aby znaleźć kluczowy związek między $a, b, c$.",
-    "Aby udowodnić, że $\\angle BPB' = 90^\\circ$, najwygodniej jest skorzystać z twierdzenia odwrotnego do twierdzenia Pitagorasa dla trójkąta $\\triangle BPB'$.",
-    "Zauważ, że trójkąty $\\triangle ABP$ oraz $\\triangle C'B'P$ są równoramienne. Aby obliczyć długości ich podstaw, $BP$ i $B'P$, potrzebujesz miar kątów między ich ramionami.",
-    "Wyznacz cosinusy kątów $\\angle BAC'$ i $\\angle AC'B'$ korzystając z faktu, że trójkąty $\\triangle ABC'$ i $\\triangle AB'C'$ są prostokątne. To pozwoli obliczyć kwadraty szukanych długości."
-  ],
-  "prerequisites": [
-    "2020_etap1_2"
+    "Narysuj trapez i zaznacz jego cztery kąty. Przypomnij sobie, jaka zależność łączy kąty leżące przy tym samym ramieniu (boku nierównoległym).",
+    "Zastanów się, czy kąty będące liczbami naturalnymi mogą pojawiać się pojedynczo, czy raczej „w parach”. Pomyśl, jak suma pewnych dwóch kątów wpływa na to, czy oba są jednocześnie naturalne.",
+    "Zauważ, że dwa kąty przy tym samym ramieniu trapezu dają w sumie $180°$. Jeśli jeden z nich jest liczbą naturalną, co możesz powiedzieć o drugim?",
+    "Skoro $180$ minus liczba naturalna to wciąż liczba naturalna, kąty naturalne dokładają się parami. Policz, ile naturalnych kątów może być w sumie — czy ta liczba może być nieparzysta? Sprawdź na tej podstawie przypadki (a), (b) i (c)."
   ],
   "skills_required": [
-    "spatial_3d",
-    "pythagorean_theorem"
+    "angle_chasing",
+    "trapezoid_parallelogram",
+    "parity_arguments"
   ],
   "skills_gained": [
-    "pythagorean_theorem"
+    "parity_arguments",
+    "case_analysis"
+  ],
+  "prerequisites": [
+    "2025_etap1_3",
+    "2024_etap1_5",
+    "2025_etap1_9"
   ]
 }

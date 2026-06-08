@@ -81,7 +81,7 @@ test.describe('Progress Tracking', () => {
       // Submit a solution
       await page.goto('/task/2024/etap2/1');
       await uploadAndSubmit(page, TEST_IMAGE);
-      await expect(page.getByText(/Wynik:\s*6\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
+      await expect(page.getByText(/Wynik:\s*4\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
 
       // Get updated progress
       const updatedResponse = await page.request.get('/api/progress/data');
@@ -100,7 +100,7 @@ test.describe('Progress Tracking', () => {
       // Submit as user 1
       await page.goto('/task/2024/etap2/1');
       await uploadAndSubmit(page, TEST_IMAGE);
-      await expect(page.getByText(/Wynik:\s*6\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
+      await expect(page.getByText(/Wynik:\s*4\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
 
       // Get user 1 progress
       const user1Response = await page.request.get('/api/progress/data');

@@ -1,27 +1,32 @@
 {
   "number": 3,
-  "title": "Warunek $|a-b| = 2|b-c| = 3|c-a|$",
-  "content": "Liczby $a$, $b$, $c$ spełniają warunek $|a-b| = 2|b-c| = 3|c-a|$. Udowodnij, że $a = b = c$.",
+  "title": "Suma trzech odwrotności równa $1$",
+  "content": "Wpisz w kratki takie liczby naturalne, aby otrzymać prawdziwą równość. Podaj trzy różne rozwiązania tego zadania.\n\n$$\\frac{1}{\\square} + \\frac{1}{\\square} + \\frac{1}{\\square} = 1.$$",
   "pdf": {
-    "tasks": "tasks/2020/etap1/1etap20.pdf",
-    "solutions": "tasks/2020/etap1/1etap20r.pdf",
-    "statistics": null
+    "tasks": "tasks/2020/etap1/tasks.pdf"
   },
   "difficulty": 2,
   "categories": [
-    "algebra"
+    "teoria_liczb",
+    "arytmetyka"
   ],
   "hints": [
-    "Aby uniknąć ułamków, oznacz wspólną wartość wyrażeń przez $6k$, gdzie $k \\ge 0$. Wyraź wartości $|a-b|$, $|b-c|$ oraz $|c-a|$ za pomocą $k$.",
-    "Zauważ, że trzy różnice $a-b$, $b-c$ oraz $c-a$ nie są od siebie niezależne. Jaka jest wartość ich sumy?",
-    "Suma $(a-b) + (b-c) + (c-a)$ jest zawsze równa zero. Zastanów się, co to oznacza dla wartości bezwzględnych tych trzech liczb. Czy największa z nich może być większa od sumy dwóch pozostałych?",
-    "Jeśli $x+y+z=0$, to musi zachodzić nierówność $|x| \\le |y|+|z|$. Zastosuj tę zasadę do różnic $a-b$, $b-c$, $c-a$ i sprawdź, czy dla $k>0$ jest ona spełniona."
+    "Przeczytaj uważnie: szukasz trzech liczb naturalnych, które wstawisz w mianowniki (pod kreską ułamka), tak aby suma trzech ułamków o liczniku $1$ dała dokładnie $1$. Co oznacza, że ułamek ma licznik $1$ i jak wygląda taki ułamek dla małych mianowników?",
+    "Spróbuj podejścia od najprostszego do trudniejszego. Zacznij od pytania: a co, gdyby wszystkie trzy ułamki były takie same? Jaka liczba w mianowniku sprawi, że trzy jednakowe ułamki dadzą $1$?",
+    "Aby znaleźć kolejne rozwiązania, ustal najpierw jeden ułamek (np. największy możliwy mniejszy od $1$), a potem zastanów się, ile musi wynosić suma dwóch pozostałych. Pamiętaj, że ułamek tym mniejszy, im większa liczba w mianowniku.",
+    "Wybierz wartość pierwszego ułamka, np. $\\frac{1}{2}$, i policz, ile zostaje do $1$. Następnie szukaj dwóch ułamków o liczniku $1$, których suma da tę resztę. Powtórz pomysł z inną wartością pierwszego ułamka, aby otrzymać trzecie, różne rozwiązanie."
   ],
   "skills_required": [
-    "absolute_value"
+    "diophantine_equations",
+    "basic_operations"
   ],
   "skills_gained": [
+    "diophantine_equations",
     "case_analysis"
   ],
-  "prerequisites": []
+  "prerequisites": [
+    "2021_etap1_2",
+    "2017_etap1_6",
+    "2018_etap1_2"
+  ]
 }

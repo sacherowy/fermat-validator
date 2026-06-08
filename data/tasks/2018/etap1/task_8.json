@@ -1,0 +1,32 @@
+{
+  "number": 8,
+  "title": "Ile wody zostało w akwarium",
+  "content": "Do akwarium o pojemności $200$ litrów wlano $160$ litrów wody, a następnie włożono do niego duży kamień w kształcie prostopadłościanu o wymiarach $4\\,\\text{dm} \\times 3\\,\\text{dm} \\times 4\\,\\text{dm}$ tak, że w całości się zmieścił w akwarium. Potem wyjęto ten kamień i odlano z akwarium $8$ litrów wody. Ile wody jest teraz w akwarium?",
+  "pdf": {
+    "tasks": "tasks/2018/etap1/tasks.pdf"
+  },
+  "difficulty": 3,
+  "categories": [
+    "arytmetyka",
+    "geometria"
+  ],
+  "hints": [
+    "Wypisz dane: ile mieści akwarium, ile wlano wody, jakie są wymiary kamienia. Czego szukamy na końcu? Zamień wymiary kamienia z decymetrów na litry, pamiętając, że $1\\,\\text{dm}^3 = 1$ litr.",
+    "Zastanów się, co dzieje się z poziomem wody, gdy zanurzamy w niej kamień. Sprawdź, czy woda razem z kamieniem zmieści się w akwarium, czy może być jej za dużo.",
+    "Porównaj objętość wody powiększoną o objętość kamienia z pojemnością akwarium. Jeśli ta suma przekracza pojemność, to część wody musi gdzieś zniknąć - co się z nią dzieje?",
+    "Najpierw policz objętość kamienia jako iloczyn jego trzech wymiarów. Dodaj ją do ilości wody i porównaj z pojemnością akwarium - nadmiar to woda, która się wylała. Dopiero potem odejmij jeszcze odlane litry."
+  ],
+  "skills_required": [
+    "word_problems",
+    "spatial_3d",
+    "basic_operations"
+  ],
+  "skills_gained": [
+    "spatial_3d",
+    "word_problems"
+  ],
+  "prerequisites": [
+    "2020_etap1_5",
+    "2017_etap1_7"
+  ]
+}

@@ -1,30 +1,27 @@
 {
   "number": 1,
-  "title": "Punkt $E$ na boku $CD$ prostokąta $ABCD$",
-  "content": "Punkt $E$ leży na boku $CD$ prostokąta $ABCD$, przy czym\n$$\\angle DAE + \\angle EBC = \\angle ABE.$$\nWykaż, że $AB \\geqslant AD$.",
+  "title": "Różnica skrajnych liczb czterocyfrowych",
+  "content": "Oblicz różnicę największej liczby czterocyfrowej podzielnej przez $4$ i najmniejszej liczby czterocyfrowej podzielnej przez $11$.",
   "pdf": {
-    "tasks": "tasks/2024/etap2/20omj-2etap.pdf",
-    "solutions": "tasks/2024/etap2/20omj-2r.pdf",
-    "statistics": "tasks/2024/etap2/20omj-2etap-st.pdf"
+    "tasks": "tasks/2024/etap2/tasks.pdf"
   },
-  "difficulty": 3,
+  "difficulty": 1,
   "categories": [
-    "geometria"
+    "teoria_liczb",
+    "arytmetyka"
   ],
   "hints": [
-    "Oznacz kąty: $\\angle DAE = \\alpha$, $\\angle EBC = \\beta$ oraz $\\angle ABE = \\gamma$. Zapisz warunek z zadania oraz zależność między kątami przy wierzchołku $B$ prostokąta.",
-    "Wyraź wszystkie kąty w trójkącie $ABE$ w zależności od jednego z nich, na przykład od kąta $\\gamma$.",
-    "Porównaj miary kątów w trójkącie $ABE$. Jakie ma to konsekwencje dla własności tego trójkąta?",
-    "Wykorzystaj uzyskaną równość boków. Rozważ teraz trójkąt $ADE$. Jaka jest relacja między długościami jego boków?"
-  ],
-  "prerequisites": [
-    "2022_etap2_1"
+    "Co jest dane, a czego szukamy? Przypomnij sobie, że liczby czterocyfrowe to liczby od $1000$ do $9999$. Masz znaleźć dwie szczególne liczby z tego zakresu, a potem je odjąć.",
+    "Rozbij zadanie na dwie osobne części: najpierw znajdź jedną liczbę, potem drugą, a na końcu wykonaj odejmowanie. Zacznij od krańców zakresu czterocyfrowego.",
+    "Aby znaleźć największą liczbę podzielną przez $4$, zacznij od $9999$ i schodź w dół. Aby znaleźć najmniejszą podzielną przez $11$, zacznij od $1000$ i idź w górę, sprawdzając podzielność.",
+    "Sprawdź resztę z dzielenia $9999$ przez $4$ i odejmij ją, aby trafić na liczbę podzielną przez $4$. Podobnie sprawdź resztę z dzielenia $1000$ przez $11$ i uzupełnij ją do pełnej wielokrotności. Następnie odejmij mniejszą liczbę od większej."
   ],
   "skills_required": [
-    "angle_chasing",
-    "isosceles_triangle"
+    "divisibility_arguments",
+    "basic_operations"
   ],
   "skills_gained": [
-    "angle_chasing"
-  ]
+    "divisibility_arguments"
+  ],
+  "prerequisites": []
 }

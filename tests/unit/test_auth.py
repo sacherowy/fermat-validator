@@ -33,12 +33,17 @@ SAMPLE_USER = {
 class TestGetCurrentUser:
     def test_returns_user_from_session(self):
         request = make_request({SESSION_USER_KEY: SAMPLE_USER})
-        user = get_current_user(request)
+        with patch("app.auth.settings") as mock_settings:
+            mock_settings.auth_disabled = False
+            user = get_current_user(request)
         assert user == SAMPLE_USER
 
     def test_returns_none_when_session_empty(self):
         request = make_request({})
-        assert get_current_user(request) is None
+        with patch("app.auth.settings") as mock_settings:
+            mock_settings.auth_disabled = False
+            result = get_current_user(request)
+        assert result is None
 
     def test_auth_disabled_returns_anonymous_user(self):
         request = make_request({})
@@ -53,11 +58,15 @@ class TestGetCurrentUser:
 class TestGetCurrentUserId:
     def test_returns_google_sub_when_authenticated(self):
         request = make_request({SESSION_USER_KEY: SAMPLE_USER})
-        assert get_current_user_id(request) == "sub123"
+        with patch("app.auth.settings") as mock_settings:
+            mock_settings.auth_disabled = False
+            assert get_current_user_id(request) == "sub123"
 
     def test_returns_none_when_unauthenticated(self):
         request = make_request({})
-        assert get_current_user_id(request) is None
+        with patch("app.auth.settings") as mock_settings:
+            mock_settings.auth_disabled = False
+            assert get_current_user_id(request) is None
 
 
 class TestVerifyAuth:

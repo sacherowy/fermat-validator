@@ -1,33 +1,31 @@
 {
   "number": 2,
-  "title": "Liczba podzielna przez swoje cyfry",
-  "content": "W zapisie dziesiętnym dodatniej liczby całkowitej $n$ każda cyfra jest różna od $0$ oraz żadna cyfra nie pojawia się więcej niż raz. Ponadto liczba $n$ jest podzielna przez każdą ze swoich cyfr. Wykaż, że liczba $n$ ma co najwyżej $7$ cyfr.",
+  "title": "Kąty czworokąta $AKLC$",
+  "content": "W trójkącie $ABC$ na boku $AB$ zaznaczono punkt $K$, a na boku $BC$ punkt $L$ w taki sposób, że trójkąt $BKL$ jest równoramienny. Kąt $\\angle BAC$ ma miarę $50^\\circ$, a kąt $\\angle ABC$ ma miarę $40^\\circ$. Oblicz miary kątów w czworokącie $AKLC$. Rozważ wszystkie przypadki.",
   "pdf": {
-    "tasks": "tasks/2025/etap2/21omj-2etap.pdf",
-    "solutions": "tasks/2025/etap2/21omj-2r.pdf",
-    "statistics": "tasks/2025/etap2/21omj-2st.pdf"
+    "tasks": "tasks/2025/etap2/tasks.pdf"
   },
   "difficulty": 3,
   "categories": [
-    "teoria_liczb"
+    "geometria"
   ],
   "hints": [
-    "Zauważ, że wszystkie cyfry liczby $n$ należą do zbioru $\\{1,2,3,4,5,6,7,8,9\\}$ - jest ich tylko 9 różnych. Zastanów się, jakie ograniczenia nakłada warunek podzielności przez każdą cyfrę.",
-    "Rozważ, co się stanie, gdy wśród cyfr pojawi się jednocześnie cyfra $5$ oraz jakaś cyfra parzysta. Co wtedy musiałoby być prawdą o liczbie $n$ i jej ostatniej cyfrze?",
-    "Rozpatrz dwa przypadki: gdy cyfra $5$ występuje wśród cyfr $n$ oraz gdy nie występuje. W pierwszym przypadku zlicz dostępne cyfry. W drugim - przypomnij sobie cechę podzielności przez $9$ i policz sumę pozostałych dostępnych cyfr.",
-    "W przypadku bez piątki cyfry pochodzą ze zbioru $\\{1,2,3,4,6,7,8,9\\}$. Gdyby liczba miała wszystkie $8$ tych cyfr, jaka byłaby ich suma i czy spełniałaby warunek podzielności przez $9$ (która musi być wśród cyfr)?"
+    "Narysuj trójkąt $ABC$ i zaznacz na nim wszystkie znane kąty. Skoro znasz $\\angle BAC$ i $\\angle ABC$, spróbuj najpierw wyznaczyć trzeci kąt trójkąta, czyli $\\angle BCA$.",
+    "Zwróć uwagę, że trójkąt $BKL$ jest równoramienny, ale nie wiadomo, które dwa boki są równe. To podpowiada, że trzeba rozważyć kilka osobnych przypadków (analiza przypadków).",
+    "W każdym przypadku kąt przy wierzchołku $B$ pozostaje taki sam. Zastanów się, jak położenie równych boków wpływa na miary kątów $\\angle BKL$ i $\\angle BLK$ przy podstawie. Pamiętaj, że suma kątów w trójkącie to $180^\\circ$.",
+    "Kąty czworokąta przy wierzchołkach $K$ i $L$ są kątami przyległymi do kątów trójkąta $BKL$ (leżą na prostych $AB$ i $BC$). Skorzystaj z tego, że kąty przyległe dają w sumie $180^\\circ$, i sprawdź na koniec, czy suma czterech kątów czworokąta wychodzi poprawnie."
   ],
   "skills_required": [
-    "divisibility_arguments",
-    "case_analysis",
-    "digit_manipulation"
-  ],
-  "skills_gained": [
-    "divisibility_arguments",
+    "angle_chasing",
+    "isosceles_triangle",
     "case_analysis"
   ],
+  "skills_gained": [
+    "case_analysis",
+    "angle_chasing"
+  ],
   "prerequisites": [
-    "2008_etap3_1",
-    "2025_etap1_2"
+    "2025_etap1_3",
+    "2025_etap1_7"
   ]
 }

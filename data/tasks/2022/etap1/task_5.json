@@ -1,27 +1,29 @@
 {
   "number": 5,
-  "title": "Nierówność $a+b+c \\geq \\frac{3}{4}abc$",
-  "content": "Liczby dodatnie $a$, $b$, $c$ spełniają nierówności\n$$a + b \\geq ab, \\quad b + c \\geq bc \\quad \\text{oraz} \\quad c + a \\geq ca.$$\nUdowodnij, że $a + b + c \\geq \\frac{3}{4}abc$.",
+  "title": "Podzielność przez $51$",
+  "content": "Czy liczba $11 \\cdot 17 \\cdot 23 \\cdot 39 \\cdot 55$ jest podzielna przez $51$?",
   "pdf": {
-    "tasks": "tasks/2022/etap1/18omj-1etap.pdf",
-    "solutions": "tasks/2022/etap1/18omj-1r.pdf",
-    "statistics": null
+    "tasks": "tasks/2022/etap1/tasks.pdf"
   },
-  "difficulty": 4,
+  "difficulty": 2,
   "categories": [
-    "algebra"
-  ],
-  "prerequisites": [],
-  "skills_required": [
-    "inequality_manipulation"
-  ],
-  "skills_gained": [
-    "inequality_manipulation"
+    "teoria_liczb"
   ],
   "hints": [
-    "Zauważ, że dzieląc nierówność $a+b \\geq ab$ przez $ab$, otrzymasz warunek wiążący odwrotności liczb. Wprowadź zmienne pomocnicze $x=1/a, y=1/b, z=1/c$.",
-    "Po podstawieniu otrzymasz warunki typu $x+y \\geq 1$. Twoim celem jest oszacowanie wyrażenia $xy+yz+zx$. Zacznij od znalezienia dolnego ograniczenia na sumę $x+y+z$.",
-    "Aby powiązać sumę $x+y+z$ z iloczynami $xy, yz, zx$, spróbuj 'uzupełnić' każdą nierówność z założenia, mnożąc ją przez brakującą w niej zmienną (np. $x+y \\geq 1$ przez $z$).",
-    "Dodaj otrzymane po mnożeniu trzy nierówności stronami. Wynik pozwoli Ci uzależnić szukaną sumę iloczynów od sumy $x+y+z$, którą oszacowałeś wcześniej."
+    "Co oznacza, że liczba dzieli się przez $51$? Zastanów się, na jakie mniejsze liczby można rozłożyć $51$ — czy jest to liczba pierwsza, czy iloczyn dwóch mniejszych liczb?",
+    "Zamiast mnożyć wszystko i otrzymywać ogromną liczbę, spróbuj rozłożyć każdy czynnik oraz samo $51$ na 'klocki', czyli liczby pierwsze. Wtedy łatwiej porównać, co się w czym kryje.",
+    "Rozłóż $51$ na czynniki pierwsze. Następnie sprawdź, czy te same czynniki znajdziesz wśród liczb $11, 17, 23, 39, 55$ — wystarczy zajrzeć do każdej z nich osobno.",
+    "Zauważ, że $51 = 3 \\cdot 17$. Poszukaj w iloczynie czynnika, który zawiera $17$, oraz takiego, który zawiera $3$ (przyjrzyj się liczbie $39$). Jeśli oba się znajdą, co możesz wtedy powiedzieć o podzielności?"
+  ],
+  "skills_required": [
+    "prime_factorization",
+    "divisibility_arguments"
+  ],
+  "skills_gained": [
+    "divisibility_arguments"
+  ],
+  "prerequisites": [
+    "2023_etap1_2",
+    "2025_etap1_6"
   ]
 }

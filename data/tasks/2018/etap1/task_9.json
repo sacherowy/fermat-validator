@@ -1,0 +1,30 @@
+{
+  "number": 9,
+  "title": "Przekątne ścian sześcianu na siatce",
+  "content": "Na trzech ścianach sześcianu poprowadzono przekątne, jak pokazano na rysunku obok. Poniżej znajduje się siatka. Dorysuj przykładowe odcinki na siatce tak, by po sklejeniu powstał sześcian przedstawiony obok.",
+  "pdf": {
+    "tasks": "tasks/2018/etap1/tasks.pdf"
+  },
+  "difficulty": 3,
+  "categories": [
+    "geometria"
+  ],
+  "hints": [
+    "Co jest dane, a co masz narysować? Na rysunku sześcianu widzisz trzy ściany z przekątnymi - spróbuj najpierw policzyć, ile wierzchołków sześcianu łączą te przekątne i które to wierzchołki.",
+    "Wyobraź sobie, że składasz siatkę w sześcian (albo wytnij ją z papieru!). Spróbuj zaznaczyć, która kratka na siatce stanie się którą ścianą bryły po sklejeniu.",
+    "Zwróć uwagę na wierzchołki: każdy róg sześcianu powstaje ze sklejenia kilku rogów kwadratów na siatce. Końce przekątnych muszą trafić dokładnie w te same wierzchołki, co na bryle.",
+    "Dla każdej przekątnej na sześcianie odszukaj jej dwa końce, a potem znajdź odpowiadające im rogi kwadratów na siatce - odcinek na siatce poprowadź dokładnie między tymi rogami. Pamiętaj, że sąsiednie ściany na bryle mogą być na siatce daleko od siebie."
+  ],
+  "skills_required": [
+    "spatial_3d",
+    "transformations"
+  ],
+  "skills_gained": [
+    "spatial_3d",
+    "polyhedra"
+  ],
+  "prerequisites": [
+    "2017_etap1_8",
+    "2017_etap1_7"
+  ]
+}

@@ -1,28 +1,29 @@
 {
   "number": 5,
-  "title": "Cztery liczby z sumą $2^{1002}$ i iloczynem $5^{1002}$",
-  "content": "Czy istnieją takie cztery dodatnie liczby całkowite, których suma jest równa $2^{1002}$, a iloczyn jest równy $5^{1002}$? Odpowiedź uzasadnij.",
+  "title": "Pole powierzchni dwóch sześcianów",
+  "content": "Dane są dwa sześciany, z których pierwszy ma objętość $64$ razy większą niż drugi. Ile razy pole powierzchni pierwszego sześcianu jest większe niż pole powierzchni drugiego sześcianu?",
   "pdf": {
-    "tasks": "tasks/2020/etap1/1etap20.pdf",
-    "solutions": "tasks/2020/etap1/1etap20r.pdf",
-    "statistics": null
+    "tasks": "tasks/2020/etap1/tasks.pdf"
   },
   "difficulty": 2,
   "categories": [
-    "teoria_liczb"
+    "geometria",
+    "arytmetyka"
   ],
   "hints": [
-    "Iloczyn czterech dodatnich liczb całkowitych jest potęgą liczby 5. Zapisz te cztery liczby jako $5^{x_1}, 5^{x_2}, 5^{x_3}, 5^{x_4}$. Co wiesz o sumie wykładników $x_1+x_2+x_3+x_4$?",
-    "Suma tych czterech liczb musi być równa $2^{1002}$. Zbadaj tę sumę, analizując jej resztę z dzielenia przez jakąś małą potęgę dwójki, na przykład 4 lub 8.",
-    "Jaka jest reszta z dzielenia $5^k$ przez 8? Zauważ, że zależy ona od parzystości wykładnika $k$. Co to oznacza dla podzielności sumy $5^{x_1}+5^{x_2}+5^{x_3}+5^{x_4}$ przez 8?",
-    "Suma $5^{x_1}+5^{x_2}+5^{x_3}+5^{x_4}$ musi być podzielna przez 8. Ile spośród wykładników $x_i$ musi być nieparzystych, aby tak było? Porównaj ten wniosek z parzystością sumy $x_1+x_2+x_3+x_4=1002$."
+    "Zastanów się, co łączy objętość sześcianu z długością jego krawędzi, a co łączy pole powierzchni z długością krawędzi. Spróbuj zapisać krawędź pierwszego sześcianu jako pewną wielokrotność krawędzi drugiego.",
+    "Zacznij od znalezienia, ile razy krawędź pierwszego sześcianu jest dłuższa od krawędzi drugiego. Pomyśl, jak zmienia się objętość, gdy krawędź rośnie określoną liczbę razy.",
+    "Objętość zależy od krawędzi podniesionej do trzeciej potęgi, a pole powierzchni od krawędzi podniesionej do kwadratu. Skoro znasz stosunek objętości, możesz odzyskać stosunek krawędzi.",
+    "Jeśli krawędź pierwszego sześcianu jest $k$ razy dłuższa, to jego objętość jest $k^3$ razy większa. Z równania $k^3 = 64$ wyznacz $k$, a potem policz, ile razy większe jest pole powierzchni, korzystając z $k^2$."
   ],
   "skills_required": [
-    "prime_factorization"
+    "spatial_3d",
+    "basic_operations"
   ],
   "skills_gained": [
-    "parity_arguments",
-    "contradiction"
+    "spatial_3d"
   ],
-  "prerequisites": []
+  "prerequisites": [
+    "2023_etap1_5"
+  ]
 }

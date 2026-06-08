@@ -1,34 +1,30 @@
 {
   "number": 2,
-  "title": "Tablica $5 \\times 5$ pomalowana na czerwono i niebiesko",
-  "content": "Każde pole tablicy $5 \\times 5$ pomalowano albo na czerwono, albo na niebiesko. Okazało się, że w każdym wierszu tej tablicy liczba czerwonych pól jest taka sama, a w każdych dwóch kolumnach tej tablicy liczby niebieskich pól są różne. Wyznacz łączną liczbę niebieskich pól w całej tablicy. Podaj wszystkie możliwości.",
+  "title": "Kąt $DEF$ w rombie z dobudowanym kwadratem",
+  "content": "Dany jest romb $ABCD$, w którym $\\angle DAB = 60^\\circ$. Do boku $AB$ dorysowano kwadrat $ABEF$ po zewnętrznej stronie rombu. Oblicz miarę kąta $DEF$.",
   "pdf": {
-    "tasks": "tasks/2024/etap2/20omj-2etap.pdf",
-    "solutions": "tasks/2024/etap2/20omj-2r.pdf",
-    "statistics": "tasks/2024/etap2/20omj-2etap-st.pdf"
+    "tasks": "tasks/2024/etap2/tasks.pdf"
   },
-  "difficulty": 3,
+  "difficulty": 4,
   "categories": [
-    "kombinatoryka",
-    "logika",
-    "arytmetyka"
+    "geometria"
   ],
   "hints": [
-    "Liczba niebieskich pól w każdej z 5 kolumn jest inna. Jakie wartości może przyjmować ta liczba w jednej kolumnie? Z jakiego zbioru liczb wybieramy 5 różnych wartości dla 5 kolumn?",
-    "Policz całkowitą liczbę niebieskich pól na dwa sposoby: sumując po wierszach i sumując po kolumnach. Oznacz przez $r$ stałą liczbę czerwonych pól w każdym wierszu.",
-    "Wykorzystując $r$, wyraź łączną liczbę niebieskich pól w tablicy. Zauważ, że ta liczba musi być podzielna przez pewną liczbę większą od 1. Jaką?",
-    "Liczby niebieskich pól w kolumnach to 5 różnych liczb ze zbioru \\{0,1,2,3,4,5\\}. Oblicz wszystkie możliwe sumy tych pięciu liczb. Które z tych sum pasują do warunku z poprzedniej wskazówki?"
-  ],
-  "prerequisites": [
-    "2021_etap1_4"
+    "Narysuj dokładnie figurę: romb $ABCD$ i dobudowany na zewnątrz kwadrat $ABEF$. Zaznacz, które odcinki są równej długości - pamiętaj, że wszystkie boki rombu są równe i wszystkie boki kwadratu też.",
+    "To zadanie na 'gonienie kątów': spróbuj rozłożyć szukany kąt $\\angle DEF$ na różnicę lub sumę mniejszych kątów, których miary potrafisz wyznaczyć. Poszukaj trójkątów, w których dwa boki są równej długości.",
+    "Przyjrzyj się trójkątowi $ABD$: skoro $AB = AD$ oraz $\\angle DAB = 60^\\circ$, to jaki to szczególny rodzaj trójkąta? Co możesz wtedy powiedzieć o długości przekątnej $BD$ w porównaniu z bokiem kwadratu $BE$?",
+    "Zauważ, że $BD = BE$, więc trójkąt $DBE$ jest równoramienny. Wyznacz miarę kąta $\\angle DBE$ (połóż obok siebie kąt rombu i kąt kwadratu przy wierzchołku $B$), policz kąty przy podstawie, a potem odejmij kąt $\\angle DEB$ od prostego kąta $\\angle FEB$ kwadratu."
   ],
   "skills_required": [
-    "basic_operations",
-    "counting_techniques",
-    "case_analysis"
+    "angle_chasing",
+    "isosceles_triangle"
   ],
   "skills_gained": [
-    "basic_operations",
-    "counting_techniques"
+    "angle_chasing"
+  ],
+  "prerequisites": [
+    "2024_etap1_3",
+    "2025_etap1_3",
+    "2025_etap2_2"
   ]
 }

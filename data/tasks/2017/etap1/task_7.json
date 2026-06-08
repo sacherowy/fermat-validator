@@ -1,30 +1,31 @@
 {
   "number": 7,
-  "title": "Prostopadłościan przecięty płaszczyzną",
-  "content": "Kwadrat $ABCD$ o boku 4 jest podstawą prostopadłościanu $ABCDA'B'C'D'$. Krawędzie boczne $AA'$, $BB'$, $CC'$, $DD'$ tego prostopadłościanu mają długość 7. Punkty $K$, $L$, $M$ leżą odpowiednio na odcinkach $AA'$, $BB'$, $CC'$, przy czym $AK = 3$, $BL = 2$, $CM = 5$. Płaszczyzna przechodząca przez punkty $K$, $L$, $M$ rozcina prostopadłościan na dwie bryły. Wyznacz objętości obu tych brył.",
+  "title": "Sześciany z dokładnie jedną białą ścianą",
+  "content": "Ola miała dwa drewniane prostopadłościenne klocki. Jeden o wymiarach $7$ cm $\\times\\, 5$ cm $\\times\\, 4$ cm, drugi o wymiarach $8$ cm $\\times\\, 6$ cm $\\times\\, 1$ cm. Obydwa klocki Ola pomalowała na biało, pocięła na sześciany o krawędzi $1$ cm i policzyła sześciany, które mają dokładnie jedną ścianę białą. Ile ich jest?",
   "pdf": {
-    "tasks": "tasks/2017/etap1/1etap17.pdf",
-    "solutions": "tasks/2017/etap1/1etap17r.pdf",
-    "statistics": null
+    "tasks": "tasks/2017/etap1/tasks.pdf"
   },
   "difficulty": 3,
   "categories": [
-    "geometria"
+    "geometria",
+    "kombinatoryka"
   ],
   "hints": [
-    "Narysuj prostopadłościan i punkt $N$ na krawędzi $DD'$. Pamiętaj, że płaszczyzna przecina równoległe ściany bryły wzdłuż odcinków równoległych, więc czworokąt $KLMN$ jest równoległobokiem.",
-    "Zauważ, że środek symetrii przekroju $KLMN$ leży dokładnie nad środkiem podstawy $ABCD$. Jaka jest zależność między sumami długości przeciwległych krawędzi bocznych: $AK + CM$ oraz $BL + DN$?",
-    "Zastanów się nad wysokością bryły w punkcie będącym środkiem podstawy. Zauważ, że jest ona średnią arytmetyczną długości wszystkich krawędzi bocznych ($AK, BL, CM, DN$).",
-    "Skorzystaj z faktu, że objętość takiej bryły jest równa objętości prostopadłościanu o tej samej podstawie i wysokości równej obliczonej średniej (zasada 'wyrównywania' poziomu)."
+    "Wyobraź sobie, że klocek jest pomalowany na biało tylko z zewnątrz, a w środku drewno jest niepomalowane. Po pocięciu na małe sześciany $1\\times1\\times1$ zastanów się: które dotykały powierzchni klocka, a które były ukryte w środku?",
+    "Mały sześcian ma dokładnie jedną białą ścianę, gdy leży na jednej ze ścian dużego klocka, ale nie sięga do żadnej krawędzi ani rogu. Spróbuj policzyć takie sześciany osobno dla każdej z sześciu ścian klocka.",
+    "Na każdej ścianie odetnij myślowo brzegowy pasek o szerokości jednego sześcianu — zostanie 'wewnętrzny prostokąt' sześcianów z jedną białą ścianą. Uwaga: drugi klocek ma grubość tylko $1$ cm — sprawdź, ile ścian białych mają jego sześciany!",
+    "Dla pierwszego klocka policz wewnętrzne prostokąty na trzech parach przeciwległych ścian (np. dla ściany $7\\times5$ liczysz $(7-2)\\times(5-2)$), pamiętaj o dwóch identycznych ścianach w parze. W klocku grubości $1$ cm każdy sześcian dotyka góry i dołu jednocześnie."
   ],
   "skills_required": [
     "spatial_3d",
-    "coordinate_geometry"
+    "counting_techniques"
   ],
   "skills_gained": [
-    "area_methods"
+    "spatial_3d",
+    "case_analysis"
   ],
   "prerequisites": [
-    "2016_etap1_6"
+    "2022_etap1_6",
+    "2021_etap1_9"
   ]
 }

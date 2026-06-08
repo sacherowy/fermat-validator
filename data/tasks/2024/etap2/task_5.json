@@ -1,33 +1,31 @@
 {
   "number": 5,
-  "title": "Liczby olimpijskie",
-  "content": "Liczbę całkowitą nazwiemy *olimpijską*, jeśli można ją uzyskać z liczby $1$ w wyniku wykonania pewnej liczby operacji polegających na zwiększeniu liczby o jej cyfrę jedności. Początkowymi liczbami olimpijskimi są więc $1, 2, 4, 8, 16, 22, 24, 28, 36, \\ldots$\nWykaż, że kwadrat liczby olimpijskiej jest liczbą olimpijską.",
+  "title": "Spotkania mrówek na patyku",
+  "content": "Po patyku chodzą mrówki, każda z taką samą prędkością. Cztery mrówki, ustawione w szeregu w równych odległościach między sobą, startują z lewego końca patyka i idą w prawą stronę. Pięć mrówek, ustawionych również w szeregu w równych odległościach między sobą, startuje z prawego końca i idzie w lewą stronę, jak na poniższym rysunku. Gdy dwie mrówki się spotkają, to obie zawracają. Jeśli mrówka dochodzi do końca patyka, to z niego schodzi. Po pewnym czasie wszystkie mrówki zeszły z patyka. Ile nastąpiło spotkań?",
   "pdf": {
-    "tasks": "tasks/2024/etap2/20omj-2etap.pdf",
-    "solutions": "tasks/2024/etap2/20omj-2r.pdf",
-    "statistics": "tasks/2024/etap2/20omj-2etap-st.pdf"
+    "tasks": "tasks/2024/etap2/tasks.pdf"
   },
   "difficulty": 4,
   "categories": [
-    "teoria_liczb",
-    "algebra"
+    "kombinatoryka",
+    "logika"
   ],
   "hints": [
-    "Dowód najłatwiej przeprowadzić indukcyjnie. Załóż, że $n$ jest liczbą olimpijską i $n^2$ też. Jeśli $c$ jest cyfrą jedności $n$, musisz pokazać, że z $n^2$ da się dojść do $(n+c)^2$.",
-    "Zbadaj, jakie mogą być cyfry jedności liczb olimpijskich. Wypisz kilkanaście pierwszych takich liczb i zobacz, czy jest jakaś reguła. To bardzo uprości dalsze rozumowanie.",
-    "Startując od $n^2$, tworzymy kolejne liczby, dodając do nich ich cyfry jedności. Zbadaj ciąg samych cyfr jedności tych liczb. Jaka jest zależność między kolejnymi wyrazami tego ciągu? Czy staje się on okresowy?",
-    "Suma, którą trzeba dodać do $n^2$, to $2nc+c^2$. Wiesz już, że dodawane cyfry tworzą okresowy ciąg o sumie 20 w jednym cyklu. Pokaż, że $2nc+c^2$ można uzyskać, sumując wielokrotność 20 i sumę kilku początkowych wyrazów tego ciągu."
-  ],
-  "prerequisites": [
-    "2022_etap2_2"
+    "Co tak naprawdę dzieje się przy spotkaniu? Dwie mrówki zderzają się i obie zawracają. Spróbuj prześledzić ruch na małym przykładzie - np. jedna mrówka z lewej i jedna z prawej.",
+    "Zastanów się, czy musisz śledzić każdą mrówkę z osobna. Czasem łatwiej spojrzeć na cały układ z góry i poszukać czegoś, co się nie zmienia mimo zderzeń.",
+    "Wyobraź sobie, że mrówki nie zawracają, tylko przechodzą jedna przez drugą. Czy z punktu widzenia liczby spotkań ta sytuacja czymś się różni od zawracania?",
+    "Skoro spotkanie można potraktować jak 'przejście na wylot', policz po prostu, ile par mrówek idących w przeciwnych kierunkach kiedykolwiek się minie - każda taka para daje jedno spotkanie."
   ],
   "skills_required": [
-    "induction",
-    "digit_manipulation",
-    "invariants"
+    "invariants",
+    "counting_techniques"
   ],
   "skills_gained": [
-    "induction",
-    "sequences"
+    "invariants",
+    "counting_techniques"
+  ],
+  "prerequisites": [
+    "2025_etap2_1",
+    "2025_etap1_2"
   ]
 }

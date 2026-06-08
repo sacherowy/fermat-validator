@@ -1,32 +1,29 @@
 {
   "number": 5,
-  "title": "Turniej 8 zawodników z remisami",
-  "content": "W turnieju wzięło udział 8 zawodników. Każda para zawodników rozegrała dokładnie jeden mecz, który zakończył się zwycięstwem jednego z nich lub remisem. Zwycięzca meczu otrzymywał 2 punkty, jego przeciwnik 0 punktów, a w przypadku remisu obaj zawodnicy uzyskiwali po 1 punkcie. Po rozegraniu wszystkich meczów okazało się, że każdy zawodnik miał tę samą liczbę punktów. Jaka jest najmniejsza możliwa liczba meczów, które zakończyły się remisem? Odpowiedź uzasadnij.",
+  "title": "Kulki w szufladzie",
+  "content": "Marta w szufladzie ma $5$ kulek czerwonych, $7$ zielonych i $12$ niebieskich. Ile co najmniej kulek powinna wyjąć Marta, aby mieć pewność, że wśród wyjętych kulek\n\na) będą $3$ w tym samym kolorze,\n\nb) będzie przynajmniej jedna kulka w każdym z trzech kolorów?",
   "pdf": {
-    "tasks": "tasks/2019/etap1/1etap19.pdf",
-    "solutions": "tasks/2019/etap1/1etap19r.pdf",
-    "statistics": null
+    "tasks": "tasks/2019/etap1/tasks.pdf"
   },
-  "difficulty": 3,
+  "difficulty": 2,
   "categories": [
     "kombinatoryka",
     "logika"
   ],
   "hints": [
-    "Oblicz, ile jest wszystkich meczów w turnieju i jaka jest całkowita pula punktów do zdobycia. Ile punktów musi mieć każdy zawodnik?",
-    "Każdy zawodnik musi zdobyć nieparzystą liczbę punktów. Zastanów się, jakie kombinacje zwycięstw (2 pkt) i remisów (1 pkt) dają taki wynik.",
-    "Zwróć uwagę, że każdy zawodnik musi mieć nieparzystą liczbę remisów. Policz, ile łącznie \"końców remisowych\" muszą mieć wszyscy zawodnicy razem.",
-    "Każdy remis angażuje dwóch zawodników (daje dwa \"końce remisowe\"). Użyj tego, aby znaleźć dolne ograniczenie na liczbę remisów, a następnie skonstruuj przykładowy turniej."
+    "Co jest dane, a czego szukamy? Marta wyjmuje kulki nie patrząc na kolory. Słowo \"pewność\" oznacza, że musimy poradzić sobie nawet z najgorszym możliwym układem wyjętych kulek.",
+    "W obu podpunktach zastanów się nad najgorszym (najbardziej pechowym) przypadkiem: jak długo los może \"przeszkadzać\" w osiągnięciu celu? Dopiero kulka wyjęta po tym pechowym ciągu daje pewność.",
+    "W podpunkcie a) wyobraź sobie najgorszy scenariusz: ile najwięcej kulek można wyjąć tak, aby NADAL nie mieć trzech w jednym kolorze? W podpunkcie b) ile najwięcej można wyjąć, wciąż NIE mając kompletu trzech kolorów?",
+    "Dla a): pomyśl, ile kulek z każdego koloru można mieć bez uzyskania trójki, dodaj te liczby i dorzuć jeszcze jedną kulkę. Dla b): najgorszy przypadek to wyjęcie wszystkich kulek z dwóch najliczniejszych kolorów; policz tę sumę i dodaj jedną kulkę."
   ],
-  "prerequisites": [],
   "skills_required": [
-    "graph_theory",
-    "parity_arguments",
-    "counting_techniques"
+    "pigeonhole",
+    "extremal_principle",
+    "case_analysis"
   ],
   "skills_gained": [
-    "graph_theory",
-    "extremal_principle",
-    "constructive_proof"
-  ]
+    "pigeonhole",
+    "extremal_principle"
+  ],
+  "prerequisites": []
 }

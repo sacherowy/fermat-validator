@@ -1,31 +1,28 @@
 {
   "number": 1,
-  "title": "Dopisanie cyfry - liczba 13 razy większa",
-  "content": "Do pewnej dodatniej liczby całkowitej $n$ dopisano na końcu pewną cyfrę, uzyskując w ten sposób liczbę 13 razy większą od liczby $n$. Wyznacz wszystkie liczby $n$ o tej własności.",
+  "title": "Kąt w kwadracie z przekątną",
+  "content": "Rysunek obok przedstawia kwadrat $ABCD$. Na bokach $AD$ i $BC$ zaznaczono odpowiednio punkty $K$ i $L$ tak, że kąt $\\angle LKD$ ma miarę $60^\\circ$. Punkt przecięcia przekątnej $AC$ oraz odcinka $KL$ oznaczono literą $S$. Jaka jest miara kąta $\\angle LSC$?",
   "pdf": {
-    "tasks": "tasks/2019/etap1/1etap19.pdf",
-    "solutions": "tasks/2019/etap1/1etap19r.pdf",
-    "statistics": null
+    "tasks": "tasks/2019/etap1/tasks.pdf"
   },
   "difficulty": 2,
   "categories": [
-    "algebra",
-    "teoria_liczb"
+    "geometria"
   ],
   "hints": [
-    "Zastanów się, jak zapisać algebraicznie liczbę powstałą przez dopisanie cyfry $c$ na końcu liczby całkowitej $n$.",
-    "Ułóż równanie wynikające z treści zadania: liczba z dopisaną cyfrą ma być 13 razy większa od liczby $n$.",
-    "Przekształć otrzymane równanie tak, aby wyznaczyć dopisaną cyfrę $c$ za pomocą liczby $n$.",
-    "Skoro $c$ jest cyfrą (czyli $c < 10$), to jakie wartości może przyjmować $n$ w wyznaczonej zależności? Pamiętaj, że $n$ jest dodatnie."
+    "Narysuj dokładnie kwadrat $ABCD$, zaznacz przekątną $AC$, odcinek $KL$ oraz punkt przecięcia $S$. Co już wiesz o kątach? Dany jest $\\angle LKD = 60^\\circ$, a przekątna kwadratu dzieli kąt prosty przy wierzchołku na dwie równe części.",
+    "Spróbuj wyznaczać kolejne kąty krok po kroku (tzw. „polowanie na kąty\"). Pomocna będzie własność, że suma kątów w każdym trójkącie jest taka sama.",
+    "Zauważ, jaki kąt tworzy przekątna $AC$ z bokiem kwadratu. Zwróć też uwagę, że szukany $\\angle LSC$ oraz kąt po przeciwnej stronie punktu $S$ (czyli $\\angle ASK$) to kąty wierzchołkowe, więc są równe.",
+    "Przyjrzyj się trójkątowi $AKS$: jeden jego kąt (przy $A$) wynika z własności przekątnej kwadratu, drugi (przy $K$) możesz wyznaczyć korzystając z danego $\\angle LKD = 60^\\circ$ i tego, że punkty $A$, $K$, $D$ leżą na jednej prostej. Trzeci kąt obliczysz z sumy kątów trójkąta."
   ],
-  "prerequisites": [],
   "skills_required": [
-    "digit_manipulation",
-    "diophantine_equations"
+    "angle_chasing"
   ],
   "skills_gained": [
-    "digit_manipulation",
-    "case_analysis",
-    "algebraic_identities"
+    "angle_chasing"
+  ],
+  "prerequisites": [
+    "2018_etap1_1",
+    "2017_etap1_1"
   ]
 }

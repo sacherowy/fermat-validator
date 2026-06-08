@@ -1,30 +1,31 @@
 {
   "number": 5,
-  "title": "Kolorowanie liczb całkowitych na trzy kolory",
-  "content": "Każdą liczbę całkowitą należy pokolorować na jeden z trzech kolorów, w tym czerwony. Należy to uczynić w taki sposób, by każda liczba, którą można przedstawić w postaci sumy dwóch liczb o różnych kolorach miała kolor czerwony. Czy da się zrealizować takie kolorowanie, używając wszystkich trzech kolorów? Odpowiedź uzasadnij.",
+  "title": "Liczby stucyfrowe o iloczynie cyfr $2$",
+  "content": "Ile jest takich stucyfrowych liczb, których iloczyn cyfr jest równy $2$?",
   "pdf": {
-    "tasks": "tasks/2017/etap1/1etap17.pdf",
-    "solutions": "tasks/2017/etap1/1etap17r.pdf",
-    "statistics": null
+    "tasks": "tasks/2017/etap1/tasks.pdf"
   },
-  "difficulty": 3,
+  "difficulty": 2,
   "categories": [
     "kombinatoryka",
-    "logika"
+    "teoria_liczb"
   ],
   "hints": [
-    "Nazwijmy kolory: czerwony (C), niebieski (N) i zielony (Z). Zgodnie z treścią, muszą istnieć liczby w każdym z tych kolorów. Jaki kolor musi mieć suma dwóch liczb o różnych kolorach, np. niebieskiej i zielonej?",
-    "Załóż, że takie kolorowanie istnieje, aby znaleźć sprzeczność. Jest jedna szczególna liczba całkowita, która ma unikalną własność w dodawaniu. Zastanów się, jaki może mieć kolor.",
-    "Jaki kolor może mieć liczba 0? Rozważmy przypadek, gdy 0 jest czerwone. Weź dowolną liczbę $k$, która nie jest czerwona. Jaki kolor, zgodnie z warunkami zadania, musi mieć suma $k+0$?",
-    "Pozostał do zbadania przypadek, gdy 0 nie jest czerwone (np. jest niebieskie). Skoro muszą istnieć liczby we wszystkich trzech kolorach, to weź liczbę w trzecim kolorze (zielonym) i zbadaj jej sumę z zerem."
+    "Zastanów się, co oznacza, że iloczyn cyfr równa się $2$. Czy któraś cyfra może być zerem? Jakie cyfry w ogóle mogą wystąpić, skoro po pomnożeniu mają dać tak małą liczbę?",
+    "Liczba $2$ jest dość szczególna - spróbuj wypisać wszystkie sposoby, na jakie można otrzymać iloczyn $2$, mnożąc cyfry. Zauważ, że $2$ to liczba pierwsza.",
+    "Skoro iloczyn cyfr to $2$, a żadna cyfra nie może być $0$, to prawie wszystkie cyfry muszą być takie same. Zastanów się, ile cyfr różni się od pozostałych i jaka to cyfra.",
+    "Okazuje się, że taka liczba składa się z samych jedynek i tylko jednej dwójki. Pozostaje policzyć, na ilu różnych pozycjach w liczbie stucyfrowej może stać ta dwójka."
   ],
   "skills_required": [
-    "case_analysis",
-    "constructive_proof"
+    "digit_manipulation",
+    "counting_techniques"
   ],
   "skills_gained": [
-    "contradiction",
-    "pigeonhole"
+    "counting_techniques",
+    "case_analysis"
   ],
-  "prerequisites": []
+  "prerequisites": [
+    "2018_etap1_4",
+    "2020_etap1_4"
+  ]
 }

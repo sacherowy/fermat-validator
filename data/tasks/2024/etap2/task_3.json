@@ -1,30 +1,31 @@
 {
   "number": 3,
-  "title": "Trójkąt $ABC$ z $AC = BC$ i $\\angle ACB = 150°$",
-  "content": "Dany jest trójkąt $ABC$, w którym $AC = BC$ i $\\angle ACB = 150°$. Punkt $A'$ jest symetryczny do punktu $A$ względem prostej $BC$, punkt $B'$ jest symetryczny do punktu $B$ względem prostej $AC$, a punkt $C'$ jest symetryczny do punktu $C$ względem prostej $AB$. Udowodnij, że trójkąt $A'B'C'$ jest równoboczny.",
+  "title": "Dodawanie liczb czterocyfrowych z cyframi-literami",
+  "content": "Dwie liczby dwucyfrowe $\\overline{AB}$ oraz $\\overline{CD}$ dają sumę $119$. Oblicz wynik dodawania dwóch liczb czterocyfrowych $\\overline{ADCB}$ oraz $\\overline{CBAD}$.\n\nUwaga. Jednakowym literom odpowiadają jednakowe cyfry, różnym literom — różne cyfry.",
   "pdf": {
-    "tasks": "tasks/2024/etap2/20omj-2etap.pdf",
-    "solutions": "tasks/2024/etap2/20omj-2r.pdf",
-    "statistics": "tasks/2024/etap2/20omj-2etap-st.pdf"
+    "tasks": "tasks/2024/etap2/tasks.pdf"
   },
-  "difficulty": 4,
+  "difficulty": 3,
   "categories": [
-    "geometria"
+    "teoria_liczb",
+    "arytmetyka"
   ],
   "hints": [
-    "Narysuj dokładny rysunek. Zauważ, że symetria osiowa zachowuje odległości. Wypisz wszystkie odcinki, o których możesz od razu powiedzieć, że mają długość równą $AC$.",
-    "Kluczowe jest zrozumienie, co symetrie robią z kątami. Zastanów się, jaka jest miara kąta $\\angle ACA'$ oraz, analogicznie, kąta $\\angle BCB'$. Co to mówi o trójkątach $\\triangle ACA'$ i $\\triangle BCB'$?",
-    "Wykorzystaj własności $\\triangle ACA'$ i $\\triangle BCB'$, aby znaleźć długości $AA'$ i $BB'$. Teraz możesz obliczyć boki $\\triangle A'B'C'$, badając kąty w trójkątach pomocniczych: $\\triangle A'AC'$, $\\triangle B'BC'$ i $\\triangle A'CB'$.",
-    "Aby obliczyć długość boku $A'C'$, znajdź miarę kąta $\\angle A'AC'$. Wyraź go jako sumę kątów $\\angle A'AC$ i $\\angle CAC'$. Drugi z tych kątów jest związany z kątem $\\angle CAB$ poprzez symetrię."
-  ],
-  "prerequisites": [
-    "2021_etap1_5"
+    "Zapisz każdą liczbę przez jej cyfry: $\\overline{AB} = 10\\cdot A + B$. Czy potrafisz tak samo rozpisać liczby czterocyfrowe $\\overline{ADCB}$ oraz $\\overline{CBAD}$ według pozycji cyfr (tysiące, setki, dziesiątki, jedności)?",
+    "Nie próbuj zgadywać konkretnych cyfr — spróbuj wyrazić sumę obu liczb czterocyfrowych za pomocą sum $A+C$ oraz $B+D$, a nie pojedynczych liter.",
+    "Zauważ, że z warunku wynika $10\\cdot(A+C) + (B+D) = 119$. Pogrupuj wyrazy w szukanej sumie tak, aby pojawiły się w niej dokładnie $(A+C)$ oraz $(B+D)$.",
+    "Po pogrupowaniu sprawdź, czy całe wyrażenie da się zapisać jako pewna stała liczba pomnożona przez $\\big(10\\cdot(A+C)+(B+D)\\big)$. Jeśli tak, wystarczy w to miejsce wstawić $119$ i wykonać mnożenie."
   ],
   "skills_required": [
-    "isosceles_triangle",
-    "transformations"
+    "digit_manipulation",
+    "algebraic_identities",
+    "basic_operations"
   ],
   "skills_gained": [
-    "transformations"
+    "digit_manipulation",
+    "algebraic_identities"
+  ],
+  "prerequisites": [
+    "2024_etap2_1"
   ]
 }

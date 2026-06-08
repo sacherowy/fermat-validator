@@ -1,31 +1,31 @@
 {
   "number": 3,
-  "title": "Różnice $|b-c|$, $|c-a|$, $|a-b|$ między 1 i 2",
-  "content": "Czy istnieją takie liczby rzeczywiste $a$, $b$, $c$, że każda z liczb $|b-c|$, $|c-a|$, $|a-b|$ jest większa od 1, ale mniejsza od 2?",
+  "title": "Zadanie 3 — rozcinanie rombu",
+  "content": "Romb, którego kąt ostry ma $60^\\circ$, można rozciąć na\n\n(a) $2$ trójkąty równoboczne;\n\n(b) $4$ trójkąty prostokątne;\n\n(c) $4$ trójkąty i kwadrat.",
   "pdf": {
-    "tasks": "tasks/2024/etap1/20omj-1etap.pdf",
-    "solutions": "tasks/2024/etap1/20omj-1etap-r.pdf",
-    "statistics": null
+    "tasks": "tasks/2024/etap1/tasks.pdf"
   },
-  "difficulty": 2,
+  "difficulty": 3,
   "categories": [
-    "algebra",
-    "logika"
+    "geometria"
   ],
   "hints": [
-    "Wyobraź sobie liczby $a, b, c$ jako punkty na osi liczbowej. Wartości $|b-c|$, $|c-a|$ i $|a-b|$ to odległości między tymi punktami.",
-    "Jeden z trzech punktów na osi liczbowej musi leżeć pomiędzy dwoma pozostałymi. Jaki ma to wpływ na związek między trzema odległościami?",
-    "Aby to zbadać, załóżmy bez straty ogólności, że $a < b < c$. Wyraź trzy odległości za pomocą $a, b, c$ (już bez wartości bezwzględnej) i znajdź równość, która je łączy.",
-    "Jedna z odległości jest sumą dwóch pozostałych. Sprawdź, czy jest możliwe, aby wszystkie trzy odległości jednocześnie spełniały warunki podane w zadaniu."
-  ],
-  "prerequisites": [
-    "2020_etap1_3"
+    "Narysuj romb i zaznacz jego kąty — pamiętaj, że wszystkie boki rombu mają tę samą długość, a kąty ostre mają $60^\\circ$, więc kąty rozwarte mają $120^\\circ$. Czego szukamy w każdym z trzech podpunktów?",
+    "Spróbuj dorysowywać pomocnicze odcinki: przekątne rombu albo odcinki prostopadłe do boków. Eksperymentuj na rysunku — każde cięcie tworzy nowe figury, których kąty możesz policzyć.",
+    "Zwróć uwagę na krótszą przekątną rombu: jakie kąty powstają po jej narysowaniu i czy wszystkie boki powstałych trójkątów są równe? To podpowiedź do podpunktu (a).",
+    "W podpunkcie (b) pomyśl o dłuższej przekątnej lub o odcinkach prostopadłych do boków (wysokościach), które dają kąty proste. W podpunkcie (c) poszukaj cięcia tak, by w środku powstała figura o czterech równych bokach i czterech kątach prostych — zacznij od dorysowania prostopadłych do boków rombu."
   ],
   "skills_required": [
-    "absolute_value",
-    "inequality_manipulation"
+    "angle_chasing",
+    "constructive_proof"
   ],
   "skills_gained": [
-    "absolute_value"
+    "constructive_proof",
+    "area_methods"
+  ],
+  "prerequisites": [
+    "2025_etap1_4",
+    "2024_etap1_5",
+    "2025_etap1_3"
   ]
 }

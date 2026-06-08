@@ -1,0 +1,31 @@
+{
+  "number": 8,
+  "title": "Siatka ostrosłupa bez osi symetrii",
+  "content": "Narysowana obok siatka ostrosłupa pięciokątnego prawidłowego ma jedną oś symetrii. Naszkicuj taką siatkę tego ostrosłupa, która nie ma osi symetrii.",
+  "pdf": {
+    "tasks": "tasks/2017/etap1/tasks.pdf"
+  },
+  "difficulty": 3,
+  "categories": [
+    "geometria"
+  ],
+  "hints": [
+    "Co to jest siatka ostrosłupa? To rozłożona na płasko powierzchnia bryły. Tu mamy podstawę - pięciokąt foremny i 5 jednakowych trójkątów. Zastanów się, na ile różnych sposobów można doczepić te trójkąty.",
+    "Pamiętaj, że ten sam ostrosłup może mieć wiele różnych siatek. Figura ma oś symetrii, gdy istnieje prosta, względem której obie połowy rysunku są lustrzanym odbiciem. Twoim celem jest uniknąć takiej prostej.",
+    "Zwróć uwagę, że trójkąty boczne nie muszą wszystkie wystawać z boków pięciokąta. Dwa sąsiednie trójkąty można skleić ze sobą. Spróbuj poprzestawiać trójkąty tak, by ich układ był 'nieregularny'.",
+    "Narysuj pięciokąt i celowo zaburz układ: cztery trójkąty przy bokach, a piąty doczep do boku innego trójkąta. Potem sprawdź, czy istnieje jakakolwiek prosta dająca lustrzane odbicie - jeśli żadnej nie ma, gotowe."
+  ],
+  "skills_required": [
+    "spatial_3d",
+    "transformations"
+  ],
+  "skills_gained": [
+    "spatial_3d",
+    "constructive_proof"
+  ],
+  "prerequisites": [
+    "2022_etap1_9",
+    "2020_etap1_9",
+    "2018_etap1_9"
+  ]
+}

@@ -1,31 +1,31 @@
 {
   "number": 5,
-  "title": "Trójkąt równoboczny $ABC$ z punktami $K$, $L$, $M$",
-  "content": "Punkty $K$, $L$, $M$ leżą odpowiednio na bokach $BC$, $CA$, $AB$ trójkąta równobocznego $ABC$ i spełniają warunki\n$$KM = LM, \\quad \\angle KML = 90^\\circ \\quad \\text{oraz} \\quad AM = BK.$$\nUdowodnij, że $\\angle CKL = 90^\\circ$.",
+  "title": "Oblicz $2021 \\cdot 202220222022 - 2022 \\cdot 202120212021$",
+  "content": "Oblicz\n$$2021 \\cdot 202220222022 - 2022 \\cdot 202120212021.$$",
   "pdf": {
-    "tasks": "tasks/2021/etap1/1etap21.pdf",
-    "solutions": "tasks/2021/etap1/1etap21rr.pdf",
-    "statistics": null
+    "tasks": "tasks/2021/etap1/tasks.pdf"
   },
-  "difficulty": 4,
+  "difficulty": 3,
   "categories": [
-    "geometria"
+    "arytmetyka",
+    "algebra"
   ],
   "hints": [
-    "Narysuj starannie figurę. Warunek $AM=BK$ w trójkącie równobocznym silnie sugeruje użycie symetrii lub obrotów. Czy potrafisz znaleźć obrót, który przekształca punkt $M$ na $K$?",
-    "Rozważ obrót o $120^\\circ$ wokół środka $\\triangle ABC$. Pokaż, że obrazem $M$ jest $K$. Niech $L_1$ będzie obrazem $K$ w tym obrocie. Jaki jest kształt $\\triangle MKL_1$? Jaka jest zależność między długościami odcinków $AL_1$ i $CK$?",
-    "Na boku $AC$ leżą teraz dwa punkty: $L$ z zadania i skonstruowany $L_1$. Wykorzystaj warunek $KM=LM$ oraz własności $\\triangle MKL_1$, aby pokazać, że $ML=ML_1$. Co to geometrycznie oznacza dla trójkąta $\\triangle MLL_1$?",
-    "Skoro $L, L_1$ leżą na prostej $AC$ i $ML=ML_1$, to rzut prostopadły $M$ na prostą $AC$ jest środkiem odcinka $LL_1$. Wyznacz położenie tego rzutu, a następnie użyj tego faktu, by znaleźć związek między $AL+AL_1$ a $AM$. To pozwoli Ci udowodnić, że $CL=2CK$."
-  ],
-  "prerequisites": [
-    "2021_etap1_2"
+    "Przyjrzyj się dokładnie liczbom $202220222022$ i $202120212021$. Czy zauważasz, że powstały przez powtórzenie krótszej liczby ($2022$ oraz $2021$)? Co to może oznaczać?",
+    "Bezpośrednie mnożenie tak dużych liczb jest żmudne i łatwo o błąd. Spróbuj raczej zapisać każdą z dużych liczb jako iloczyn mniejszej liczby przez pewien wspólny mnożnik i poszukać uproszczeń.",
+    "Zastanów się, przez jaką liczbę trzeba pomnożyć $2022$, aby otrzymać $202220222022$. Czy ten sam mnożnik zadziała, gdy weźmiesz $2021$ i chcesz dostać $202120212021$?",
+    "Zapisz $202220222022 = 2022 \\cdot k$ oraz $202120212021 = 2021 \\cdot k$ z tym samym $k$. Podstaw to do wyrażenia i zobacz, co się dzieje ze wspólnymi czynnikami w obu składnikach."
   ],
   "skills_required": [
-    "isosceles_triangle",
-    "angle_chasing",
-    "transformations"
+    "digit_manipulation",
+    "algebraic_identities",
+    "basic_operations"
   ],
   "skills_gained": [
-    "transformations"
+    "algebraic_identities",
+    "digit_manipulation"
+  ],
+  "prerequisites": [
+    "2024_etap2_3"
   ]
 }

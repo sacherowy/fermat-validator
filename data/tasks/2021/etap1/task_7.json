@@ -1,30 +1,30 @@
 {
   "number": 7,
-  "title": "Cyfry i podzielność przez 7",
-  "content": "Wybrano $n$ (niekoniecznie różnych) cyfr, z których żadna nie jest równa 0 ani 7. Okazało się, że każda liczba $n$-cyfrowa zapisana wszystkimi wybranymi cyframi jest podzielna przez 7. Udowodnij, że liczba $n$ jest podzielna przez 6.",
+  "title": "Sześcian zanurzany w farbie",
+  "content": "Biały sześcian o krawędzi $3\\,\\text{cm}$ postawiono na ścianie $A$ w naczyniu z czerwoną farbą. Sześcian ten zanurzył się w farbie do $\\frac{1}{3}$ swojej wysokości. Następnie sześcian wyjęto. Po osuszeniu wstawiono go ponownie do tego samego pojemnika z farbą, stawiając tym razem na jednej ze ścian sąsiadujących ze ścianą $A$. Jakie jest pole powierzchni, która pozostała biała?",
   "pdf": {
-    "tasks": "tasks/2021/etap1/1etap21.pdf",
-    "solutions": "tasks/2021/etap1/1etap21rr.pdf",
-    "statistics": null
+    "tasks": "tasks/2021/etap1/tasks.pdf"
   },
   "difficulty": 4,
   "categories": [
-    "teoria_liczb",
-    "kombinatoryka"
+    "geometria"
   ],
   "hints": [
-    "Warunek w zadaniu dotyczy *każdej* liczby, którą można ułożyć z wybranych cyfr. Rozważ dwie takie liczby, różniące się tylko zamianą miejscami dwóch sąsiednich cyfr. Co wiesz o ich różnicy?",
-    "Zapisz algebraicznie różnicę tych liczb. Jest ona postaci $k \\cdot (c_i - c_j)$ dla pewnych cyfr $c_i, c_j$ i liczby $k$ niepodzielnej przez 7. Jaki wniosek płynie stąd dla cyfr $c_i$ i $c_j$?",
-    "Wszystkie wybrane cyfry muszą dawać tę samą resztę z dzielenia przez 7. Zatem każda liczba utworzona z tych cyfr jest (modulo 7) krotnością liczby złożonej z $n$ jedynek. Co z tego wynika?",
-    "Zbadaj, dla jakich $n$ liczba $11\\dots1$ ($n$ jedynek) jest podzielna przez 7. W tym celu znajdź najmniejszą dodatnią potęgę $k$, dla której $10^k \\equiv 1 \\pmod{7}$."
+    "Sześcian ma 6 ścian, każda o polu $3 \\times 3 = 9\\,\\text{cm}^2$. Zastanów się najpierw, co dokładnie zostaje czerwone po każdym zanurzeniu. Bardzo pomoże Ci rysunek sześcianu lub zbudowanie modelu z kostki.",
+    "Spróbuj rozpatrzyć każdą z 6 ścian osobno i dla każdej ustal, jaka jej część została pomalowana w pierwszym, a jaka w drugim zanurzeniu. Na końcu zsumuj pola, które pozostały białe.",
+    "Zwróć uwagę, że zanurzenie do $\\frac{1}{3}$ wysokości oznacza pasek o szerokości $1\\,\\text{cm}$ na ściankach bocznych oraz całą ścianę spodnią. Po przewróceniu na ścianę sąsiednią dolna i kierunek zanurzania się zmieniają — które ściany teraz dotkną farby?",
+    "Uważnie przeanalizuj ściany, które dostają pasek farby w obu zanurzeniach — paski mogą się nakładać w narożniku (kwadracik $1 \\times 1$). Żeby nie policzyć tego fragmentu dwa razy, odejmij część wspólną. Porównaj też, która ściana w ogóle nie zetknęła się z farbą."
   ],
-  "prerequisites": [],
   "skills_required": [
-    "modular_arithmetic",
-    "divisibility_arguments"
+    "spatial_3d",
+    "area_methods"
   ],
   "skills_gained": [
-    "modular_arithmetic",
-    "counting_techniques"
+    "spatial_3d",
+    "area_methods"
+  ],
+  "prerequisites": [
+    "2017_etap1_7",
+    "2020_etap1_5"
   ]
 }

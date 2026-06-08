@@ -1,29 +1,30 @@
 {
   "number": 2,
-  "title": "Zaginanie rombu $ABCD$",
-  "content": "Arek ma kartkę w kształcie rombu $ABCD$, w którym $\\angle BCD \\leqslant 90^\\circ$. Najpierw zagina ją w taki sposób, aby odcinki $CB$ oraz $CD$ pokryły się na prostej $CA$, a następnie w taki sposób, aby otrzymać trójkąt, jak pokazano na rysunku. Udowodnij, że odległości punktu $A$ od wszystkich trzech wierzchołków otrzymanego trójkąta są równe.",
+  "title": "Zadanie 2 — podzielność liczb",
+  "content": "Liczby naturalne $a$ i $b$ są dodatnie. Liczba $a$ dzieli się przez $2$, a liczba $b$ dzieli się przez $3$. Zatem\n\n(a) liczba $a + b$ dzieli się przez $5$;\n\n(b) liczba $a + b$ dzieli się przez $6$;\n\n(c) liczba $a \\cdot b$ dzieli się przez $6$.",
   "pdf": {
-    "tasks": "tasks/2024/etap1/20omj-1etap.pdf",
-    "solutions": "tasks/2024/etap1/20omj-1etap-r.pdf",
-    "statistics": null
+    "tasks": "tasks/2024/etap1/tasks.pdf"
   },
-  "difficulty": 3,
+  "difficulty": 2,
   "categories": [
-    "geometria"
+    "teoria_liczb"
   ],
   "hints": [
-    "Narysuj dokładnie kolejne etapy składania kartki. Zauważ, że pierwsze zagięcie tworzy dwie linie załamania. Niech przetną one boki $AB$ i $AD$ odpowiednio w punktach $K$ i $L$. Otrzymany trójkąt to $\triangle KLR$.",
-    "Twoim celem jest dowód, że $AK=AL=AR$. Wykorzystaj symetrię rombu względem przekątnej $AC$, aby uzasadnić pierwszą równość, $AK=AL$.",
-    "Aby udowodnić, że $AK=AR$, zbadaj położenie punktu $R$. Zauważ, że prosta $AC$ jest prostopadła do linii drugiego zagięcia $KL$. Co to oznacza dla punktów $A, C$ i $R$?",
-    "Punkty $A, C, R$ leżą na jednej prostej. Wyraź długość odcinka $AR$ za pomocą długości odcinków leżących na przekątnej $AC$. Zadanie sprowadza się teraz do wykazania równości długości odcinków $AK$ i $AR$."
-  ],
-  "prerequisites": [
-    "2020_etap1_7"
+    "Zapisz, co wiesz: $a$ jest podzielne przez $2$ (czyli $a$ jest parzyste), a $b$ jest podzielne przez $3$. Dla każdego z trzech zdań musisz rozstrzygnąć, czy jest ono ZAWSZE prawdziwe, czy tylko CZASEM.",
+    "Aby pokazać, że jakieś zdanie NIE jest zawsze prawdziwe, wystarczy znaleźć jeden przykład liczb $a$ i $b$, dla którego ono zawodzi. Aby pokazać, że zdanie jest zawsze prawdziwe, trzeba to uzasadnić ogólnie.",
+    "Spróbuj najpierw podstawić kilka najmniejszych dozwolonych wartości, np. $a=2$, $b=3$, potem $a=4$, $b=3$ i sprawdź sumy oraz iloczyn. Zwróć uwagę, że $a+b$ łatwo zmienić, ale w iloczynie $a\\cdot b$ zawsze pojawia się czynnik z $a$ i czynnik z $b$.",
+    "Dla punktu (c) zastanów się: skoro $a$ ma w sobie czynnik $2$, a $b$ ma w sobie czynnik $3$, to jakie czynniki na pewno ma iloczyn $a\\cdot b$? Dla punktów (a) i (b) poszukaj kontrprzykładu, dobierając $a$ i $b$ tak, by suma nie dzieliła się przez podaną liczbę."
   ],
   "skills_required": [
-    "transformations"
+    "divisibility_arguments",
+    "prime_factorization"
   ],
   "skills_gained": [
-    "transformations"
+    "divisibility_arguments",
+    "constructive_proof"
+  ],
+  "prerequisites": [
+    "2025_etap1_6",
+    "2024_etap1_6"
   ]
 }

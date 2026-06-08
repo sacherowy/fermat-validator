@@ -1,30 +1,28 @@
 {
   "number": 1,
-  "title": "Liczba sześciocyfrowa z kwadratami",
-  "content": "Czy istnieje taka liczba sześciocyfrowa, której każde dwie kolejne cyfry tworzą pewną liczbę dwucyfrową będącą kwadratem liczby całkowitej? Odpowiedź uzasadnij.",
+  "title": "Wiek sześciu braci",
+  "content": "Sześciu braci ma w sumie $65$ lat. Dwa najmłodsi mają $3$ lata i $6$ lat. Ile lat w sumie mieli wszyscy bracia $5$ lat temu?",
   "pdf": {
-    "tasks": "tasks/2020/etap1/1etap20.pdf",
-    "solutions": "tasks/2020/etap1/1etap20r.pdf",
-    "statistics": null
+    "tasks": "tasks/2020/etap1/tasks.pdf"
   },
   "difficulty": 2,
   "categories": [
-    "teoria_liczb",
-    "kombinatoryka"
+    "arytmetyka"
   ],
   "hints": [
-    "Wypisz wszystkie dwucyfrowe liczby, które są kwadratami liczb całkowitych. Zastanów się, jak muszą na siebie 'zachodzić' kolejne pary cyfr w szukanej liczbie.",
-    "Potraktuj dwucyfrowe kwadraty jako punkty. Narysuj strzałkę od jednego kwadratu do drugiego, jeśli można je połączyć (ostatnia cyfra pierwszego jest pierwszą cyfrą drugiego).",
-    "Przyjrzyj się narysowanemu schematowi. Czy z każdego kwadratu da się przejść do jakiegoś następnego? Zwróć uwagę na te, które są 'ślepymi zaułkami'.",
-    "Szukana liczba sześciocyfrowa odpowiada ścieżce złożonej z 5 kwadratów. Jaka jest najdłuższa ścieżka, którą można znaleźć na Twoim schemacie?"
+    "Co wiemy? Suma wieku sześciu braci dziś to $65$ lat. Czego szukamy? Sumy ich wieku $5$ lat temu. Zastanów się, jak zmienia się wiek każdej osoby, gdy cofamy się o $5$ lat.",
+    "Pomyśl, ile lat trzeba odjąć każdemu bratu, by poznać jego wiek sprzed $5$ lat. Ale uwaga — sprawdź dokładnie wiek najmłodszych braci, bo tu kryje się pułapka.",
+    "Zwróć uwagę na najmłodszego brata, który ma dziś $3$ lata. Czy $5$ lat temu on w ogóle już żył? Jaki wiek powinniśmy mu przypisać w sumie sprzed $5$ lat?",
+    "Dla braci, którzy żyli $5$ lat temu, odejmij po $5$ lat. Najmłodszy ($3$ lata) jeszcze się nie urodził, więc do sumy wnosi $0$. Policz osobno, o ile maleje suma dla braci, którzy już żyli, i nie odejmuj lat za nieurodzonego brata."
   ],
   "skills_required": [
-    "digit_manipulation",
-    "case_analysis"
+    "word_problems",
+    "basic_operations"
   ],
   "skills_gained": [
-    "case_analysis",
-    "counting_techniques"
+    "word_problems"
   ],
-  "prerequisites": []
+  "prerequisites": [
+    "2018_etap1_6"
+  ]
 }

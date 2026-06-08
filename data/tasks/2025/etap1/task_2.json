@@ -1,31 +1,27 @@
 {
   "number": 2,
-  "title": "Liczba $n$ i suma jej cyfr",
-  "content": "Dodatnia liczba całkowita $n$ jest 21 razy większa od sumy swoich cyfr. Udowodnij, że liczba $n$ jest podzielna przez 9.",
+  "title": "Zestawy obiadowe",
+  "content": "W stołówce można zamówić zestaw obiadowy składający się z zupy, drugiego dania oraz surówki. Tomek zauważył, że można skomponować $12$ zestawów. Do wyboru mogły być:\n\n(a) $3$ rodzaje zupy, $2$ rodzaje drugiego dania oraz $3$ rodzaje surówek;\n\n(b) $2$ rodzaje zupy, $3$ rodzaje drugiego dania oraz $2$ rodzaje surówek;\n\n(c) $3$ rodzaje zupy, $4$ rodzaje drugiego dania oraz $1$ rodzaj surówki.",
   "pdf": {
-    "tasks": "tasks/2025/etap1/21omj-1etap-zad.pdf",
-    "solutions": "tasks/2025/etap1/21omj-1etap-r.pdf",
-    "statistics": null
+    "tasks": "tasks/2025/etap1/tasks.pdf"
   },
-  "difficulty": 2,
+  "difficulty": 1,
   "categories": [
-    "teoria_liczb",
-    "algebra"
+    "kombinatoryka",
+    "arytmetyka"
   ],
   "hints": [
-    "Zapisz równanie wynikające z treści zadania: $n = 21 \\cdot S(n)$. Przypomnij sobie cechy podzielności przez 3 i przez 9 – jaki jest związek między liczbą a sumą jej cyfr?",
-    "Przyjrzyj się czynnikowi 21. Przez jaką cyfrę na pewno dzieli się prawa strona równania? Co to oznacza dla liczby $n$, a w konsekwencji dla sumy jej cyfr $S(n)$?",
-    "Skoro ustaliłeś, że suma cyfr $S(n)$ musi być podzielna przez 3, zapisz ją w postaci $S(n) = 3k$ (gdzie $k$ jest liczbą całkowitą). Podstaw to wyrażenie do wyjściowego równania na $n$.",
-    "Po podstawieniu otrzymasz $n = 21 \\cdot 3k$. Wykonaj mnożenie i zastanów się, dlaczego otrzymany wynik gwarantuje podzielność liczby $n$ przez 9."
+    "Co jest dane, a czego szukamy? Zestaw składa się z trzech części: zupy, drugiego dania i surówki. Zastanów się, ile różnych zestawów można ułożyć w każdym z przypadków (a), (b), (c).",
+    "Pomyśl, jak liczyć liczbę możliwych kombinacji, gdy wybieramy po jednym elemencie z kilku grup. Czy te liczby trzeba dodać, czy może wykonać inne działanie?",
+    "Zwróć uwagę, że dla każdej zupy możesz dobrać dowolne drugie danie, a do każdej takiej pary dowolną surówkę. Spróbuj policzyć osobno dla jednej zupy, a potem dla wszystkich.",
+    "W każdym przypadku pomnóż przez siebie liczbę rodzajów zupy, drugiego dania i surówki. Następnie sprawdź, dla których przypadków wynik tego mnożenia jest taki, jaki zauważył Tomek."
   ],
   "skills_required": [
-    "digit_manipulation",
-    "modular_arithmetic"
+    "counting_techniques",
+    "basic_operations"
   ],
   "skills_gained": [
-    "digit_manipulation",
-    "modular_arithmetic",
-    "algebraic_identities"
+    "counting_techniques"
   ],
   "prerequisites": []
 }

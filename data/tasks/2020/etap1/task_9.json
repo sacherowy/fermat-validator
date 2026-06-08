@@ -1,0 +1,29 @@
+{
+  "number": 9,
+  "title": "Siatka sześcianu ze strzałkami i literą F",
+  "content": "Na trzech ścianach sześcianu zaznaczono dwie strzałki i literę F, jak pokazano na rysunku obok. Poniżej znajduje się siatka sześcianu z narysowaną jedną strzałką. Narysuj drugą strzałkę i literę F tak, by po sklejeniu siatki otrzymać sześcian przedstawiony obok, pamiętając, że litera i strzałki nie mogą być obrócone.",
+  "pdf": {
+    "tasks": "tasks/2020/etap1/tasks.pdf"
+  },
+  "difficulty": 3,
+  "categories": [
+    "geometria"
+  ],
+  "hints": [
+    "Co jest dane, a czego szukasz? Masz gotowy sześcian z dwiema strzałkami i literą F oraz siatkę z jedną strzałką. Spróbuj wyobrazić sobie, jak siatka się składa - która ściana siatki stanie się którą ścianą sześcianu.",
+    "Zamiast od razu rysować, pomyśl o sklejaniu siatki krok po kroku. Pomocne bywa fizyczne wycięcie takiej siatki z kartki i zgięcie jej w sześcian - wtedy łatwo sprawdzić, gdzie trafiają ściany i w którą stronę skierowane są rysunki.",
+    "Zwróć uwagę, które ściany sześcianu sąsiadują ze sobą, a które są naprzeciwko siebie. Ustal, na której ścianie siatki jest już strzałka, i sprawdź, jak ta ściana ułoży się względem ścian z drugą strzałką i literą F.",
+    "Pamiętaj, że przy składaniu niektóre ściany trzeba 'obrócić w wyobraźni', więc kierunek rysunku na płaskiej siatce może wyglądać inaczej niż na sześcianie. Sprawdzaj każdą ścianę osobno i upewnij się, że F oraz strzałki nie są lustrzanie odbite."
+  ],
+  "skills_required": [
+    "spatial_3d"
+  ],
+  "skills_gained": [
+    "spatial_3d",
+    "polyhedra"
+  ],
+  "prerequisites": [
+    "2018_etap1_9",
+    "2022_etap1_9"
+  ]
+}

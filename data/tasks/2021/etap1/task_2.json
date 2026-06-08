@@ -1,28 +1,31 @@
 {
   "number": 2,
-  "title": "Prostokąt $ABCD$ z $AB = BX = XD$",
-  "content": "W prostokącie $ABCD$ stosunek długości boków $BC : AB$ jest równy $\\sqrt{2}$. Wewnątrz tego prostokąta zaznaczono taki punkt $X$, że $AB = BX = XD$. Wyznacz miarę kąta $BXD$.",
+  "title": "Iloczyn dwa razy większy od sumy",
+  "content": "Podaj przykład dwóch liczb całkowitych dodatnich, których iloczyn jest dwa razy większy niż ich suma.",
   "pdf": {
-    "tasks": "tasks/2021/etap1/1etap21.pdf",
-    "solutions": "tasks/2021/etap1/1etap21rr.pdf",
-    "statistics": null
+    "tasks": "tasks/2021/etap1/tasks.pdf"
   },
-  "difficulty": 3,
+  "difficulty": 2,
   "categories": [
-    "geometria"
+    "teoria_liczb",
+    "algebra"
   ],
   "hints": [
-    "Narysuj figurę i zaznacz na niej wszystkie równe odcinki. Twoim celem jest wyznaczenie miary kąta w trójkącie $BXD$. Zauważ, że znasz już długości dwóch jego boków – są równe $AB$.",
-    "Aby w pełni poznać własności trójkąta $BXD$ i wyznaczyć jego kąty, potrzebujesz znać długości wszystkich trzech boków. Skup się na znalezieniu długości boku $BD$.",
-    "Długość przekątnej $BD$ zależy od wymiarów prostokąta. Wykorzystaj podany w zadaniu stosunek długości boków $BC : AB = \\sqrt{2}$ oraz twierdzenie Pitagorasa, aby obliczyć długość $BD$ w zależności od $AB$.",
-    "Skoro znasz już długości wszystkich trzech boków trójkąta $BXD$, możesz wyznaczyć jego kąty. Poprowadź wysokość z wierzchołka $X$ na podstawę $BD$. Oblicz długości boków w jednym z powstałych trójkątów prostokątnych i poszukaj jego szczególnych własności."
+    "Co jest dane, a czego szukasz? Oznacz szukane liczby literami, np. $a$ i $b$, i zapisz słowami: ich iloczyn $a\\cdot b$ ma być dwa razy większy od sumy $a+b$.",
+    "Zapisz warunek jako jedno równanie i spróbuj metody prób — podstawiaj kolejne małe liczby całkowite dodatnie za jedną z nich i sprawdzaj, kiedy druga wychodzi całkowita.",
+    "Ustal jedną z liczb na konkretną wartość i sprawdź, jakie wtedy musi być drugie. Zwróć uwagę, że dla niektórych wyborów druga liczba wcale nie wyjdzie całkowita.",
+    "Z równania $a\\cdot b = 2(a+b)$ wyznacz $b$ w zależności od $a$ i poszukaj takiego $a$, dla którego ułamek upraszcza się do liczby całkowitej. Wystarczy podać jeden działający przykład."
   ],
-  "prerequisites": [],
   "skills_required": [
-    "isosceles_triangle",
-    "pythagorean_theorem"
+    "diophantine_equations",
+    "basic_operations"
   ],
   "skills_gained": [
-    "angle_chasing"
+    "diophantine_equations",
+    "constructive_proof"
+  ],
+  "prerequisites": [
+    "2020_etap1_3",
+    "2019_etap1_2"
   ]
 }

@@ -1,28 +1,29 @@
 {
   "number": 6,
-  "title": "Liczba $n$ z $2n$ sześcianem i $3n$ kwadratem",
-  "content": "Dana jest liczba całkowita $n$ o tej własności, że liczba $2n$ jest sześcianem liczby całkowitej, a liczba $3n$ jest kwadratem liczby całkowitej. Udowodnij, że liczba $n$ jest podzielna przez 108.",
+  "title": "Podzielność liczby $2025$",
+  "content": "Liczba $2025$ jest podzielna przez\n\n(a) $45$;\n\n(b) $75$;\n\n(c) $125$.",
   "pdf": {
-    "tasks": "tasks/2025/etap1/21omj-1etap-zad.pdf",
-    "solutions": "tasks/2025/etap1/21omj-1etap-r.pdf",
-    "statistics": null
+    "tasks": "tasks/2025/etap1/tasks.pdf"
   },
-  "difficulty": 3,
+  "difficulty": 1,
   "categories": [
     "teoria_liczb"
   ],
   "hints": [
-    "Zapisz liczbę $n$ w postaci $n = 2^a \tcdot 3^b \tcdot k$. Rozłóż 108 na czynniki pierwsze i ustal, jakie nierówności muszą spełniać wykładniki $a$ i $b$, aby $n$ dzieliło się przez 108.",
-    "Skorzystaj z faktu, że w rozkładzie na czynniki pierwsze sześcianu wszystkie wykładniki są podzielne przez 3, a w kwadracie – przez 2. Zastosuj to do liczb $2n$ i $3n$.",
-    "Przeanalizuj wykładnik $a$ przy liczbie 2. Skoro $3n$ jest kwadratem, to $a$ musi być parzyste. Skoro $2n$ jest sześcianem, to $a+1$ musi dzielić się przez 3. Znajdź najmniejsze takie $a$.",
-    "Przeprowadź analogiczne rozumowanie dla wykładnika $b$ przy liczbie 3. Sprawdź, czy wyznaczone minimalne wartości $a$ i $b$ gwarantują podzielność $n$ przez 108."
+    "Co trzeba sprawdzić? Dla każdej z liczb $45$, $75$ i $125$ ustal, czy $2025$ dzieli się przez nią bez reszty. Spróbuj po prostu wykonać dzielenie.",
+    "Zamiast od razu dzielić, możesz rozbić każdą liczbę na czynniki pierwsze. Zastanów się, jakie liczby pierwsze i ile razy występują w $2025$, $45$, $75$ i $125$.",
+    "Liczba dzieli się przez drugą wtedy, gdy zawiera wszystkie jej czynniki pierwsze w odpowiedniej ilości. Sprawdź, ile razy w rozkładzie $2025$ pojawia się liczba $3$, a ile liczba $5$.",
+    "Wyznacz rozkład $2025 = 3^? \\cdot 5^?$ i porównaj go z rozkładami $45 = 3^2\\cdot 5$, $75 = 3\\cdot 5^2$ oraz $125 = 5^3$. Czy w $2025$ jest wystarczająco dużo piątek dla każdego przypadku?"
   ],
   "skills_required": [
+    "divisibility_arguments",
     "prime_factorization"
   ],
   "skills_gained": [
     "prime_factorization",
     "divisibility_arguments"
   ],
-  "prerequisites": []
+  "prerequisites": [
+    "2024_etap2_1"
+  ]
 }

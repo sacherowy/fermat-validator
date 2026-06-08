@@ -1,0 +1,33 @@
+{
+  "number": 8,
+  "title": "Liczby niecałkowite o całkowitych iloczynach",
+  "content": "Podaj przykład takich różnych liczb $a$, $b$, $c$, które nie są liczbami całkowitymi, a każdy z iloczynów\n$$a \\cdot b, \\quad b \\cdot c, \\quad a \\cdot b \\cdot c$$\njest liczbą całkowitą.",
+  "pdf": {
+    "tasks": "tasks/2023/etap1/tasks.pdf"
+  },
+  "difficulty": 3,
+  "categories": [
+    "arytmetyka",
+    "teoria_liczb"
+  ],
+  "hints": [
+    "Przeczytaj uważnie: szukamy trzech różnych liczb, które same NIE są całkowite (czyli są ułamkami), ale ich pewne iloczyny już są liczbami całkowitymi. Zapisz każdą liczbę jako ułamek i zastanów się, kiedy iloczyn dwóch ułamków daje liczbę całkowitą.",
+    "To zadanie typu 'podaj przykład' — nie musisz nic udowadniać, wystarczy zbudować jedną pasującą trójkę. Spróbuj dobierać liczby krok po kroku, sprawdzając po drodze warunki, zamiast zgadywać wszystkie naraz.",
+    "Iloczyn dwóch ułamków jest liczbą całkowitą, gdy mianownik jednego skraca się z licznikiem drugiego. Przyjrzyj się więc mianownikom liczb $a$, $b$, $c$ i zastanów się, jak ułożyć je tak, by mianownik jednej liczby był 'pokryty' przez licznik sąsiedniej.",
+    "Zacznij od wybrania $a$ jako prostego ułamka (np. z mianownikiem 2). Dobierz $b$ tak, by $a\\cdot b$ było całkowite, a na końcu $c$ tak, by $b\\cdot c$ też. Pamiętaj, że $a\\cdot b\\cdot c=(a\\cdot b)\\cdot c$, więc warunek na ostatni iloczyn zależy od mianownika $c$."
+  ],
+  "skills_required": [
+    "basic_operations",
+    "divisibility_arguments",
+    "constructive_proof"
+  ],
+  "skills_gained": [
+    "constructive_proof",
+    "divisibility_arguments"
+  ],
+  "prerequisites": [
+    "2021_etap1_2",
+    "2024_etap1_2",
+    "2022_etap1_4"
+  ]
+}

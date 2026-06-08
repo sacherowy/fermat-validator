@@ -1,0 +1,32 @@
+{
+  "number": 8,
+  "title": "Świece pana Świecalskiego",
+  "content": "Pan Świecalski zakupił $2021$ świec. Codziennie wypala $1$ świecę, a z wosku pozostałego po wypaleniu każdych $11$ świec robi $1$ nową świecę. Po ilu dniach pan Świecalski wypali wszystkie świece?",
+  "pdf": {
+    "tasks": "tasks/2021/etap1/tasks.pdf"
+  },
+  "difficulty": 3,
+  "categories": [
+    "arytmetyka",
+    "teoria_liczb"
+  ],
+  "hints": [
+    "Co jest dane, a czego szukamy? Każdego dnia spala się jedna świeca, a z wosku po każdych $11$ spalonych świecach powstaje nowa. Spróbuj prześledzić sytuację dla mniejszej liczby świec, np. $11$ albo $22$, i policzyć, ile dni faktycznie się pali.",
+    "Zauważ, że nowe świece też się palą i też zostawiają wosk! Pomyśl o tym jako o procesie, który powtarzasz: pal świece, zbieraj wosk, rób nowe, znów pal. Warto liczyć osobno, ile świec łącznie zostanie spalonych.",
+    "Każda spalona świeca to jeden dzień. Pytanie sprowadza się do: ile świec ŁĄCZNIE uda się spalić, licząc te oryginalne i wszystkie zrobione z wosku? Zastanów się, ile świec powstaje z $2021$ ogarków, potem z ogarków tych nowych itd.",
+    "Dodawaj kolejne porcje: z $2021$ zrób nowe świece (po $11$ ogarków na jedną), pamiętając o reszcie wosku, która przechodzi dalej. Powtarzaj, aż nie da się już zrobić pełnej świecy z dostępnych ogarków. Suma wszystkich spalonych świec to szukana liczba dni."
+  ],
+  "skills_required": [
+    "word_problems",
+    "basic_operations",
+    "divisibility_arguments"
+  ],
+  "skills_gained": [
+    "word_problems",
+    "divisibility_arguments"
+  ],
+  "prerequisites": [
+    "2022_etap1_8",
+    "2020_etap1_4"
+  ]
+}

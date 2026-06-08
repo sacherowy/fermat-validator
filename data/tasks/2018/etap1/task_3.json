@@ -1,33 +1,29 @@
 {
   "number": 3,
-  "title": "Warunek $\\frac{a}{b+c^2} = \\frac{a+c^2}{b}$",
-  "content": "Liczby całkowite $a$, $b$, $c$ są różne od $0$ i spełniają zależność $$\\frac{a}{b+c^2} = \\frac{a+c^2}{b}.$$ Wykaż, że $a + b + c \\leq 0$.",
+  "title": "Cena rogalika (układ równań)",
+  "content": "Karolina za $4$ bułeczki i $3$ rogaliki zapłaciła $6$ złotych, zaś Bartek za $4$ bułeczki i $6$ rogalików zapłacił $9$ złotych i $60$ groszy. Ile kosztował jeden rogalik?",
   "pdf": {
-    "tasks": "tasks/2018/etap1/1etap18.pdf",
-    "solutions": "tasks/2018/etap1/1etap18r.pdf",
-    "statistics": null
+    "tasks": "tasks/2018/etap1/tasks.pdf"
   },
-  "difficulty": 3,
+  "difficulty": 2,
   "categories": [
     "algebra",
-    "teoria_liczb"
+    "arytmetyka"
   ],
   "hints": [
-    "Równanie zawiera dwa ułamki. Dobrym pierwszym krokiem jest pozbycie się mianowników. Jak możesz przekształcić to równanie, aby nie zawierało ułamków?",
-    "Po wymnożeniu na krzyż uprość otrzymane wyrażenie. Pogrupuj wyrazy i poszukaj wspólnego czynnika, który można wyłączyć przed nawias, pamiętając, że $c \\neq 0$.",
-    "Uproszczone równanie powinno dać ci prostą zależność między sumą $a+b$ a wyrażeniem $c^2$. Wykorzystaj tę zależność, aby wyrazić sumę $a+b+c$ tylko za pomocą zmiennej $c$.",
-    "Pozostaje wykazać, że otrzymane wyrażenie ze zmienną $c$ jest zawsze niedodatnie. Pamiętaj, że $c$ jest liczbą całkowitą różną od zera. Przekształć nierówność do postaci iloczynowej."
+    "Co wiemy z zadania? Obie osoby kupiły tyle samo bułeczek (po $4$), ale różną liczbę rogalików. Zapisz, ile dokładnie kosztował każdy zakup i czym te zakupy się różnią.",
+    "Zauważ, że nie musisz od razu poznać ceny bułeczki. Spróbuj porównać oba zakupy ze sobą i zastanów się, co dostajemy, gdy jeden odejmiemy od drugiego.",
+    "Skoro liczba bułeczek jest w obu przypadkach taka sama, różnica w zapłaconej kwocie bierze się tylko z dodatkowych rogalików. Ile rogalików 'więcej' kupił Bartek?",
+    "Odejmij od droższego zakupu tańszy. Pamiętaj zamienić złotówki na grosze (lub odwrotnie). Otrzymasz koszt kilku rogalików, a stąd łatwo wyznaczysz cenę jednego."
   ],
   "skills_required": [
-    "algebraic_identities",
-    "inequality_manipulation"
+    "word_problems",
+    "basic_operations"
   ],
   "skills_gained": [
-    "algebraic_identities",
-    "inequality_manipulation",
-    "divisibility_arguments"
+    "word_problems"
   ],
   "prerequisites": [
-    "2017_etap1_6"
+    "2017_etap1_4"
   ]
 }

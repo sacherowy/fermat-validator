@@ -1,30 +1,31 @@
 {
   "number": 7,
-  "title": "Sześciokąt foremny $ABCDEF$ o boku 2",
-  "content": "Dany jest sześciokąt foremny $ABCDEF$ o boku 2. Punkt $M$ jest środkiem przekątnej $AE$. Pięciokąt $ABCDE$ zagięto wzdłuż odcinków $BD$, $BM$, $DM$ w taki sposób, że punkty $A$, $C$ oraz $E$ spotkały się. W wyniku tej operacji otrzymano czworościan. Wyznacz jego objętość.",
+  "title": "Podział kwadratu na trójkąt prostokątny równoramienny",
+  "content": "Podziel kwadrat na takie trzy części, z których można złożyć trójkąt prostokątny równoramienny.",
   "pdf": {
-    "tasks": "tasks/2022/etap1/18omj-1etap.pdf",
-    "solutions": "tasks/2022/etap1/18omj-1r.pdf",
-    "statistics": null
+    "tasks": "tasks/2022/etap1/tasks.pdf"
   },
   "difficulty": 4,
   "categories": [
     "geometria"
   ],
-  "prerequisites": [
-    "2020_etap1_7"
+  "hints": [
+    "Najpierw zauważ, że pole figury się nie zmienia: kawałki kwadratu po przełożeniu muszą dać dokładnie pole trójkąta. Narysuj oba kształty obok siebie i zastanów się, jaki bok ma trójkąt o takim samym polu jak kwadrat.",
+    "To zadanie konstrukcyjne — nie liczysz wyniku, tylko budujesz przykład. Pomyśl, jak rozciąć kwadrat i jak potem obrócić lub przesunąć kawałki, żeby ułożyć je w nowy kształt.",
+    "Trójkąt prostokątny równoramienny powstaje, gdy kwadrat przetniesz wzdłuż przekątnej. Porównaj długość przekątnej kwadratu z długością boku szukanego trójkąta — to podpowie, gdzie poprowadzić pierwsze cięcie.",
+    "Przetnij kwadrat wzdłuż jednej przekątnej: jedna połowa jest już trójkątem prostokątnym równoramiennym. Drugą połowę potnij na dwie części i dołóż je do boków pierwszego, by powstał większy trójkąt tego samego typu."
   ],
   "skills_required": [
-    "spatial_3d",
-    "pythagorean_theorem"
+    "area_methods",
+    "transformations"
   ],
   "skills_gained": [
-    "spatial_3d"
+    "constructive_proof",
+    "transformations"
   ],
-  "hints": [
-    "Po zagięciu pięciokąta punkty $A, C, E$ spotykają się w jednym wierzchołku, nazwijmy go $P$. Czworościan ma więc wierzchołki $P, B, D, M$. Pamiętaj, że zagięcie nie zmienia długości odcinków.",
-    "Aby obliczyć objętość, warto znaleźć wysokość czworościanu. Poszukaj w figurze przed złożeniem kątów prostych, które po zagięciu mogą utworzyć krawędź prostopadłą do jednej ze ścian.",
-    "Sprawdź, czy trójkąty $\\triangle ABE$ oraz $\\triangle ADE$ w płaskim sześciokącie są prostokątne. Jaki wniosek płynie z tego dla wzajemnego położenia krawędzi $PM$, $PB$ i $PD$ w powstałym czworościanie?",
-    "Wiesz już, że $PM \\perp PB$ oraz $PM \\perp PD$. Co to oznacza dla położenia krawędzi $PM$ względem płaszczyzny $\\triangle PBD$? Potraktuj czworościan jako ostrosłup o podstawie $\\triangle PBD$ i znajdź jego wysokość."
+  "prerequisites": [
+    "2017_etap1_2",
+    "2024_etap1_3",
+    "2023_etap1_3"
   ]
 }

@@ -1,30 +1,29 @@
 {
   "number": 1,
-  "title": "Prostokąt o obwodzie $x$ i polu $x$",
-  "content": "Dany jest prostokąt o obwodzie $x$ cm, w którym stosunek długości boków wynosi $1 : 2$. Załóżmy, że pole tego prostokąta jest równe $x$ cm$^2$. Wyznacz $x$.",
+  "title": "Kąty trójkąta $CED$ między kwadratami",
+  "content": "Na rysunku obok dany jest trójkąt równoboczny $ABC$ oraz dwa kwadraty $ACDF$ oraz $BGEC$. Wyznacz miary kątów trójkąta $CED$.",
   "pdf": {
-    "tasks": "tasks/2022/etap1/18omj-1etap.pdf",
-    "solutions": "tasks/2022/etap1/18omj-1r.pdf",
-    "statistics": null
+    "tasks": "tasks/2022/etap1/tasks.pdf"
   },
-  "difficulty": 2,
+  "difficulty": 3,
   "categories": [
-    "algebra",
-    "arytmetyka"
+    "geometria"
   ],
   "hints": [
-    "Oznacz długość krótszego boku literą $a$. Skoro stosunek boków wynosi $1:2$, to drugi bok ma długość $2a$. Zapisz wyrażenia opisujące obwód i pole tego prostokąta w zależności od $a$.",
-    "Z treści zadania wynika, że wartość obwodu i pola jest taka sama (równa $x$). Ułóż równanie, przyrównując do siebie wyznaczone wcześniej wyrażenia na obwód i pole.",
-    "Rozwiąż otrzymane równanie, aby wyznaczyć długość boku $a$. Pamiętaj, że $a$ jest długością odcinka (liczbą dodatnią), więc możesz podzielić równanie stronami przez $a$, aby je uprościć.",
-    "Mając obliczoną wartość $a$, podstaw ją do jednego ze wzorów (na obwód lub pole), aby znaleźć szukaną liczbę $x$."
+    "Narysuj dokładny rysunek: trójkąt równoboczny $ABC$ i oba kwadraty na jego bokach. Zaznacz kąty, które znasz od razu — w trójkącie równobocznym każdy kąt jest taki sam, a w kwadracie każdy kąt jest prosty.",
+    "Aby znaleźć kąty trójkąta $CED$, najpierw zbadaj kąty, które spotykają się w wierzchołku $C$. Wokół punktu $C$ schodzą się kąt trójkąta i kąty kwadratów — pełny obrót wokół punktu to zawsze ta sama suma stopni.",
+    "Zauważ, że boki kwadratów są równe bokom trójkąta równobocznego, więc niektóre powstałe trójkąty są równoramienne — a w takich kąty przy podstawie są równe.",
+    "Wyznacz najpierw kąt $\\angle DCE$ wokół punktu $C$ (odejmij od pełnego kąta znane kąty). Potem zauważ, że $CD$ i $CE$ to boki kwadratów równej długości, więc $\\triangle CED$ jest równoramienny — pozostałe dwa kąty są równe."
   ],
-  "prerequisites": [],
   "skills_required": [
-    "basic_operations",
-    "algebraic_identities"
+    "angle_chasing",
+    "isosceles_triangle"
   ],
   "skills_gained": [
-    "word_problems",
-    "algebraic_identities"
+    "angle_chasing"
+  ],
+  "prerequisites": [
+    "2018_etap1_1",
+    "2020_etap1_2"
   ]
 }

@@ -1,29 +1,32 @@
 {
   "number": 3,
-  "title": "Liczba całkowita między $\\sqrt{2n}$ a $\\sqrt{5n}$",
-  "content": "Niech $n \\geq 1$ będzie liczbą całkowitą. Wykaż, że istnieje taka liczba całkowita, która jest większa od $\\sqrt{2n}$ i mniejsza od $\\sqrt{5n}$.",
+  "title": "Wyprawa narciarska — z ilu rodzin",
+  "content": "Na wyprawę narciarską wybrało się czterdziestu ośmiu chłopców. Sześciu z nich przybyło z dokładnie jednym bratem, dziewięciu z dokładnie dwoma braćmi i czterech z dokładnie trzema braćmi. Pozostali chłopcy przybyli bez rodzeństwa. Z ilu rodzin było tych czterdziestu ośmiu chłopców?",
   "pdf": {
-    "tasks": "tasks/2021/etap1/1etap21.pdf",
-    "solutions": "tasks/2021/etap1/1etap21rr.pdf",
-    "statistics": null
+    "tasks": "tasks/2021/etap1/tasks.pdf"
   },
-  "difficulty": 3,
+  "difficulty": 2,
   "categories": [
-    "teoria_liczb",
-    "algebra"
+    "kombinatoryka",
+    "arytmetyka"
   ],
   "hints": [
-    "Przekształć warunek $\\sqrt{2n} < k < \\sqrt{5n}$ podnosząc go do kwadratu. Zadanie sprowadza się do pytania: czy w przedziale $(2n, 5n)$ zawsze znajduje się kwadrat liczby całkowitej?",
-    "Przeprowadź dowód nie wprost. Załóż, że w przedziale $(2n, 5n)$ nie ma żadnego kwadratu. Oznacza to, że cały ten przedział musi zmieścić się w 'luce' pomiędzy dwoma kolejnymi kwadratami $m^2$ i $(m+1)^2$.",
-    "Porównaj długości tych przedziałów. Przedział $(2n, 5n)$ ma długość $3n$. Luka między $m^2$ a $(m+1)^2$ ma długość $2m+1$. Jeśli pierwszy przedział mieści się w drugim, to musi zachodzić nierówność $3n \\le 2m+1$.",
-    "Wykorzystaj fakt, że $m^2 \\le 2n$ (czyli $m \\le \\sqrt{2n}$). Podstaw to oszacowanie do nierówności $3n \\le 2m+1$. Czy ta nierówność może być prawdziwa dla dużych $n$, skoro lewa strona rośnie znacznie szybciej niż prawa? Małe przypadki sprawdź ręcznie."
+    "Zastanów się, co znaczy, że chłopiec ma dokładnie jednego brata (też uczestnika wyprawy). Ilu chłopców pochodzi wtedy z jego rodziny? Spróbuj rozpisać sytuację dla małej grupy.",
+    "Pogrupuj chłopców według liczby braci, jakich mają na wyprawie. Każda taka grupa odpowiada rodzinom o tej samej liczbie chłopców — policz osobno rodziny w każdej grupie.",
+    "Zauważ, że jeśli chłopiec ma dokładnie $k$ braci na wyprawie, to z jego rodziny przyjechało $k+1$ chłopców. Ilu więc chłopców liczy każda taka rodzina?",
+    "Dla każdej grupy podziel liczbę chłopców przez wielkość rodziny, by uzyskać liczbę rodzin. Nie zapomnij policzyć chłopców bez rodzeństwa (każdy to osobna rodzina) — odejmij od $48$ pozostałych, a na końcu zsumuj wszystkie rodziny."
   ],
-  "prerequisites": [],
   "skills_required": [
-    "inequality_manipulation"
+    "word_problems",
+    "counting_techniques",
+    "basic_operations"
   ],
   "skills_gained": [
-    "constructive_proof",
-    "divisibility_arguments"
+    "word_problems",
+    "counting_techniques"
+  ],
+  "prerequisites": [
+    "2020_etap1_1",
+    "2018_etap1_7"
   ]
 }

@@ -1,31 +1,30 @@
 {
   "number": 1,
-  "title": "Cyfra jedności $n$ przy $3n = 999^{1000}$",
-  "content": "Liczbę naturalną $n$ pomnożono przez $3$, otrzymując w wyniku liczbę $999^{1000}$. Wyznacz cyfrę jedności liczby $n$.",
+  "title": "Kąt $\\angle BFC$ w kwadracie z trójkątem równobocznym",
+  "content": "Rysunek obok przedstawia kwadrat $ABCD$ i trójkąt równoboczny $ABE$. Punkt przecięcia przekątnej $AC$ kwadratu i boku $BE$ trójkąta oznaczono literą $F$. Jaka jest miara kąta $\\angle BFC$?",
   "pdf": {
-    "tasks": "tasks/2018/etap1/1etap18.pdf",
-    "solutions": "tasks/2018/etap1/1etap18r.pdf",
-    "statistics": null
+    "tasks": "tasks/2018/etap1/tasks.pdf"
   },
   "difficulty": 2,
   "categories": [
-    "teoria_liczb",
-    "arytmetyka"
+    "geometria"
   ],
   "hints": [
-    "Równanie $3n = 999^{1000}$ dotyczy wielkich liczb, ale pytanie jest tylko o cyfrę jedności $n$. Jak można przeformułować to równanie, używając tylko cyfr jedności?",
-    "Aby znaleźć cyfrę jedności $n$, musisz najpierw ustalić cyfrę jedności liczby $999^{1000}$. Zależy ona wyłącznie od cyfry jedności podstawy, czyli $9$.",
-    "Bezpośrednie potęgowanie jest trudne. Zauważ jednak, że $9$ to $10-1$. Jak ta obserwacja upraszcza znalezienie reszty z dzielenia $9^{1000}$ przez $10$?",
-    "Gdy już znasz cyfrę jedności liczby $999^{1000}$, oznaczmy ją przez $j$. Twoje zadanie sprowadza się do znalezienia takiej cyfry $c$, że iloczyn $3 \\cdot c$ ma cyfrę jedności równą $j$."
+    "Narysuj dokładnie kwadrat $ABCD$ i trójkąt równoboczny $ABE$ zbudowany na boku $AB$. Zaznacz przekątną $AC$ i punkt $F$. Przyjrzyj się trójkątowi $\\triangle BFC$ — jakie kąty trzeba w nim znać?",
+    "Kąt $\\angle BFC$ leży w trójkącie $\\triangle BFC$. Pamiętaj, że suma miar kątów w każdym trójkącie jest stała, więc wystarczy wyznaczyć dwa pozostałe kąty tego trójkąta.",
+    "Jeden z kątów to $\\angle FCB$, czyli kąt między przekątną $AC$ a bokiem $BC$ kwadratu — zastanów się, jak przekątna dzieli kąt prosty kwadratu. Drugi kąt to $\\angle FBC$, część kąta prostego $\\angle ABC$.",
+    "Zauważ, że $\\angle ABE$ ma miarę kąta w trójkącie równobocznym. Odejmij tę miarę od kąta prostego $\\angle ABC$, aby znaleźć $\\angle FBC$. Dodaj oba wyznaczone kąty i skorzystaj z sumy kątów w $\\triangle BFC$."
   ],
   "skills_required": [
-    "basic_operations",
-    "modular_arithmetic"
+    "angle_chasing",
+    "isosceles_triangle"
   ],
   "skills_gained": [
-    "basic_operations",
-    "modular_arithmetic",
-    "digit_manipulation"
+    "angle_chasing"
   ],
-  "prerequisites": []
+  "prerequisites": [
+    "2017_etap1_1",
+    "2020_etap1_2",
+    "2019_etap1_1"
+  ]
 }

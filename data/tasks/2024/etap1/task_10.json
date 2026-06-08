@@ -1,0 +1,32 @@
+{
+  "number": 10,
+  "title": "Zadanie 10 — własności liczby $221$",
+  "content": "Liczba $221$ jest\n\n(a) liczbą pierwszą;\n\n(b) iloczynem dwóch liczb pierwszych;\n\n(c) sumą dwóch liczb pierwszych.",
+  "pdf": {
+    "tasks": "tasks/2024/etap1/tasks.pdf"
+  },
+  "difficulty": 2,
+  "categories": [
+    "teoria_liczb"
+  ],
+  "hints": [
+    "Masz jedną liczbę i trzy pytania typu TAK/NIE. Przypomnij sobie: co to znaczy, że liczba jest pierwsza, a co znaczy, że jest iloczynem (lub sumą) dwóch liczb pierwszych? Rozważ każdy podpunkt osobno.",
+    "Aby sprawdzić podpunkt (a) i (b), spróbuj rozłożyć liczbę na czynniki - poszukaj, czy dzieli się ona bez reszty przez jakąś niewielką liczbę pierwszą. W (c) zastanów się, jakie własności muszą mieć dwie liczby, których suma jest nieparzysta.",
+    "Przy szukaniu dzielnika nie musisz sprawdzać wszystkiego - wystarczy próbować liczby pierwsze, których kwadrat nie przekracza $221$. Zwróć uwagę, że $221$ jest nieparzysta - to ważna podpowiedź do podpunktu (c).",
+    "Spróbuj podzielić $221$ przez kolejne liczby pierwsze: $7, 11, 13, \\dots$ - jeden z tych podziałów wyjdzie bez reszty. Dla (c): suma dwóch liczb jest nieparzysta tylko wtedy, gdy jedna z nich jest parzysta, czyli musi być równa $2$ - sprawdź, czy pozostała liczba też jest wtedy pierwsza."
+  ],
+  "skills_required": [
+    "primality_testing",
+    "divisibility_arguments",
+    "parity_arguments"
+  ],
+  "skills_gained": [
+    "prime_factorization",
+    "primality_testing"
+  ],
+  "prerequisites": [
+    "2025_etap1_6",
+    "2025_etap1_9",
+    "2024_etap1_2"
+  ]
+}

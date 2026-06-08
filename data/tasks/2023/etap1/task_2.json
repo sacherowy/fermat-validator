@@ -1,31 +1,29 @@
 {
   "number": 2,
-  "title": "Punkty $X$, $Y$ na bokach trójkąta $ABC$",
-  "content": "Punkty $X$ oraz $Y$ leżą odpowiednio na bokach $AC$ oraz $BC$ trójkąta $ABC$. Punkt $M$ jest środkiem odcinka $XY$. Załóżmy, że $$AX = MX = MC = MY = BY.$$ Wyznacz miarę kąta $AMB$.",
+  "title": "Podzielność przez 45",
+  "content": "Rozstrzygnij, czy liczba $123456789 \\cdot 2023 \\cdot 335 \\cdot 221$ jest podzielna przez $45$.",
   "pdf": {
-    "tasks": "tasks/2023/etap1/19omj-1etap.pdf",
-    "solutions": "tasks/2023/etap1/19omj-1etap-r.pdf",
-    "statistics": null
+    "tasks": "tasks/2023/etap1/tasks.pdf"
   },
-  "difficulty": 3,
+  "difficulty": 2,
   "categories": [
-    "geometria"
+    "teoria_liczb"
   ],
   "hints": [
-    "Zaznacz na rysunku wszystkie równe odcinki. Zauważ, że w trójkącie $XCY$ punkt $M$ jest środkiem boku $XY$, a jego odległość od wierzchołka $C$ jest taka sama jak od $X$ i $Y$.",
-    "Skoro $MX = MY = MC$, to punkt $M$ jest środkiem okręgu opisanego na trójkącie $XCY$, a odcinek $XY$ jest jego średnicą. Jaka jest miara kąta wpisanego $\\angle XCY$ opartego na średnicy?",
-    "Wiedząc już, jaką miarę ma kąt $\\angle ACB$, oblicz sumę kątów $\\angle A$ i $\\angle B$ w trójkącie $ABC$. Następnie zauważ, że trójkąty $AXM$ i $BYM$ są równoramienne i wyznacz za ich pomocą kąty $\\angle AMX$ oraz $\\angle BMY$.",
-    "Zauważ, że kąty $\\angle AMX$, $\\angle AMB$ i $\\angle BMY$ tworzą razem kąt półpełny ($180^\\circ$), ponieważ $M$ leży na odcinku $XY$. Wykorzystaj sumę kątów $\\angle A + \\angle B$ do obliczenia szukanego kąta."
+    "Co tak naprawdę musimy sprawdzić? Liczba $45$ to iloczyn dwóch mniejszych, łatwiejszych liczb. Spróbuj rozbić $45$ na czynniki — to podpowie, jakie dwa warunki trzeba sprawdzić osobno.",
+    "Zamiast mnożyć te ogromne liczby (co byłoby bardzo żmudne!), wykorzystaj fakt, że jeśli iloczyn ma dzielić się przez $45$, to musi dzielić się przez każdy z czynników, na które rozłożyłeś $45$.",
+    "Przypomnij sobie cechy podzielności: kiedy liczba dzieli się przez $5$, a kiedy przez $9$? Wystarczy, że wśród czynników iloczynu znajdzie się taki, który zapewni każdą z tych podzielności.",
+    "Sprawdź sumę cyfr liczby $123456789$ — czy dzieli się przez $9$? Następnie przyjrzyj się liczbie $335$ — czy któryś z czynników kończy się cyfrą $0$ lub $5$? Połącz oba wnioski."
   ],
   "skills_required": [
-    "isosceles_triangle",
-    "angle_chasing"
+    "divisibility_arguments",
+    "digit_manipulation"
   ],
   "skills_gained": [
-    "isosceles_triangle",
-    "angle_chasing"
+    "divisibility_arguments",
+    "prime_factorization"
   ],
   "prerequisites": [
-    "2021_etap1_2"
+    "2022_etap1_5"
   ]
 }

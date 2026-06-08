@@ -1,30 +1,30 @@
 {
   "number": 6,
-  "title": "Szachownica $14 \\times 14$",
-  "content": "Pola szachownicy o wymiarach $14 \\times 14$ pokolorowano w sposób przedstawiony na rysunku. Czy można wybrać siedem pól czarnych i siedem pól białych tej szachownicy w taki sposób, aby w każdym wierszu i w każdej kolumnie znalazło się dokładnie jedno wybrane pole? Odpowiedź uzasadnij.",
+  "title": "Wiek Sebastiana",
+  "content": "Sebastian za $3$ lata będzie $3$ razy starszy niż był $3$ lata temu. Ile lat ma Sebastian teraz?",
   "pdf": {
-    "tasks": "tasks/2018/etap1/1etap18.pdf",
-    "solutions": "tasks/2018/etap1/1etap18r.pdf",
-    "statistics": null
+    "tasks": "tasks/2018/etap1/tasks.pdf"
   },
-  "difficulty": 3,
+  "difficulty": 2,
   "categories": [
-    "kombinatoryka",
-    "logika"
+    "algebra",
+    "arytmetyka"
   ],
   "hints": [
-    "Zauważ, że kolor pola zależy od parzystości sumy jego numeru wiersza i kolumny. Skoro wybieramy po jednym polu z każdego wiersza i kolumny, to jakie liczby tworzą zbiór wszystkich numerów wierszy i kolumn wybranych pól?",
-    "Rozważ sumę $S$ wszystkich 28 współrzędnych (14 numerów wierszy i 14 numerów kolumn) wybranych pól. Wiedząc, że wykorzystujemy każdy numer od 1 do 14 dokładnie raz jako wiersz i raz jako kolumnę, ustal, czy suma $S$ jest parzysta czy nieparzysta.",
-    "Z drugiej strony spójrz na sumę $S$ przez pryzmat kolorów. Zadanie wymaga wyboru 7 pól o parzystej sumie współrzędnych i 7 o nieparzystej. Jaka musiałaby być parzystość sumy $S$, gdybyśmy dodali do siebie te 14 sum?",
-    "Porównaj parzystość sumy $S$ wyznaczoną na podstawie dostępnych wierszy i kolumn z parzystością wynikającą z wyboru kolorów. Czy taki wybór pól jest możliwy?"
+    "Co jest dane, a czego szukamy? Oznacz obecny wiek Sebastiana jedną literą, np. $x$. Jak zapiszesz jego wiek za $3$ lata oraz $3$ lata temu?",
+    "To zadanie da się zapisać jako jedno równanie. Spróbuj przetłumaczyć zdanie z treści na język matematyki, używając wyrażeń, które zapisałeś dla obu sytuacji.",
+    "Zwrot „$3$ razy starszy\" oznacza, że jedną wielkość mnożymy przez $3$. Po której stronie równania pojawi się mnożenie przez $3$ — przy wieku za $3$ lata czy $3$ lata temu?",
+    "Ułóż równanie typu $x+3 = 3\\cdot(x-3)$, a następnie rozwiń nawias po prawej stronie i przenieś wyrazy z $x$ na jedną stronę, a liczby na drugą."
   ],
   "skills_required": [
-    "parity_arguments",
-    "counting_techniques"
+    "word_problems",
+    "basic_operations"
   ],
   "skills_gained": [
-    "parity_arguments",
-    "tiling"
+    "word_problems"
   ],
-  "prerequisites": []
+  "prerequisites": [
+    "2018_etap1_3",
+    "2017_etap1_4"
+  ]
 }

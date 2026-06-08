@@ -19,7 +19,7 @@ import argparse
 import re
 from dataclasses import dataclass, field
 
-# Valid categories based on OMJ problem analysis
+# Valid categories based on FerMat problem analysis
 VALID_CATEGORIES = [
     "algebra",        # Systems of equations, algebraic identities, inequalities
     "geometria",      # Plane geometry: triangles, quadrilaterals, circles
@@ -85,7 +85,7 @@ class ProcessingReport:
 processing_report = ProcessingReport()
 
 
-PROMPT_TEMPLATE = """Przeanalizuj poniższe zadanie z Olimpiady Matematycznej Juniorów i przypisz mu:
+PROMPT_TEMPLATE = """Przeanalizuj poniższe zadanie z Konkursu Matematycznego FerMat i przypisz mu:
 
 1. **difficulty** (trudność): liczba od 1 do 5, gdzie:
    - 1 = bardzo łatwe (podstawowe zastosowanie wzorów)
@@ -135,7 +135,7 @@ PROMPT_TEMPLATE = """Przeanalizuj poniższe zadanie z Olimpiady Matematycznej Ju
    - Używaj notacji LaTeX dla matematyki: $x^2$ dla inline
    - Przykłady: $\\sqrt{{2}}$, $\\frac{{a}}{{b}}$, $\\angle ABC$, $\\triangle ABC$
 
-   JĘZYK DOSTOSOWANY DO WIEKU (klasy 4-8, wiek 10-14 lat):
+   JĘZYK DOSTOSOWANY DO WIEKU (klasy 4-6, wiek 9-12 lat):
    - UNIKAJ zaawansowanej terminologii: "Małe Twierdzenie Fermata", "rząd elementu",
      "kongruencja", "homomorfizm", "bijekcja", "kombinacja liniowa"
    - ZAMIAST tego używaj prostych opisów: "reszta z dzielenia", "dzieli się bez reszty",
@@ -154,7 +154,7 @@ PROMPT_TEMPLATE = """Przeanalizuj poniższe zadanie z Olimpiady Matematycznej Ju
    - ZŁE: "Oblicz, że α = 30°, więc..."
    - DOBRE: "Spróbuj wyznaczyć miarę kąta α z układu równań"
 
-   OGRANICZENIA MATEMATYCZNE (OMJ to olimpiada dla klas 4-8, wiek 10-14 lat):
+   OGRANICZENIA MATEMATYCZNE (FerMat to konkurs dla klas 4-6, wiek 9-12 lat):
    - ZAKAZ: trygonometria (sin, cos, tan, ctg), pochodne, całki, logarytmy
    - ZAKAZ: wzory Viète'a, wzór na pierwiastki równania kwadratowego
    - ZAKAZ: zaawansowana geometria analityczna, wektory
@@ -181,7 +181,7 @@ PROMPT_TEMPLATE = """Przeanalizuj poniższe zadanie z Olimpiady Matematycznej Ju
    - id: krótki identyfikator w snake_case (np. "angle_bisector_properties")
    - name: nazwa po polsku (np. "Własności dwusiecznej kąta")
    - category: jedna z: algebra, geometry, number_theory, combinatorics, logic, arithmetic
-   - description: opis dla uczniów klas 4-8 (2-3 zdania)
+   - description: opis dla uczniów klas 4-6 (2-3 zdania)
    - examples: lista 2-3 przykładów zastosowania
 
    WAŻNE: Jeśli sugerujesz nową umiejętność, nadal wypełnij skills_required i
@@ -191,7 +191,6 @@ PROMPT_TEMPLATE = """Przeanalizuj poniższe zadanie z Olimpiady Matematycznej Ju
 Wskazówki dla oceny trudności:
 - Etap 1 zwykle ma zadania o trudności 1-3
 - Etap 2 zwykle ma zadania o trudności 3-5
-- Etap 3 zwykle ma zadania o trudności 4-5
 - Zadanie może mieć więcej niż jedną kategorię jeśli łączy różne dziedziny
 
 ---
@@ -203,7 +202,7 @@ Treść: {content}
 ---
 
 PRZYPOMNIENIE KRYTYCZNE przed odpowiedzią:
-1. ŻADNEJ trygonometrii (sin, cos, tan) - uczeń ma 10-14 lat!
+1. ŻADNEJ trygonometrii (sin, cos, tan) - uczeń ma 9-12 lat!
 2. ŻADNYCH konkretnych wartości liczbowych w odpowiedziach (nie pisz "α = 30°" ani "α = 45° - γ")
 3. Wskazówki mają NAPROWADZAĆ metodą pytań, nie wykonywać obliczeń za ucznia
 4. PROSTYM JĘZYKIEM - unikaj terminów jak "Twierdzenie Fermata", "rząd elementu", "kongruencja"

@@ -1,30 +1,31 @@
 {
   "number": 4,
-  "title": "Pierwiastki sześcienne $\\sqrt[3]{a} + \\sqrt[3]{b} = \\sqrt[3]{2025}$",
-  "content": "Czy istnieją takie dodatnie liczby całkowite $a$ oraz $b$, że\n$$\\sqrt[3]{a} + \\sqrt[3]{b} = \\sqrt[3]{2025}?$$\n*Uwaga.* Symbol $\\sqrt[3]{x}$ oznacza *pierwiastek trzeciego stopnia* z $x$, czyli taką liczbę rzeczywistą $y$, że $y^3 = x$.",
+  "title": "Pęknięta szybka — trójkąty o równych polach",
+  "content": "Na prostokątną szybkę o wymiarach $20\\,\\text{cm} \\times 12\\,\\text{cm}$ spadł kamyk. Szybka pękła na dziesięć trójkątów, jak na poniższym rysunku. Wszystkie uzyskane w wyniku rozbicia trójkąty mają równe pola. Oblicz, w jakiej odległości od prawej krawędzi szybki spadł kamień.",
   "pdf": {
-    "tasks": "tasks/2024/etap2/20omj-2etap.pdf",
-    "solutions": "tasks/2024/etap2/20omj-2r.pdf",
-    "statistics": "tasks/2024/etap2/20omj-2etap-st.pdf"
+    "tasks": "tasks/2024/etap2/tasks.pdf"
   },
   "difficulty": 4,
   "categories": [
-    "teoria_liczb",
+    "geometria",
     "algebra"
   ],
   "hints": [
-    "Uprość prawą stronę równania. Rozłóż $2025$ na czynniki pierwsze i wyłącz największy sześcian, jaki się da, przed znak pierwiastka.",
-    "Załóż, że $\\sqrt[3]{a}$ i $\\sqrt[3]{b}$ są \"wyrazami podobnymi\", czyli mają postać $x\\sqrt[3]{m}$ i $y\\sqrt[3]{m}$, gdzie $m$ jest liczbą pod pierwiastkiem z uproszczonej prawej strony.",
-    "Podstaw powyższe wyrażenia do równania i je uprość. Jaką zależność otrzymasz dla współczynników $x$ i $y$?",
-    "Poszukaj najprostszych dodatnich liczb całkowitych $x$ i $y$, które spełniają tę zależność. Pamiętaj, że $a$ i $b$ muszą być dodatnimi liczbami całkowitymi."
+    "Co wiesz o całej szybce? Policz jej pole, a potem zastanów się, jakie pole musi mieć każdy z dziesięciu trójkątów, skoro wszystkie są równe. Zauważ też, że punkt uderzenia kamienia to wspólny wierzchołek tych trójkątów.",
+    "Przypomnij sobie wzór na pole trójkąta: $\\text{pole} = \\frac{1}{2}\\cdot\\text{podstawa}\\cdot\\text{wysokość}$. Trójkąty opierają się bokami o krawędzie prostokąta — spróbuj powiązać ich pola z odległościami punktu uderzenia od poszczególnych krawędzi.",
+    "Dla trójkątów, których podstawa leży na danej krawędzi szybki, wysokością jest odległość punktu uderzenia od tej krawędzi. Sprawdź, ile trójkątów opiera się o krawędź prawą, a ile o lewą, i co to mówi o sumach ich podstaw.",
+    "Oznacz odległość punktu od prawej krawędzi jako $x$. Zapisz pole grupy trójkątów opartych o prawą krawędź, korzystając z tego, że suma ich podstaw to bok o długości $12$ cm, a wysokość to $x$. Porównaj to z liczbą trójkątów w tej grupie pomnożoną przez pole jednego trójkąta i ułóż równanie."
   ],
-  "prerequisites": [],
   "skills_required": [
-    "algebraic_identities",
-    "contradiction"
+    "area_methods",
+    "basic_operations"
   ],
   "skills_gained": [
-    "contradiction",
-    "primality_testing"
+    "area_methods",
+    "word_problems"
+  ],
+  "prerequisites": [
+    "2024_etap1_3",
+    "2025_etap2_4"
   ]
 }

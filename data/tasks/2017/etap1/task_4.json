@@ -1,28 +1,29 @@
 {
   "number": 4,
-  "title": "Trapez $ABCD$ z symetralnymi",
-  "content": "Dany jest trapez $ABCD$ o podstawach $AB$ i $CD$. Symetralne ramion $AD$ i $BC$ przecinają odcinki $BC$ i $AD$ odpowiednio w punktach $P$ i $Q$. Wykaż, że $\\measuredangle APD = \\measuredangle BQC$.",
+  "title": "Cena gałki lodów",
+  "content": "Cyryl chciał kupić $5$ gałek lodów, ale zabrakło mu $80$ groszy. Zdecydował się na $4$ gałki i zostało mu jeszcze $1{,}70$ złotych. Ile kosztuje jedna gałka lodów?",
   "pdf": {
-    "tasks": "tasks/2017/etap1/1etap17.pdf",
-    "solutions": "tasks/2017/etap1/1etap17r.pdf",
-    "statistics": null
+    "tasks": "tasks/2017/etap1/tasks.pdf"
   },
-  "difficulty": 3,
+  "difficulty": 2,
   "categories": [
-    "geometria"
+    "arytmetyka"
   ],
   "hints": [
-    "Z definicji symetralnej, punkt $P$ jest równo odległy od $A$ i $D$, a punkt $Q$ od $B$ i $C$. Jaką własność mają dzięki temu trójkąty $\triangle APD$ i $\triangle BQC$?",
-    "Teza jest równoważna równości kątów przy podstawie tych trójkątów równoramiennych. Aby powiązać te kąty, przedłuż nierównoległe boki trapezu $AD$ i $BC$ aż do ich przecięcia w punkcie $S$.",
-    "Niech $M$ i $N$ będą środkami ramion $AD$ i $BC$. Zauważ, że symetralne tworzą z ramionami kąty proste. Poszukaj w punkcie $S$ dwóch podobnych trójkątów prostokątnych.",
-    "Z podobieństwa tych trójkątów wynika pewna proporcja boków. Użyj jej oraz podobieństwa trójkątów $\triangle SAB$ i $\triangle SDC$, aby udowodnić podobieństwo trójkątów $\triangle SPD$ i $\triangle SQC$."
+    "Co wiemy? Przy $5$ gałkach Cyrylowi brakuje $80$ groszy, a przy $4$ gałkach jeszcze coś mu zostaje. Zapisz obie sytuacje, pamiętając, że Cyryl przez cały czas ma tę samą kwotę pieniędzy.",
+    "Pomyśl, czym różnią się oba zakupy: $5$ gałek a $4$ gałki. Zastanów się, jak różnica w liczbie gałek wiąże się z różnicą między \"brakuje\" a \"zostaje\".",
+    "Zwróć uwagę, że jedna gałka mniej zmienia sytuację z \"brakuje $80$ groszy\" na \"zostaje $1{,}70$ zł\". Co dokładnie kosztuje ta jedna gałka, której Cyryl nie kupił?",
+    "Najpierw zamień wszystko na te same jednostki (np. grosze): $1{,}70$ zł to $170$ groszy. Cena jednej gałki to suma kwoty, której brakowało, i kwoty, która została. Dodaj te dwie liczby."
   ],
   "skills_required": [
-    "trapezoid_parallelogram",
-    "circle_theorems"
+    "word_problems",
+    "basic_operations"
   ],
   "skills_gained": [
-    "angle_chasing"
+    "word_problems"
   ],
-  "prerequisites": []
+  "prerequisites": [
+    "2018_etap1_3",
+    "2018_etap1_6"
+  ]
 }

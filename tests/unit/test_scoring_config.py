@@ -115,10 +115,11 @@ class TestGetMaxPoints:
         assert get_max_points("etap1", 6) == 4
 
     def test_etap2_task_in_first_group(self):
-        assert get_max_points("etap2", 3) == 2
+        assert get_max_points("etap2", 3) == 4
 
-    def test_etap2_task_in_second_group(self):
-        assert get_max_points("etap2", 8) == 4
+    def test_etap2_unknown_task_raises(self):
+        with pytest.raises(ValueError, match="8"):
+            get_max_points("etap2", 8)
 
     def test_unknown_etap_raises(self):
         with pytest.raises(ValueError, match="etap3"):

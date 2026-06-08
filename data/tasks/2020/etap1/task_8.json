@@ -1,0 +1,34 @@
+{
+  "number": 8,
+  "title": "Samoopisująca się liczba $\\overline{ABCD}$",
+  "content": "Liczba czterocyfrowa $\\overline{ABCD}$ ma tę własność, że cyfra $A$ jest równa ilości zer w tej liczbie, $B$ — ilości jedynek, $C$ — ilości dwójek, $D$ — ilości trójek. Przykładową liczbą spełniającą ten warunek jest $1210$. Podaj przykład innej liczby czterocyfrowej mającej tę własność.",
+  "pdf": {
+    "tasks": "tasks/2020/etap1/tasks.pdf"
+  },
+  "difficulty": 3,
+  "categories": [
+    "kombinatoryka",
+    "teoria_liczb",
+    "logika"
+  ],
+  "hints": [
+    "Najpierw upewnij się, że rozumiesz warunek: cyfra $A$ mówi, ile zer jest w całej liczbie, $B$ — ile jedynek, $C$ — ile dwójek, $D$ — ile trójek. Sprawdź na przykładzie $1210$, czy faktycznie się zgadza, licząc po kolei jej cyfry.",
+    "Skoro liczba ma cztery cyfry, to łącznie opisujesz cztery pozycje. Zastanów się, co musi być prawdą o sumie $A+B+C+D$, gdy zliczasz tylko zera, jedynki, dwójki i trójki.",
+    "Zwróć uwagę, że cyfra $A$ (liczba zer) raczej nie może być zbyt duża — gdyby było bardzo wiele zer, zabrakłoby miejsca na inne cyfry. Spróbuj ograniczyć, jakie wartości może przyjmować $A$, a potem dobierać resztę.",
+    "Wybierz wartość pierwszej cyfry $A$ i sprawdzaj zgodność: ustaw cyfry, a potem policz w gotowej liczbie, ile jest naprawdę zer, jedynek, dwójek i trójek — i porównaj z tym, co same cyfry zapowiadają. Przejdź tak przez kilka możliwości w sposób uporządkowany."
+  ],
+  "skills_required": [
+    "digit_manipulation",
+    "case_analysis",
+    "counting_techniques"
+  ],
+  "skills_gained": [
+    "case_analysis",
+    "digit_manipulation"
+  ],
+  "prerequisites": [
+    "2018_etap1_4",
+    "2019_etap1_7",
+    "2017_etap1_5"
+  ]
+}

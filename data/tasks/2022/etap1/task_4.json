@@ -1,31 +1,28 @@
 {
   "number": 4,
-  "title": "Kolorowanie liczb od $1$ do $n$",
-  "content": "Każdą z liczb naturalnych od $1$ do $n$ pokolorowano albo na niebiesko, albo na czerwono, przy czym każdego z tych kolorów użyto co najmniej raz. Okazało się, że:\n- każda liczba czerwona jest sumą pewnych dwóch różnych liczb niebieskich;\n- każda liczba niebieska jest różnicą pewnych dwóch liczb czerwonych.\nWyznacz najmniejszą liczbę $n$, dla której takie kolorowanie jest możliwe.",
+  "title": "Liczba, dla której $x > x^2$",
+  "content": "Podaj przykład takiej liczby $x$, że $x > x^2$.",
   "pdf": {
-    "tasks": "tasks/2022/etap1/18omj-1etap.pdf",
-    "solutions": "tasks/2022/etap1/18omj-1r.pdf",
-    "statistics": null
+    "tasks": "tasks/2022/etap1/tasks.pdf"
   },
-  "difficulty": 3,
+  "difficulty": 2,
   "categories": [
-    "kombinatoryka",
-    "teoria_liczb"
-  ],
-  "prerequisites": [],
-  "skills_required": [
-    "counting_techniques",
-    "constructive_proof"
-  ],
-  "skills_gained": [
-    "counting_techniques",
-    "case_analysis",
-    "divisibility_arguments"
+    "algebra"
   ],
   "hints": [
-    "Zastanów się, jaki kolor musi mieć liczba 1. Czy może być sumą dwóch różnych dodatnich liczb całkowitych?",
-    "Ustal kolor największej liczby $n$. Następnie zapisz dwie kluczowe nierówności dla $b_{max}$: jedną wynikającą z tego, że $b_{max}$ jest różnicą liczb czerwonych, a drugą z tego, że $n$ jest sumą liczb niebieskich.",
-    "Połącz obie nierówności z poprzedniej wskazówki. Jaką zaskakującą relację otrzymasz pomiędzy najmniejszą liczbą czerwoną ($r_{min}$) a drugą co do wielkości liczbą niebieską ($b_{max-1}$)?",
-    "Jaki kolor musi mieć liczba 2 i co z tego wynika dla $r_{min}$? Użyj tej informacji wraz z relacją z poprzedniej wskazówki, by sprawdzić najmniejsze wartości $n$, dla których kolorowanie może istnieć."
+    "Zastanów się, co tak naprawdę mówi nierówność $x > x^2$: pewna liczba ma być większa od swojego kwadratu. Spróbuj najpierw podstawić kilka prostych liczb i sprawdzić, czy działają.",
+    "Sprawdź różne rodzaje liczb po kolei: liczby większe od 1, równe 1, oraz takie, które leżą gdzieś pomiędzy. Dla każdej policz jej kwadrat i porównaj z samą liczbą.",
+    "Zwróć uwagę, że dla liczb większych od 1 podnoszenie do kwadratu daje wynik jeszcze większy. Zastanów się więc, co dzieje się z liczbą, gdy jest ona bardzo mała — na przykład ułamkiem mniejszym od 1.",
+    "Wybierz jakiś ułamek pomiędzy 0 a 1 i policz jego kwadrat. Zauważ, czy mnożenie takiego ułamka przez liczbę mniejszą od 1 powiększa go, czy pomniejsza — to wskaże Ci, gdzie szukać przykładu."
+  ],
+  "skills_required": [
+    "inequality_manipulation",
+    "basic_operations"
+  ],
+  "skills_gained": [
+    "inequality_manipulation"
+  ],
+  "prerequisites": [
+    "2019_etap1_3"
   ]
 }

@@ -1,31 +1,31 @@
 {
   "number": 6,
-  "title": "Schodkowy diagram $n \\times n$",
-  "content": "Z tablicy $n \\times n$ usunięto pola znajdujące się w całości powyżej jednej z przekątnych, otrzymując schodkowy diagram. W każde pole diagramu należy wpisać jedną z liczb 1 lub 2. Wyznacz wszystkie liczby całkowite $n \\geqslant 2$, dla których można to zrobić w taki sposób, aby pośród $2n$ sum liczb w wierszach i kolumnach nie było dwóch równych liczb.",
+  "title": "Zadanie 6 — procenty liczby naturalnej",
+  "content": "Dodatnia liczba $n$ jest naturalna i $25\\%$ liczby $n$ też jest liczbą naturalną. Liczbą naturalną jest więc także\n\n(a) $50\\%$ liczby $n$;\n\n(b) $60\\%$ liczby $n$;\n\n(c) $125\\%$ liczby $n$.",
   "pdf": {
-    "tasks": "tasks/2024/etap1/20omj-1etap.pdf",
-    "solutions": "tasks/2024/etap1/20omj-1etap-r.pdf",
-    "statistics": null
+    "tasks": "tasks/2024/etap1/tasks.pdf"
   },
-  "difficulty": 3,
+  "difficulty": 2,
   "categories": [
-    "kombinatoryka",
-    "logika"
+    "arytmetyka",
+    "teoria_liczb"
   ],
   "hints": [
-    "Przeanalizuj strukturę diagramu: ile pól jest w $i$-tym wierszu, a ile w $j$-tej kolumnie? Jaka jest najmniejsza, a jaka największa możliwa suma w dowolnym wierszu lub kolumnie?",
-    "Masz $2n$ sum, które muszą być różnymi liczbami całkowitymi. Biorąc pod uwagę ich minimalną i maksymalną możliwą wartość, jaki konkretny zbiór liczb muszą one tworzyć?",
-    "Oblicz sumę wszystkich $2n$ sum na dwa sposoby. Raz, korzystając ze zbioru z poprzedniej wskazówki. Dwa, wyrażając ją przez $S$ - sumę wszystkich liczb w diagramie. Co z tego wynika?",
-    "Wyraź $S$ przez liczbę jedynek $N_1$ i wyznacz $N_1$. To da ci warunek konieczny na $n$. Czy jest on też wystarczający? Spróbuj skonstruować przykład dla małego $n$ spełniającego ten warunek."
-  ],
-  "prerequisites": [
-    "2023_etap1_7"
+    "Zacznij od zapisania, co oznacza, że $25\\%$ liczby $n$ jest liczbą naturalną. $25\\%$ to to samo co jedna czwarta — czyli $\\frac{n}{4}$ jest liczbą naturalną. Co to mówi o liczbie $n$?",
+    "W każdym z trzech podpunktów zamień procent na ułamek i zapytaj: czy ten ułamek liczby $n$ MUSI być całkowity, skoro wiemy tylko, że $n$ dzieli się przez $4$? Sprawdzaj każdy podpunkt osobno.",
+    "Skoro $\\frac{n}{4}$ jest liczbą naturalną, to $n$ dzieli się bez reszty przez $4$. Zastanów się, które z wyrażeń ($\\frac{n}{2}$, $\\frac{3n}{5}$, $\\frac{5n}{4}$) na pewno będzie całkowite dla każdego takiego $n$, a które może nie być.",
+    "Dla podpunktu, który wydaje się wątpliwy, spróbuj podstawić konkretną liczbę podzielną przez $4$ i sprawdź, czy wynik wychodzi całkowity. Jeśli znajdziesz choć jeden przykład, w którym wynik nie jest naturalny, to ten podpunkt jest fałszywy."
   ],
   "skills_required": [
-    "parity_arguments",
-    "counting_techniques"
+    "divisibility_arguments",
+    "basic_operations"
   ],
   "skills_gained": [
-    "parity_arguments"
+    "divisibility_arguments"
+  ],
+  "prerequisites": [
+    "2025_etap1_10",
+    "2024_etap1_2",
+    "2025_etap1_6"
   ]
 }

@@ -1,0 +1,30 @@
+{
+  "number": 9,
+  "title": "Wielościan wypukły o równej liczbie ścian i wierzchołków",
+  "content": "Podaj przykład takiego wielościanu wypukłego, który nie jest ostrosłupem i który ma tyle samo ścian co wierzchołków.",
+  "pdf": {
+    "tasks": "tasks/2017/etap1/tasks.pdf"
+  },
+  "difficulty": 3,
+  "categories": [
+    "geometria"
+  ],
+  "hints": [
+    "Najpierw zastanów się, co znaczy, że wielościan ma tyle samo ścian co wierzchołków. Sprawdź na znanym przykładzie: ile wierzchołków i ile ścian ma ostrosłup o podstawie $n$-kąta? Czy ostrosłup spełnia warunek? Szukamy więc czegoś innego niż ostrosłup.",
+    "To zadanie typu 'podaj przykład' - najlepiej coś zbudować. Spróbuj wziąć znaną bryłę i ją zmodyfikować albo połączyć dwie bryły w jedną, a potem starannie policzyć ściany i wierzchołki.",
+    "Pomocny może być wzór Eulera: liczba wierzchołków $-$ liczba krawędzi $+$ liczba ścian $= 2$. Pomyśl też, co się stanie, gdy 'doklejisz' jedną bryłę do drugiej wzdłuż wspólnej ściany - które wierzchołki i ściany się pokryją, a które dojdą.",
+    "Spróbuj postawić ostrosłup na graniastosłupie (np. ostrosłup na pryzmie o tej samej podstawie) i dokładnie policz wszystkie wierzchołki oraz wszystkie ściany powstałej bryły. Sprawdź, czy te dwie liczby wychodzą równe."
+  ],
+  "skills_required": [
+    "polyhedra",
+    "spatial_3d"
+  ],
+  "skills_gained": [
+    "constructive_proof",
+    "polyhedra"
+  ],
+  "prerequisites": [
+    "2017_etap1_8",
+    "2017_etap1_7"
+  ]
+}

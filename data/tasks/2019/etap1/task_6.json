@@ -1,31 +1,31 @@
 {
   "number": 6,
-  "title": "Suma $a + b + c = 10^{1001}$",
-  "content": "Dane są liczby naturalne $a$, $b$, $c$, które w zapisie dziesiętnym są zapisane takimi samymi cyframi (tzn. każda cyfra liczby $a$ występuje w jej zapisie dziesiętnym tyle samo razy co w zapisie każdej z liczb $b$ i $c$). Czy jest możliwe, aby $a + b + c = 10^{1001}$? Odpowiedź uzasadnij.",
+  "title": "Ile razy napisano cyfrę 7",
+  "content": "Tomek napisał zbiór zadań z matematyki, który zawiera $972$ zadania. Własnoręcznie je ponumerował. Ile razy napisał cyfrę $7$?",
   "pdf": {
-    "tasks": "tasks/2019/etap1/1etap19.pdf",
-    "solutions": "tasks/2019/etap1/1etap19r.pdf",
-    "statistics": null
+    "tasks": "tasks/2019/etap1/tasks.pdf"
   },
   "difficulty": 3,
   "categories": [
-    "teoria_liczb"
+    "teoria_liczb",
+    "kombinatoryka"
   ],
   "hints": [
-    "Zastanów się, co łączy liczby mające te same cyfry w różnej kolejności. Jaka własność arytmetyczna jest zachowana przy permutacji cyfr liczby?",
-    "Przypomnij sobie cechę podzielności przez 9 - suma cyfr liczby daje tę samą resztę z dzielenia przez 9 co sama liczba. Zbadaj reszty z dzielenia przez 9.",
-    "Skoro $a$, $b$, $c$ mają te same cyfry, to każda z nich daje tę samą resztę z dzielenia przez 9. Oznacz tę resztę przez $r$ i zapisz, jaką resztę daje suma $a + b + c$.",
-    "Oblicz resztę z dzielenia $10^{1001}$ przez 9 (skorzystaj z tego, że $10 \\equiv 1 \\pmod{9}$). Sprawdź, czy istnieje liczba $r \\in \\{0, 1, ..., 8\\}$ taka, że $3r$ daje tę resztę."
+    "Co jest dane, a czego szukamy? Tomek numeruje zadania od $1$ do $972$, a my liczymy, ile razy pojawi się cyfra $7$. Zacznij od policzenia siódemek wśród małych liczb, np. od $1$ do $20$.",
+    "Zamiast wypisywać wszystkie liczby, policz cyfrę $7$ osobno na każdej pozycji: ile razy stoi na miejscu jedności, ile na miejscu dziesiątek, a ile na miejscu setek. Na końcu dodasz te trzy wyniki.",
+    "Pomyśl, jak często cyfra jedności bywa siódemką w pełnym zakresie $0$–$9$ i jak często siódemką jest cyfra dziesiątek. Sprawdź też, czy ostatnia, niepełna grupa blisko $972$ zawiera komplet siódemek.",
+    "Policz $7$ na miejscu jedności (w każdej dziesiątce jest jedna taka liczba), potem na miejscu dziesiątek (siódemki w blokach po dziesięć, np. $70$–$79$), a na końcu na miejscu setek ($700$–$799$). Dodaj wyniki."
   ],
-  "prerequisites": [],
   "skills_required": [
     "digit_manipulation",
-    "modular_arithmetic",
-    "divisibility_arguments"
+    "counting_techniques"
   ],
   "skills_gained": [
     "digit_manipulation",
-    "modular_arithmetic",
-    "contradiction"
+    "case_analysis"
+  ],
+  "prerequisites": [
+    "2020_etap1_4",
+    "2018_etap1_4"
   ]
 }

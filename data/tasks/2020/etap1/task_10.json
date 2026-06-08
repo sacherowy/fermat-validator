@@ -1,0 +1,25 @@
+{
+  "number": 10,
+  "title": "Zadanie 10",
+  "content": "Brak zadania — IV edycja konkursu FerMat (etap 1, 23 czerwca 2020) zawiera tylko 9 zadań. W PDF nie ma zadania nr 10.",
+  "pdf": {
+    "tasks": "tasks/2020/etap1/tasks.pdf"
+  },
+  "difficulty": 1,
+  "categories": [
+    "arytmetyka"
+  ],
+  "hints": [
+    "To miejsce na zadanie nr 10, ale w tej edycji konkursu FerMat (etap 1, 2020) takie zadanie nie istnieje — arkusz zawiera tylko 9 zadań.",
+    "Nie ma tu treści do rozwiązania. Sprawdź oryginalny arkusz PDF, aby potwierdzić, że zadania nr 10 brakuje.",
+    "Jeśli szukasz zadań do ćwiczeń, przejdź do zadań od 1 do 9 z tego etapu.",
+    "Brak danych zadania — nie da się sformułować wskazówki rozwiązania."
+  ],
+  "skills_required": [
+    "basic_operations"
+  ],
+  "skills_gained": [
+    "basic_operations"
+  ],
+  "prerequisites": []
+}

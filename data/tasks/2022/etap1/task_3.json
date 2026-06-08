@@ -1,29 +1,31 @@
 {
   "number": 3,
-  "title": "Prostokąt $ABCD$ z punktami $E$ i $F$",
-  "content": "Dany jest prostokąt $ABCD$. Punkt $E$ leży na boku $AB$, a punkt $F$ leży na odcinku $CE$. Wykaż, że jeśli trójkąty $ADE$ i $CDF$ mają równe pola, to również trójkąty $BCE$ i $DEF$ mają równe pola.",
+  "title": "Obwód prostokąta w siatce $3 \\times 3$",
+  "content": "Na rysunku obok dany jest prostokąt podzielony na $9$ mniejszych prostokątów. Liczby w prostokątach oznaczają ich obwody. W siatce $3 \\times 3$ podano obwody: $17$ (lewy górny prostokąt), $9$ (prawy górny), $7$ (środkowy) oraz $5$ (prawy dolny). Oblicz obwód prostokąta oznaczonego znakiem zapytania (lewy dolny).",
   "pdf": {
-    "tasks": "tasks/2022/etap1/18omj-1etap.pdf",
-    "solutions": "tasks/2022/etap1/18omj-1r.pdf",
-    "statistics": null
+    "tasks": "tasks/2022/etap1/tasks.pdf"
   },
   "difficulty": 3,
   "categories": [
-    "geometria"
+    "geometria",
+    "arytmetyka"
   ],
   "hints": [
-    "Narysuj prostokąt $ABCD$ i zaznacz na nim punkty $E$ i $F$. Zapisz w postaci równości, co jest dane i co należy udowodnić, używając symboli pól, np. $P_{ADE}$.",
-    "Zastanów się nad polami trzech trójkątów opartych na bokach prostokąta: $ADE$, $BCE$ i $CDE$. Czy potrafisz znaleźć jakąś zależność między sumą pól dwóch z nich a polem trzeciego?",
-    "Oblicz sumę pól trójkątów $ADE$ i $BCE$. Jaką część pola całego prostokąta stanowi ta suma? A jaką część pola prostokąta stanowi pole trójkąta $CDE$?",
-    "Wykorzystaj odkrytą zależność $P_{ADE} + P_{BCE} = P_{CDE}$. Zauważ, że punkt $F$ dzieli trójkąt $CDE$ na dwa mniejsze trójkąty. Użyj tej informacji oraz danej w zadaniu równości pól."
-  ],
-  "prerequisites": [
-    "2021_etap2_4"
+    "Każdy mały prostokąt ma swoją szerokość i wysokość. Zauważ, że obwód takiego prostokąta to $2 \\cdot (\\text{szerokość} + \\text{wysokość})$. Oznacz szerokości trzech kolumn i wysokości trzech wierszy literami.",
+    "Spróbuj zapisać obwód każdego z czterech narożnych prostokątów za pomocą tych samych szerokości kolumn i wysokości wierszy. Czy potrzebujesz znać wszystkie te liczby z osobna?",
+    "Przyjrzyj się tylko czterem prostokątom w rogach siatki. Dodaj do siebie obwody dwóch z nich leżących na przekątnej i porównaj z sumą obwodów dwóch pozostałych narożnych prostokątów.",
+    "Pokaż, że suma obwodów lewego górnego i prawego dolnego prostokąta jest równa sumie obwodów prawego górnego i lewego dolnego (bo w obu sumach pojawiają się te same szerokości i wysokości). Z tej równości wyznacz szukany obwód — środkowa liczba $7$ nie jest do tego potrzebna."
   ],
   "skills_required": [
-    "area_methods"
+    "area_methods",
+    "basic_operations"
   ],
   "skills_gained": [
-    "area_methods"
+    "invariants"
+  ],
+  "prerequisites": [
+    "2021_etap1_6",
+    "2017_etap1_2",
+    "2019_etap1_4"
   ]
 }

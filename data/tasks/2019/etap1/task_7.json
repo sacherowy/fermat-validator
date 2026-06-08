@@ -1,34 +1,29 @@
 {
   "number": 7,
-  "title": "Graniastosłup prosty z rombem - przekrój kwadratowy",
-  "content": "Dany jest graniastosłup prosty, którego podstawą jest romb o boku długości $a$ i kącie ostrym $60^\\circ$. Graniastosłup ten przecięto płaszczyzną, przecinając jego krawędzie boczne i uzyskując w przekroju kwadrat. Wyznacz wszystkie możliwe wartości, jakie może przyjąć długość boku tego kwadratu.",
+  "title": "Suma cyfr liczby czterocyfrowej",
+  "content": "Dana jest liczba czterocyfrowa. Sumę cyfr tej liczby oznaczono przez $A$, a sumę cyfr liczby $A$ oznaczono przez $B$. Jaką największą wartość może przyjąć $B$?",
   "pdf": {
-    "tasks": "tasks/2019/etap1/1etap19.pdf",
-    "solutions": "tasks/2019/etap1/1etap19r.pdf",
-    "statistics": null
+    "tasks": "tasks/2019/etap1/tasks.pdf"
   },
-  "difficulty": 3,
+  "difficulty": 2,
   "categories": [
-    "geometria",
-    "algebra"
+    "teoria_liczb"
   ],
   "hints": [
-    "Narysuj podstawę graniastosłupa – romb o boku $a$ i kącie $60^\\circ$. Jakie są długości jego przekątnych? Pomyśl, jak płaszczyzna może przeciąć graniastosłup, aby powstał kwadratowy przekrój.",
-    "Rozważ dwa główne rodzaje położenia płaszczyzny tnącej. Może być ona prostopadła do podstawy (pionowa) lub nachylona względem niej. Zbadaj oba przypadki.",
-    "Jeśli płaszczyzna jest pionowa, przekrój jest prostokątem. Aby był to kwadrat, jego wysokość musi być równa długości boku leżącego w podstawie. Jakie szczególne odcinki w rombie mogą być takimi bokami?",
-    "Jeśli płaszczyzna jest nachylona, wierzchołki kwadratu leżą na czterech krawędziach. Aby jego przekątne były prostopadłe, jedna para przeciwległych wierzchołków musi leżeć na tej samej wysokości. Wykorzystaj tę własność i twierdzenie Pitagorasa."
-  ],
-  "prerequisites": [
-    "2017_etap1_7"
+    "Zastanów się najpierw, jak duża może być suma cyfr $A$. Ile maksymalnie wynosi suma cyfr dowolnej liczby czterocyfrowej?",
+    "Skoro $A$ nie może być dowolnie duże, to wystarczy sprawdzić, jakie wartości $A$ są w ogóle możliwe, a potem dla nich policzyć sumę cyfr $B$.",
+    "Nie szukaj największego $A$ — szukaj takiego $A$ z dozwolonego zakresu, którego cyfry dają największą sumę. Czy największe $A$ na pewno daje największe $B$?",
+    "Wypisz wszystkie możliwe wartości $A$ (od najmniejszej do największej możliwej) i dla każdej policz sumę jej cyfr. Zwróć uwagę na liczby, których cyfry są bliskie 9, np. tuż przed okrągłą dziesiątką."
   ],
   "skills_required": [
-    "spatial_3d",
-    "pythagorean_theorem",
-    "trapezoid_parallelogram"
+    "digit_manipulation",
+    "case_analysis"
   ],
   "skills_gained": [
-    "spatial_3d",
-    "coordinate_geometry",
-    "algebraic_identities"
+    "digit_manipulation"
+  ],
+  "prerequisites": [
+    "2018_etap1_4",
+    "2017_etap1_5"
   ]
 }

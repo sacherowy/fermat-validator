@@ -1,29 +1,25 @@
 {
   "number": 1,
-  "title": "Wynik Marka na teście",
-  "content": "W klasie Marka jest 17 uczniów i wszyscy napisali test. Marek uzyskał wynik o 17 punktów wyższy od średniej arytmetycznej wyników pozostałych uczniów. O ile punktów wynik Marka jest wyższy od średniej arytmetycznej wyników całej klasy? Odpowiedź uzasadnij.",
+  "title": "Cztery kąty między prostymi",
+  "content": "Dwie przecinające się proste utworzyły $4$ kąty. Suma trzech z tych kątów wynosi $221^\\circ$. Ile stopni ma każdy z tych kątów?",
   "pdf": {
-    "tasks": "tasks/2021/etap1/1etap21.pdf",
-    "solutions": "tasks/2021/etap1/1etap21rr.pdf",
-    "statistics": null
+    "tasks": "tasks/2021/etap1/tasks.pdf"
   },
   "difficulty": 2,
   "categories": [
-    "arytmetyka",
-    "algebra"
+    "geometria"
   ],
   "hints": [
-    "Oznaczmy przez $A$ średnią arytmetyczną wyników 16 uczniów (bez Marka). Wynik Marka jest o 17 punktów wyższy. Potraktuj te 17 punktów jako jego 'nadwyżkę' ponad średnią grupy.",
-    "Gdy obliczamy średnią dla całej klasy, 'nadwyżka' punktów Marka zostaje w pewnym sensie rozdzielona pomiędzy wszystkich uczniów. Zastanów się, jak to wpłynie na nową średnią.",
-    "Nadwyżka 17 punktów jest rozdzielana na 17 osób. O ile w takim razie średnia arytmetyczna całej klasy będzie wyższa od średniej arytmetycznej pozostałych 16 uczniów?",
-    "Wiesz już, jak średnia całej klasy ma się do średniej 16 uczniów. Wiesz też, jak wynik Marka ma się do średniej 16 uczniów. Oblicz teraz szukaną różnicę."
+    "Co wiesz o czterech kątach, które powstają, gdy dwie proste się przecinają? Spróbuj narysować taki rysunek i oznaczyć wszystkie cztery kąty.",
+    "Zastanów się, ile wynosi suma wszystkich czterech kątów wokół punktu przecięcia. Jak ta wiedza pomoże Ci wykorzystać podaną sumę trzech kątów?",
+    "Zwróć uwagę, że kąty leżące naprzeciw siebie są równe, a kąty leżące obok siebie razem dają kąt półpełny. To znacznie zmniejsza liczbę różnych wartości kątów.",
+    "Najpierw wyznacz miarę czwartego kąta, korzystając z tego, że wszystkie cztery razem dają pełny obrót. Potem użyj zależności między kątami sąsiednimi, aby znaleźć pozostałe."
   ],
-  "prerequisites": [],
   "skills_required": [
-    "basic_operations"
+    "angle_chasing"
   ],
   "skills_gained": [
-    "word_problems",
-    "algebraic_identities"
-  ]
+    "angle_chasing"
+  ],
+  "prerequisites": []
 }

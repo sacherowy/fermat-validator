@@ -1,28 +1,30 @@
 {
   "number": 5,
-  "title": "Liczby pierwsze $a$, $a+b$, $a+b+c$, $b+c$, $c$",
-  "content": "Liczby całkowite $a$, $b$, $c$ są większe od 1 i mają tę własność, że liczby $a$, $a+b$, $a+b+c$, $b+c$, $c$ są pierwsze. Wykaż, że liczba $b$ jest podzielna przez 3.",
+  "title": "Zadanie 5 — różnica miar kątów trójkąta",
+  "content": "Istnieje taki trójkąt, że różnica miar pewnych dwóch jego kątów jest równa\n\n(a) $0^\\circ$;\n\n(b) $178^\\circ$;\n\n(c) $180^\\circ$.",
   "pdf": {
-    "tasks": "tasks/2024/etap1/20omj-1etap.pdf",
-    "solutions": "tasks/2024/etap1/20omj-1etap-r.pdf",
-    "statistics": null
+    "tasks": "tasks/2024/etap1/tasks.pdf"
   },
-  "difficulty": 3,
+  "difficulty": 2,
   "categories": [
-    "teoria_liczb"
+    "geometria"
   ],
   "hints": [
-    "Zbadaj parzystość liczb $a, b, c$. Pamiętaj, że jedyną parzystą liczbą pierwszą jest 2. Co by wynikło z założenia, że $a$ i $c$ są obie nieparzyste? Przeanalizuj parzystość sum $a+b$, $b+c$ oraz $a+b+c$.",
-    "Analiza parzystości powinna doprowadzić Cię do wniosku, że jedna z liczb, np. $a$, musi być równa 2. Sprawdź, czy $c$ może być wtedy nieparzyste. W tym celu ustal najpierw, jaka musiałaby być parzystość $b$, aby $b+c$ było pierwsze, a potem zbadaj liczbę $a+b$.",
-    "Powinieneś wywnioskować, że koniecznie $a=2$ oraz $c=2$. Wstaw te wartości do wyrażeń z treści zadania. Zauważ, że teraz liczby $b+2$ oraz $b+4$ muszą być liczbami pierwszymi.",
-    "Aby wykazać tezę, zbadaj reszty z dzielenia przez 3. Gdyby $b$ nie dzieliło się przez 3, to czy liczby $b+2$ i $b+4$ mogłyby być jednocześnie liczbami pierwszymi większymi od 2? Pamiętaj, że $b>1$."
+    "Przypomnij sobie najważniejszą własność kątów w każdym trójkącie. Ile wynosi suma wszystkich trzech kątów? Zapisz to, zanim ruszysz dalej.",
+    "Dla każdego z trzech przypadków spróbuj zbudować konkretny przykład trójkąta lub uzasadnić, że taki trójkąt nie może istnieć. To dwie różne strategie — wybierz właściwą dla każdej części.",
+    "Oznacz dwa kąty, których różnica nas interesuje, i pamiętaj, że KAŻDY kąt trójkąta musi być większy od $0^\\circ$, a wszystkie trzy razem dają stałą sumę. Zastanów się, jak duża może być różnica dwóch kątów przy takim ograniczeniu.",
+    "Zapisz warunek jako układ: różnica dwóch kątów ma daną wartość, a ich suma musi pozostawić miejsce na dodatni trzeci kąt. Sprawdź, dla których z wartości $0^\\circ$, $178^\\circ$, $180^\\circ$ da się dobrać kąty spełniające oba warunki — i kiedy zabraknie miejsca na trzeci kąt."
   ],
-  "prerequisites": [],
   "skills_required": [
-    "modular_arithmetic",
-    "primality_testing"
+    "angle_chasing",
+    "case_analysis"
   ],
   "skills_gained": [
-    "modular_arithmetic"
+    "angle_chasing",
+    "constructive_proof"
+  ],
+  "prerequisites": [
+    "2024_etap1_4",
+    "2025_etap1_7"
   ]
 }

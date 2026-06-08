@@ -1,30 +1,25 @@
 {
   "number": 1,
-  "title": "Monety dwuzłotówki i pięciozłotówki",
-  "content": "Jaś ma monety o łącznej wartości równej dokładnie 100 złotych, przy czym każda z tych monet jest dwuzłotówką albo pięciozłotówką. Wykaż, że Jaś może spośród tych monet wybrać takie, których łączna wartość jest równa dokładnie 50 złotych.",
+  "title": "Prawdziwa równość",
+  "content": "Prawdziwa jest równość:\n\n(a) $3 \\cdot 11 \\cdot 14 = 22 \\cdot 7 \\cdot 3$;\n\n(b) $2 + 3 \\cdot 2 = 3 + 2 \\cdot 2$;\n\n(c) $221 \\cdot 45 \\cdot 3 \\cdot \\left(1 - \\frac{1}{2} - \\frac{1}{3} - \\frac{1}{6}\\right) = 13 \\cdot 2025 \\cdot (6 - 1 - 2 - 3)$.",
   "pdf": {
-    "tasks": "tasks/2025/etap1/21omj-1etap-zad.pdf",
-    "solutions": "tasks/2025/etap1/21omj-1etap-r.pdf",
-    "statistics": null
+    "tasks": "tasks/2025/etap1/tasks.pdf"
   },
-  "difficulty": 2,
+  "difficulty": 1,
   "categories": [
-    "teoria_liczb",
-    "kombinatoryka"
+    "arytmetyka"
   ],
   "hints": [
-    "Oznacz liczbę dwuzłotówek przez $a$, a pięciozłotówek przez $b$. Zapisz równanie opisujące łączną wartość monet. Jakie są najprostsze sposoby na uzyskanie 50 zł?",
-    "Rozważmy, co by się stało, gdyby Jaś *nie mógł* wybrać monet o wartości 50 zł. Spróbuj doprowadzić to założenie do sprzeczności.",
-    "Jeśli nie można uzyskać 50 zł, to w szczególności nie można tego zrobić w najprostszy sposób. Co to założenie mówi o liczbie dwuzłotówek, a co o liczbie pięciozłotówek, które posiada Jaś?",
-    "Oszacuj, jaka może być maksymalna łączna wartość monet, jeśli spełnione są warunki na liczby monet $a$ i $b$ uzyskane w poprzednim kroku. Porównaj wynik ze 100 zł."
+    "Co trzeba sprawdzić? Dla każdej z trzech równości policz osobno lewą i prawą stronę, a potem porównaj wyniki. Czy obie strony dają tę samą liczbę?",
+    "Nie zawsze trzeba mnożyć wszystko po kolei. Spróbuj najpierw uprościć każdą stronę: poszukaj wspólnych czynników albo wyrażeń, które łatwo policzyć w pamięci.",
+    "W podpunkcie (c) zwróć szczególną uwagę na wyrażenia w nawiasach. Policz najpierw, ile wynosi $1 - \\frac{1}{2} - \\frac{1}{3} - \\frac{1}{6}$ oraz $6 - 1 - 2 - 3$. Co zauważasz?",
+    "Aby dodać ułamki $\\frac{1}{2}$, $\\frac{1}{3}$ i $\\frac{1}{6}$, sprowadź je do wspólnego mianownika $6$. Jeśli nawias da pewną szczególną wartość, zastanów się, ile wtedy wynosi cały iloczyn — i co to oznacza dla równości."
   ],
   "skills_required": [
-    "diophantine_equations"
+    "basic_operations"
   ],
   "skills_gained": [
-    "diophantine_equations",
-    "constructive_proof",
-    "counting_techniques"
+    "basic_operations"
   ],
   "prerequisites": []
 }

@@ -1,0 +1,32 @@
+{
+  "number": 9,
+  "title": "Sześcian z wydrążonymi tunelami",
+  "content": "W sześcianie o krawędzi $3 \\text{ cm}$ Mateusz wydrążył na wylot trzy tunele o przekroju kwadratu o boku $1 \\text{ cm}$, z każdej strony tak samo (jak na poniższym rysunku). Jaka jest objętość otrzymanej bryły? Ile ścian ma otrzymana bryła?",
+  "pdf": {
+    "tasks": "tasks/2019/etap1/tasks.pdf"
+  },
+  "difficulty": 4,
+  "categories": [
+    "geometria"
+  ],
+  "hints": [
+    "Wyobraź sobie ten sześcian i trzy tunele przewiercone na wylot w trzech różnych kierunkach, wszystkie przez środek. Co jest dane (krawędź $3$, przekrój tuneli $1\\times1$), a czego szukamy? Najpierw policz objętość całego pełnego sześcianu.",
+    "Objętość bryły to objętość sześcianu pomniejszona o to, co wydrążono. Policz objętość jednego tunelu, a potem zastanów się, jak połączyć trzy tunele — uważaj na miejsce, gdzie się one spotykają.",
+    "Trzy tunele przecinają się w samym środku. Gdybyś po prostu dodał objętości trzech tuneli, środkowy fragment policzyłbyś kilka razy. Zastanów się, jak duży jest ten wspólny środkowy kawałek i ile razy się powtarza.",
+    "Objętość: odejmij trzy tunele, ale dodaj z powrotem środkowy sześcianik $1\\times1\\times1$ odjęty zbyt wiele razy. Ściany: policz osobno zewnętrzne (każda z dziurą) i wszystkie wewnętrzne ścianki na bokach tuneli, systematycznie."
+  ],
+  "skills_required": [
+    "spatial_3d",
+    "polyhedra",
+    "case_analysis"
+  ],
+  "skills_gained": [
+    "spatial_3d",
+    "counting_techniques"
+  ],
+  "prerequisites": [
+    "2017_etap1_7",
+    "2017_etap1_9",
+    "2018_etap1_8"
+  ]
+}

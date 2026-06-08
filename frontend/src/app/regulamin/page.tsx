@@ -178,7 +178,7 @@ export default function RegulaminPage() {
             Kod źródłowy serwisu {APP_NAME} jest udostępniony na licencji MIT i
             dostępny w repozytorium{" "}
             <MuiLink
-              href="https://github.com/rsokolowski/fermat-validator"
+              href="https://github.com/sacherowy/fermat-validator"
               target="_blank"
               rel="noopener"
             >

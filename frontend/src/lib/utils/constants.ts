@@ -4,7 +4,7 @@ export const APP_NAME = "FerMat Validator";
 export const APP_TITLE = "FerMat Validator – Konkurs Matematyczny FerMat";
 export const APP_DESCRIPTION =
   "Przygotuj się do Konkursu Matematycznego FerMat z pomocą AI. Archiwum zadań z wielu edycji, ocena rozwiązań przez sztuczną inteligencję, wskazówki i ścieżka nauki.";
-export const CONTACT_EMAIL = "fermat@sp221.edu.pl";
+export const CONTACT_EMAIL = "pgmichalak@gmail.com";
 export const SITE_URL = "https://fermat-validator.pl";
 
 export const CATEGORY_NAMES: Record<string, string> = {

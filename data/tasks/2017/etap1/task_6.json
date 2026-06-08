@@ -1,30 +1,32 @@
 {
   "number": 6,
-  "title": "Równość $m^2 + n = k^2 + k$",
-  "content": "Dodatnie liczby całkowite $k$, $m$, $n$ spełniają równość $m^2 + n = k^2 + k$. Wykaż, że $m \\leq n$.",
+  "title": "Cztery liczby naturalne o równej sumie i iloczynie",
+  "content": "Podaj przykład czterech takich dodatnich liczb naturalnych (niekoniecznie różnych), których suma jest równa ich iloczynowi.",
   "pdf": {
-    "tasks": "tasks/2017/etap1/1etap17.pdf",
-    "solutions": "tasks/2017/etap1/1etap17r.pdf",
-    "statistics": null
+    "tasks": "tasks/2017/etap1/tasks.pdf"
   },
-  "difficulty": 3,
+  "difficulty": 2,
   "categories": [
     "teoria_liczb",
-    "algebra"
+    "arytmetyka"
   ],
   "hints": [
-    "Przekształć równość tak, aby wyznaczyć $n$. Skoro $n$ jest liczbą dodatnią, to jaką nierówność otrzymujesz między $m^2$ a $k^2+k$?",
-    "Zauważ, że dla dodatniego $k$ liczba $k^2+k$ znajduje się pomiędzy dwoma kolejnymi kwadratami liczb całkowitych: $k^2$ oraz $(k+1)^2$.",
-    "Skoro $m^2$ jest kwadratem mniejszym od $k^2+k$, a $k^2+k$ jest mniejsze od $(k+1)^2$, to jaka nierówność zachodzi między $m$ a $k$?",
-    "Skoro $m \\leq k$, to $m^2+m \\leq k^2+k$. Wstaw do tej nierówności wyrażenie $m^2+n$ w miejsce $k^2+k$ i uprość wynik."
+    "Co jest dane, a czego szukamy? Masz znaleźć cztery dodatnie liczby naturalne (mogą się powtarzać), dla których suma da dokładnie to samo co iloczyn. Wypisz najpierw, co znaczy „suma\" i co znaczy „iloczyn\" dla czterech liczb.",
+    "To zadanie nie wymaga wzoru — wystarczy sprytnie poszukać przykładu. Spróbuj metody prób: ustal kilka liczb i sprawdzaj, czy suma równa się iloczynowi. Zacznij od liczb małych.",
+    "Zwróć uwagę, że liczba $1$ powiększa sumę, ale wcale nie zmienia iloczynu (mnożenie przez $1$ nic nie psuje). Zastanów się, jak można to wykorzystać, dodając kilka jedynek do większych liczb.",
+    "Spróbuj wziąć dwie jedynki i dwie inne liczby, np. $1, 1, a, b$. Wtedy iloczyn to $a\\cdot b$, a suma to $2 + a + b$. Poszukaj takich małych $a$ i $b$, żeby te dwa wyrażenia były równe."
   ],
   "skills_required": [
-    "algebraic_identities",
-    "inequality_manipulation"
+    "diophantine_equations",
+    "constructive_proof",
+    "basic_operations"
   ],
   "skills_gained": [
-    "contradiction",
+    "constructive_proof",
     "diophantine_equations"
   ],
-  "prerequisites": []
+  "prerequisites": [
+    "2017_etap1_3",
+    "2018_etap1_5"
+  ]
 }

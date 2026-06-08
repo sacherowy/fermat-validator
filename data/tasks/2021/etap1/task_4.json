@@ -1,31 +1,30 @@
 {
   "number": 4,
-  "title": "Tabela z liczbami od 1 do 17",
-  "content": "W każde pole poniższej tabeli należy wpisać inną liczbę całkowitą spośród liczb od 1 do 17 w taki sposób, aby sumy liczb we wszystkich ośmiu kolumnach były równe, a suma liczb w górnym wierszu była dwa razy większa od sumy liczb w dolnym wierszu.\n\nKtórej z liczb od 1 do 17 można nie wpisać do tabeli? Podaj wszystkie takie liczby. Odpowiedź uzasadnij.",
+  "title": "Klocki na wagonikach pociągu",
+  "content": "Grześ bawi się zestawem $999$ klocków i $333$ wagoników, które tworzą pociąg. Na klockach widnieją liczby od $1$ do $999$ (każda liczba występuje dokładnie raz). Na każdym z wagoników można umieścić $3$ klocki. Grześ chce umieścić wszystkie klocki na wagonikach w kolejności rosnącej (od lewej do prawej).\n\n(a) Na którym wagoniku i na której pozycji (lewa/środek/prawa) Grześ powinien umieścić klocek z liczbą $671$?\n\n(b) Jaka liczba powinna się znaleźć na prawej pozycji $147$ wagonika?",
   "pdf": {
-    "tasks": "tasks/2021/etap1/1etap21.pdf",
-    "solutions": "tasks/2021/etap1/1etap21rr.pdf",
-    "statistics": null
+    "tasks": "tasks/2021/etap1/tasks.pdf"
   },
-  "difficulty": 3,
+  "difficulty": 2,
   "categories": [
-    "teoria_liczb",
-    "kombinatoryka",
-    "logika"
+    "arytmetyka",
+    "teoria_liczb"
   ],
   "hints": [
-    "Oblicz sumę wszystkich liczb od 1 do 17. Zastanów się, jak suma 16 liczb wpisanych do tabeli zależy od wartości pominiętej liczby.",
-    "Wykorzystaj warunki dotyczące sum w wierszach i w kolumnach, aby zapisać sumę wszystkich 16 liczb w tabeli na dwa różne sposoby.",
-    "Z zależności, które zapisałeś, wynikają dwa warunki podzielności dla sumy liczb w tabeli. Jaki jest ostateczny warunek podzielności, który musi spełniać ta suma?",
-    "Gdy ustalisz, która liczba musi zostać pominięta, uzasadnij, że odpowiednie wypełnienie tabeli istnieje. Oblicz wymaganą sumę w każdej kolumnie i spróbuj dobrać pozostałe 16 liczb w pary o takiej właśnie sumie."
+    "Zastanów się, ile klocków mieści jeden wagonik i jak wygląda pierwszy wagonik. Wypisz sobie, jakie liczby trafią na wagonik nr 1, nr 2 i nr 3 — od razu zobaczysz regułę.",
+    "Skoro klocki idą rosnąco po 3 na wagonik, spróbuj powiązać numer wagonika z liczbami na nim. Pomocne będzie dzielenie z resztą przez $3$.",
+    "Zauważ, że na prawej pozycji wagonika nr $k$ leży liczba będąca wielokrotnością $3$. Jaka to wielokrotność w zależności od $k$? A jak z tego odczytać liczby na pozycji lewej i środkowej?",
+    "Aby znaleźć wagonik danej liczby, podziel ją przez $3$ i spójrz na resztę: reszta decyduje o pozycji (lewa/środek/prawa), a wynik dzielenia podpowiada numer wagonika. Dla punktu (b) policz, ile wynosi prawa pozycja wagonika $k$ jako $3\\cdot k$."
   ],
-  "prerequisites": [],
   "skills_required": [
-    "divisibility_arguments",
-    "parity_arguments"
+    "basic_operations",
+    "divisibility_arguments"
   ],
   "skills_gained": [
-    "case_analysis",
-    "counting_techniques"
+    "modular_arithmetic"
+  ],
+  "prerequisites": [
+    "2020_etap1_4",
+    "2021_etap1_8"
   ]
 }

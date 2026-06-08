@@ -1,31 +1,33 @@
 {
   "number": 5,
-  "title": "Trzy okręgi o wspólnym środku",
-  "content": "Dane są trzy okręgi $o_1$, $o_2$, $o_3$ o wspólnym środku $O$. Na tych okręgach leżą odpowiednio punkty $A$, $B$, $C$, przy czym czworokąt $ABCO$ jest prostokątem. Wykaż, że pole koła ograniczonego okręgiem $o_1$ jest równe polu pierścienia kołowego ograniczonego okręgami $o_2$ i $o_3$.",
+  "title": "Największe pole prostopadłościanu o objętości 8",
+  "content": "Jakie największe pole powierzchni może mieć prostopadłościan o objętości $8$ i krawędziach o długościach całkowitych?",
   "pdf": {
-    "tasks": "tasks/2023/etap1/19omj-1etap.pdf",
-    "solutions": "tasks/2023/etap1/19omj-1etap-r.pdf",
-    "statistics": null
+    "tasks": "tasks/2023/etap1/tasks.pdf"
   },
   "difficulty": 2,
   "categories": [
-    "geometria"
+    "geometria",
+    "teoria_liczb"
   ],
   "hints": [
-    "Narysuj figurę i oznacz promienie $r_1=|OA|$, $r_2=|OB|$, $r_3=|OC|$. Zastanów się, które długości w prostokącie $ABCO$ (boki, przekątne) są równe tym promieniom.",
-    "Aby powiązać ze sobą kwadraty promieni, poszukaj w figurze trójkąta prostokątnego, którego boki można wyrazić za pomocą $r_1, r_2, r_3$.",
-    "Rozważ trójkąt $\\triangle OAB$. Jaki to jest trójkąt, skoro $ABCO$ jest prostokątem? Wyraź długości jego wszystkich trzech boków za pomocą promieni $r_1, r_2, r_3$.",
-    "Zapisz twierdzenie Pitagorasa dla trójkąta $\\triangle OAB$. Przekształć otrzymaną równość, aby powiązać ją ze wzorami na pole koła i pole pierścienia."
+    "Co jest dane, a czego szukamy? Objętość prostopadłościanu to iloczyn trzech krawędzi, czyli $a \\cdot b \\cdot c = 8$, gdzie $a$, $b$, $c$ są liczbami całkowitymi. Pole powierzchni to $2(ab + bc + ca)$. Zastanów się, ile jest możliwych kształtów takiego pudełka.",
+    "Skoro krawędzi jest skończenie wiele, dobrym pomysłem jest wypisanie wszystkich sposobów, na jakie liczbę $8$ można zapisać jako iloczyn trzech liczb całkowitych, a potem porównanie pól. To zadanie na uporządkowane sprawdzanie przypadków.",
+    "Pomyśl, jak rozłożyć $8$ na czynniki: $8 = 2 \\cdot 2 \\cdot 2$. Jak z tych dwójek (i jedynek) poskładać trzy krawędzie? Zwróć uwagę, że pudełko bardzo \"płaskie\" i wydłużone może mieć inne pole niż pudełko \"kostkowe\".",
+    "Wypisz wszystkie trójki $(a,b,c)$ dające iloczyn $8$, na przykład $(2,2,2)$, $(1,2,4)$, $(1,1,8)$. Dla każdej policz $2(ab+bc+ca)$ i sprawdź, która daje największą wartość. Zauważ, czy bardziej \"rozciągnięte\" pudełko zwiększa, czy zmniejsza pole."
   ],
   "skills_required": [
-    "pythagorean_theorem",
-    "area_methods"
+    "prime_factorization",
+    "spatial_3d",
+    "case_analysis"
   ],
   "skills_gained": [
-    "pythagorean_theorem",
-    "area_methods"
+    "spatial_3d",
+    "case_analysis"
   ],
   "prerequisites": [
-    "2020_etap1_2"
+    "2020_etap1_5",
+    "2023_etap1_2",
+    "2020_etap1_3"
   ]
 }

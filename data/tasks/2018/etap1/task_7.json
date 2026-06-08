@@ -1,33 +1,31 @@
 {
   "number": 7,
-  "title": "Sześcian z ostrosłupem",
-  "content": "Dany jest sześcian $ABCDA'B'C'D'$ o krawędzi długości $2$ i wierzchołkach oznaczonych jak na rysunku. Punkt $K$ jest środkiem krawędzi $AB$. Płaszczyzna zawierająca punkty $B'$, $D'$, $K$ przecina krawędź $AD$ w punkcie $L$. Oblicz objętość ostrosłupa o podstawie czworokąta $D'B'KL$ i wierzchołku $A$.",
+  "title": "Suma oczek na komplecie domino",
+  "content": "Komplet gry domino zawiera $28$ kamieni. Na kamieniach umieszczone są wszystkie możliwe kombinacje dwóch liczb oczek od $0$ do $6$ (przykładowe kamienie są na rysunku obok). Ile łącznie oczek jest na wszystkich kamieniach domino?",
   "pdf": {
-    "tasks": "tasks/2018/etap1/1etap18.pdf",
-    "solutions": "tasks/2018/etap1/1etap18r.pdf",
-    "statistics": null
+    "tasks": "tasks/2018/etap1/tasks.pdf"
   },
-  "difficulty": 3,
+  "difficulty": 2,
   "categories": [
-    "geometria",
-    "algebra"
+    "kombinatoryka",
+    "arytmetyka"
   ],
   "hints": [
-    "Wykonaj staranny rysunek sześcianu i zaznacz punkty $B'$, $D'$ i $K$. Pomyśl o płaszczyźnie, która je zawiera. Gdzie przetnie ona krawędź $AD$, tworząc punkt $L$?",
-    "Zadanie można podzielić na dwa etapy. Najpierw znajdź dokładne położenie punktu $L$. Następnie znajdź sprytny sposób na obliczenie objętości ostrosłupa, na przykład dzieląc go na prostsze bryły.",
-    "Płaszczyzna $B'D'KL$ przecina dwie równoległe płaszczyzny: podstawę dolną i górną sześcianu. Jakie są linie przecięcia i jaka jest zależność między nimi? Wykorzystaj tę własność, aby znaleźć położenie punktu $L$.",
-    "Zamiast obliczać pole podstawy $D'B'KL$ i wysokość, podziel ostrosłup na dwa czworościany: $A-D'KL$ i $A-D'B'K$. Objętość każdego z nich obliczysz łatwo, jeśli sprytnie wybierzesz ich podstawy na ścianach sześcianu."
+    "Co dokładnie jest dane? Każdy kamień ma dwie połówki, a na każdej połówce jest od $0$ do $6$ oczek. Szukamy sumy oczek na wszystkich $28$ kamieniach. Spróbuj wypisać kilka kamieni, np. $(0,0)$, $(0,1)$, $(0,2)$.",
+    "Zamiast dodawać sumy z każdego kamienia po kolei (co jest żmudne), spróbuj policzyć osobno, ile razy w całym komplecie pojawia się każda liczba oczek (ile razy występuje $0$, ile razy $1$, itd.).",
+    "Zwróć uwagę, że kamienie z dwiema różnymi liczbami liczą się raz (np. para $1$ i $2$ to jeden kamień), a kamienie z dwoma takimi samymi liczbami (np. $3$ i $3$) mają tę liczbę dwa razy. Policz, na ilu połówkach łącznie pojawia się dana liczba.",
+    "Sprawdź, że każda liczba oczek występuje na tej samej liczbie połówek w całym komplecie. Gdy ustalisz, ile razy pojawia się każda liczba, pomnóż liczbę przez tę krotność i dodaj wyniki dla wszystkich liczb od $0$ do $6$."
   ],
   "skills_required": [
-    "spatial_3d",
-    "coordinate_geometry"
+    "counting_techniques",
+    "basic_operations"
   ],
   "skills_gained": [
-    "spatial_3d",
-    "coordinate_geometry",
-    "algebraic_identities"
+    "counting_techniques"
   ],
   "prerequisites": [
-    "2017_etap1_7"
+    "2020_etap1_4",
+    "2018_etap1_4",
+    "2017_etap1_5"
   ]
 }

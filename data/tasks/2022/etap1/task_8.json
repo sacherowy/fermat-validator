@@ -1,0 +1,31 @@
+{
+  "number": 8,
+  "title": "Talary za rozcinanie sześcianów",
+  "content": "Stolarz rozcina drewniany sześcian na $8$ jednakowych sześcianów za jednego talara, niezależnie od wielkości sześcianu. Adam ma $3$ sześciany, a chciałby mieć ich $80$ (niekoniecznie tej samej wielkości). Ile talarów Adam zapłaci stolarzowi za rozcinanie sześcianów?",
+  "pdf": {
+    "tasks": "tasks/2022/etap1/tasks.pdf"
+  },
+  "difficulty": 2,
+  "categories": [
+    "arytmetyka",
+    "kombinatoryka"
+  ],
+  "hints": [
+    "Zastanów się, co dzieje się z liczbą sześcianów, gdy stolarz wykona jedno rozcięcie. Z ilu sześcianów robi się ile?",
+    "Zamiast śledzić wielkości sześcianów, śledź samą ich liczbę. Spróbuj zauważyć, jak zmienia się ona po każdym kolejnym rozcięciu.",
+    "Zwróć uwagę, że przy każdym rozcięciu jeden sześcian znika, a na jego miejsce pojawia się kilka nowych. O ile zatem za każdym razem rośnie łączna liczba sześcianów?",
+    "Skoro każde rozcięcie zwiększa liczbę sześcianów zawsze o tyle samo, oblicz, o ile musi wzrosnąć liczba (od stanu początkowego do docelowego), a potem sprawdź, ile rozcięć to daje. Każde rozcięcie kosztuje jednego talara."
+  ],
+  "skills_required": [
+    "basic_operations",
+    "divisibility_arguments"
+  ],
+  "skills_gained": [
+    "invariants"
+  ],
+  "prerequisites": [
+    "2021_etap1_8",
+    "2025_etap1_8",
+    "2022_etap1_5"
+  ]
+}

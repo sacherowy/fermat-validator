@@ -1,0 +1,29 @@
+{
+  "number": 9,
+  "title": "Dokończenie siatki prostopadłościanu",
+  "content": "Mateusz zaczął rysować siatkę prostopadłościanu. Narysował dwie ściany i poszedł spać. Dokończ rysowanie tej siatki.",
+  "pdf": {
+    "tasks": "tasks/2022/etap1/tasks.pdf"
+  },
+  "difficulty": 2,
+  "categories": [
+    "geometria"
+  ],
+  "hints": [
+    "Przypomnij sobie, jak wygląda prostopadłościan: ma 6 ścian, które są prostokątami. Ile ścian już narysował Mateusz, a ile musisz dorysować?",
+    "Pomyśl o tym, jak \"rozłożyć\" pudełko na płasko. Każda ściana ma swoją parę po przeciwnej stronie bryły o tych samych wymiarach. Jak takie ściany rozmieścić, by po sklejeniu utworzyły zamknięte pudełko?",
+    "Zwróć uwagę, że krawędzie sąsiadujących ze sobą ścian muszą mieć tę samą długość, bo po złożeniu siatki będą się stykać. Sprawdź, które boki narysowanych już ścian są równe.",
+    "Spróbuj dorysować brakujące cztery prostokąty tak, aby stykały się bokami o równej długości. Pamiętaj, że przeciwległe ściany prostopadłościanu są przystające (mają takie same wymiary). Na koniec sprawdź w wyobraźni, czy po złożeniu siatka utworzy zamknięte pudełko."
+  ],
+  "skills_required": [
+    "spatial_3d"
+  ],
+  "skills_gained": [
+    "spatial_3d",
+    "polyhedra"
+  ],
+  "prerequisites": [
+    "2023_etap1_5",
+    "2020_etap1_5"
+  ]
+}

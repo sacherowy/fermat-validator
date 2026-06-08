@@ -1,30 +1,31 @@
 {
   "number": 6,
-  "title": "Kwadrat o boku $n$ z plusami i minusami",
-  "content": "*Plusem* nazwiemy przedstawioną na rysunku figurę złożoną z pięciu kwadratów o boku 1, a *minusem* — każdy prostokąt złożony z dwóch takich kwadratów. Czy istnieje liczba nieparzysta $n$ o tej własności, że kwadrat o boku $n$ można rozciąć na plusy i minusy? Odpowiedź uzasadnij.",
+  "title": "Czerwone ściany sześcianu z klocków",
+  "content": "Kuba ma $64$ jednakowe sześcienne klocki. Każdy klocek ma jedną ścianę czerwoną, a pozostałe ściany ma białe. Kuba ze wszystkich klocków skleił taki model sześcianu, że na jego powierzchni widać maksymalnie dużo czerwonych ścian klocków. Ile ich widać?",
   "pdf": {
-    "tasks": "tasks/2022/etap1/18omj-1etap.pdf",
-    "solutions": "tasks/2022/etap1/18omj-1r.pdf",
-    "statistics": null
+    "tasks": "tasks/2022/etap1/tasks.pdf"
   },
   "difficulty": 3,
   "categories": [
     "kombinatoryka",
-    "logika"
-  ],
-  "prerequisites": [],
-  "skills_required": [
-    "tiling",
-    "parity_arguments"
-  ],
-  "skills_gained": [
-    "tiling",
-    "invariants"
+    "geometria"
   ],
   "hints": [
-    "Oblicz pole plusa i minusa. Zastanów się, jakie pole ma kwadrat o boku $n$ dla nieparzystego $n$ i czy można je uzyskać, sumując pola plusów i minusów.",
-    "Samo sprawdzenie podzielności pola nie wystarczy. Poszukaj niezmiennika — spróbuj pokolorować kwadrat w specjalny sposób i zbadaj, ile pól każdego koloru pokrywa plus, a ile minus.",
-    "Użyj kolorowania szachownicowego. Policz, ile jest czarnych i białych pól w kwadracie $n \\times n$ dla nieparzystego $n$. Ile pól każdego koloru pokrywa minus? A ile plus, w zależności od położenia jego środka?",
-    "Minus zawsze pokrywa jedno pole białe i jedno czarne. Plus, w zależności od koloru swojego środka, pokrywa 1 pole jednego koloru i 4 pola drugiego. Sprawdź, czy da się zbilansować liczbę pokrytych pól obu kolorów."
+    "Zauważ, że $64 = 4 \\times 4 \\times 4$, więc Kuba buduje duży sześcian o boku 4 klocki. Pamiętaj, że każdy mały klocek ma tylko jedną ścianę czerwoną.",
+    "Zastanów się osobno nad dwiema sprawami: ile małych klocków w ogóle widać na powierzchni dużego sześcianu, oraz ile czerwonych ścian może pokazać pojedynczy klocek.",
+    "Skoro każdy klocek ma tylko jedną czerwoną ścianę, to nawet jeśli widać dwie lub trzy jego ściany, czerwona może być co najwyżej jedna z nich. Ile klocków jest ukrytych w środku i nie widać ich wcale?",
+    "Policz, ile klocków leży całkowicie wewnątrz (te tworzą mniejszy sześcian o boku $4-2$) i odejmij je od wszystkich. Każdy z pozostałych kloców może obrócić swoją czerwoną ścianę na zewnątrz."
+  ],
+  "skills_required": [
+    "spatial_3d",
+    "counting_techniques"
+  ],
+  "skills_gained": [
+    "spatial_3d",
+    "counting_techniques"
+  ],
+  "prerequisites": [
+    "2017_etap1_7",
+    "2021_etap1_9"
   ]
 }

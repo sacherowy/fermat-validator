@@ -1,30 +1,32 @@
 {
   "number": 1,
-  "title": "Równoległobok i równe odcinki",
-  "content": "Dany jest równoległobok $ABCD$. Na odcinku $CD$ leżą takie punkty $X$ i $Y$, że\n\n$$\\angle XAB = \\angle XAD \\quad \\text{oraz} \\quad \\angle YBA = \\angle YBC.$$\n\nWykaż, że $CX = DY$.",
+  "title": "Liczby $1$–$12$ w kółkach",
+  "content": "W narysowane obok kółka wpisz liczby od $1$ do $12$, każdą tylko raz, tak aby każde dwie stojące obok siebie różniły się o $1$ lub $2$. Czy możesz zrobić to w taki sposób, aby liczby $6$ i $7$ sąsiadowały ze sobą? Zadanie rozwiąż w wyznaczonym miejscu na karcie odpowiedzi.",
   "pdf": {
-    "tasks": "tasks/2025/etap2/21omj-2etap.pdf",
-    "solutions": "tasks/2025/etap2/21omj-2r.pdf",
-    "statistics": "tasks/2025/etap2/21omj-2st.pdf"
+    "tasks": "tasks/2025/etap2/tasks.pdf"
   },
-  "difficulty": 2,
+  "difficulty": 4,
   "categories": [
-    "geometria"
+    "kombinatoryka",
+    "logika"
   ],
   "hints": [
-    "Narysuj duży, dokładny rysunek równoległoboku $ABCD$ i zaznacz punkty $X$, $Y$ na boku $CD$. Co wiesz o prostych $AB$ i $CD$? Jaką rolę pełni odcinek $AX$ względem kąta $\\angle DAB$, a odcinek $BY$ względem kąta $\\angle ABC$?",
-    "Skoro $AB \\parallel CD$, to przy przecięciu prostą $AX$ powstają kąty naprzemianległe. Spróbuj znaleźć w powstałych trójkątach $ADX$ i $BCY$ jakąś szczególną własność - może któryś z nich jest wyjątkowego rodzaju?",
-    "Porównaj kąt $\\angle XAD$ z kątem $\\angle AXD$ (pamiętając o równoległości $AB$ i $CD$). Co możesz powiedzieć o trójkącie $ADX$? Analogicznie zbadaj trójkąt $BCY$. Jakie boki w tych trójkątach okazują się równe?",
-    "Pokaż, że $DX = AD$ oraz $CY = BC$. Skorzystaj z tego, że w równoległoboku $AD = BC$ i wyraź długości $CX$ i $DY$ przez długość boku $CD$ pomniejszoną o odpowiednie odcinki."
+    "Zauważ, że niektóre liczby mają bardzo mało możliwych sąsiadów. Jakie liczby mogą stać obok $1$? A jakie obok $12$? Wypisz dozwolone pary dla skrajnych liczb.",
+    "Spróbuj podzielić liczby na dwie grupy: małe $1$–$6$ oraz duże $7$–$12$. Idąc dookoła całego okręgu, ile razy przechodzisz między grupą małych a grupą dużych? Zastanów się, czy ta liczba przejść musi być parzysta.",
+    "Które pary — jedna liczba mała (z $1$–$6$), druga duża (z $7$–$12$) — różnią się tylko o $1$ lub $2$? Takich par jest naprawdę niewiele, spróbuj wypisać je wszystkie.",
+    "Skoro przejść między grupami musi być parzyście, a do wyboru masz tylko kilka takich par, sprawdź, ile z nich da się użyć jednocześnie. Zbadaj, czy para $6$ i $7$ może być jednym z tych przejść, nie psując pozostałych warunków."
   ],
   "skills_required": [
-    "isosceles_triangle",
-    "angle_chasing",
-    "trapezoid_parallelogram"
+    "parity_arguments",
+    "case_analysis",
+    "extremal_principle"
   ],
   "skills_gained": [
-    "isosceles_triangle",
-    "angle_chasing"
+    "invariants",
+    "contradiction"
   ],
-  "prerequisites": []
+  "prerequisites": [
+    "2025_etap1_9",
+    "2024_etap1_7"
+  ]
 }

@@ -1,29 +1,32 @@
 {
   "number": 6,
-  "title": "Tablica $10 \\times 10$ ze strzałkami",
-  "content": "W każdym polu tablicy $10 \\times 10$ znajduje się strzałka skierowana w górę, w dół, w lewo lub w prawo. Wykaż, że można tak usunąć z tablicy 50 strzałek, aby żadne dwie z pozostałych nie wskazywały na siebie nawzajem.\n\n*Uwaga:* Strzałki wskazują na siebie nawzajem także wtedy, gdy ich pola nie sąsiadują lub gdy pomiędzy nimi są inne strzałki.",
+  "title": "Pole prostokąta $ABCD$ z obwodów",
+  "content": "Na rysunku obok w prostokątach zapisano ich obwody. Wyznacz pole prostokąta $ABCD$, wiedząc, że długości jego boków są dwiema kolejnymi liczbami pierwszymi.\n\nProstokąt $ABCD$ (wierzchołki: $D$ — lewy górny, $C$ — prawy górny, $A$ — lewy dolny, $B$ — prawy dolny) jest podzielony liniami na mniejsze prostokąty, w których zapisano ich obwody: $50$ (górny wiersz, przy krawędzi $DC$), $50$ (środkowy wiersz, przy lewej krawędzi $DA$) oraz $80$ (dolny wiersz, przy prawej krawędzi $CB$).",
   "pdf": {
-    "tasks": "tasks/2021/etap1/1etap21.pdf",
-    "solutions": "tasks/2021/etap1/1etap21rr.pdf",
-    "statistics": null
+    "tasks": "tasks/2021/etap1/tasks.pdf"
   },
   "difficulty": 3,
   "categories": [
-    "kombinatoryka",
-    "logika"
+    "geometria",
+    "teoria_liczb"
   ],
   "hints": [
-    "Zastanów się, czy strzałka pozioma może kiedykolwiek 'wskazywać' na strzałkę pionową? Zauważ, że konflikty (wzajemne wskazanie) mogą zdarzyć się tylko między strzałkami leżącymi w tym samym wierszu lub w tej samej kolumnie.",
-    "Skoro strzałki poziome nie wchodzą w konflikt z pionowymi, możesz podzielić problem na dwie niezależne części. Rozważ osobno zbiór wszystkich strzałek w wierszach (lewo/prawo) i osobno zbiór strzałek w kolumnach (góra/dół).",
-    "Skup się na pojedynczym wierszu. Konflikt powstaje, gdy strzałka w prawo 'patrzy' na strzałkę w lewo. Jak w najprostszy sposób wyeliminować WSZYSTKIE konflikty w tym wierszu, decydując się na zachowanie tylko jednego rodzaju strzałek?",
-    "W każdym wierszu zostaw tylko te strzałki, których jest więcej (np. same w lewo). Zrób to samo niezależnie dla każdej kolumny. Wykaż, że sumując te wybory, zachowasz łącznie co najmniej połowę wszystkich strzałek."
+    "Co jest dane, a czego szukasz? Znasz obwody trzech mniejszych prostokątów ($50$, $50$ i $80$), a długości boków całego prostokąta $ABCD$ to dwie kolejne liczby pierwsze. Narysuj rysunek i zaznacz, gdzie leżą poszczególne obwody.",
+    "Spróbuj oznaczyć szerokość i wysokość każdego małego prostokąta literami. Pamiętaj, że obwód prostokąta to podwojona suma jego dwóch sąsiednich boków — to pozwoli zamienić każdy podany obwód na proste równanie.",
+    "Zauważ, że z obwodu możesz odczytać sumę szerokości i wysokości danego prostokąta (połowę obwodu). Połóż te zależności obok siebie i sprawdź, jak boki małych prostokątów składają się na boki dużego prostokąta $ABCD$.",
+    "Z równań wyznacz długości boków całego prostokąta i sprawdź, które dwie kolejne liczby pierwsze do nich pasują. Gdy już masz oba boki, pole policzysz jednym mnożeniem — ten ostatni krok zostaw dla siebie."
   ],
-  "prerequisites": [],
   "skills_required": [
-    "graph_theory"
+    "area_methods",
+    "primality_testing",
+    "basic_operations"
   ],
   "skills_gained": [
-    "graph_theory",
-    "constructive_proof"
+    "primality_testing",
+    "word_problems"
+  ],
+  "prerequisites": [
+    "2022_etap1_3",
+    "2024_etap1_10"
   ]
 }

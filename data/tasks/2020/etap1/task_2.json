@@ -1,28 +1,29 @@
 {
   "number": 2,
-  "title": "Trójkąt $ABC$ z $AC = BC = 5$",
-  "content": "Dany jest trójkąt $ABC$, w którym $AC = BC = 5$. Wysokość tego trójkąta poprowadzona z wierzchołka $A$ ma długość $4$. Oblicz długość wysokości trójkąta $ABC$ poprowadzonej z wierzchołka $C$.",
+  "title": "Kąty trójkąta $ACD$",
+  "content": "W trójkącie $ABC$ kąt $A$ ma miarę $60^\\circ$, a kąt $B$ ma miarę $70^\\circ$. Przedłużono bok $BC$ poza punkt $C$ i znaleziono na tym przedłużeniu taki punkt $D$, że $|CD| = |AC|$. Oblicz kąty trójkąta $ACD$.",
   "pdf": {
-    "tasks": "tasks/2020/etap1/1etap20.pdf",
-    "solutions": "tasks/2020/etap1/1etap20r.pdf",
-    "statistics": null
+    "tasks": "tasks/2020/etap1/tasks.pdf"
   },
   "difficulty": 2,
   "categories": [
     "geometria"
   ],
   "hints": [
-    "Narysuj trójkąt $ABC$ i zaznacz w nim wysokość z wierzchołka $A$. Jej spodek leży na prostej zawierającej bok $BC$. Czy musi on leżeć na samym boku $BC$, czy może leżeć na jego przedłużeniu?",
-    "Wysokość z wierzchołka $A$ (długości 4), ramię trójkąta (długości 5) i fragment prostej $BC$ tworzą trójkąt prostokątny. Oblicz długość trzeciego boku w tym trójkącie.",
-    "Rozważ teraz dwa możliwe położenia spodka wysokości z $A$. W zależności od tego, czy leży on na boku $BC$ czy na jego przedłużeniu, oblicz dwie możliwe długości podstawy $AB$.",
-    "Pole trójkąta można obliczyć, znając długość boku i opuszczonej na niego wysokości. Zapisz pole trójkąta na dwa sposoby, aby znaleźć możliwe wartości wysokości poprowadzonej z wierzchołka $C$."
+    "Co jest dane, a czego szukamy? Narysuj trójkąt $ABC$, zaznacz dane kąty, a potem przedłuż bok $BC$ za punkt $C$ i zaznacz punkt $D$ tak, by odcinek $CD$ był równy odcinkowi $AC$.",
+    "Zauważ, że kąty trójkąta $ABC$ pomogą Ci wyznaczyć kąt $ACD$. Pomyśl też, co wynika z tego, że dwa boki trójkąta $ACD$ są równej długości.",
+    "Najpierw policz kąt $ACB$ w trójkącie $ABC$ (suma kątów w trójkącie!). Następnie zwróć uwagę, że $D$ leży na prostej $BC$ — jaki kąt tworzą razem $\\angle ACB$ i $\\angle ACD$?",
+    "Skoro $|CD|=|AC|$, trójkąt $ACD$ jest równoramienny, więc kąty przy jego podstawie są równe. Wyznacz najpierw kąt $\\angle ACD$ jako kąt dopełniający $\\angle ACB$ do kąta półpełnego, a potem skorzystaj z tego, że suma kątów trójkąta $ACD$ wynosi $180^\\circ$."
   ],
   "skills_required": [
-    "pythagorean_theorem",
+    "angle_chasing",
     "isosceles_triangle"
   ],
   "skills_gained": [
-    "area_methods"
+    "angle_chasing"
   ],
-  "prerequisites": []
+  "prerequisites": [
+    "2017_etap1_1",
+    "2018_etap1_1"
+  ]
 }

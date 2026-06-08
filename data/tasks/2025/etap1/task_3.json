@@ -1,29 +1,32 @@
 {
   "number": 3,
-  "title": "Pięć osób i liczba znajomych",
-  "content": "Każda z pięciu osób napisała na tablicy, ilu znajomych ma wśród czterech pozostałych osób (jeżeli osoba $A$ zna osobę $B$, to osoba $B$ zna osobę $A$). Cztery z napisanych liczb są równe 1. Wyznacz wszystkie możliwe wartości piątej liczby. Odpowiedź uzasadnij.",
+  "title": "Romb $ABCD$ i kąt $EBC$",
+  "content": "Na poniższym rysunku czworokąt $ABCD$ jest rombem, a punkt $B$ leży na odcinku $AE$. Kąt $EBC$ ma miarę $50^\\circ$. Wówczas\n\n(a) miara kąta $BCA$ jest równa $30^\\circ$;\n\n(b) miara kąta $ABD$ jest równa $65^\\circ$;\n\n(c) miara kąta $ADB$ jest równa $75^\\circ$.",
   "pdf": {
-    "tasks": "tasks/2025/etap1/21omj-1etap-zad.pdf",
-    "solutions": "tasks/2025/etap1/21omj-1etap-r.pdf",
-    "statistics": null
+    "tasks": "tasks/2025/etap1/tasks.pdf"
   },
   "difficulty": 2,
   "categories": [
-    "kombinatoryka",
-    "logika"
+    "geometria"
   ],
   "hints": [
-    "Narysuj 5 punktów reprezentujących osoby i zaznacz znajomości jako linie łączące punkty. Zastanów się, co oznacza, że znajomość jest wzajemna.",
-    "Policz sumę wszystkich liczb napisanych na tablicy. Zauważ, że każda znajomość (linia na rysunku) jest liczona dwukrotnie – raz dla każdej z dwóch osób.",
-    "Suma wszystkich liczb musi być parzysta. Co to oznacza dla parzystości piątej liczby? Rozważ też, ile maksymalnie znajomych może mieć jedna osoba w tej grupie.",
-    "Wykorzystaj poprzednią wskazówkę, aby ustalić, jakie wartości może przyjąć piąta liczba. Dla każdej z tych możliwości spróbuj narysować odpowiedni układ znajomości."
+    "Zacznij od narysowania rombu $ABCD$ i przedłużenia boku $AB$ do punktu $E$. Zaznacz dany kąt $EBC = 50^\\circ$. Co wiesz o bokach rombu i jego przekątnych?",
+    "Zauważ, że punkty $A$, $B$, $E$ leżą na jednej prostej, więc kąty $EBC$ i $ABC$ uzupełniają się do kąta półpełnego. Przypomnij sobie też, że przekątne rombu połowią jego kąty.",
+    "Skup się na trójkątach, które powstają w rombie. Boki rombu są równej długości, więc wiele trójkątów jest równoramiennych - a w takich kąty przy podstawie są równe. To pozwala wyznaczyć kolejne kąty.",
+    "Najpierw wyznacz kąt $ABC$ z kąta uzupełniającego. W trójkącie $ABC$ boki $AB$ i $BC$ są równe, więc kąty $BAC$ i $BCA$ są równe - skorzystaj z sumy kątów w trójkącie. Pamiętaj też, że przekątna $BD$ dzieli kąt $ABC$ na połowy. Sprawdź każdą z odpowiedzi (a), (b), (c) osobno."
   ],
   "skills_required": [
-    "graph_theory"
+    "angle_chasing",
+    "isosceles_triangle",
+    "trapezoid_parallelogram"
   ],
   "skills_gained": [
-    "graph_theory",
-    "case_analysis"
+    "angle_chasing",
+    "isosceles_triangle"
   ],
-  "prerequisites": []
+  "prerequisites": [
+    "2025_etap1_7",
+    "2024_etap1_4",
+    "2024_etap1_3"
+  ]
 }

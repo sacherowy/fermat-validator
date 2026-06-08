@@ -1,28 +1,27 @@
 {
   "number": 1,
-  "title": "Zależność $3a+4b=3c$ i $4a-3b=4c$",
-  "content": "Liczby $a$, $b$, $c$ spełniają zależności $3a + 4b = 3c$ oraz $4a - 3b = 4c$. Wykaż, że $a^2 + b^2 = c^2$.",
+  "title": "Miara kąta $\\beta$ z rysunku",
+  "content": "Na rysunku obok odcinki tej samej długości oznaczono w ten sam sposób. Oblicz miarę kąta $\\beta$.",
   "pdf": {
-    "tasks": "tasks/2017/etap1/1etap17.pdf",
-    "solutions": "tasks/2017/etap1/1etap17r.pdf",
-    "statistics": null
+    "tasks": "tasks/2017/etap1/tasks.pdf"
   },
   "difficulty": 2,
   "categories": [
-    "algebra"
+    "geometria"
   ],
   "hints": [
-    "Masz dane dwa równania liniowe, a teza do udowodnienia jest równaniem kwadratowym. Zastanów się, jak można przejść od zależności liniowych do kwadratowych.",
-    "Podniesienie obu stron każdego z równań do kwadratu wprowadzi szukane wyrażenia $a^2$ i $b^2$. Wykonaj tę operację i zobacz, jakie jeszcze inne wyrazy pojawią się w obu równościach.",
-    "Spójrz na wyrazy zawierające iloczyn $ab$ w obu nowych równaniach. Zauważ, że mają one przeciwne znaki. Jaką operację na tych równaniach warto wykonać, aby te wyrazy się uprościły?",
-    "Dodaj oba równania stronami. Wyrazy z iloczynem $ab$ zredukują się. Uporządkuj pozostałe składniki, aby otrzymać tezę."
+    "Przyjrzyj się rysunkowi: odcinki oznaczone tak samo mają tę samą długość. Które trójkąty na rysunku mają dwa równe boki? Zaznacz je sobie.",
+    "Wykorzystaj fakt, że trójkąt z dwoma równymi bokami (równoramienny) ma równe kąty przy podstawie. Spróbuj przechodzić od jednego trójkąta do następnego, zapisując kolejne równe kąty.",
+    "Pamiętaj, że suma kątów w każdym trójkącie to $180°$, a kąty leżące przy jednym punkcie na prostej dają razem $180°$. To pozwoli Ci powiązać nieznane kąty ze sobą.",
+    "Oznacz nieznany kąt literą i wyrażaj przez nią kolejne kąty, idąc po równoramiennych trójkątach. Na koniec ułóż jedno równanie (korzystając z sumy kątów) i wyznacz z niego $\\beta$."
   ],
   "skills_required": [
-    "symmetric_systems",
-    "algebraic_identities"
+    "isosceles_triangle",
+    "angle_chasing"
   ],
   "skills_gained": [
-    "pythagorean_theorem"
+    "angle_chasing",
+    "isosceles_triangle"
   ],
   "prerequisites": []
 }

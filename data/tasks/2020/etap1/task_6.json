@@ -1,30 +1,30 @@
 {
   "number": 6,
-  "title": "$(2n+2)$-kąt z $n^2$ przekątnymi",
-  "content": "W $(2n+2)$-kącie wypukłym narysowano $n^2$ przekątnych. Udowodnij, że pewna z tych przekątnych rozcina $(2n+2)$-kąt na dwa wielokąty, z których każdy ma nieparzystą liczbę wierzchołków.",
+  "title": "Koszt kompletu farb",
+  "content": "Kasia i Basia chcą kupić farby, każda taki sam komplet. Kasi brakuje jednak $7$ zł, a Basi $8$ zł. Gdyby dziewczynki złożyły się, aby kupić wspólnie ten komplet farb, to zabrakłoby im $3$ zł. Ile kosztuje taki komplet farb?",
   "pdf": {
-    "tasks": "tasks/2020/etap1/1etap20.pdf",
-    "solutions": "tasks/2020/etap1/1etap20r.pdf",
-    "statistics": null
+    "tasks": "tasks/2020/etap1/tasks.pdf"
   },
-  "difficulty": 3,
+  "difficulty": 2,
   "categories": [
-    "kombinatoryka",
-    "teoria_liczb"
+    "arytmetyka",
+    "algebra"
   ],
   "hints": [
-    "Zauważ, że jeśli przekątna odcina $k$ wierzchołków, to powstały mniejszy wielokąt ma ich $k+2$. Aby ta liczba była nieparzysta, $k$ musi być liczbą nieparzystą.",
-    "Zastosuj metodę nie wprost: spróbuj oszacować maksymalną liczbę 'złych' przekątnych (gdzie $k$ jest parzyste). W tym celu ponumeruj wierzchołki wielokąta kolejno od $1$ do $2n+2$.",
-    "Zbadaj parzystość numerów końców 'złej' przekątnej. Skoro liczba wierzchołków między nimi ($k$) jest parzysta, to końce muszą mieć różną parzystość (jeden parzysty, drugi nieparzysty).",
-    "Oblicz, ile jest wszystkich możliwych odcinków łączących wierzchołki parzyste z nieparzystymi. Pamiętaj, by odjąć od tej liczby boki wielokąta, i porównaj wynik z liczbą $n^2$."
+    "Co wiemy o pieniądzach każdej dziewczynki? Skoro Kasi brakuje $7$ zł, to znaczy, że ma o $7$ zł mniej niż kosztuje komplet. Spróbuj zapisać, ile pieniędzy ma Kasia, a ile Basia, używając ceny kompletu.",
+    "Pomyśl, ile pieniędzy mają dziewczynki razem. Możesz oznaczyć cenę kompletu jakąś literą i ułożyć równanie z informacji o wspólnym zakupie.",
+    "Gdy dziewczynki złożą się, ich pieniądze się dodają. Zauważ, że wspólnie i tak brakuje im $3$ zł do jednego kompletu — to daje Ci ważne porównanie.",
+    "Zapisz, że suma pieniędzy obu dziewczynek równa się cenie kompletu pomniejszonej o $3$ zł. Po lewej stronie pojawi się dwa razy cena minus brakujące kwoty — uporządkuj to równanie i znajdź cenę."
   ],
   "skills_required": [
-    "counting_techniques"
+    "word_problems",
+    "basic_operations"
   ],
   "skills_gained": [
-    "parity_arguments",
-    "pigeonhole",
-    "divisibility_arguments"
+    "word_problems"
   ],
-  "prerequisites": []
+  "prerequisites": [
+    "2017_etap1_4",
+    "2018_etap1_3"
+  ]
 }

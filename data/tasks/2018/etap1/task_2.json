@@ -1,29 +1,29 @@
 {
   "number": 2,
-  "title": "Czworokąt $ABCD$ z kątami $45°$",
-  "content": "Dany jest czworokąt wypukły $ABCD$, w którym $\\angle DAB = \\angle ABC = 45°$ oraz $DA = 3$, $AB = 7\\sqrt{2}$, $BC = 4$. Oblicz długość boku $CD$.",
+  "title": "Liczba i jej odwrotność dające w sumie $4{,}25$",
+  "content": "Podaj przykład takiej liczby $a$, że suma liczby $a$ i odwrotności liczby $a$ jest równa $4{,}25$.",
   "pdf": {
-    "tasks": "tasks/2018/etap1/1etap18.pdf",
-    "solutions": "tasks/2018/etap1/1etap18r.pdf",
-    "statistics": null
+    "tasks": "tasks/2018/etap1/tasks.pdf"
   },
-  "difficulty": 3,
+  "difficulty": 2,
   "categories": [
-    "geometria"
+    "arytmetyka",
+    "algebra"
   ],
   "hints": [
-    "Narysuj czworokąt i zaznacz w nim dane kąty. Co sugeruje suma miar kątów przy wierzchołkach $A$ i $B$? Rozważ przedłużenie boków $AD$ i $BC$ do przecięcia.",
-    "Niech proste zawierające boki $AD$ i $BC$ przecinają się w punkcie $P$. Oblicz miarę kąta $APB$ w trójkącie $ABP$. Co możesz powiedzieć o tym trójkącie?",
-    "Skoro znasz już rodzaj trójkąta $ABP$ i długość jego boku $AB$, oblicz długości boków $PA$ i $PB$.",
-    "Wykorzystaj znane długości odcinków $DA$ i $BC$, aby obliczyć długości przyprostokątnych trójkąta $PDC$. Następnie zastosuj twierdzenie Pitagorasa."
+    "Przypomnij sobie, co to jest odwrotność liczby: odwrotność liczby $a$ to $\\frac{1}{a}$. Czego szukamy? Liczby, która razem ze swoją odwrotnością daje w sumie $4{,}25$.",
+    "Zamiast od razu układać równanie, spróbuj zgadnąć rozwiązanie. Pomyśl, jak można zapisać $4{,}25$ jako sumę dwóch składników, gdzie jeden jest większy, a drugi bardzo mały.",
+    "Zauważ, że $4{,}25 = 4 + 0{,}25$, a $0{,}25$ to $\\frac{1}{4}$. Kiedy odwrotność liczby jest mała? Wtedy, gdy sama liczba jest stosunkowo duża.",
+    "Spróbuj sprawdzić liczbę całkowitą i policzyć jej odwrotność. Jeśli sama liczba da ci całą część sumy, to jej odwrotność powinna dopełnić wynik do $4{,}25$ — poszukaj liczby, której odwrotność to dokładnie $\\frac{1}{4}$."
   ],
   "skills_required": [
-    "coordinate_geometry",
-    "pythagorean_theorem"
+    "basic_operations"
   ],
   "skills_gained": [
-    "coordinate_geometry",
-    "isosceles_triangle"
+    "basic_operations",
+    "word_problems"
   ],
-  "prerequisites": []
+  "prerequisites": [
+    "2017_etap1_3"
+  ]
 }

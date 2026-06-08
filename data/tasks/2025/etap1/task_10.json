@@ -1,0 +1,30 @@
+{
+  "number": 10,
+  "title": "Procenty liczby $n$",
+  "content": "Dodatnia liczba $n$ jest naturalna, $20\\%$ liczby $n$ jest liczbą naturalną oraz $25\\%$ liczby $n$ jest liczbą naturalną. Wynika stąd, że\n\n(a) liczba $n$ jest podzielna przez $10$;\n\n(b) liczba $n$ jest podzielna przez $20$;\n\n(c) liczba $n$ jest podzielna przez $40$.",
+  "pdf": {
+    "tasks": "tasks/2025/etap1/tasks.pdf"
+  },
+  "difficulty": 2,
+  "categories": [
+    "teoria_liczb",
+    "arytmetyka"
+  ],
+  "hints": [
+    "Co oznacza, że $20\\%$ liczby $n$ jest liczbą naturalną? Zapisz $20\\%$ i $25\\%$ jako proste ułamki liczby $n$ i zastanów się, kiedy taki ułamek jest liczbą całkowitą.",
+    "Każdy z trzech podpunktów (a), (b), (c) sprawdzaj osobno. Aby pokazać, że zdanie NIE musi być prawdziwe, wystarczy znaleźć jeden przykład liczby $n$, dla której nie zachodzi.",
+    "Z warunku, że $\\frac{n}{5}$ jest całkowite, wynika coś o dzielnikach $n$. Podobnie z warunku, że $\\frac{n}{4}$ jest całkowite. Co możesz powiedzieć o $n$, gdy obie te rzeczy są spełnione naraz?",
+    "Jeśli $n$ dzieli się jednocześnie przez $5$ i przez $4$, to przez jaką najmniejszą liczbę musi się dzielić? Sprawdź potem, czy ta liczba pociąga za sobą podzielność przez $10$, przez $20$ i przez $40$ — dla podpunktu o $40$ poszukaj kontrprzykładu."
+  ],
+  "skills_required": [
+    "divisibility_arguments",
+    "basic_operations"
+  ],
+  "skills_gained": [
+    "divisibility_arguments"
+  ],
+  "prerequisites": [
+    "2024_etap1_6",
+    "2024_etap1_2"
+  ]
+}

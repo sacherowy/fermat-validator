@@ -88,25 +88,25 @@ test.describe('Submission Flow', () => {
   });
 
   test.describe('Score scenarios', () => {
-    test('displays perfect score (6 points)', async ({ page, request }) => {
+    test('displays perfect score (4 points, capped at max)', async ({ page, request }) => {
       await setGeminiScenario(request, 'success_score_6');
       await page.goto('/task/2024/etap2/1');
       await uploadAndSubmit(page, TEST_IMAGE);
 
-      // Wait for result - look for exact score format "Wynik: 6 / 6 punktów"
-      await expect(page.getByText(/Wynik:\s*6\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
+      // Wait for result - score 6 is clamped to max_points=4, denominator is hardcoded 6
+      await expect(page.getByText(/Wynik:\s*4\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
 
       // Should show positive feedback - add .first() to avoid strict mode
       await expect(page.getByText(/poprawne/i).or(page.getByText(/gratulacje/i)).first()).toBeVisible();
     });
 
-    test('displays good score (5 points)', async ({ page, request }) => {
+    test('displays good score (5 points, capped at max)', async ({ page, request }) => {
       await setGeminiScenario(request, 'success_score_5');
       await page.goto('/task/2024/etap2/1');
       await uploadAndSubmit(page, TEST_IMAGE);
 
-      // Wait for result - look for exact score format "Wynik: 5 / 6 punktów"
-      await expect(page.getByText(/Wynik:\s*5\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
+      // Wait for result - score 5 is clamped to max_points=4, denominator is hardcoded 6
+      await expect(page.getByText(/Wynik:\s*4\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
     });
 
     test('displays partial score (2 points)', async ({ page, request }) => {
@@ -179,10 +179,10 @@ test.describe('Submission Flow', () => {
       await setGeminiScenario(request, 'success_score_6', '2024_etap2_1');
       await setGeminiScenario(request, 'success_score_0', '2024_etap2_2');
 
-      // Submit to task 1 - should get 6 points
+      // Submit to task 1 - should get 4 points (score 6 clamped to max_points=4)
       await page.goto('/task/2024/etap2/1');
       await uploadAndSubmit(page, TEST_IMAGE);
-      await expect(page.getByText(/Wynik:\s*6\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
+      await expect(page.getByText(/Wynik:\s*4\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
 
       // Submit to task 2 - should get 0 points
       await page.goto('/task/2024/etap2/2');
@@ -204,8 +204,8 @@ test.describe('Submission Flow', () => {
         )
       ).toBeVisible({ timeout: 10000 });
 
-      // Wait for eventual completion - slow_response returns score 6
-      await expect(page.getByText(/Wynik:\s*6\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 60000 });
+      // Wait for eventual completion - slow_response returns score 6, clamped to max_points=4
+      await expect(page.getByText(/Wynik:\s*4\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 60000 });
     });
   });
 
@@ -272,8 +272,8 @@ test.describe('Submission Flow', () => {
       // Submit a solution
       await uploadAndSubmit(page, TEST_IMAGE);
 
-      // Wait for completion - look for exact score format
-      await expect(page.getByText(/Wynik:\s*6\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
+      // Wait for completion - score 6 clamped to max_points=4
+      await expect(page.getByText(/Wynik:\s*4\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
 
       // History section should appear/update automatically WITHOUT page reload
       // Wait for history section to show updated count
@@ -284,7 +284,7 @@ test.describe('Submission Flow', () => {
 
       // Verify the new submission is in the history list (shows score chip in history section)
       const historyPaper = page.locator('text=Historia rozwiązań').locator('..');
-      await expect(historyPaper.locator('text=6/6').first()).toBeVisible();
+      await expect(historyPaper.locator('text=4/6').first()).toBeVisible();
     });
 
     test('submission persists in history after page reload', async ({ page, request }) => {
@@ -292,8 +292,8 @@ test.describe('Submission Flow', () => {
       await page.goto('/task/2024/etap2/1');
       await uploadAndSubmit(page, TEST_IMAGE);
 
-      // Wait for completion - look for exact score format
-      await expect(page.getByText(/Wynik:\s*6\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
+      // Wait for completion - score 6 clamped to max_points=4
+      await expect(page.getByText(/Wynik:\s*4\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
 
       // Reload page and check history
       await page.reload();
@@ -321,7 +321,7 @@ test.describe('Submission Flow', () => {
       const submitButton = page.getByRole('button', { name: /prześlij/i });
       await expect(submitButton).toBeEnabled({ timeout: 5000 });
       await submitButton.click();
-      await expect(page.getByText(/Wynik:\s*6\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
+      await expect(page.getByText(/Wynik:\s*4\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
     });
 
     test('history count updates after each submission without reload', async ({ page, request }) => {
@@ -351,17 +351,17 @@ test.describe('Submission Flow', () => {
       const submitButton = page.getByRole('button', { name: /prześlij/i });
       await expect(submitButton).toBeEnabled({ timeout: 5000 });
       await submitButton.click();
-      await expect(page.getByText(/Wynik:\s*6\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
+      await expect(page.getByText(/Wynik:\s*4\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
 
       // Verify history updated to initialCount + 2 without reload
       await expect(
         page.getByText(new RegExp(`historia rozwiązań\\s*\\(${initialCount + 2}\\)`, 'i'))
       ).toBeVisible({ timeout: 10000 });
 
-      // Verify both submissions are visible in history (2/6 and 6/6 scores)
+      // Verify both submissions are visible in history (2/6 and 4/6 scores)
       const historyPaper = page.locator('text=Historia rozwiązań').locator('..');
       await expect(historyPaper.locator('text=2/6').first()).toBeVisible();
-      await expect(historyPaper.locator('text=6/6').first()).toBeVisible();
+      await expect(historyPaper.locator('text=4/6').first()).toBeVisible();
     });
   });
 });

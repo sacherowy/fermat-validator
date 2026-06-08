@@ -1,28 +1,29 @@
 {
   "number": 3,
-  "title": "Liczby pierwsze $a$, $b$, $c$ większe od 3",
-  "content": "Liczby pierwsze $a$, $b$, $c$ są większe od 3. Udowodnij, że liczba $(a-b)(b-c)(c-a)$ jest podzielna przez 48.",
+  "title": "Cztery różne ułamki dziesiętne o sumie $\\frac{1}{8}$",
+  "content": "Podaj przykład czterech takich różnych dodatnich ułamków dziesiętnych, których suma jest równa $\\frac{1}{8}$.",
   "pdf": {
-    "tasks": "tasks/2017/etap1/1etap17.pdf",
-    "solutions": "tasks/2017/etap1/1etap17r.pdf",
-    "statistics": null
+    "tasks": "tasks/2017/etap1/tasks.pdf"
   },
-  "difficulty": 3,
+  "difficulty": 2,
   "categories": [
-    "teoria_liczb"
+    "arytmetyka"
   ],
   "hints": [
-    "Aby udowodnić podzielność przez 48, wystarczy pokazać podzielność przez 3 oraz przez 16. Jakie wspólne własności, związane z podzielnością, mają liczby pierwsze większe od 3?",
-    "Rozważ podzielność przez 3 i 16 osobno. Jakie reszty z dzielenia przez 3 mogą dawać liczby $a, b, c$? Co to mówi o ich różnicach? Zauważ też, że wszystkie te liczby są nieparzyste.",
-    "Skoro mamy trzy liczby, a tylko dwie możliwe reszty z dzielenia przez 3, to co najmniej dwie muszą mieć tę samą resztę. To załatwia podzielność przez 3. Każda różnica jest parzysta, więc iloczyn dzieli się przez 8. Gdzie znaleźć brakujący czynnik 2?",
-    "Pomyśl o resztach z dzielenia liczb $a, b, c$ przez 4. Ile jest możliwych reszt dla liczb pierwszych większych od 3? Zastosuj tę samą zasadę, co przy dzieleniu przez 3, aby pokazać, że jedna z różnic jest podzielna przez 4."
+    "Co jest dane, a czego szukamy? Mamy podać cztery różne dodatnie ułamki dziesiętne (czyli liczby z przecinkiem), które po dodaniu dają $\\frac{1}{8}$. Zacznij od zamiany $\\frac{1}{8}$ na ułamek dziesiętny.",
+    "To nie jest zadanie na dowód — wystarczy znaleźć i podać jeden działający przykład. Pomyśl, jak rozbić jedną liczbę na sumę czterech mniejszych, różnych składników.",
+    "Gdy znasz już $\\frac{1}{8}$ jako ułamek dziesiętny, spróbuj dobrać trzy dowolne małe, różne ułamki, a czwarty wyznaczyć tak, aby suma się zgadzała. Pamiętaj, że wszystkie muszą być dodatnie i różne.",
+    "Wybierz trzy proste, różne ułamki o małej wartości (np. z dokładnością do tysięcznych), dodaj je, a brakującą resztę do $\\frac{1}{8}$ zapisz jako czwarty ułamek. Na końcu sprawdź, czy żaden składnik się nie powtarza i czy suma jest dokładnie równa $\\frac{1}{8}$."
   ],
   "skills_required": [
-    "modular_arithmetic",
-    "primality_testing"
+    "basic_operations"
   ],
   "skills_gained": [
-    "divisibility_arguments"
+    "basic_operations",
+    "constructive_proof"
   ],
-  "prerequisites": []
+  "prerequisites": [
+    "2018_etap1_2",
+    "2017_etap1_6"
+  ]
 }

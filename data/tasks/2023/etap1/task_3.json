@@ -1,31 +1,32 @@
 {
   "number": 3,
-  "title": "Układanie cyfr z patyczków",
-  "content": "Tomek ma do dyspozycji $n$ jednakowych patyczków, z których układa liczby wielocyfrowe (rysunek przedstawia wygląd układanych przez Tomka cyfr). Tomek zauważył, że suma cyfr największej z możliwych do ułożenia przez niego liczb jest równa dokładnie $n$. Wyznacz wszystkie liczby $n$, dla których taka sytuacja jest możliwa.",
+  "title": "Ułożenie kwadratu z mniejszych kwadratów",
+  "content": "Ułóż kwadrat z: trzech kwadratów $1 \\times 1$, trzech kwadratów $2 \\times 2$, dwóch kwadratów $3 \\times 3$ i jednego kwadratu $4 \\times 4$.",
   "pdf": {
-    "tasks": "tasks/2023/etap1/19omj-1etap.pdf",
-    "solutions": "tasks/2023/etap1/19omj-1etap-r.pdf",
-    "statistics": null
+    "tasks": "tasks/2023/etap1/tasks.pdf"
   },
   "difficulty": 3,
   "categories": [
-    "kombinatoryka",
-    "teoria_liczb"
+    "geometria",
+    "logika"
   ],
   "hints": [
-    "Aby liczba była największa, musi mieć jak najwięcej cyfr. Najmniej patyczków (2) zużywa jedynka. Zastanów się, jak wyglądałaby największa liczba ułożona z $n$ patyczków, gdybyśmy używali głównie jedynek.",
-    "Rozważ parzystość $n$. Jeśli $n$ jest parzyste, mamy same jedynki. Jeśli $n$ jest nieparzyste, zostaje jeden patyczek – dołóż go do pierwszej jedynki. Jaką cyfrę otrzymasz z $2+1=3$ patyczków?",
-    "Zauważ, że dla parzystego $n$ suma cyfr to $n/2$, więc równość $n/2=n$ jest niemożliwa. Szukaj rozwiązania tylko dla nieparzystego $n$, gdzie liczba zaczyna się od siódemki, a dalej ma same jedynki.",
-    "Mamy liczbę postaci $711...1$. Niech $x$ oznacza liczbę jedynek. Zapisz za pomocą $x$ liczbę zużytych patyczków ($n$) oraz sumę cyfr tej liczby. Przyrównaj te wartości do siebie."
+    "Co masz do dyspozycji, a co chcesz zbudować? Wypisz wszystkie klocki i policz pole każdego z nich. Pomyśl, jakie pole będzie miał gotowy duży kwadrat.",
+    "Pole dużego kwadratu musi być równe sumie pól wszystkich małych kwadratów. Policz tę sumę — to powie Ci, jak długi jest bok wielkiego kwadratu, który chcesz złożyć.",
+    "Gdy znasz już bok dużego kwadratu, zacznij układać od największego klocka. Wstaw kwadrat $4 \\times 4$ w róg i zobacz, ile miejsca zostaje wzdłuż boków.",
+    "Spróbuj wkładać klocki od najwiekszych do najmniejszych, zaczynając od rogów. Po wstawieniu kwadratu $4 \\times 4$ dopasuj oba kwadraty $3 \\times 3$ wzdłuż pozostałych boków, a najmniejsze klocki $1 \\times 1$ zostaw na zapełnienie szczelin na końcu."
   ],
   "skills_required": [
-    "counting_techniques",
-    "digit_manipulation"
+    "area_methods",
+    "tiling",
+    "constructive_proof"
   ],
   "skills_gained": [
-    "counting_techniques",
-    "extremal_principle",
-    "sequences"
+    "tiling",
+    "area_methods"
   ],
-  "prerequisites": []
+  "prerequisites": [
+    "2025_etap1_4",
+    "2017_etap1_2"
+  ]
 }

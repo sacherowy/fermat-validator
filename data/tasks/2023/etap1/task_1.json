@@ -1,29 +1,30 @@
 {
   "number": 1,
-  "title": "Liczba $\\underbrace{11\\ldots1}_{n}\\underbrace{99\\ldots9}_{n}$ pierwsza",
-  "content": "Wyznacz wszystkie takie liczby naturalne $n$, że liczba $\\underbrace{11\\ldots1}_{n}\\underbrace{99\\ldots9}_{n}$ jest pierwsza.",
+  "title": "Kąt między trójkątami równobocznymi na kwadracie",
+  "content": "Na bokach kwadratu $ABCD$ zbudowano dwa trójkąty równoboczne: $ABE$ wewnątrz kwadratu, zaś $BCF$ na zewnątrz. Oblicz miarę kąta $\\angle EFB$.",
   "pdf": {
-    "tasks": "tasks/2023/etap1/19omj-1etap.pdf",
-    "solutions": "tasks/2023/etap1/19omj-1etap-r.pdf",
-    "statistics": null
+    "tasks": "tasks/2023/etap1/tasks.pdf"
   },
   "difficulty": 3,
   "categories": [
-    "teoria_liczb"
+    "geometria"
   ],
   "hints": [
-    "Zapisz daną liczbę jako sumę dwóch składników: części z jedynkami (pomnożonej przez odpowiednią potęgę 10) i części z dziewiątkami.",
-    "Przyjrzyj się obu składnikom sumy. Czy widzisz prosty związek między liczbą $\\underbrace{99\\ldots9}_{n}$ a liczbą $\\underbrace{11\\ldots1}_{n}$?",
-    "Wykorzystaj fakt, że $\\underbrace{99\\ldots9}_{n} = 9 \\cdot \\underbrace{11\\ldots1}_{n}$, aby wyłączyć wspólny czynnik przed nawias i przedstawić liczbę w postaci iloczynu.",
-    "Liczba pierwsza ma tylko dwa dzielniki: 1 i samą siebie. Sprawdź, dla jakiego $n$ jeden z otrzymanych czynników jest równy 1."
+    "Narysuj dokładnie kwadrat $ABCD$, a następnie trójkąt $ABE$ w środku kwadratu i trójkąt $BCF$ na zewnątrz. Zaznacz wszystkie znane Ci kąty (każdy kąt trójkąta równobocznego to przecież ta sama miara) i zastanów się, czego dotyczy szukany kąt.",
+    "Zamiast od razu liczyć kąt $\\angle EFB$, przyjrzyj się trójkątowi $\\triangle BEF$. Sprawdź, jakie odcinki mają w nim taką samą długość — może okazać się, że to szczególny rodzaj trójkąta.",
+    "Zauważ, że odcinki $BE$ i $BF$ są bokami trójkątów równobocznych zbudowanych na bokach kwadratu. Co możesz powiedzieć o ich długościach w porównaniu z bokiem kwadratu? A skoro tak, co to mówi o trójkącie $\\triangle BEF$?",
+    "Wyznacz miarę kąta $\\angle EBF$, składając go z kątów przy wierzchołku $B$: kąta prostego kwadratu oraz kątów trójkątów równobocznych (uważaj, który kąt dodajesz, a który odejmujesz). Gdy poznasz ten kąt, a wiesz, że $BE = BF$, pozostałe dwa kąty trójkąta $\\triangle BEF$ łatwo policzysz."
   ],
   "skills_required": [
-    "divisibility_arguments",
-    "algebraic_identities"
+    "angle_chasing",
+    "isosceles_triangle"
   ],
   "skills_gained": [
-    "primality_testing",
-    "algebraic_identities"
+    "angle_chasing",
+    "isosceles_triangle"
   ],
-  "prerequisites": []
+  "prerequisites": [
+    "2022_etap1_1",
+    "2020_etap1_2"
+  ]
 }

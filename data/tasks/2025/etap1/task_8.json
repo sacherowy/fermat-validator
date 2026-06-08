@@ -1,0 +1,31 @@
+{
+  "number": 8,
+  "title": "Długopisy w paczkach",
+  "content": "W sklepie długopisy są sprzedawane w paczkach po $12$ i po $8$. Nie można kupować długopisów poza paczkami. Wtedy\n\n(a) można kupić dokładnie $92$ długopisy;\n\n(b) można kupić dokładnie $97$ długopisów;\n\n(c) można kupić dokładnie $102$ długopisy.",
+  "pdf": {
+    "tasks": "tasks/2025/etap1/tasks.pdf"
+  },
+  "difficulty": 2,
+  "categories": [
+    "teoria_liczb"
+  ],
+  "hints": [
+    "Każdy zakup to pewna liczba paczek po $12$ i pewna liczba paczek po $8$. Zapisz liczbę kupionych długopisów jako $12 \\cdot a + 8 \\cdot b$, gdzie $a$ i $b$ to liczby paczek. Co musimy sprawdzić dla każdej z trzech liczb?",
+    "Zamiast od razu szukać konkretnych paczek, przyjrzyj się, jaką wspólną cechę mają wszystkie możliwe sumy $12 \\cdot a + 8 \\cdot b$. Czy obie liczby $12$ i $8$ mają wspólny dzielnik?",
+    "Zwróć uwagę, że zarówno $12$, jak i $8$ dzielą się przez $4$. Co to oznacza dla reszty z dzielenia przez $4$ całej sumy? Sprawdź, które z liczb $92$, $97$, $102$ w ogóle dzielą się przez $4$.",
+    "Najpierw odrzuć te liczby, które nie dzielą się przez $4$ — takiej kwoty nie da się uzyskać. Dla pozostałej liczby spróbuj znaleźć konkretne $a$ i $b$, podstawiając kolejno $a = 0, 1, 2, \\ldots$ i sprawdzając, czy reszta da się uzupełnić paczkami po $8$."
+  ],
+  "skills_required": [
+    "divisibility_arguments",
+    "basic_operations"
+  ],
+  "skills_gained": [
+    "divisibility_arguments",
+    "parity_arguments"
+  ],
+  "prerequisites": [
+    "2024_etap1_2",
+    "2025_etap1_9",
+    "2024_etap1_6"
+  ]
+}

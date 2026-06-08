@@ -1,0 +1,28 @@
+{
+  "number": 9,
+  "title": "Zadanie 9 — siatka sześcianu",
+  "content": "Na rysunku obok przedstawiono siatkę sześcianu. Siatka składa się ze ścian ułożonych następująco: w górnym rzędzie ściany $A$ i $B$, w środkowym rzędzie (przesuniętym w lewo o jedną kratkę) ściany $C$ i $D$, w dolnym rzędzie (przesuniętym w lewo o kolejną kratkę) ściany $E$ i $F$. W tym sześcianie równoległe są:\n\n(a) ściany $A$ i $C$;\n\n(b) ściany $D$ i $E$;\n\n(c) ściany $B$ i $F$.",
+  "pdf": {
+    "tasks": "tasks/2024/etap1/tasks.pdf"
+  },
+  "difficulty": 3,
+  "categories": [
+    "geometria"
+  ],
+  "hints": [
+    "Wyobraź sobie, że składasz tę siatkę w sześcian. W gotowym sześcianie każda ściana ma dokładnie jedną ścianę równoległą — tę naprzeciwko. Twoim zadaniem jest sprawdzić, które pary z rysunku rzeczywiście trafiają naprzeciw siebie.",
+    "Najlepszą strategią jest mozolne 'złożenie' siatki w wyobraźni albo wycięcie jej z kartki. Zwróć uwagę na prostą zasadę: ściany, które stykają się krawędzią, NIE mogą być równoległe — równoległe są tylko te, które są naprzeciwko.",
+    "Przyjrzyj się, jak ściany łączą się w paski. W prostym pasku trzech kolejnych ścian skrajne ściany lądują naprzeciwko siebie. Sprawdź, które ściany w tej siatce tworzą taki ciąg trzech ścian.",
+    "Wybierz jedną ścianę jako podstawę i 'składaj' pozostałe wokół niej, zaznaczając na bryle, gdzie każda trafia (góra, dół, przód, tył, lewo, prawo). Potem dla każdej pary $A$–$C$, $D$–$E$, $B$–$F$ sprawdź, czy obie ściany są naprzeciw siebie, czy stykają się krawędzią."
+  ],
+  "skills_required": [
+    "spatial_3d"
+  ],
+  "skills_gained": [
+    "spatial_3d",
+    "polyhedra"
+  ],
+  "prerequisites": [
+    "2024_etap1_8"
+  ]
+}

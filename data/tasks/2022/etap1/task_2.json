@@ -1,31 +1,32 @@
 {
   "number": 2,
-  "title": "Działanie $1-2+3-4+\\ldots-100$",
-  "content": "Kamil napisał na tablicy działanie polegające na naprzemiennym odejmowaniu i dodawaniu liczb naturalnych od 1 do 100:\n$$1 - 2 + 3 - 4 + 5 - 6 + \\ldots - 98 + 99 - 100.$$\nNastępnie Kamil starł jeden ze znaków $+$ lub $-$ i wpisał w jego miejsce znak $=$, uzyskując w ten sposób prawdziwą równość. Którą liczbę poprzedzał starty znak? Podaj wszystkie możliwości. Odpowiedź uzasadnij.",
+  "title": "Liczba w środkowej kratce",
+  "content": "Suma liczb w każdych trzech kolejnych kratkach wynosi $15$. Suma liczb we wszystkich kratkach wynosi $52$. Jaka liczba będzie w szóstej (środkowej) kratce?",
   "pdf": {
-    "tasks": "tasks/2022/etap1/18omj-1etap.pdf",
-    "solutions": "tasks/2022/etap1/18omj-1r.pdf",
-    "statistics": null
+    "tasks": "tasks/2022/etap1/tasks.pdf"
   },
-  "difficulty": 2,
+  "difficulty": 3,
   "categories": [
-    "arytmetyka",
-    "algebra"
+    "algebra",
+    "arytmetyka"
   ],
   "hints": [
-    "Oblicz wartość całego wyrażenia $S = 1-2+3-4+\\ldots-100$. Pomocne może być łączenie sąsiednich liczb w pary.",
-    "Niech równość powstaje przez zastąpienie znaku przed liczbą $k$. Oznaczmy lewą stronę równości przez $L$, a prawą przez $R$. Zastanów się, jak cała suma $S$ zależy od $L$ oraz oryginalnych składników od $k$ do 100.",
-    "Rozważ osobno przypadek, gdy $k$ jest nieparzyste (oryginalnie był znak +) i gdy $k$ jest parzyste (oryginalnie był znak -). Porównaj prawą stronę $R$ z oryginalną sumą od $k$ do 100 w obu przypadkach.",
-    "W jednym z przypadków dojdziesz do sprzeczności. W drugim przypadku znajdziesz związek między $S$ i $L$. Oblicz wymaganą wartość $L$, a następnie wyznacz $k$ z zależności $L=1-2+\\ldots\\pm(k-1)$."
+    "Co wiemy? Każde trzy kratki obok siebie dają w sumie $15$, a wszystkie razem $52$. Spróbuj policzyć, ile w ogóle jest kratek, skoro szukamy szóstej — środkowej.",
+    "Zastanów się, co się dzieje, gdy przesuwasz \"okienko\" trzech kratek o jedną kratkę w prawo. Skoro suma się nie zmienia, to jaka zależność musi łączyć kratkę, która wychodzi z okienka, z tą, która do niego wchodzi?",
+    "Z tego rozumowania wynika, że liczby w kratkach powtarzają się co trzy miejsca. Spróbuj oznaczyć trzy pierwsze liczby literami i zapisać, jak wygląda cały rząd kratek.",
+    "Policz, ile razy występuje każda z trzech powtarzających się liczb w całym rzędzie, i ułóż równanie na sumę $52$. Wykorzystaj też, że suma trzech kolejnych to $15$ — odejmowanie tych dwóch zależności pozwoli wyznaczyć szukaną kratkę."
   ],
-  "prerequisites": [],
   "skills_required": [
-    "basic_operations",
-    "sequences"
+    "word_problems",
+    "sequences",
+    "basic_operations"
   ],
   "skills_gained": [
-    "basic_operations",
     "sequences",
-    "parity_arguments"
+    "invariants"
+  ],
+  "prerequisites": [
+    "2021_etap1_4",
+    "2018_etap1_3"
   ]
 }

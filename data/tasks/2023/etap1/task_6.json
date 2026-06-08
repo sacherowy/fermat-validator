@@ -1,29 +1,30 @@
 {
   "number": 6,
-  "title": "Warunek $ab+b+1$, $bc+c+1$, $ca+a+1$",
-  "content": "Dane są liczby rzeczywiste $a$, $b$, $c$. Udowodnij, że jeżeli pewne dwie z liczb $$ab+b+1, \\quad bc+c+1, \\quad ca+a+1$$ są równe $0$, to także trzecia z nich jest równa $0$.",
+  "title": "Dwucyfrowe liczby pierwsze o pierwszym iloczynie cyfr",
+  "content": "Znajdź wszystkie takie dwucyfrowe liczby pierwsze, że iloczyn cyfr każdej z nich też jest liczbą pierwszą.",
   "pdf": {
-    "tasks": "tasks/2023/etap1/19omj-1etap.pdf",
-    "solutions": "tasks/2023/etap1/19omj-1etap-r.pdf",
-    "statistics": null
+    "tasks": "tasks/2023/etap1/tasks.pdf"
   },
   "difficulty": 3,
   "categories": [
-    "algebra"
+    "teoria_liczb"
   ],
   "hints": [
-    "Spróbuj przekształcić równanie $ab+b+1=0$, dodając do obu stron $a$. Zauważ, że lewą stronę da się teraz zapisać w postaci iloczynu.",
-    "Zapisz dwa przyjęte założenia w tej nowej, iloczynowej postaci. Celem jest wykazanie trzeciej równości poprzez wyeliminowanie z układu zmiennej $b$.",
-    "Z pierwszego równania można wyznaczyć $b$ w zależności od $a$. Jak można wykorzystać tę zależność w drugim równaniu?",
-    "Podstaw wyznaczone wyrażenie na $b$ do drugiego równania. Po uproszczeniu otrzymasz związek między $a$ i $c$, który jest równoważny trzeciej tezie."
+    "Co jest dane, a czego szukamy? Liczba ma dwie cyfry i sama jest pierwsza, ale dodatkowo iloczyn jej cyfr też ma być liczbą pierwszą. Przypomnij sobie, kiedy liczba jest pierwsza.",
+    "Zastanów się nad iloczynem dwóch cyfr. Kiedy wynik mnożenia dwóch liczb może być liczbą pierwszą? Co to mówi o samych czynnikach?",
+    "Liczba pierwsza dzieli się tylko przez 1 i samą siebie. Jeśli iloczyn dwóch cyfr jest pierwszy, to jedna z tych cyfr musi być wyjątkowa. Jaka liczba pomnożona przez inną nie psuje jej pierwszości?",
+    "Skoro jedna z cyfr musi być równa $1$, a druga musi być cyfrą pierwszą, wypisz możliwe ustawienia (jedynka na początku lub na końcu) i na koniec sprawdź, które z otrzymanych liczb dwucyfrowych są naprawdę pierwsze."
   ],
   "skills_required": [
-    "algebraic_identities",
-    "symmetric_systems"
+    "primality_testing",
+    "digit_manipulation"
   ],
   "skills_gained": [
-    "algebraic_identities",
-    "symmetric_systems"
+    "primality_testing",
+    "case_analysis"
   ],
-  "prerequisites": []
+  "prerequisites": [
+    "2024_etap1_10",
+    "2017_etap1_5"
+  ]
 }

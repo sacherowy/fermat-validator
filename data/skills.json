@@ -498,6 +498,17 @@
         "Problemy z mieszaninami",
         "Zadania o cenach i rabatach"
       ]
+    },
+    "triangle_inequality": {
+      "id": "triangle_inequality",
+      "name": "Nierówność trójkąta",
+      "category": "geometry",
+      "description": "Żeby z trzech odcinków dało się zbudować trójkąt, suma długości dwóch krótszych boków musi być większa od najdłuższego. Jeśli ten warunek nie jest spełniony, trójkąt nie istnieje.",
+      "examples": [
+        "Czy z odcinków o długościach 3, 4 i 8 można zbudować trójkąt?",
+        "Jakie długości może mieć trzeci bok, jeśli dwa boki mają 5 i 11?",
+        "Sprawdzenie, czy trójkąt równoramienny o bokach 5, 5, 11 w ogóle istnieje"
+      ]
     }
   }
 }

@@ -1,34 +1,31 @@
 {
   "number": 7,
-  "title": "Diagram z liczbami od 11 do 29",
-  "content": "Czy w pola diagramu przedstawionego na rysunku obok można wpisać liczby całkowite od 11 do 29, każdą dokładnie raz, w taki sposób aby sumy liczb na wszystkich piętnastu odcinkach oznaczonych strzałkami były równe? Odpowiedź uzasadnij.",
+  "title": "Siatki sześcianu z osią symetrii i bez",
+  "content": "Narysuj dwie różne siatki tego samego sześcianu: jedną taką, która ma oś symetrii, a drugą taką, która nie ma osi symetrii.",
   "pdf": {
-    "tasks": "tasks/2023/etap1/19omj-1etap.pdf",
-    "solutions": "tasks/2023/etap1/19omj-1etap-r.pdf",
-    "statistics": null
+    "tasks": "tasks/2023/etap1/tasks.pdf"
   },
   "difficulty": 3,
   "categories": [
-    "kombinatoryka",
-    "logika"
+    "geometria"
   ],
   "hints": [
-    "Oblicz sumę wszystkich liczb, które należy wpisać w diagram (od 11 do 29). Wiedząc, że w każdym z trzech kierunków jest 5 linii pokrywających wszystkie pola, oblicz wymaganą sumę liczb na jednej linii.",
-    "Skup się na trzech najdłuższych liniach (przekątnych), które przecinają się w środkowym polu. Jaka musiałaby być łączna suma liczb na tych trzech liniach, biorąc pod uwagę wynik z poprzedniej wskazówki?",
-    "Zauważ, że te trzy linie składają się łącznie z 13 pól, przy czym pole środkowe jest uwzględnione w sumie aż trzy razy. Zapisz wyrażenie na tę sumę jako: 'suma 13 różnych liczb' plus 'podwojona liczba ze środka'.",
-    "Sprawdź, czy uzyskanie wymaganej sumy jest w ogóle możliwe. Oszacuj najmniejszą możliwą wartość tego wyrażenia, wstawiając w nie najmniejsze dostępne liczby (od 11 w górę) i porównaj wynik z obliczoną wcześniej sumą przekątnych."
+    "Przypomnij sobie, czym jest siatka sześcianu: figura z sześciu kwadratów, którą po złożeniu otrzymujemy sześcian. Zastanów się, ile różnych takich siatek istnieje.",
+    "To zadanie polega na zbudowaniu konkretnych przykładów. Narysuj kilka różnych siatek i dla każdej sprawdź, czy ma oś symetrii — prostą, względem której jedna połowa jest lustrzanym odbiciem drugiej.",
+    "Oś symetrii oznacza, że po złożeniu rysunku wzdłuż pewnej prostej obie części się pokryją. Poszukaj siatki wyglądającej regularnie (np. krzyż) oraz takiej ułożonej bardziej schodkowo.",
+    "Narysuj jedną siatkę w kształcie krzyża — łatwo w niej znaleźć prostą dzielącą ją na lustrzane połowy. Potem przesuń jeden kwadrat tak, by powstał układ schodkowy bez takiej prostej. Sprawdź, czy obie nadal składają się w sześcian."
   ],
   "skills_required": [
-    "double_counting",
-    "parity_arguments",
-    "sequences"
+    "spatial_3d",
+    "transformations"
   ],
   "skills_gained": [
-    "double_counting",
-    "parity_arguments",
-    "contradiction"
+    "spatial_3d",
+    "constructive_proof"
   ],
   "prerequisites": [
-    "2021_etap1_4"
+    "2017_etap1_8",
+    "2022_etap1_9",
+    "2018_etap1_9"
   ]
 }

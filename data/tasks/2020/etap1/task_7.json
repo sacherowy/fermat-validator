@@ -1,29 +1,30 @@
 {
   "number": 7,
-  "title": "Figura z pięciokątów foremnych",
-  "content": "Poniższą figurę, złożoną z czterech pięciokątów foremnych o boku długości $1$, sklejono w przestrzeni w następujący sposób. Najpierw zagięto ją wzdłuż odcinków przerywanych, łącząc pogrubione odcinki, a następnie uformowano w taki sposób, aby kolorowe odcinki utworzyły kwadrat. Wyznacz długość powstałego w ten sposób odcinka $AB$.",
+  "title": "Boki i przekątne wielokąta",
+  "content": "Odpowiedz na poniższe pytania. Jeśli odpowiesz TAK, to podaj przykład, jeśli zaś NIE, to uzasadnij odpowiedź.\n\n(a) Czy istnieje wielokąt, którego pewien bok leży na pewnej przekątnej?\n\n(b) Czy istnieje wielokąt, którego pewne dwie przekątne mają więcej niż jeden punkt wspólny?",
   "pdf": {
-    "tasks": "tasks/2020/etap1/1etap20.pdf",
-    "solutions": "tasks/2020/etap1/1etap20r.pdf",
-    "statistics": null
+    "tasks": "tasks/2020/etap1/tasks.pdf"
   },
-  "difficulty": 4,
+  "difficulty": 3,
   "categories": [
-    "geometria"
+    "geometria",
+    "logika"
   ],
   "hints": [
-    "Wyobraź sobie powstałą bryłę. Zauważ, że z powodu symetrii odcinek $AB$ jest równoległy do płaszczyzny podstawy. Jego długość jest więc równa odległości między rzutami punktów $A$ i $B$ na tę płaszczyznę.",
-    "Umieść środek kwadratowej podstawy w początku układu współrzędnych. Zadanie sprowadza się do wyznaczenia współrzędnych rzutu punktu $A$ na płaszczyznę podstawy i obliczenia jego odległości od początku układu.",
-    "Położenie wierzchołka $A$ zależy od nachylenia ścian bocznych. To nachylenie jest zdeterminowane przez położenie wierzchołków (nazwijmy je $V$), które są wspólne dla sąsiednich pięciokątów. Spróbuj wyznaczyć współrzędne jednego z takich wierzchołków $V$.",
-    "Położenie punktu $V$ można wyznaczyć z jego odległości od trzech wierzchołków podstawy. Podobnie, położenie punktu $A$ można wyznaczyć z jego odległości od znanych już punktów, np. wierzchołka podstawy i punktu $V$."
+    "Przypomnij sobie dokładne definicje: czym jest bok wielokąta, a czym przekątna? Co je łączy, a czym się różnią? Spróbuj narysować różne wielokąty i zaznaczyć w nich przekątne.",
+    "Zastanów się, czy musisz ograniczać się tylko do wielokątów wypukłych (takich, które nie mają żadnego 'wgłębienia'). Co się zmienia, gdy dopuścisz wielokąty wklęsłe?",
+    "Żeby odpowiedzieć na każde pytanie, wystarczy albo zbudować konkretny przykład (jeśli odpowiedź brzmi TAK), albo wyjaśnić, dlaczego to niemożliwe. Pobaw się rysunkami wielokątów o większej liczbie boków.",
+    "W części (a) poszukaj wielokąta wklęsłego, w którym trzy wierzchołki leżą na jednej linii prostej — wtedy odcinek łączący dwa z nich może pokrywać się z bokiem. W części (b) rozważ, kiedy dwie przekątne mogłyby leżeć na tej samej prostej."
   ],
   "skills_required": [
-    "angle_chasing",
-    "pythagorean_theorem"
+    "constructive_proof",
+    "case_analysis"
   ],
   "skills_gained": [
-    "spatial_3d",
     "constructive_proof"
   ],
-  "prerequisites": []
+  "prerequisites": [
+    "2017_etap1_2",
+    "2017_etap1_9"
+  ]
 }

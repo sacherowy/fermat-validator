@@ -1,32 +1,29 @@
 {
   "number": 5,
-  "title": "Trapez $ABCD$ z punktem $P$",
-  "content": "Dany jest trapez $ABCD$ o podstawach $AB$ i $CD$. Punkt $P$ znajduje się wewnątrz trapezu $ABCD$, przy czym\n$$AB = BP, \\quad DC = CP \\quad \\text{oraz} \\quad \\measuredangle BPC = 90^\\circ.$$\nOblicz miarę kąta $APD$.",
+  "title": "Ułamek $\\frac{3}{7}$",
+  "content": "Dany jest ułamek $\\frac{3}{7}$. Wówczas\n\n(a) jeśli zwiększymy licznik i mianownik tego ułamka o $10$, to uzyskamy ułamek mniejszy od początkowego;\n\n(b) jeśli zwiększymy licznik i mianownik tego ułamka o $10$, to uzyskamy ułamek równy początkowemu;\n\n(c) ułamek ten można zapisać jako iloczyn dwóch liczb większych od niego.",
   "pdf": {
-    "tasks": "tasks/2025/etap1/21omj-1etap-zad.pdf",
-    "solutions": "tasks/2025/etap1/21omj-1etap-r.pdf",
-    "statistics": null
+    "tasks": "tasks/2025/etap1/tasks.pdf"
   },
-  "difficulty": 3,
+  "difficulty": 2,
   "categories": [
-    "geometria"
+    "arytmetyka"
   ],
   "hints": [
-    "Z warunków $AB = BP$ i $DC = CP$ wynikają pewne własności trójkątów $ABP$ i $DCP$. Narysuj staranny rysunek i zaznacz na nim wszystkie równe boki oraz kąt prosty.",
-    "Spróbuj znaleźć szukany kąt, analizując zależności między innymi kątami na rysunku. Wykorzystaj sumę kątów wokół punktu $P$ oraz sumę kątów przy ramieniu trapezu.",
-    "Oznacz kąty przy podstawach trójkątów równoramiennych, np. $\\angle BPA = \\alpha$ i $\\angle CPD = \\beta$. Zauważ, że kąty $\\angle ABP$ i $\\angle DCP$ można wyrazić za pomocą $\\alpha$ i $\\beta$.",
-    "Zapisz sumę kątów przy ramieniu $BC$ trapezu, wykorzystując wprowadzone oznaczenia. Pozwoli Ci to obliczyć wartość $\\alpha + \\beta$. Stąd już tylko krok do znalezienia miary kąta $\\angle APD$."
+    "Zadanie to zestaw trzech twierdzeń (a), (b), (c) o ułamku $\\frac{3}{7}$ — dla każdego rozstrzygnij, czy jest prawdziwe. Zacznij od zapisania, jak wygląda ułamek po zwiększeniu licznika i mianownika o $10$.",
+    "Aby porównać dwa ułamki, sprowadź je do wspólnego mianownika albo porównaj z czymś znajomym, np. z $\\frac{1}{2}$. Zastanów się, czy ułamek mniejszy od $1$ po dodaniu tej samej liczby do góry i do dołu rośnie czy maleje.",
+    "Dla części (c) pomyśl: $\\frac{3}{7}$ jest mniejsze od $1$. Czy iloczyn dwóch liczb większych od $\\frac{3}{7}$ (każda może być mniejsza od $1$) może dać tak mały wynik? Spróbuj rozbić $\\frac{3}{7}$ na iloczyn dwóch prostych ułamków.",
+    "W (a) i (b) porównaj $\\frac{3}{7}$ z ułamkiem po zmianie przez wspólny mianownik. W (c) spróbuj zapisać $\\frac{3}{7}=\\frac{a}{b}\\cdot\\frac{c}{d}$ tak, by oba czynniki przekraczały $\\frac{3}{7}$."
   ],
   "skills_required": [
-    "trapezoid_parallelogram",
-    "isosceles_triangle",
-    "angle_chasing"
+    "basic_operations"
   ],
   "skills_gained": [
-    "angle_chasing",
-    "isosceles_triangle"
+    "inequality_manipulation",
+    "basic_operations"
   ],
   "prerequisites": [
-    "2023_etap2_3"
+    "2024_etap1_1",
+    "2025_etap1_1"
   ]
 }

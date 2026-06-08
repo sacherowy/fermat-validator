@@ -6,19 +6,18 @@ This script creates placeholder task JSON files that can then be populated
 using fix_latex_content.py.
 
 Usage:
-    python create_tasks.py 2024 etap3           # Create tasks for specific year/etap
-    python create_tasks.py --etap 3 --all       # Create tasks for all years with etap3 PDFs
+    python create_tasks.py 2024 etap1           # Create tasks for specific year/etap
+    python create_tasks.py --etap etap1 --all   # Create tasks for all years with etap1 PDFs
 """
 
 import json
 import argparse
 from pathlib import Path
 
-# Task counts per etap (standard for OMJ/OMG)
+# Task counts per etap (FerMat competition: confirmed from actual PDFs)
 TASK_COUNTS = {
-    "etap1": 7,  # First stage: 7 tasks
-    "etap2": 5,  # Second stage: 5 tasks
-    "etap3": 5,  # Finals: 5 tasks
+    "etap1": 10,  # First stage: 10 tasks (multiple choice)
+    "etap2": 5,   # Second stage: 5 tasks (open-ended)
 }
 
 
@@ -110,7 +109,7 @@ def get_years_with_etap(etap: str) -> list[str]:
 def main():
     parser = argparse.ArgumentParser(description="Create initial task JSON files")
     parser.add_argument("year", nargs="?", help="Year to process")
-    parser.add_argument("etap", nargs="?", help="Etap to process (etap1, etap2, etap3)")
+    parser.add_argument("etap", nargs="?", help="Etap to process (etap1, etap2)")
     parser.add_argument("--etap", dest="etap_flag", help="Etap to process with --all")
     parser.add_argument("--all", action="store_true", help="Process all years with PDFs")
     parser.add_argument("--dry-run", action="store_true", help="Preview without creating files")

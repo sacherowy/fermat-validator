@@ -1,0 +1,32 @@
+{
+  "number": 9,
+  "title": "Trójkąt równoramienny wśród 10 punktów na okręgu",
+  "content": "Na okręgu zaznaczono $10$ punktów w równej odległości. Każdy z tych punktów pokolorowano na czerwono lub niebiesko. Uzasadnij, że pewne trzy punkty jednego koloru są wierzchołkami trójkąta równoramiennego.",
+  "pdf": {
+    "tasks": "tasks/2023/etap1/tasks.pdf"
+  },
+  "difficulty": 4,
+  "categories": [
+    "kombinatoryka",
+    "geometria"
+  ],
+  "hints": [
+    "Najpierw zrozum sytuację: $10$ punktów leży na okręgu w równych odstępach. Narysuj je i zastanów się, kiedy trzy punkty tworzą trójkąt równoramienny — kiedy dwa boki (cięciwy) mają tę samą długość?",
+    "Mamy tylko dwa kolory i $10$ punktów. Czy zawsze któregoś koloru musi być odpowiednio dużo? To pomysł na zasadę szufladkową. Potem skup się na punktach tego liczniejszego koloru i rozważ przypadki ich rozmieszczenia.",
+    "Zauważ, że dwie cięciwy mają równą długość dokładnie wtedy, gdy odcinają łuki o tej samej liczbie odstępów. Punkt jest więc wierzchołkiem trójkąta równoramiennego, gdy ma dwóch sąsiadów w tej samej liczbie kroków po obu stronach.",
+    "Skoro jednego koloru jest co najmniej pięć punktów, spróbuj dowodu nie wprost: załóż, że żadne trzy nie tworzą trójkąta równoramiennego. Policz, ile różnych odległości (w krokach po okręgu) istnieje, i sprawdź, czy starczy ich dla pięciu punktów."
+  ],
+  "skills_required": [
+    "pigeonhole",
+    "case_analysis",
+    "isosceles_triangle"
+  ],
+  "skills_gained": [
+    "pigeonhole",
+    "case_analysis"
+  ],
+  "prerequisites": [
+    "2019_etap1_5",
+    "2025_etap1_7"
+  ]
+}

@@ -1,31 +1,31 @@
 {
   "number": 4,
-  "title": "Warunek $(a+b^2)(a^3+b^3)=a^4+b^5$",
-  "content": "Niezerowe liczby rzeczywiste $a$, $b$ spełniają warunek $(a+b^2)(a^3+b^3)=a^4+b^5$. Wykaż, że $b<0$.",
+  "title": "Rozcięcie kwadratu na kwadraty",
+  "content": "Kwadrat można rozciąć na (niekoniecznie takie same)\n\n(a) $4$ kwadraty;\n\n(b) $6$ kwadratów;\n\n(c) $7$ kwadratów.",
   "pdf": {
-    "tasks": "tasks/2025/etap1/21omj-1etap-zad.pdf",
-    "solutions": "tasks/2025/etap1/21omj-1etap-r.pdf",
-    "statistics": null
+    "tasks": "tasks/2025/etap1/tasks.pdf"
   },
   "difficulty": 3,
   "categories": [
-    "algebra"
+    "geometria",
+    "kombinatoryka"
   ],
   "hints": [
-    "Wymnóż nawiasy po lewej stronie równania. Następnie uprość równanie, redukując te same wyrażenia po obu stronach.",
-    "Przenieś wszystkie wyrazy na jedną stronę, aby po drugiej zostało zero. Spróbuj zapisać otrzymane wyrażenie w postaci iloczynu.",
-    "W uproszczonym równaniu oba składniki zawierają potęgi zmiennych $a$ i $b$. Jaki jest największy wspólny czynnik, który można wyłączyć przed nawias?",
-    "Otrzymane równanie ma postać iloczynu równego zero. Skoro $a \\neq 0$ i $b \\neq 0$, to który z czynników musi być zerem? Wyznacz $b$ i zbadaj jego znak."
+    "Co właściwie znaczy \"rozciąć na kwadraty\"? Spróbuj najpierw narysować prosty podział kwadratu na cztery równe mniejsze kwadraty - to dobry punkt startowy.",
+    "To zadanie polega na ZBUDOWANIU przykładu dla każdego przypadku. Pomyśl, jak z jednego gotowego podziału otrzymać podział z większą liczbą kawałków, dzieląc tylko fragment rysunku.",
+    "Zauważ pewną sztuczkę: jeśli weźmiesz jeden z kwadratów w gotowym podziale i pokroisz go na 4 mniejsze kwadraty, to liczba wszystkich kawałków zmienia się o pewną stałą wartość. Policz, o ile.",
+    "Wyjdź od podziału na 4 kwadraty. Rozcinając jeden kwadrat na 4, zwiększasz ich liczbę o 3 - to daje Ci kolejne przypadki. Dla 6 kwadratów spróbuj innego pomysłu: jeden duży kwadrat w rogu i kilka mniejszych dopełniających kwadrat."
   ],
   "skills_required": [
-    "algebraic_identities",
-    "polynomial_analysis"
+    "constructive_proof",
+    "tiling",
+    "area_methods"
   ],
   "skills_gained": [
-    "algebraic_identities",
-    "case_analysis"
+    "tiling",
+    "constructive_proof"
   ],
   "prerequisites": [
-    "2023_etap1_6"
+    "2024_etap1_3"
   ]
 }

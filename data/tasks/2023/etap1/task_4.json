@@ -1,30 +1,31 @@
 {
   "number": 4,
-  "title": "Różnica sześcianów dwóch liczb pierwszych",
-  "content": "Wyznacz wszystkie liczby pierwsze, które można przedstawić jako różnicę sześcianów dwóch liczb pierwszych.",
+  "title": "Liczba równoległoboków na rysunku",
+  "content": "Ile równoległoboków jest na poniższym rysunku? Narysowane odcinki są równoległe do odcinków $AC$ lub $BC$.\n\nUwaga. W tym zadaniu wystarczy podać samą odpowiedź.",
   "pdf": {
-    "tasks": "tasks/2023/etap1/19omj-1etap.pdf",
-    "solutions": "tasks/2023/etap1/19omj-1etap-r.pdf",
-    "statistics": null
+    "tasks": "tasks/2023/etap1/tasks.pdf"
   },
-  "difficulty": 2,
+  "difficulty": 3,
   "categories": [
-    "teoria_liczb",
-    "algebra"
+    "kombinatoryka",
+    "geometria"
   ],
   "hints": [
-    "Przypomnij sobie wzór na różnicę sześcianów $a^3 - b^3$. Jak można rozłożyć to wyrażenie na czynniki?",
-    "Skoro wynik ma być liczbą pierwszą, a mamy iloczyn dwóch czynników, to co musi być prawdą o jednym z tych czynników?",
-    "Zastanów się: czy czynnik $a^2 + ab + b^2$ może być równy 1 dla liczb pierwszych $a > b$? Co to oznacza dla czynnika $(a-b)$?",
-    "Jeśli $a - b = 1$, to szukasz dwóch liczb pierwszych różniących się o 1. Ile jest takich par?"
+    "Co jest dane, a czego szukamy? Przyjrzyj się rysunkowi: odcinki biegną w dwóch kierunkach (równolegle do $AC$ albo do $BC$). Równoległobok powstaje, gdy wybierzemy dwie równoległe linie z jednej rodziny i dwie z drugiej.",
+    "Zamiast liczyć wszystkie równoległoboki naraz, podziel pracę: policz osobno równoległoboki różnych rozmiarów lub powstające z różnych par linii. Systematyczne zliczanie chroni przed pominięciem i podwójnym policzeniem.",
+    "Zauważ, że każdy równoległobok jest jednoznacznie wyznaczony przez parę linii z pierwszego kierunku i parę linii z drugiego kierunku. Zbadaj, ile linii biegnie w każdym z dwóch kierunków i które ich kombinacje rzeczywiście dają zamkniętą figurę na rysunku.",
+    "Dla każdej pary linii równoległych do $AC$ sprawdź, ile par linii równoległych do $BC$ tworzy z nimi równoległobok mieszczący się w figurze. Dodaj wyniki dla wszystkich przypadków — uważaj, bo nie każda para linii musi się przecinać wewnątrz rysunku."
   ],
   "skills_required": [
-    "algebraic_identities",
-    "primality_testing"
+    "counting_techniques",
+    "case_analysis"
   ],
   "skills_gained": [
-    "algebraic_identities",
-    "primality_testing"
+    "counting_techniques"
   ],
-  "prerequisites": []
+  "prerequisites": [
+    "2018_etap1_4",
+    "2017_etap1_5",
+    "2021_etap1_9"
+  ]
 }

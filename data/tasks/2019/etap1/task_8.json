@@ -1,0 +1,29 @@
+{
+  "number": 8,
+  "title": "Ulubione liczby Filipa",
+  "content": "Iloczyn ulubionych liczb Filipa wynosi $1664$. Największa z nich jest dwa razy większa niż najmniejsza. Ile ulubionych liczb ma Filip?",
+  "pdf": {
+    "tasks": "tasks/2019/etap1/tasks.pdf"
+  },
+  "difficulty": 3,
+  "categories": [
+    "teoria_liczb"
+  ],
+  "hints": [
+    "Co jest dane, a czego szukasz? Wiesz, że pewne liczby pomnożone przez siebie dają $1664$ oraz że największa z nich jest dwa razy większa od najmniejszej. Szukasz, ile tych liczb jest.",
+    "Skoro liczby mnożą się do $1664$, warto najpierw rozłożyć tę liczbę na czynniki pierwsze (czyli na iloczyn liczb pierwszych). To pokaże, z jakich 'klocków' można budować ulubione liczby.",
+    "Zwróć uwagę na warunek: największa liczba jest dwa razy większa od najmniejszej. Zastanów się, jaka mogłaby być najmniejsza liczba i jaka wtedy największa, tak aby ich iloczyn dzielił $1664$.",
+    "Spróbuj oznaczyć najmniejszą liczbę przez $a$, wtedy największa to $2a$. Pomnóż je przez siebie i sprawdź, czy $1664$ dzieli się przez ten iloczyn bez reszty oraz czy to, co zostaje, mieści się pomiędzy $a$ a $2a$."
+  ],
+  "skills_required": [
+    "prime_factorization",
+    "divisibility_arguments"
+  ],
+  "skills_gained": [
+    "prime_factorization"
+  ],
+  "prerequisites": [
+    "2018_etap1_5",
+    "2022_etap1_5"
+  ]
+}

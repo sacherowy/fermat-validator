@@ -1,0 +1,29 @@
+{
+  "number": 9,
+  "title": "Parzystość czterech liczb",
+  "content": "Suma czterech liczb całkowitych jest nieparzysta, a ich iloczyn jest parzysty. Wśród tych liczb mogą się znajdować\n\n(a) trzy liczby parzyste oraz jedna liczba nieparzysta;\n\n(b) trzy liczby nieparzyste oraz jedna liczba parzysta;\n\n(c) cztery liczby nieparzyste.",
+  "pdf": {
+    "tasks": "tasks/2025/etap1/tasks.pdf"
+  },
+  "difficulty": 2,
+  "categories": [
+    "teoria_liczb"
+  ],
+  "hints": [
+    "Co wiemy o liczbach? Przypomnij sobie: kiedy suma kilku liczb jest parzysta, a kiedy nieparzysta? Kiedy iloczyn jest parzysty? Spróbuj zapisać przy każdym z trzech przypadków, ile jest liczb parzystych, a ile nieparzystych.",
+    "Rozważ osobno dwa warunki: warunek na sumę i warunek na iloczyn. Sprawdź dla każdego z przypadków (a), (b), (c), czy oba warunki mogą zachodzić jednocześnie.",
+    "Zwróć uwagę, że o parzystości sumy decyduje liczba nieparzystych składników: dodanie liczby parzystej nic nie zmienia, a dodanie nieparzystej zmienia parzystość. Policz, ile nieparzystych liczb jest w każdym przypadku.",
+    "Zauważ, że suma jest nieparzysta tylko wtedy, gdy nieparzystych składników jest nieparzyście wiele. Sprawdź też warunek na iloczyn: aby był parzysty, musi być co najmniej jedna liczba parzysta. Skonfrontuj to z każdym przypadkiem i odrzuć te, które nie spełniają obu warunków."
+  ],
+  "skills_required": [
+    "parity_arguments",
+    "case_analysis"
+  ],
+  "skills_gained": [
+    "parity_arguments"
+  ],
+  "prerequisites": [
+    "2025_etap1_8",
+    "2025_etap1_7"
+  ]
+}

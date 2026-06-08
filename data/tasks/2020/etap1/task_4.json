@@ -1,28 +1,32 @@
 {
   "number": 4,
-  "title": "Czworokąt $ABCD$ z kątami $120°$",
-  "content": "Dany jest czworokąt wypukły $ABCD$, w którym $\\angle DAB = \\angle ABC = 120°$ oraz $CD = 3$, $BC = 2$, $AB = 1$. Oblicz długość odcinka $AD$.",
+  "title": "Liczba stron książki",
+  "content": "Do numeracji stron pewnej książki użyto $999$ cyfr. Ile stron liczy ta książka?",
   "pdf": {
-    "tasks": "tasks/2020/etap1/1etap20.pdf",
-    "solutions": "tasks/2020/etap1/1etap20r.pdf",
-    "statistics": null
+    "tasks": "tasks/2020/etap1/tasks.pdf"
   },
-  "difficulty": 3,
+  "difficulty": 2,
   "categories": [
-    "geometria"
+    "teoria_liczb",
+    "arytmetyka"
   ],
   "hints": [
-    "Narysuj czworokąt. Zauważ, że kąty $120°$ są rozwarte. Co się stanie, jeśli przedłużysz boki $AD$ i $BC$ tak, aby przecięły się, tworząc trójkąt oparty na boku $AB$?",
-    "Niech proste $AD$ i $BC$ przetną się w punkcie $P$. Oblicz kąty w trójkącie $\\triangle PAB$. Jakim jest on trójkątem i jakie są długości jego boków?",
-    "Teraz spójrz na większy trójkąt $\\triangle PDC$. Wykorzystaj to, co wiesz o punkcie $P$, aby obliczyć długość boku $PC$ i wyrazić długość boku $PD$ za pomocą szukanej długości $AD$.",
-    "W trójkącie $\\triangle PDC$ znasz długości dwóch boków ($PC$ i $CD$) oraz miarę kąta $\\angle DPC$. Co możesz wywnioskować o tym trójkącie? Oblicz $PD$, a następnie $AD$."
+    "Zastanów się, ile cyfr potrzeba na zapisanie numeru strony. Czy strona o numerze 7 potrzebuje tyle samo cyfr co strona o numerze 42 albo 305?",
+    "Podziel numery stron na grupy według liczby cyfr: strony jednocyfrowe, dwucyfrowe, trzycyfrowe. Policz osobno, ile cyfr zużywa każda grupa.",
+    "Najpierw odejmij od $999$ cyfry zużyte na strony jednocyfrowe i dwucyfrowe. Ile cyfr zostanie na strony trzycyfrowe?",
+    "Gdy wiesz, ile cyfr zostało na strony trzycyfrowe, podziel tę liczbę przez liczbę cyfr w jednym numerze, aby dowiedzieć się, ile jest takich stron. Pamiętaj potem dodać strony z wcześniejszych grup."
   ],
   "skills_required": [
-    "angle_chasing"
+    "digit_manipulation",
+    "basic_operations",
+    "counting_techniques"
   ],
   "skills_gained": [
-    "transformations",
-    "pythagorean_theorem"
+    "digit_manipulation",
+    "counting_techniques"
   ],
-  "prerequisites": []
+  "prerequisites": [
+    "2019_etap1_6",
+    "2018_etap1_4"
+  ]
 }

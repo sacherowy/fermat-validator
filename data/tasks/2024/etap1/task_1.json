@@ -1,30 +1,25 @@
 {
   "number": 1,
-  "title": "Punkt wewnątrz kwadratu o boku 20",
-  "content": "Czy wewnątrz kwadratu o boku długości 20 istnieje punkt, którego odległości od boków tego kwadratu są czterema kolejnymi liczbami całkowitymi?",
+  "title": "Zadanie 1 — równości liczbowe",
+  "content": "Prawdziwa jest następująca równość:\n\n(a) $\\frac{1}{2} + 0{,}25 = \\frac{1}{4} + 0{,}5$;\n\n(b) $5 \\cdot 0{,}2 = 10 \\cdot 0{,}1$;\n\n(c) $\\frac{1}{8} : 0{,}125 = \\frac{1}{5} : 0{,}2$.",
   "pdf": {
-    "tasks": "tasks/2024/etap1/20omj-1etap.pdf",
-    "solutions": "tasks/2024/etap1/20omj-1etap-r.pdf",
-    "statistics": null
+    "tasks": "tasks/2024/etap1/tasks.pdf"
   },
-  "difficulty": 2,
+  "difficulty": 1,
   "categories": [
-    "geometria",
-    "teoria_liczb"
+    "arytmetyka"
   ],
   "hints": [
-    "Narysuj kwadrat i zaznacz w nim dowolny punkt $P$. Oznacz odległości od wszystkich czterech boków. Co możesz powiedzieć o sumie odległości od dwóch przeciwległych boków?",
-    "Wykorzystaj fakt, że suma odległości punktu od dwóch równoległych boków kwadratu jest stała. Oblicz sumę wszystkich czterech odległości.",
-    "Jeśli cztery kolejne liczby całkowite to $n, n+1, n+2, n+3$, wyraź ich sumę w zależności od $n$. Porównaj z sumą odległości od boków.",
-    "Sprawdź, czy równanie na sumę czterech kolejnych liczb całkowitych ma rozwiązanie będące liczbą całkowitą. Co to oznacza dla istnienia takiego punktu?"
+    "Przyjrzyj się każdej równości osobno. Co jest po lewej, a co po prawej stronie znaku równości? Spróbuj zapisać wszystkie liczby w tej samej postaci.",
+    "Najprościej zamienić ułamki dziesiętne na zwykłe (albo odwrotnie), żeby po obu stronach były liczby w tym samym zapisie. Wtedy łatwo porównasz.",
+    "Zauważ, że $0{,}25 = \\frac{1}{4}$, $0{,}5 = \\frac{1}{2}$, $0{,}2 = \\frac{1}{5}$, a $0{,}125 = \\frac{1}{8}$. Podstaw te zamiany w każdej części.",
+    "W części (c) pamiętaj, że dzielenie przez ułamek to mnożenie przez jego odwrotność. Policz osobno lewą i prawą stronę i sprawdź, czy wychodzi to samo."
   ],
-  "prerequisites": [],
   "skills_required": [
-    "coordinate_geometry",
-    "case_analysis"
+    "basic_operations"
   ],
   "skills_gained": [
-    "constructive_proof",
-    "divisibility_arguments"
-  ]
+    "basic_operations"
+  ],
+  "prerequisites": []
 }

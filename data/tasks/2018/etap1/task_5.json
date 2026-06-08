@@ -1,31 +1,30 @@
 {
   "number": 5,
-  "title": "Równoległobok $ABCD$ z $AP = BD$",
-  "content": "Dany jest równoległobok $ABCD$. Na przekątnej $BD$ wybrano taki punkt $P$, że spełniona jest równość $AP = BD$. Punkt $Q$ jest środkiem odcinka $CP$. Wykaż, że $\\angle BQD = 90°$.",
+  "title": "Trzy kolejne liczby naturalne o iloczynie $120$",
+  "content": "Podaj przykład trzech kolejnych liczb naturalnych, których iloczyn jest równy $120$.",
   "pdf": {
-    "tasks": "tasks/2018/etap1/1etap18.pdf",
-    "solutions": "tasks/2018/etap1/1etap18r.pdf",
-    "statistics": null
+    "tasks": "tasks/2018/etap1/tasks.pdf"
   },
-  "difficulty": 3,
+  "difficulty": 1,
   "categories": [
-    "geometria"
+    "arytmetyka",
+    "teoria_liczb"
   ],
   "hints": [
-    "Narysuj równoległobok $ABCD$ i jego przekątne. Zaznacz punkt $P$ na przekątnej $BD$ oraz punkt $Q$ będący środkiem odcinka $CP$. Co wiesz o punkcie przecięcia przekątnych równoległoboku?",
-    "Aby wykazać, że kąt jest prosty, często warto poszukać okręgu, w którym ten kąt jest oparty na średnicy. Czy punkty $B, Q, D$ mogą leżeć na jednym okręgu?",
-    "Niech $O$ będzie środkiem przekątnej $BD$. Jaki warunek musi spełniać punkt $Q$, aby leżał na okręgu o średnicy $BD$? Zbadaj odległość punktu $Q$ od punktu $O$.",
-    "Zauważ, że $O$ jest również środkiem przekątnej $AC$. Rozważ trójkąt $ACP$. Co możesz powiedzieć o odcinku $OQ$, który łączy środki boków $AC$ i $CP$?"
+    "Co jest dane, a czego szukamy? Potrzebujesz trzech liczb idących po kolei (jak $n$, $n+1$, $n+2$), których iloczyn ma wynieść $120$. Spróbuj zapisać, co to znaczy 'kolejne liczby naturalne'.",
+    "Nie musisz układać skomplikowanego równania. Wystarczy sprytnie sprawdzać kolejne trójki liczb i liczyć ich iloczyn, aż trafisz na właściwą wartość.",
+    "Zwróć uwagę, że gdy mnożysz trzy małe liczby, iloczyn rośnie bardzo szybko. Zastanów się, w okolicach jakiej wielkości muszą być te liczby, żeby iloczyn nie był ani za mały, ani za duży.",
+    "Spróbuj rozbić $120$ na czynniki (na przykład $120 = 2 \\cdot 60 = ...$) i poszukaj wśród nich trzech, które idą jedna po drugiej. Możesz też zacząć próby od trójki, której środkowa liczba pomnożona przez siebie trzy razy jest blisko $120$."
   ],
   "skills_required": [
-    "trapezoid_parallelogram",
-    "circle_theorems"
+    "basic_operations",
+    "prime_factorization"
   ],
   "skills_gained": [
-    "trapezoid_parallelogram",
-    "circle_theorems"
+    "prime_factorization"
   ],
   "prerequisites": [
-    "2017_etap1_2"
+    "2025_etap1_6",
+    "2019_etap1_2"
   ]
 }

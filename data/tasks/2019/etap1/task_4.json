@@ -1,30 +1,30 @@
 {
   "number": 4,
-  "title": "Prostokąt $ABCD$ z $\\angle EAF = 45^\\circ$",
-  "content": "Dany jest prostokąt $ABCD$. Punkty $E$ i $F$ leżą odpowiednio na bokach $BC$ i $CD$, przy czym $\\angle EAF = 45^\\circ$ oraz $BE = DF$. Wykaż, że pole trójkąta $AEF$ jest równe sumie pól trójkątów $ABE$ i $ADF$.",
+  "title": "Podział prostokąta wg obwodu",
+  "content": "Dany jest prostokąt o wymiarach $8 \\text{ cm} \\times 17 \\text{ cm}$. Podziel go na dwa prostokąty, z których jeden ma obwód $2$ razy większy niż drugi.",
   "pdf": {
-    "tasks": "tasks/2019/etap1/1etap19.pdf",
-    "solutions": "tasks/2019/etap1/1etap19r.pdf",
-    "statistics": null
+    "tasks": "tasks/2019/etap1/tasks.pdf"
   },
-  "difficulty": 3,
+  "difficulty": 2,
   "categories": [
-    "geometria"
+    "algebra",
+    "arytmetyka"
   ],
   "hints": [
-    "Narysuj figurę i oznacz $\\angle BAE = \\alpha$ oraz $\\angle DAF = \\beta$. Jaka jest suma kątów $\\alpha + \\beta$? Wykorzystaj fakt, że kąt wewnętrzny prostokąta ma miarę $90^\\circ$.",
-    "Teza zadania dotyczy równości pól. Spróbuj tak przekształcić figurę, aby suma pól trójkątów $\\triangle ABE$ i $\\triangle ADF$ stała się polem jednego trójkąta. Pomocny może być obrót.",
-    "Obróć trójkąt $\\triangle ADF$ o $90^\\circ$ wokół punktu $A$ zgodnie z ruchem wskazówek zegara. Niech obrazem punktu $F$ będzie $F'$. Co możesz powiedzieć o trójkątach $\\triangle AEF$ i $\\triangle AEF'$?",
-    "Wykaż, że $\\triangle AEF \\cong \\triangle AEF'$, korzystając z cechy bok-kąt-bok. Oznacz boki prostokąta przez $a, b$ i $BE=x$. Oblicz pole $\\triangle AEF'$ i porównaj je z sumą pól $\\triangle ABE$ i $\\triangle ADF$."
+    "Narysuj prostokąt o bokach $8$ i $17$ i zaznacz linię cięcia. Zauważ, że dzieląc go prostą równoległą do jednego z boków, otrzymasz dwa mniejsze prostokąty — jeden z ich boków pozostanie taki sam jak w dużym prostokącie.",
+    "Oznacz literą długość odcinka, na którym tniesz jeden z boków. Wtedy obwody obu mniejszych prostokątów zapiszesz jako wyrażenia z tą niewiadomą i ułożysz równanie z warunku zadania.",
+    "Zastanów się, w którą stronę poprowadzić cięcie: równolegle do boku $8$ cm czy do boku $17$ cm. Sprawdź, przy którym kierunku oba prostokąty zachowują wspólny bok i czy niewiadoma mieści się w wymiarach prostokąta.",
+    "Jeśli tniesz wzdłuż boku $17$ cm na części $x$ i $17-x$, to obwody wynoszą $2(8+x)$ oraz $2(8+(17-x))$. Zapisz warunek, że większy obwód jest $2$ razy większy od mniejszego, i rozwiąż powstałe równanie."
   ],
-  "prerequisites": [],
   "skills_required": [
-    "area_methods",
-    "angle_chasing",
-    "isosceles_triangle"
+    "word_problems",
+    "basic_operations"
   ],
   "skills_gained": [
-    "area_methods",
-    "transformations"
+    "word_problems"
+  ],
+  "prerequisites": [
+    "2017_etap1_2",
+    "2018_etap1_3"
   ]
 }

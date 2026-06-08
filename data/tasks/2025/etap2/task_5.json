@@ -1,32 +1,33 @@
 {
   "number": 5,
-  "title": "Nierówność dla odwrotności",
-  "content": "Dane są dodatnie liczby rzeczywiste $a$, $b$, $c$ o tej własności, że każda z liczb $ab$, $bc$, $ca$ jest większa od $a+b+c$. Wykaż, że\n\n$$\\frac{1}{a} + \\frac{1}{b} + \\frac{1}{c} < 1.$$",
+  "title": "Równość $F \\cdot E \\cdot R = M \\cdot A \\cdot T$",
+  "content": "Każdej literze słowa $FERMAT$ przyporządkowano jedną spośród liczb $0, 1, 2, \\ldots, 9$, przy czym różnym literom przyporządkowano różne liczby. Wiadomo, że zachodzi równość\n$$F \\cdot E \\cdot R = M \\cdot A \\cdot T.$$\nWyznacz wszystkie możliwe wartości, jakie może przyjąć iloczyn $F \\cdot E \\cdot R$.",
   "pdf": {
-    "tasks": "tasks/2025/etap2/21omj-2etap.pdf",
-    "solutions": "tasks/2025/etap2/21omj-2r.pdf",
-    "statistics": "tasks/2025/etap2/21omj-2st.pdf"
+    "tasks": "tasks/2025/etap2/tasks.pdf"
   },
   "difficulty": 4,
   "categories": [
-    "algebra"
+    "teoria_liczb",
+    "kombinatoryka"
   ],
   "hints": [
-    "Co jest dane, a co mamy wykazać? Zauważ, że tezę $\\frac{1}{a}+\\frac{1}{b}+\\frac{1}{c}<1$ można po pomnożeniu przez $abc$ zapisać w postaci nierówności łączącej $abc$ z sumą iloczynów $ab+bc+ca$. Spróbuj zapisać tezę bez ułamków.",
-    "Masz trzy podobne założenia: $ab>a+b+c$, $bc>a+b+c$, $ca>a+b+c$. Pomyśl, jak je sprytnie połączyć (np. mnożąc każde przez odpowiednią zmienną), żeby otrzymać nierówność z wyrazem $abc$ po jednej stronie.",
-    "Pomnóż nierówność $ab>a+b+c$ stronami przez $c$ (wolno, bo $c>0$). Zrób to samo z pozostałymi dwiema nierównościami, mnożąc przez $a$ i przez $b$. Co dostaniesz po dodaniu wszystkich trzech otrzymanych nierówności?",
-    "Po dodaniu otrzymasz $3abc>2(ab+bc+ca)+(a^2+b^2+c^2)$. Skorzystaj teraz ze znanej nierówności $a^2+b^2+c^2\\ge ab+bc+ca$ (wynika ona ze wzoru skróconego mnożenia zastosowanego do $(a-b)^2+(b-c)^2+(c-a)^2$). Co stąd wynika dla porównania $abc$ z $ab+bc+ca$?"
+    "Co jest dane? Sześciu różnym literom ($F, E, R, M, A, T$) przyporządkowano sześć różnych cyfr. Szukamy, kiedy iloczyn trzech cyfr po lewej równa się iloczynowi trzech cyfr po prawej. Zacznij od pytania: jaką wartość ma iloczyn, gdy jedna z cyfr to $0$?",
+    "Tu nie pomoże jeden sprytny wzór - kluczem jest uporządkowana analiza przypadków. Najpierw spróbuj wykluczyć cyfry, które na pewno nie mogą wystąpić, a potem szukaj pasujących par trójek. Pomocne będzie rozłożenie każdej cyfry na czynniki pierwsze.",
+    "Zastanów się nad cyframi $0$, $5$ i $7$. Jeśli po jednej stronie pojawi się czynnik $0$, to ile musi wynosić druga strona - i czy da się to przy różnych cyfrach? Pomyśl też, ile razy wśród cyfr $0$–$9$ występuje czynnik $7$, a ile razy czynnik $5$.",
+    "Skoro czynnik $7$ jest tylko w jednej cyfrze, a $5$ tylko w cyfrach $5$ i $0$, sprawdź, czy mogą się w ogóle pojawić, by obie strony były równe. Po ich wyeliminowaniu zostanie niewielki zbiór cyfr - przejrzyj, jakie iloczyny trzech z nich da się uzyskać na dwa sposoby."
   ],
   "skills_required": [
-    "inequality_manipulation",
-    "algebraic_identities"
+    "digit_manipulation",
+    "prime_factorization",
+    "case_analysis"
   ],
   "skills_gained": [
-    "inequality_manipulation"
+    "case_analysis",
+    "prime_factorization"
   ],
   "prerequisites": [
-    "2022_etap1_5",
-    "2013_etap3_1",
-    "2010_etap1_3"
+    "2024_etap2_3",
+    "2024_etap1_10",
+    "2025_etap2_2"
   ]
 }

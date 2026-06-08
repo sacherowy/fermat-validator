@@ -1,0 +1,32 @@
+{
+  "number": 9,
+  "title": "Tunele w sześcianie ze 125 kostek",
+  "content": "W sześcianie sklejonym ze $125$ jednakowych kostek usunięto niektóre z nich, tworząc tunele na wylot. Kształty tuneli widoczne są na rysunku obok. Ile kostek usunięto?",
+  "pdf": {
+    "tasks": "tasks/2021/etap1/tasks.pdf"
+  },
+  "difficulty": 3,
+  "categories": [
+    "geometria",
+    "kombinatoryka"
+  ],
+  "hints": [
+    "Wyobraź sobie sześcian o wymiarach $5\\times5\\times5$ kostek. Każdy tunel na wylot to ciąg kostek przewierconych przez całą bryłę. Ile kostek liczy jeden taki tunel biegnący od ściany do ściany?",
+    "Policz osobno kostki usunięte przez każdy tunel, a potem zastanów się, czy żadnej kostki nie policzyłeś dwa razy. To typowe zadanie na ostrożne zliczanie z odejmowaniem powtórzeń.",
+    "Zwróć uwagę na miejsca, gdzie tunele się przecinają (krzyżują) wewnątrz sześcianu. Kostka leżąca na przecięciu dwóch tuneli należy do obu — policzona dwukrotnie zawyża wynik.",
+    "Zsumuj długości wszystkich tuneli, a następnie od tej sumy odejmij kostki policzone wielokrotnie w punktach skrzyżowań. Sprawdź dokładnie na rysunku, ile tuneli i w ilu miejscach się spotyka."
+  ],
+  "skills_required": [
+    "spatial_3d",
+    "counting_techniques",
+    "case_analysis"
+  ],
+  "skills_gained": [
+    "spatial_3d",
+    "counting_techniques"
+  ],
+  "prerequisites": [
+    "2017_etap1_7",
+    "2019_etap1_9"
+  ]
+}

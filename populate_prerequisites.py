@@ -12,7 +12,7 @@ Prerequisites are selected based on:
 
 Usage:
     python populate_prerequisites.py                          # Process all tasks without prerequisites
-    python populate_prerequisites.py --year 2024 --etap etap3 # Process specific year/etap
+    python populate_prerequisites.py --year 2024 --etap etap1 # Process specific year/etap
     python populate_prerequisites.py --force                  # Regenerate all prerequisites
     python populate_prerequisites.py --dry-run                # Preview without saving
 """
@@ -55,7 +55,7 @@ def build_prompt(task_id: str, task_data: dict, index_dir: Path) -> str:
     """
     index_files = get_index_files_list()
 
-    return f"""Jesteś ekspertem od Olimpiady Matematycznej Juniorów (OMJ).
+    return f"""Jesteś ekspertem od Konkursu Matematycznego FerMat.
 Twoim zadaniem jest analiza zadania i wskazanie 0-3 zadań prerequisite,
 które pomogą uczniowi przygotować się do rozwiązania danego zadania.
 
@@ -71,7 +71,7 @@ Każde zadanie w indeksie ma:
 - skills_required: umiejętności wymagane do rozwiązania
 - skills_gained: umiejętności rozwijane przez rozwiązanie
 
-Klucz zadania ma format: rok_etap_numer (np. "2024_etap3_1")
+Klucz zadania ma format: rok_etap_numer (np. "2024_etap1_1")
 
 ## KRYTERIA WYBORU PREREQUISITES
 

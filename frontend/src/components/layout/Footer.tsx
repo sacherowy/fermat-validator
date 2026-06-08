@@ -51,6 +51,16 @@ export function Footer() {
             <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
               {APP_NAME} to niekomercyjny projekt edukacyjny pomagający w
               przygotowaniu do Konkursu Matematycznego FerMat organizowanego przez SP 221 w Warszawie.
+              Bazuje na projekcie{" "}
+              <MuiLink
+                href="https://github.com/rsokolowski/omj-validator"
+                target="_blank"
+                rel="noopener"
+                sx={{ color: "primary.main" }}
+              >
+                OMJ Validator
+              </MuiLink>{" "}
+              autorstwa Rafała Sokołowskiego — dziękujemy za inspirację i otwarty kod!
             </Typography>
             <Typography variant="body2" color="text.secondary">
               Autor:{" "}
@@ -83,7 +93,7 @@ export function Footer() {
                 SP 221 – organizator FerMat
               </MuiLink>
               <MuiLink
-                href="https://github.com/rsokolowski/fermat-validator"
+                href="https://github.com/sacherowy/fermat-validator"
                 target="_blank"
                 rel="noopener"
                 sx={{

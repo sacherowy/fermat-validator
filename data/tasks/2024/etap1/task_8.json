@@ -1,0 +1,29 @@
+{
+  "number": 8,
+  "title": "Zadanie 8 — trójkąty z wierzchołków sześcianu",
+  "content": "Spośród wierzchołków sześcianu można wybrać takie trzy, które są wierzchołkami\n\n(a) trójkąta prostokątnego równoramiennego;\n\n(b) trójkąta prostokątnego nierównoramiennego;\n\n(c) trójkąta równobocznego.",
+  "pdf": {
+    "tasks": "tasks/2024/etap1/tasks.pdf"
+  },
+  "difficulty": 3,
+  "categories": [
+    "geometria"
+  ],
+  "hints": [
+    "Narysuj sześcian i ponumeruj jego wierzchołki. Zastanów się: ile różnych długości może mieć odcinek łączący dwa wierzchołki sześcianu? Spróbuj znaleźć po jednym przykładzie każdej z tych długości.",
+    "W każdym podpunkcie szukasz trójki wierzchołków o odpowiednich odległościach. Dobrą strategią jest najpierw wypisać wszystkie możliwe długości odcinków między wierzchołkami, a potem składać z nich trójkąty.",
+    "Zwróć uwagę, że między wierzchołkami pojawiają się trzy rodzaje odcinków: krawędź, przekątna ściany oraz przekątna przechodząca przez wnętrze sześcianu. Użyj twierdzenia Pitagorasa, żeby porównać ich długości.",
+    "Dla (a) weź wierzchołki połączone dwiema krawędziami wychodzącymi z jednego rogu. Dla (b) poszukaj trójki, w której wystąpią aż trzy różne rodzaje odcinków i sprawdź Pitagorasem, czy jest prostokątny. Dla (c) spróbuj wybrać trzy wierzchołki połączone wyłącznie przekątnymi ścian."
+  ],
+  "skills_required": [
+    "spatial_3d",
+    "pythagorean_theorem"
+  ],
+  "skills_gained": [
+    "spatial_3d",
+    "constructive_proof"
+  ],
+  "prerequisites": [
+    "2024_etap1_9"
+  ]
+}
