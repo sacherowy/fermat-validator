@@ -1371,10 +1371,16 @@ async def task_detail_api(
             # Show prerequisites without status for unauthenticated users
             prerequisite_statuses = get_prerequisite_statuses(task.prerequisites, None)
 
+    sub_dicts = []
+    for s in submissions:
+        d = s.model_dump(mode="json")
+        d["max_score"] = get_max_points(s.etap, s.task_number)
+        sub_dicts.append(d)
+
     return {
         "task": task.model_dump(mode="json"),
         "stats": stats,
-        "submissions": [s.model_dump(mode="json") for s in submissions],
+        "submissions": sub_dicts,
         "pdf_links": pdf_links,
         "user": user,
         "is_authenticated": user is not None,
