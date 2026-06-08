@@ -6,7 +6,6 @@ import { MathContent } from "@/components/ui/MathContent";
 import { DifficultyStars } from "@/components/ui/DifficultyStars";
 import { CategoryBadge } from "@/components/ui/CategoryBadge";
 import { TaskWithStats } from "@/lib/types";
-import { getMaxScore } from "@/lib/utils/constants";
 
 interface TaskCardProps {
   task: TaskWithStats;
@@ -79,7 +78,7 @@ export function TaskCard({ task, year, etap, showStats = false }: TaskCardProps)
                   className={`score-${task.highest_score}`}
                   sx={{ fontWeight: 600 }}
                 >
-                  {task.highest_score}/{getMaxScore(etap)}
+                  {task.highest_score}/{task.max_score}
                 </Box>
               </Typography>
             </Box>

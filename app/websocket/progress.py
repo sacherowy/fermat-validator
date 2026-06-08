@@ -38,6 +38,7 @@ class SubmissionProgress:
     # Final result (cached for late-connecting clients)
     completed: bool = False
     score: Optional[int] = None
+    max_points: Optional[int] = None
     feedback: Optional[str] = None
     error: Optional[str] = None
     # Timestamp for TTL-based cleanup
@@ -98,6 +99,7 @@ class ProgressManager:
                     messages_to_send.append(CompletedMessage(
                         submission_id=submission_id,
                         score=progress.score or 0,
+                        max_points=progress.max_points or 0,
                         feedback=progress.feedback or "",
                     ))
 
@@ -175,6 +177,7 @@ class ProgressManager:
         self,
         submission_id: str,
         score: int,
+        max_points: int,
         feedback: str,
     ) -> None:
         """Send completion message and mark as done."""
@@ -183,11 +186,13 @@ class ProgressManager:
                 progress = self._submissions[submission_id]
                 progress.completed = True
                 progress.score = score
+                progress.max_points = max_points
                 progress.feedback = feedback
 
         msg = CompletedMessage(
             submission_id=submission_id,
             score=score,
+            max_points=max_points,
             feedback=feedback,
         )
         await self._broadcast(submission_id, msg)

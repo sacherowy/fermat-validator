@@ -55,6 +55,7 @@ from .storage import (
     _load_all_tasks,
 )
 from .ai import create_ai_provider, AIProviderError
+from .ai.scoring_config import get_max_points
 from .models import SubmissionResult, TaskCategory, TaskStatus
 from .progress import build_progress_data, get_all_categories, get_prerequisite_statuses, compute_user_progress
 from .skills import get_skills_by_ids
@@ -1303,6 +1304,7 @@ async def etap_detail_api(
             "prerequisites": task_info.prerequisites,
             "skills_required": task_info.skills_required,
             "skills_gained": task_info.skills_gained,
+            "max_score": get_max_points(task_info.etap, task_info.number),
             "submission_count": 0,
             "highest_score": None,
         }
@@ -1407,18 +1409,21 @@ async def task_history_api(
     db_submissions = submission_repo.get_user_submissions_for_task(user_id, year, etap, num)
     submissions = submission_repo.to_pydantic_list(db_submissions)
 
+    sub_dicts = []
+    for s in submissions:
+        d = s.model_dump(mode="json")
+        d["max_score"] = get_max_points(s.etap, s.task_number)
+        sub_dicts.append(d)
+
     return {
         "task": task.model_dump(mode="json"),
-        "submissions": [s.model_dump(mode="json") for s in submissions],
+        "submissions": sub_dicts,
     }
 
 
 # ==================== User Submissions (Moje rozwiązania) ====================
 
 
-def _get_max_score(etap: str) -> int:
-    """Get max score for an etap (3 for etap1, 6 for etap2/3)."""
-    return 3 if etap == "etap1" else 6
 
 
 @app.get("/api/my-submissions")
@@ -1497,7 +1502,7 @@ async def my_submissions(
             "timestamp": ensure_utc(sub.timestamp).isoformat(),
             "status": sub.status.value,
             "score": sub.score,
-            "max_score": _get_max_score(sub.etap),
+            "max_score": get_max_points(sub.etap, sub.task_number),
             "feedback": sub.feedback,
             "feedback_preview": feedback_preview,
             "error_message": sub.error_message,
@@ -1588,6 +1593,7 @@ async def admin_submissions(
             "status": sub.status.value,
             "images": sub.images,
             "score": sub.score,
+            "max_score": get_max_points(sub.etap, sub.task_number),
             "feedback": sub.feedback,
             "error_message": sub.error_message,
             "issue_type": sub.issue_type.value,

@@ -144,6 +144,7 @@ class GraphNode(BaseModel):
     prerequisites: list[str] = []
     status: TaskStatus
     best_score: int = 0
+    max_score: int = 0
 
 
 class GraphEdge(BaseModel):
@@ -213,7 +214,7 @@ class UserSubmissionListItem(BaseModel):
     timestamp: datetime
     status: SubmissionStatus
     score: Optional[int] = None
-    max_score: int  # Based on etap (3 for etap1, 6 for etap2/3)
+    max_score: int  # Per-task max from scoring config
     feedback: Optional[str] = None
     feedback_preview: Optional[str] = None  # First ~150 chars of feedback
     error_message: Optional[str] = None

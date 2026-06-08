@@ -30,6 +30,7 @@ export interface TaskInfo {
 }
 
 export interface TaskWithStats extends TaskInfo {
+  max_score: number;
   submission_count: number;
   highest_score: number | null;
 }
@@ -53,6 +54,7 @@ export interface Submission {
   status: "pending" | "processing" | "completed" | "failed";
   images: string[];
   score: number | null;
+  max_score: number;
   feedback: string | null;
   error_message?: string;
 }
@@ -75,6 +77,7 @@ export interface GraphNode {
   prerequisites: string[];
   status: TaskStatus;
   best_score: number;
+  max_score: number;
 }
 
 export interface GraphEdge {
@@ -162,6 +165,7 @@ export interface AdminSubmission {
   status: "pending" | "processing" | "completed" | "failed";
   images: string[];
   score: number | null;
+  max_score: number;
   feedback: string | null;
   error_message?: string | null;
   issue_type: IssueType;

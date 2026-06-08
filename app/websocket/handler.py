@@ -14,6 +14,7 @@ from ..db.session import SessionLocal
 from ..db.models import SubmissionStatus, IssueType
 from ..db.repositories import SubmissionRepository
 from ..ai import create_ai_provider, AIProviderError
+from ..ai.scoring_config import get_max_points
 from ..storage import get_task_pdf_path, get_solution_pdf_path
 from .progress import progress_manager
 
@@ -133,6 +134,7 @@ async def process_submission_background(
         await progress_manager.send_completed(
             submission_id,
             score=result.score,
+            max_points=get_max_points(etap, task_number),
             feedback=result.feedback,
         )
 

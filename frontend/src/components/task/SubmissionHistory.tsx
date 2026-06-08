@@ -5,7 +5,6 @@ import { Paper, Typography, Box, Chip, Button, Collapse, Divider, CircularProgre
 import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
 import HourglassEmptyIcon from "@mui/icons-material/HourglassEmpty";
 import { Submission } from "@/lib/types";
-import { getMaxScore } from "@/lib/utils/constants";
 import { formatDate } from "@/lib/utils/dates";
 import { MathContent } from "@/components/ui/MathContent";
 
@@ -118,7 +117,7 @@ export function SubmissionHistory({ submissions, totalCount }: SubmissionHistory
 
       <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
         {submissions.map((submission, index) => {
-          const maxScore = getMaxScore(submission.etap);
+          const maxScore = submission.max_score;
           const isExpanded = expandedId === submission.id;
 
           return (

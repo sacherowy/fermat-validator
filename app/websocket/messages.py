@@ -16,6 +16,7 @@ class CompletedMessage(BaseModel):
     type: Literal["completed"] = "completed"
     submission_id: str
     score: int
+    max_points: int
     feedback: str
 
 
