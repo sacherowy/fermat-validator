@@ -16,7 +16,6 @@ import { DifficultyStars } from "@/components/ui/DifficultyStars";
 import { MathContent } from "@/components/ui/MathContent";
 import {
   ETAP2_PREP_TASKS,
-  getMaxScore,
   getMasteryThreshold,
 } from "@/lib/utils/constants";
 
@@ -113,7 +112,7 @@ export function Etap2PrepList({ nodes }: Etap2PrepListProps) {
       ) : (
         <Box sx={{ display: "flex", flexDirection: "column", gap: 0.5 }}>
           {displayedTasks.map((task) => {
-            const maxScore = getMaxScore(task.etap);
+            const maxScore = task.max_score;
             const completed = isCompleted(task);
 
             return (

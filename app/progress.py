@@ -13,6 +13,7 @@ from sqlalchemy.orm import Session
 from .storage import _load_all_tasks, get_task_key
 from .models import TaskInfo, TaskStatus, GraphNode, GraphEdge, ProgressData
 from .db import SubmissionRepository
+from .ai.scoring_config import get_max_points
 
 logger = logging.getLogger(__name__)
 
@@ -234,7 +235,8 @@ def build_graph_nodes(progress: dict[str, int]) -> list[GraphNode]:
             categories=task.categories,
             prerequisites=task.prerequisites,
             status=status,
-            best_score=progress.get(key, 0)
+            best_score=progress.get(key, 0),
+            max_score=get_max_points(task.etap, task.number),
         )
         nodes.append(node)
 

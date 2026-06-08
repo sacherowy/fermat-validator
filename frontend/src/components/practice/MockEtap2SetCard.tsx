@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { GraphNode } from "@/lib/types";
-import { MockEtap2Set, getMaxScore, getMasteryThreshold } from "@/lib/utils/constants";
+import { MockEtap2Set, getMasteryThreshold } from "@/lib/utils/constants";
 import { DifficultyStars } from "@/components/ui/DifficultyStars";
 import { MathContent } from "@/components/ui/MathContent";
 
@@ -92,7 +92,7 @@ export function MockEtap2SetCard({ set, nodeMap }: MockEtap2SetCardProps) {
       {/* Task list */}
       <Box sx={{ display: "flex", flexDirection: "column", gap: 0.5 }}>
         {tasks.map((task, index) => {
-          const maxTaskScore = getMaxScore(task.etap);
+          const maxTaskScore = task.max_score;
           const mastered = isTaskMastered(task);
 
           return (

@@ -11,7 +11,6 @@ import {
   CircularProgress,
 } from "@mui/material";
 import { uploadFiles } from "@/lib/api/client";
-import { getMaxScore } from "@/lib/utils/constants";
 import { LoginPrompt } from "@/components/common/LoginPrompt";
 import { MathContent } from "@/components/ui/MathContent";
 
@@ -55,6 +54,7 @@ interface CompletedMessage {
   type: "completed";
   submission_id: string;
   score: number;
+  max_points: number;
   feedback: string;
 }
 
@@ -132,13 +132,12 @@ export function SubmitSection({
               break;
 
             case "completed":
-              const maxScore = getMaxScore(etap);
               setUploadState({
                 status: "completed",
                 statusMessage: "",
                 result: {
                   score: msg.score,
-                  max_score: maxScore,
+                  max_score: msg.max_points,
                   feedback: msg.feedback,
                 },
               });

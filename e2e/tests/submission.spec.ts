@@ -93,8 +93,8 @@ test.describe('Submission Flow', () => {
       await page.goto('/task/2024/etap2/1');
       await uploadAndSubmit(page, TEST_IMAGE);
 
-      // Wait for result - score 6 is clamped to max_points=4, denominator is hardcoded 6
-      await expect(page.getByText(/Wynik:\s*4\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
+      // Wait for result - score 6 is clamped to max_points=4, denominator is max_points=4
+      await expect(page.getByText(/Wynik:\s*4\s*\/\s*4\s*punktów/)).toBeVisible({ timeout: 30000 });
 
       // Should show positive feedback - add .first() to avoid strict mode
       await expect(page.getByText(/poprawne/i).or(page.getByText(/gratulacje/i)).first()).toBeVisible();
@@ -105,8 +105,8 @@ test.describe('Submission Flow', () => {
       await page.goto('/task/2024/etap2/1');
       await uploadAndSubmit(page, TEST_IMAGE);
 
-      // Wait for result - score 5 is clamped to max_points=4, denominator is hardcoded 6
-      await expect(page.getByText(/Wynik:\s*4\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
+      // Wait for result - score 5 is clamped to max_points=4, denominator is max_points=4
+      await expect(page.getByText(/Wynik:\s*4\s*\/\s*4\s*punktów/)).toBeVisible({ timeout: 30000 });
     });
 
     test('displays partial score (2 points)', async ({ page, request }) => {
@@ -114,8 +114,8 @@ test.describe('Submission Flow', () => {
       await page.goto('/task/2024/etap2/1');
       await uploadAndSubmit(page, TEST_IMAGE);
 
-      // Wait for result - look for exact score format "Wynik: 2 / 6 punktów"
-      await expect(page.getByText(/Wynik:\s*2\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
+      // Wait for result - look for exact score format "Wynik: 2 / 4 punktów"
+      await expect(page.getByText(/Wynik:\s*2\s*\/\s*4\s*punktów/)).toBeVisible({ timeout: 30000 });
 
       // Should show feedback about improvements needed - add .first()
       await expect(page.getByText(/popraw/i).or(page.getByText(/częściowo/i)).first()).toBeVisible();
@@ -126,8 +126,8 @@ test.describe('Submission Flow', () => {
       await page.goto('/task/2024/etap2/1');
       await uploadAndSubmit(page, TEST_IMAGE);
 
-      // Wait for result - look for exact score format "Wynik: 0 / 6 punktów"
-      await expect(page.getByText(/Wynik:\s*0\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
+      // Wait for result - look for exact score format "Wynik: 0 / 4 punktów"
+      await expect(page.getByText(/Wynik:\s*0\s*\/\s*4\s*punktów/)).toBeVisible({ timeout: 30000 });
 
       // Should show feedback about incorrect solution - add .first()
       await expect(page.getByText(/niepoprawne/i).or(page.getByText(/błędne/i)).first()).toBeVisible();
@@ -182,12 +182,12 @@ test.describe('Submission Flow', () => {
       // Submit to task 1 - should get 4 points (score 6 clamped to max_points=4)
       await page.goto('/task/2024/etap2/1');
       await uploadAndSubmit(page, TEST_IMAGE);
-      await expect(page.getByText(/Wynik:\s*4\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
+      await expect(page.getByText(/Wynik:\s*4\s*\/\s*4\s*punktów/)).toBeVisible({ timeout: 30000 });
 
       // Submit to task 2 - should get 0 points
       await page.goto('/task/2024/etap2/2');
       await uploadAndSubmit(page, TEST_IMAGE);
-      await expect(page.getByText(/Wynik:\s*0\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
+      await expect(page.getByText(/Wynik:\s*0\s*\/\s*4\s*punktów/)).toBeVisible({ timeout: 30000 });
     });
   });
 
@@ -205,7 +205,7 @@ test.describe('Submission Flow', () => {
       ).toBeVisible({ timeout: 10000 });
 
       // Wait for eventual completion - slow_response returns score 6, clamped to max_points=4
-      await expect(page.getByText(/Wynik:\s*4\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 60000 });
+      await expect(page.getByText(/Wynik:\s*4\s*\/\s*4\s*punktów/)).toBeVisible({ timeout: 60000 });
     });
   });
 
@@ -273,7 +273,7 @@ test.describe('Submission Flow', () => {
       await uploadAndSubmit(page, TEST_IMAGE);
 
       // Wait for completion - score 6 clamped to max_points=4
-      await expect(page.getByText(/Wynik:\s*4\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
+      await expect(page.getByText(/Wynik:\s*4\s*\/\s*4\s*punktów/)).toBeVisible({ timeout: 30000 });
 
       // History section should appear/update automatically WITHOUT page reload
       // Wait for history section to show updated count
@@ -284,7 +284,7 @@ test.describe('Submission Flow', () => {
 
       // Verify the new submission is in the history list (shows score chip in history section)
       const historyPaper = page.locator('text=Historia rozwiązań').locator('..');
-      await expect(historyPaper.locator('text=4/6').first()).toBeVisible();
+      await expect(historyPaper.locator('text=4/4').first()).toBeVisible();
     });
 
     test('submission persists in history after page reload', async ({ page, request }) => {
@@ -293,7 +293,7 @@ test.describe('Submission Flow', () => {
       await uploadAndSubmit(page, TEST_IMAGE);
 
       // Wait for completion - score 6 clamped to max_points=4
-      await expect(page.getByText(/Wynik:\s*4\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
+      await expect(page.getByText(/Wynik:\s*4\s*\/\s*4\s*punktów/)).toBeVisible({ timeout: 30000 });
 
       // Reload page and check history
       await page.reload();
@@ -310,7 +310,7 @@ test.describe('Submission Flow', () => {
 
       // First submission
       await uploadAndSubmit(page, TEST_IMAGE);
-      await expect(page.getByText(/Wynik:\s*2\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
+      await expect(page.getByText(/Wynik:\s*2\s*\/\s*4\s*punktów/)).toBeVisible({ timeout: 30000 });
 
       // Wait for UI to be ready for next submission (file input available)
       await setGeminiScenario(request, 'success_score_6');
@@ -321,7 +321,7 @@ test.describe('Submission Flow', () => {
       const submitButton = page.getByRole('button', { name: /prześlij/i });
       await expect(submitButton).toBeEnabled({ timeout: 5000 });
       await submitButton.click();
-      await expect(page.getByText(/Wynik:\s*4\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
+      await expect(page.getByText(/Wynik:\s*4\s*\/\s*4\s*punktów/)).toBeVisible({ timeout: 30000 });
     });
 
     test('history count updates after each submission without reload', async ({ page, request }) => {
@@ -335,7 +335,7 @@ test.describe('Submission Flow', () => {
       // First submission
       await setGeminiScenario(request, 'success_score_2');
       await uploadAndSubmit(page, TEST_IMAGE);
-      await expect(page.getByText(/Wynik:\s*2\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
+      await expect(page.getByText(/Wynik:\s*2\s*\/\s*4\s*punktów/)).toBeVisible({ timeout: 30000 });
 
       // Verify history updated to initialCount + 1 without reload
       await expect(
@@ -351,17 +351,17 @@ test.describe('Submission Flow', () => {
       const submitButton = page.getByRole('button', { name: /prześlij/i });
       await expect(submitButton).toBeEnabled({ timeout: 5000 });
       await submitButton.click();
-      await expect(page.getByText(/Wynik:\s*4\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
+      await expect(page.getByText(/Wynik:\s*4\s*\/\s*4\s*punktów/)).toBeVisible({ timeout: 30000 });
 
       // Verify history updated to initialCount + 2 without reload
       await expect(
         page.getByText(new RegExp(`historia rozwiązań\\s*\\(${initialCount + 2}\\)`, 'i'))
       ).toBeVisible({ timeout: 10000 });
 
-      // Verify both submissions are visible in history (2/6 and 4/6 scores)
+      // Verify both submissions are visible in history (2/4 and 4/4 scores)
       const historyPaper = page.locator('text=Historia rozwiązań').locator('..');
-      await expect(historyPaper.locator('text=2/6').first()).toBeVisible();
-      await expect(historyPaper.locator('text=4/6').first()).toBeVisible();
+      await expect(historyPaper.locator('text=2/4').first()).toBeVisible();
+      await expect(historyPaper.locator('text=4/4').first()).toBeVisible();
     });
   });
 });

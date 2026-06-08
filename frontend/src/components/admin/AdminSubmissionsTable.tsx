@@ -25,7 +25,6 @@ import BlockIcon from "@mui/icons-material/Block";
 import Link from "next/link";
 import { fetchAPI } from "@/lib/api/client";
 import { AdminSubmission, AdminSubmissionsResponse, AdminUser, IssueType } from "@/lib/types";
-import { getMaxScore } from "@/lib/utils/constants";
 import { formatDate } from "@/lib/utils/dates";
 import { useInfiniteScroll } from "@/lib/hooks/useInfiniteScroll";
 import { UserAutocomplete } from "./UserAutocomplete";
@@ -158,7 +157,7 @@ export function AdminSubmissionsTable() {
   };
 
   const renderStatusChip = (submission: AdminSubmission) => {
-    const maxScore = getMaxScore(submission.etap);
+    const maxScore = submission.max_score;
 
     if (submission.status === "failed") {
       return (
