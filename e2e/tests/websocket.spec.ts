@@ -44,8 +44,8 @@ test.describe('WebSocket Progress', () => {
     // Submit solution
     await uploadAndSubmit(page, TEST_IMAGE);
 
-    // Wait for completion - look for exact score format
-    await expect(page.getByText(/Wynik:\s*6\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
+    // Wait for completion - score 6 from fake Gemini is clamped to max_points=4 for etap2 task 1
+    await expect(page.getByText(/Wynik:\s*4\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
 
     // Should have received WebSocket messages
     expect(wsMessages.length).toBeGreaterThan(0);
@@ -76,8 +76,8 @@ test.describe('WebSocket Progress', () => {
     // Submit
     await uploadAndSubmit(page, TEST_IMAGE);
 
-    // Wait for completion - look for exact score format
-    await expect(page.getByText(/Wynik:\s*6\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
+    // Wait for completion - score 6 from fake Gemini is clamped to max_points=4 for etap2 task 1
+    await expect(page.getByText(/Wynik:\s*4\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
 
     // Check for status messages with different content
     const statusMessages = wsMessages.filter((m) => m.type === 'status');
@@ -112,12 +112,12 @@ test.describe('WebSocket Progress', () => {
     // Submit
     await uploadAndSubmit(page, TEST_IMAGE);
 
-    // Wait for completion - look for exact score format
-    await expect(page.getByText(/Wynik:\s*5\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
+    // Wait for completion - score 5 from fake Gemini is clamped to max_points=4 for etap2 task 1
+    await expect(page.getByText(/Wynik:\s*4\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
 
     // Verify completed message
     expect(completedMessage).not.toBeNull();
-    expect(completedMessage.score).toBe(5);
+    expect(completedMessage.score).toBe(4);
     expect(completedMessage.feedback).toBeTruthy();
     expect(typeof completedMessage.feedback).toBe('string');
   });
@@ -165,7 +165,7 @@ test.describe('WebSocket Progress', () => {
     await uploadAndSubmit(page, TEST_IMAGE);
 
     // Even if WebSocket was slightly delayed, should still get result
-    await expect(page.getByText(/Wynik:\s*6\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
+    await expect(page.getByText(/Wynik:\s*4\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
   });
 
   test('ping/pong keepalive works', async ({ page }) => {
@@ -190,7 +190,7 @@ test.describe('WebSocket Progress', () => {
     await uploadAndSubmit(page, TEST_IMAGE);
 
     // Wait for completion (which includes WebSocket interaction)
-    await expect(page.getByText(/Wynik:\s*6\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
+    await expect(page.getByText(/Wynik:\s*4\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
 
     // The WebSocket handler on client side typically sends pings
     // If not, the server sends pings on timeout - we mainly verify no errors
@@ -221,7 +221,7 @@ test.describe('WebSocket Progress', () => {
     await uploadAndSubmit(page, TEST_IMAGE);
 
     // Wait for completion
-    await expect(page.getByText(/Wynik:\s*6\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
+    await expect(page.getByText(/Wynik:\s*4\s*\/\s*6\s*punktów/)).toBeVisible({ timeout: 30000 });
 
     // Should have received status messages
     expect(statusMessages.length).toBeGreaterThan(0);
