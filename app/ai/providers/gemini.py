@@ -134,9 +134,10 @@ class GeminiProvider:
         # Support custom API endpoint for testing
         # Use v1alpha API for per-part media_resolution (Gemini 3 feature)
         if settings.gemini_api_base_url:
+            # Custom endpoint (e.g. fake Gemini for E2E tests) — don't override api_version
+            # so the SDK defaults to v1beta, matching the fake server's routes.
             http_options = types.HttpOptions(
                 base_url=settings.gemini_api_base_url,
-                api_version="v1alpha",
             )
             self._client = genai.Client(
                 api_key=settings.gemini_api_key,
