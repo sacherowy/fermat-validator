@@ -8,7 +8,7 @@ cd "$(dirname "$0")"
 # Configuration
 SSH_KEY="$HOME/.ssh/nuc/id_rsa"
 SSH_HOST="rsokolowski@192.168.86.68"
-REMOTE_DIR="~/omj-validator"
+REMOTE_DIR="~/fermat-validator"
 COMPOSE_FILE="docker-compose.prod.yml"
 ENV_FILE=".env.prod"
 
@@ -25,7 +25,7 @@ ssh_cmd() {
 show_help() {
     echo "Usage: ./deploy.sh [OPTIONS]"
     echo ""
-    echo "Deploy OMJ Validator to production NUC server."
+    echo "Deploy FerMat Validator to production NUC server."
     echo "Images are pulled from ghcr.io - build locally first with ./build-and-push.sh"
     echo ""
     echo "Options:"
@@ -85,7 +85,7 @@ while [[ $# -gt 0 ]]; do
     esac
 done
 
-echo "=== OMJ Validator Production Deployment ==="
+echo "=== FerMat Validator Production Deployment ==="
 echo ""
 
 # Handle different modes
@@ -104,7 +104,7 @@ fi
 if [ "$LOGS" = true ]; then
     if [ -n "$SERVICE" ]; then
         echo "Streaming logs for $SERVICE..."
-        ssh_cmd "docker logs omj-$SERVICE --tail=100 -f"
+        ssh_cmd "docker logs fermat-$SERVICE --tail=100 -f"
     else
         echo "Streaming all logs..."
         ssh_cmd "cd $REMOTE_DIR && docker compose -f $COMPOSE_FILE --env-file $ENV_FILE logs -f --tail=100"
@@ -141,4 +141,4 @@ echo "  ./deploy.sh --logs api       # View API logs"
 echo "  ./deploy.sh --ssh            # SSH into server"
 echo "  ./build-and-push.sh          # Build and push new images"
 echo ""
-echo "URL: https://omj-validator.pl"
+echo "URL: https://fermat-validator.pl"

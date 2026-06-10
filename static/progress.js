@@ -1,5 +1,5 @@
 /**
- * OMJ Validator - Progress Page
+ * FerMat Validator - Progress Page
  *
  * Displays recommended tasks based on user progress.
  */

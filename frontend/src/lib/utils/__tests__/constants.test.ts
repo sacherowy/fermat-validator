@@ -1,39 +1,21 @@
 import { describe, expect, it } from "vitest";
-import { getMaxScore, getMasteryThreshold } from "@/lib/utils/constants";
-
-describe("getMaxScore", () => {
-  it("returns 3 for etap1", () => {
-    expect(getMaxScore("etap1")).toBe(3);
-  });
-
-  it("returns 6 for etap2", () => {
-    expect(getMaxScore("etap2")).toBe(6);
-  });
-
-  it("returns 6 for etap3", () => {
-    expect(getMaxScore("etap3")).toBe(6);
-  });
-
-  it("returns 6 as default for unknown etap", () => {
-    expect(getMaxScore("etap4")).toBe(6);
-  });
-});
+import { getMasteryThreshold } from "@/lib/utils/constants";
 
 describe("getMasteryThreshold", () => {
-  it("returns 2 for etap1", () => {
-    // Matches backend progress.py: return 5 if etap in ('etap2', 'etap3') else 2
-    expect(getMasteryThreshold("etap1")).toBe(2);
+  it("requires full marks for 2-point tasks", () => {
+    // Matches backend progress.py:get_mastery_threshold()
+    expect(getMasteryThreshold(2)).toBe(2);
   });
 
-  it("returns 5 for etap2", () => {
-    expect(getMasteryThreshold("etap2")).toBe(5);
+  it("requires max - 1 for 4-point tasks", () => {
+    expect(getMasteryThreshold(4)).toBe(3);
   });
 
-  it("returns 5 for etap3", () => {
-    expect(getMasteryThreshold("etap3")).toBe(5);
+  it("requires max - 1 for larger scales", () => {
+    expect(getMasteryThreshold(6)).toBe(5);
   });
 
-  it("returns 5 as default for unknown etap", () => {
-    expect(getMasteryThreshold("etap4")).toBe(5);
+  it("requires full marks for 1-point tasks", () => {
+    expect(getMasteryThreshold(1)).toBe(1);
   });
 });

@@ -51,26 +51,11 @@ export const ETAP_NAMES: Record<string, string> = {
   etap3: "Etap III",
 };
 
-// Max score based on etap - etap1 has 3 points, etap2 and beyond have 6 points
-export const ETAP_MAX_SCORES: Record<string, number> = {
-  etap1: 3,
-  etap2: 6,
-  etap3: 6,
-};
-
-export function getMaxScore(etap: string): number {
-  return ETAP_MAX_SCORES[etap] ?? 6;
-}
-
-// Mastery thresholds - matches backend progress.py:get_mastery_threshold()
-export const MASTERY_THRESHOLDS: Record<string, number> = {
-  etap1: 2,
-  etap2: 5,
-  etap3: 5,
-};
-
-export function getMasteryThreshold(etap: string): number {
-  return MASTERY_THRESHOLDS[etap] ?? 5;
+// Mastery threshold - matches backend progress.py:get_mastery_threshold()
+// FerMat tasks are worth 2 or 4 points (per-task max_score comes from the API).
+// Mastery = full marks for 2-point tasks, max - 1 for larger scales.
+export function getMasteryThreshold(maxScore: number): number {
+  return maxScore <= 2 ? maxScore : maxScore - 1;
 }
 
 // Curated list of tasks for Etap 2 preparation

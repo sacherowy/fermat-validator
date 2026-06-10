@@ -1,4 +1,4 @@
-// OMJ Validator - Frontend JavaScript
+// FerMat Validator - Frontend JavaScript
 
 let selectedFiles = [];
 

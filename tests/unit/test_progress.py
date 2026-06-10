@@ -56,18 +56,21 @@ def make_node(
 
 
 class TestGetMasteryThreshold:
-    def test_etap1_returns_2(self):
-        assert get_mastery_threshold("etap1") == 2
+    def test_etap1_two_point_task_requires_full_marks(self):
+        # Etap1 tasks 1-5 are worth 2 points; mastery = full marks
+        assert get_mastery_threshold("etap1", 1) == 2
 
-    def test_etap2_returns_5(self):
-        assert get_mastery_threshold("etap2") == 5
+    def test_etap1_four_point_task_requires_max_minus_one(self):
+        # Etap1 tasks 6-10 are worth 4 points; mastery = 3
+        assert get_mastery_threshold("etap1", 6) == 3
 
-    def test_etap3_returns_5(self):
-        assert get_mastery_threshold("etap3") == 5
+    def test_etap2_four_point_task_requires_max_minus_one(self):
+        # Etap2 tasks are worth 4 points; mastery = 3
+        assert get_mastery_threshold("etap2", 1) == 3
 
-    def test_unknown_etap_falls_back_to_2(self):
-        # Current logic: return 5 if etap in ("etap2", "etap3") else 2
-        assert get_mastery_threshold("etap4") == 2
+    def test_unknown_etap_raises(self):
+        with pytest.raises(ValueError):
+            get_mastery_threshold("etap3", 1)
 
 
 class TestComputePrerequisitesMet:
@@ -181,12 +184,12 @@ class TestGetTaskStatusBatch:
         statuses = get_task_status_batch(tasks, progress)
         assert statuses["2024_etap1_2"] == TaskStatus.UNLOCKED
 
-    def test_etap2_mastery_threshold_is_5(self):
+    def test_etap2_mastery_threshold_is_3(self):
         tasks = {"2024_etap2_1": make_task("2024", "etap2", 1)}
-        statuses = get_task_status_batch(tasks, {"2024_etap2_1": 4})
-        assert statuses["2024_etap2_1"] == TaskStatus.UNLOCKED  # 4 < 5
+        statuses = get_task_status_batch(tasks, {"2024_etap2_1": 2})
+        assert statuses["2024_etap2_1"] == TaskStatus.UNLOCKED  # 2 < 3
 
-        statuses = get_task_status_batch(tasks, {"2024_etap2_1": 5})
+        statuses = get_task_status_batch(tasks, {"2024_etap2_1": 3})
         assert statuses["2024_etap2_1"] == TaskStatus.MASTERED
 
 

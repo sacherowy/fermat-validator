@@ -74,7 +74,7 @@ else
     SERVICES=""  # Empty means all services
 fi
 
-echo "=== OMJ Validator Development ==="
+echo "=== FerMat Validator Development ==="
 echo ""
 
 # Start services

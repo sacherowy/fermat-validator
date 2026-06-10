@@ -110,16 +110,16 @@ SKILLS_DESCRIPTION = load_skills_description()
 
 # Prompt for hint review
 # NOTE: Prompt is structured for LLM cache efficiency - static instructions first, dynamic task data last
-REVIEW_PROMPT_TEMPLATE = """Jesteś ekspertem od Olimpiady Matematycznej Juniorów (OMJ).
+REVIEW_PROMPT_TEMPLATE = """Jesteś ekspertem od Konkursu Matematycznego FerMat (konkurs dla uczniów szkół podstawowych).
 Twoim zadaniem jest ocena wskazówek do zadań matematycznych.
 
 ================================================================================
 INSTRUKCJE ANALIZY (przeczytaj uważnie przed przystąpieniem do zadania)
 ================================================================================
 
-## KROK 1: Znajdź ELEGANCKIE rozwiązanie (DUCH OJM)
+## KROK 1: Znajdź ELEGANCKIE rozwiązanie (DUCH KONKURSU)
 
-OMJ ceni ELEGANCKIE, SPRYTNE rozwiązania, nie mechaniczne obliczenia.
+FerMat ceni ELEGANCKIE, SPRYTNE rozwiązania, nie mechaniczne obliczenia.
 Najpierw SAM rozwiąż zadanie, szukając NAJBARDZIEJ ELEGANCKIEGO podejścia.
 
 HIERARCHIA PODEJŚĆ (od najlepszego do najgorszego):
@@ -139,7 +139,7 @@ HIERARCHIA PODEJŚĆ (od najlepszego do najgorszego):
    - Przykład: "Wprowadź układ współrzędnych, podstaw, oblicz, sprawdź"
    - To podejście jest OSTATECZNOŚCIĄ, nie pierwszym wyborem!
 
-KLUCZOWA ZASADA: Wskazówki powinny prowadzić do rozwiązania w DUCHU OJM - takiego,
+KLUCZOWA ZASADA: Wskazówki powinny prowadzić do rozwiązania w DUCHU KONKURSU - takiego,
 które sprawia że uczeń poczuje się SPRYTNY gdy je znajdzie, nie zmęczony rachunkami.
 
 DOZWOLONE narzędzia (klasy 6-8, wiek 12-14 lat):
@@ -194,7 +194,7 @@ Wskazówki WYMAGAJĄ POPRAWY jeśli:
 - Używają zabronionych narzędzi
 
 Jeśli wskazówki prowadzą do rozwiązania poprawnego ALE nieeleganckiego - POPRAW JE
-tak aby prowadziły do rozwiązania w DUCHU OJM.
+tak aby prowadziły do rozwiązania w DUCHU KONKURSU.
 
 ================================================================================
 ROLE WSKAZÓWEK
@@ -222,7 +222,7 @@ ZASADY DLA NOWYCH WSKAZÓWEK (jeśli będziesz je pisać)
 7. Każda wskazówka MUSI logicznie prowadzić do następnej
 8. Ostatnia wskazówka zostawia uczniowi pracę do wykonania (nie rozwiązuje za niego)
 
-KLUCZOWE - DUCH OJM:
+KLUCZOWE - DUCH KONKURSU:
 9. Wskazówki MUSZĄ prowadzić do ELEGANCKIEGO rozwiązania, nie mechanicznego
 10. UNIKAJ: współrzędnych, "brute force", długich rachunków
 11. PREFERUJ: symetrie, przystawanie trójkątów, kąty wpisane, sprytne obserwacje

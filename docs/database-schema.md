@@ -1,6 +1,6 @@
 # Database Schema
 
-OMJ Validator uses PostgreSQL for persistent storage of users and submissions.
+FerMat Validator uses PostgreSQL for persistent storage of users and submissions.
 
 ## Tables
 
@@ -30,11 +30,11 @@ Stores student solution submissions with AI scoring results.
 | `user_id` | VARCHAR(255) | NOT NULL, FK → users.google_sub | Submitting user |
 | `year` | VARCHAR(10) | NOT NULL | Competition year (e.g., "2024") |
 | `etap` | VARCHAR(10) | NOT NULL | Competition stage ("etap1" or "etap2") |
-| `task_number` | INTEGER | NOT NULL | Task number (1-6) |
+| `task_number` | INTEGER | NOT NULL | Task number (1-10 for etap1, 1-5 for etap2) |
 | `timestamp` | TIMESTAMP | NOT NULL | Submission time (UTC) |
 | `status` | ENUM | NOT NULL | Processing status (see below) |
 | `images` | JSON | NOT NULL | Array of uploaded image paths |
-| `score` | INTEGER | NULL | AI-assigned score (0, 2, 5, or 6) |
+| `score` | INTEGER | NULL | AI-assigned score (0 up to the task max: 2 or 4 points, see `config/scoring.yml`) |
 | `feedback` | TEXT | NULL | AI-generated feedback text |
 | `error_message` | TEXT | NULL | Error details if processing failed |
 | `scoring_meta` | JSON | NULL | LLM metadata (model, tokens, timing, etc.) |
@@ -97,10 +97,10 @@ Set `DATABASE_URL` environment variable:
 
 ```bash
 # Local development (Docker)
-DATABASE_URL=postgresql://omj:omj@localhost:5433/omj
+DATABASE_URL=postgresql://fermat:fermat@localhost:5433/fermat
 
 # Production
 DATABASE_URL=postgresql://user:pass@host:5432/dbname
 ```
 
-Default (if not set): `postgresql://omj:omj@localhost:5433/omj`
+Default (if not set): `postgresql://fermat:fermat@localhost:5433/fermat`

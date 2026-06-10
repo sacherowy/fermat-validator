@@ -11,12 +11,12 @@ cd "$(dirname "$0")"
 
 # Configuration
 REGISTRY="ghcr.io/rsokolowski"
-API_IMAGE="$REGISTRY/omj-validator-api"
-FRONTEND_IMAGE="$REGISTRY/omj-validator-frontend"
+API_IMAGE="$REGISTRY/fermat-validator-api"
+FRONTEND_IMAGE="$REGISTRY/fermat-validator-frontend"
 
 # Build args for frontend (must match production docker-compose)
 FASTAPI_URL="http://api:8100"
-WS_URL="wss://omj-validator.pl"
+WS_URL="wss://fermat-validator.pl"
 
 # Parse arguments
 BUILD_API=false
@@ -88,7 +88,7 @@ if [ "$BUILD_API" = false ] && [ "$BUILD_FRONTEND" = false ]; then
     BUILD_FRONTEND=true
 fi
 
-echo "=== OMJ Validator Image Build ==="
+echo "=== FerMat Validator Image Build ==="
 echo ""
 
 # Build API
