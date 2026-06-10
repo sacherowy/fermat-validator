@@ -22,9 +22,9 @@ interface FiltersBarProps {
   totalCount: number;
 }
 
-// Generate year options (current year down to 2005)
+// Generate year options (current year down to 2017, first FerMat edition)
 const currentYear = new Date().getFullYear();
-const YEARS = Array.from({ length: currentYear - 2004 }, (_, i) => (currentYear - i).toString());
+const YEARS = Array.from({ length: currentYear - 2016 }, (_, i) => (currentYear - i).toString());
 
 export function FiltersBar({ filters, onFilterChange, totalCount }: FiltersBarProps) {
   const hasActiveFilters = filters.year || filters.etap || filters.showErrors;
@@ -95,7 +95,6 @@ export function FiltersBar({ filters, onFilterChange, totalCount }: FiltersBarPr
             <MenuItem value="">Wszystkie</MenuItem>
             <MenuItem value="etap1">Etap I</MenuItem>
             <MenuItem value="etap2">Etap II</MenuItem>
-            <MenuItem value="etap3">Etap III</MenuItem>
           </Select>
         </FormControl>
 
