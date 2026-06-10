@@ -36,7 +36,7 @@ export function Etap2PrepList({ nodes }: Etap2PrepListProps) {
 
   // Check if a task is completed (mastered)
   const isCompleted = (task: GraphNode): boolean => {
-    const threshold = getMasteryThreshold(task.etap);
+    const threshold = getMasteryThreshold(task.max_score);
     return task.best_score >= threshold;
   };
 

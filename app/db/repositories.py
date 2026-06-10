@@ -664,17 +664,20 @@ class SubmissionRepository:
         )
 
         # Tasks mastered: best score >= mastery threshold per task
-        # etap1: mastery = 2, etap2/etap3: mastery = 5
         # We use get_user_progress() which already calculates best scores
+        from ..progress import get_mastery_threshold  # local import avoids circular dependency
+
         user_progress = self.get_user_progress(user_id)
         tasks_mastered = 0
         for task_key, best in user_progress.items():
             # task_key format: "2024_etap1_3"
             parts = task_key.split("_")
-            if len(parts) >= 2:
-                etap = parts[1]
-                # Mastery threshold: 2 for etap1, 5 for etap2/3
-                threshold = 2 if etap == "etap1" else 5
+            if len(parts) >= 3:
+                try:
+                    threshold = get_mastery_threshold(parts[1], int(parts[2]))
+                except ValueError:
+                    # Submission for a task outside the current scoring config
+                    continue
                 if best >= threshold:
                     tasks_mastered += 1
 

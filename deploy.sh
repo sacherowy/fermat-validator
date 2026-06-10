@@ -5,10 +5,10 @@
 set -e
 cd "$(dirname "$0")"
 
-# Configuration
-SSH_KEY="$HOME/.ssh/nuc/id_rsa"
-SSH_HOST="rsokolowski@192.168.86.68"
-REMOTE_DIR="~/omj-validator"
+# Configuration — set these for your server (or export env vars of the same name)
+SSH_KEY="${SSH_KEY:-$HOME/.ssh/id_rsa}"
+SSH_HOST="${SSH_HOST:-}"   # e.g. user@192.168.1.100
+REMOTE_DIR="~/fermat-validator"
 COMPOSE_FILE="docker-compose.prod.yml"
 ENV_FILE=".env.prod"
 
@@ -25,7 +25,7 @@ ssh_cmd() {
 show_help() {
     echo "Usage: ./deploy.sh [OPTIONS]"
     echo ""
-    echo "Deploy OMJ Validator to production NUC server."
+    echo "Deploy FerMat Validator to production NUC server."
     echo "Images are pulled from ghcr.io - build locally first with ./build-and-push.sh"
     echo ""
     echo "Options:"
@@ -85,7 +85,14 @@ while [[ $# -gt 0 ]]; do
     esac
 done
 
-echo "=== OMJ Validator Production Deployment ==="
+if [ -z "$SSH_HOST" ]; then
+    echo "Error: SSH_HOST is not set." >&2
+    echo "Edit the configuration at the top of deploy.sh or run with:" >&2
+    echo "  SSH_HOST=user@your-server ./deploy.sh" >&2
+    exit 1
+fi
+
+echo "=== FerMat Validator Production Deployment ==="
 echo ""
 
 # Handle different modes
@@ -104,7 +111,7 @@ fi
 if [ "$LOGS" = true ]; then
     if [ -n "$SERVICE" ]; then
         echo "Streaming logs for $SERVICE..."
-        ssh_cmd "docker logs omj-$SERVICE --tail=100 -f"
+        ssh_cmd "docker logs fermat-$SERVICE --tail=100 -f"
     else
         echo "Streaming all logs..."
         ssh_cmd "cd $REMOTE_DIR && docker compose -f $COMPOSE_FILE --env-file $ENV_FILE logs -f --tail=100"
@@ -141,4 +148,4 @@ echo "  ./deploy.sh --logs api       # View API logs"
 echo "  ./deploy.sh --ssh            # SSH into server"
 echo "  ./build-and-push.sh          # Build and push new images"
 echo ""
-echo "URL: https://omj-validator.pl"
+echo "URL: https://fermat-validator.pl"

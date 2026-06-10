@@ -23,7 +23,7 @@ services:
       - fermat-network
 
   api:
-    image: ghcr.io/rsokolowski/fermat-validator-api:latest
+    image: ghcr.io/${GHCR_OWNER:?GHCR_OWNER is required (your GitHub username, see .env.prod.example)}/fermat-validator-api:latest
     container_name: fermat-api
     restart: unless-stopped
     depends_on:
@@ -91,7 +91,7 @@ services:
       - fermat-network
 
   frontend:
-    image: ghcr.io/rsokolowski/fermat-validator-frontend:latest
+    image: ghcr.io/${GHCR_OWNER:?GHCR_OWNER is required (your GitHub username, see .env.prod.example)}/fermat-validator-frontend:latest
     container_name: fermat-frontend
     restart: unless-stopped
     depends_on:

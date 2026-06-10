@@ -1,6 +1,6 @@
 # Dodawanie zadań z nowego roku lub etapu
 
-Ten dokument opisuje proces dodawania zadań z Olimpiady Matematycznej Juniorów (OMJ) lub Olimpiady Matematycznej Gimnazjalistów (OMG) do repozytorium.
+Ten dokument opisuje proces dodawania zadań z Konkursu Matematycznego FerMat (organizowanego przez SP221, https://sp221.edu.pl/fermat/) do repozytorium.
 
 ## Szybki start (dla Claude)
 
@@ -9,7 +9,7 @@ Jeśli użytkownik wskaże Ci ten dokument i poprosi o dodanie zadań, wykonaj p
 ```
 # Przykładowe polecenia użytkownika:
 # - "Dodaj zadania z etapu 1 roku 2025"
-# - "Dodaj etap 3 dla wszystkich lat"
+# - "Dodaj etap 2 dla wszystkich lat"
 # - "Zaktualizuj zadania z 2024/etap2"
 ```
 
@@ -20,23 +20,23 @@ Jeśli użytkownik wskaże Ci ten dokument i poprosi o dodanie zadań, wykonaj p
 ```bash
 source venv/bin/activate
 
-# Dla konkretnego roku i etapu:
-python download_tasks.py --etap <NUMER_ETAPU> --year <ROK>
+# Wszystkie edycje:
+python download_fermat.py
 
-# Dla wszystkich lat danego etapu:
-python download_tasks.py --etap <NUMER_ETAPU>
+# Dla konkretnego roku:
+python download_fermat.py --year 2024
 
-# Dla wszystkich etapów wszystkich lat:
-python download_tasks.py --all-etaps
+# Podgląd bez pobierania:
+python download_fermat.py --dry-run
 ```
 
 **Parametry:**
-- `--etap 1` - etap szkolny (7 zadań)
-- `--etap 2` - etap okręgowy (5 zadań)
-- `--etap 3` - finał (5 zadań)
-- `--year RRRR` - rok rozpoczęcia edycji (np. 2024 dla edycji 2024/25)
+- `--year RRRR` - rok edycji (np. 2024)
+- `--dry-run` - wypisz listę plików bez pobierania
+- `--force` - pobierz ponownie pliki, które już istnieją lokalnie
 
-**Uwaga:** Pliki PDF są pobierane do katalogu `tasks/<rok>/<etap>/`.
+**Uwaga:** Pliki PDF są pobierane do katalogu `tasks/<rok>/<etap>/` pod
+znormalizowanymi nazwami (`tasks.pdf`, `solutions.pdf`, `statistics.pdf`).
 
 ### 2. Utwórz pliki JSON zadań
 
@@ -56,7 +56,7 @@ python create_tasks.py <ROK> <ETAP> --dry-run
 **Przykłady:**
 ```bash
 python create_tasks.py 2025 etap1
-python create_tasks.py --etap etap3 --all
+python create_tasks.py --etap etap2 --all
 ```
 
 Pliki JSON są tworzone w `data/tasks/<rok>/<etap>/task_<numer>.json`.
@@ -86,23 +86,23 @@ python fix_latex_content.py <ROK> <ETAP> --dry-run
 
 ### 4. Zweryfikuj zasady oceniania (opcjonalnie)
 
-Przed generowaniem metadanych warto sprawdzić, czy oficjalne zasady oceniania OMJ nie uległy zmianie.
+Przed generowaniem metadanych warto sprawdzić, czy oficjalne zasady oceniania konkursu FerMat nie uległy zmianie.
 
 **Źródła:**
-- Strona OMJ: https://omj.edu.pl/
+- Strona konkursu FerMat: https://sp221.edu.pl/fermat/
 - Regulamin konkursu (zwykle dostępny jako PDF)
 - Pliki PDF ze statystykami (zawierają informacje o punktacji)
 
 **Co sprawdzić:**
-- Skala punktowa (obecnie: 0, 2, 5, 6 punktów)
+- Skala punktowa (obecnie: 0-2 pkt za zadania 1-5 etapu 1, 0-4 pkt za zadania 6-10 etapu 1 oraz zadania etapu 2 — patrz `config/scoring.yml`)
 - Kryteria przyznawania punktów cząstkowych
 - Zmiany w regulaminie dla nowych edycji
 
 **Pliki do aktualizacji (jeśli zasady się zmieniły):**
 - `prompts/gemini_prompt_base.txt` - bazowy prompt (rola, język)
-- `prompts/gemini_prompt_scoring_etap1.txt` - kryteria punktacji etapu 1 (0-3 pkt)
-- `prompts/gemini_prompt_scoring_etap2.txt` - kryteria punktacji etapu 2 (0-6 pkt)
-- `prompts/gemini_prompt_scoring_etap3.txt` - kryteria punktacji etapu 3 (0-6 pkt)
+- `config/scoring.yml` - maksymalna punktacja per zadanie/etap
+- `prompts/gemini_prompt_scoring_etap1.txt` - kryteria punktacji etapu 1 (0-2 / 0-4 pkt)
+- `prompts/gemini_prompt_scoring_etap2.txt` - kryteria punktacji etapu 2 (0-4 pkt)
 - `prompts/gemini_prompt_abuse.txt` - wykrywanie nadużyć + format JSON
 - `populate_metadata.py` - prompt do generowania wskazówek (PROMPT_TEMPLATE)
 - `fix_latex_content.py` - prompt do ekstrakcji treści (jeśli format PDF się zmienił)
@@ -169,7 +169,7 @@ Skill: angle_bisector_properties
   Kategoria: geometry
   Opis: Wykorzystanie własności dwusiecznej kąta...
   Przykłady: ['Podział kąta na połowy', 'Twierdzenie o dwusiecznej']
-  Zasugerowany przez: data/tasks/2024/etap3/task_2.json
+  Zasugerowany przez: data/tasks/2024/etap2/task_2.json
 
 JSON do skopiowania do data/skills.json (sekcja 'skills'):
 ----------------------------------------
@@ -182,7 +182,7 @@ JSON do skopiowania do data/skills.json (sekcja 'skills'):
 
 ZADANIA DO PONOWNEJ ANALIZY:
 ----------------------------------------
-  python populate_metadata.py --year 2024 --etap etap3 --force
+  python populate_metadata.py --year 2024 --etap etap2 --force
 ================================================================================
 ```
 
@@ -286,13 +286,13 @@ python populate_metadata.py --year <ROK> --etap <ETAP>
 ## Struktura plików
 
 ```
-omj-validator/
+fermat-validator/
 ├── tasks/                          # Pliki PDF (źródłowe)
 │   └── <rok>/
 │       └── <etap>/
-│           ├── *-zadania.pdf       # Treści zadań
-│           ├── *-rozwiazania.pdf   # Rozwiązania
-│           └── *-statystyki.pdf    # Statystyki
+│           ├── tasks.pdf           # Treści zadań
+│           ├── solutions.pdf       # Rozwiązania
+│           └── statistics.pdf      # Statystyki (jeśli dostępne)
 │
 ├── data/tasks/                     # Pliki JSON (dane aplikacji)
 │   └── <rok>/
@@ -310,9 +310,9 @@ omj-validator/
   "title": "Tytuł zadania z $LaTeX$",
   "content": "Pełna treść zadania z $notacją$ matematyczną...",
   "pdf": {
-    "tasks": "tasks/2024/etap3/20omj-3etap.pdf",
-    "solutions": "tasks/2024/etap3/20omj-3r.pdf",
-    "statistics": "tasks/2024/etap3/20omj-3st.pdf"
+    "tasks": "tasks/2024/etap2/tasks.pdf",
+    "solutions": "tasks/2024/etap2/solutions.pdf",
+    "statistics": "tasks/2024/etap2/statistics.pdf"
   },
   "difficulty": 4,
   "categories": ["geometria", "algebra"],
@@ -348,26 +348,26 @@ Kategorie zadań są zdefiniowane w `populate_metadata.py` (VALID_CATEGORIES) i 
 
 ## Liczba zadań na etap
 
-| Etap | Liczba zadań |
-|------|--------------|
-| etap1 (szkolny) | 7 |
-| etap2 (okręgowy) | 5 |
-| etap3 (finał) | 5 |
+| Etap | Liczba zadań | Punktacja |
+|------|--------------|-----------|
+| etap1 | 10 | zadania 1-5: 0-2 pkt, zadania 6-10: 0-4 pkt |
+| etap2 | 5 | 0-4 pkt |
+
+FerMat nie ma etapu 3.
 
 ## Nazewnictwo plików PDF
 
-### OMJ (od 2016, edycje XII+)
-- Nowoczesne (od 2022): `20omj-1etap.pdf`, `20omj-2etap.pdf`, `20omj-3etap.pdf`
-- Starsze (2016-2021): `1etap17.pdf`, `2etap18.pdf`, `3etap19.pdf`
+Skrypt `download_fermat.py` zapisuje pliki pod znormalizowanymi nazwami,
+niezależnie od nazw na stronie sp221.edu.pl:
 
-### OMG (2005-2015, edycje I-XI)
-- Format: `1etap10.pdf`, `2etap11.pdf`, `3etap12.pdf`
-- Lub: `omg01_1.pdf`, `omg02_2.pdf`, `omg03_3.pdf`
+- `tasks/<rok>/<etap>/tasks.pdf` - treści zadań
+- `tasks/<rok>/<etap>/solutions.pdf` - rozwiązania
+- `tasks/<rok>/<etap>/statistics.pdf` - statystyki (jeśli dostępne)
 
 ## Rozwiązywanie problemów
 
 ### Brak PDF dla danego roku
-Niektóre lata mogą nie mieć wszystkich plików (np. 2019/20 - COVID, brak finału).
+Niektóre lata mogą nie mieć wszystkich plików (np. brak rozwiązań dla starszych edycji).
 Skrypt pominie te lata automatycznie.
 
 ### Błąd przy ekstrakcji LaTeX

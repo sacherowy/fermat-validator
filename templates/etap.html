@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}{{ year }} {{ etap }} - OMJ Validator{% endblock %}
+{% block title %}{{ year }} {{ etap }} - FerMat Validator{% endblock %}
 
 {% block content %}
 <nav class="breadcrumb">
@@ -48,7 +48,7 @@
             {% if task.submission_count > 0 %}
             <span class="stat">
                 <span class="stat-label">Najwyższy wynik:</span>
-                <span class="stat-value score-{{ task.highest_score }}">{{ task.highest_score }}/6</span>
+                <span class="stat-value score-{{ task.highest_score }}">{{ task.highest_score }}/{{ task.max_score }}</span>
             </span>
             {% else %}
             <span class="stat stat-empty">Brak prób</span>

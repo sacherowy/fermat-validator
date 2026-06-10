@@ -27,9 +27,9 @@ data/tasks/
   "title": "Task title with $LaTeX$ notation",
   "content": "Full task content with $inline$ and $$display$$ math",
   "pdf": {
-    "tasks": "tasks/2024/etap1/20omj-1etap.pdf",
-    "solutions": "tasks/2024/etap1/20omj-1etap-r.pdf",
-    "statistics": "tasks/2024/etap1/20omj-1etap-st.pdf"
+    "tasks": "tasks/2024/etap1/tasks.pdf",
+    "solutions": "tasks/2024/etap1/solutions.pdf",
+    "statistics": "tasks/2024/etap1/statistics.pdf"
   },
   "difficulty": 3,
   "categories": ["geometria", "algebra"],
@@ -51,7 +51,7 @@ data/tasks/
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `number` | `int` | Task number within the etap (1-5 typically) |
+| `number` | `int` | Task number within the etap (1-10 for etap1, 1-5 for etap2) |
 | `title` | `string` | Short task title, may contain LaTeX (`$...$`) |
 | `content` | `string` | Full task statement with LaTeX notation |
 | `pdf` | `object` | Paths to related PDF files (see below) |
@@ -64,7 +64,7 @@ data/tasks/
 | `solutions` | `string` | No | Relative path to the solutions PDF |
 | `statistics` | `string` | No | Relative path to the statistics PDF |
 
-PDF paths are relative to the project root (e.g., `tasks/2024/etap2/20omj-2etap.pdf`).
+PDF paths are relative to the project root (e.g., `tasks/2024/etap2/tasks.pdf`).
 
 ### Optional Metadata Fields
 
@@ -200,9 +200,9 @@ This task requires mastering 2023 Etap II Task 1 (score >= 5), plus any tasks th
   "title": "Punkt $E$ na boku $CD$ prostokata $ABCD$",
   "content": "Punkt $E$ lezy na boku $CD$ prostokata $ABCD$, przy czym\n$$\\angle DAE + \\angle EBC = \\angle ABE.$$\nWykaz, ze $AB \\geqslant AD$.",
   "pdf": {
-    "tasks": "tasks/2024/etap2/20omj-2etap.pdf",
-    "solutions": "tasks/2024/etap2/20omj-2r.pdf",
-    "statistics": "tasks/2024/etap2/20omj-2etap-st.pdf"
+    "tasks": "tasks/2024/etap2/tasks.pdf",
+    "solutions": "tasks/2024/etap2/solutions.pdf",
+    "statistics": "tasks/2024/etap2/statistics.pdf"
   },
   "difficulty": 3,
   "categories": ["geometria"],
