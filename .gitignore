@@ -60,5 +60,6 @@ tmp/
 temp/
 
 # Claude Code and Speckit tooling
-.claude/
+.claude/*
+!.claude/skills/
 .specify/
