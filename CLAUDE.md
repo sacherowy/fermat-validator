@@ -443,5 +443,5 @@ Key test specs: `auth`, `submission`, `navigation`, `tasks`, `progress`, `my-sol
 <!-- SPECKIT START -->
 For additional context about technologies to be used, project structure,
 shell commands, and other important information, read the current plan
-at `specs/002-fermat-task-download/plan.md`.
+at `specs/003-fix-etap-labels/plan.md`.
 <!-- SPECKIT END -->

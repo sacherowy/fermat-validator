@@ -51,7 +51,7 @@ const ETAP_META: Record<
     borderColor: "#fdba74",
     hoverBg: "#fed7aa",
     icon: <EmojiEvents sx={{ fontSize: 48, color: "#ea580c" }} />,
-    description: "Etap wojewódzki",
+    description: "Drugi etap szkolny",
     difficulty: "★★☆",
   },
   etap3: {
