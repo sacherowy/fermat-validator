@@ -18,13 +18,15 @@ from .ai.scoring_config import get_max_points
 logger = logging.getLogger(__name__)
 
 
-def get_mastery_threshold(etap: str) -> int:
-    """Get the score threshold for mastery based on etap.
+def get_mastery_threshold(etap: str, task_number: int) -> int:
+    """Get the score threshold for mastery based on the task's max points.
 
-    - etap2/etap3: score >= 5 (max is 6)
-    - etap1: score >= 2 (max is 3)
+    FerMat tasks are worth 2 or 4 points (see config/scoring.yml).
+    Mastery requires full marks on 2-point tasks and max - 1 on
+    larger scales (e.g. 3 of 4 points).
     """
-    return 5 if etap in ("etap2", "etap3") else 2
+    max_pts = get_max_points(etap, task_number)
+    return max_pts if max_pts <= 2 else max_pts - 1
 
 
 def compute_user_progress(user_id: Optional[str] = None, db: Optional[Session] = None) -> dict[str, int]:
@@ -68,7 +70,7 @@ def compute_prerequisites_met(
     # First, compute mastery status for all tasks (simple O(n))
     mastered = {}
     for key, task in all_tasks.items():
-        threshold = get_mastery_threshold(task.etap)
+        threshold = get_mastery_threshold(task.etap, task.number)
         mastered[key] = progress.get(key, 0) >= threshold
 
     # Memoization cache for "all prerequisites met" status
@@ -150,7 +152,7 @@ def get_task_status_batch(
     # Compute final status for each task
     statuses = {}
     for key, task in all_tasks.items():
-        threshold = get_mastery_threshold(task.etap)
+        threshold = get_mastery_threshold(task.etap, task.number)
         best_score = progress.get(key, 0)
 
         if best_score >= threshold:
@@ -188,7 +190,7 @@ def get_task_status(
 
     task_key = get_task_key(task.year, task.etap, task.number)
     best_score = progress.get(task_key, 0)
-    threshold = get_mastery_threshold(task.etap)
+    threshold = get_mastery_threshold(task.etap, task.number)
 
     # Check if mastered
     if best_score >= threshold:
@@ -418,7 +420,7 @@ def get_prerequisite_statuses(
         # Determine status (None if no progress data)
         status = None
         if progress is not None:
-            threshold = get_mastery_threshold(task.etap)
+            threshold = get_mastery_threshold(task.etap, task.number)
             best_score = progress.get(prereq_key, 0)
             status = "mastered" if best_score >= threshold else "in_progress"
 

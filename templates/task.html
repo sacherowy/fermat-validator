@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Zadanie {{ task.number }} - {{ task.year }} - OMJ Validator{% endblock %}
+{% block title %}Zadanie {{ task.number }} - {{ task.year }} - FerMat Validator{% endblock %}
 
 {% block content %}
 <nav class="breadcrumb">
@@ -165,13 +165,13 @@
             <h3>Wynik oceny</h3>
             <div class="result-score">
                 <span class="score-value" id="result-score">0</span>
-                <span class="score-max">/ 6 punktów</span>
+                <span class="score-max">/ {{ max_score }} punktów</span>
             </div>
             <div class="result-feedback" id="result-feedback"></div>
         </div>
         {% elif is_authenticated %}
         <div class="alert alert-info">
-            <strong>ℹ</strong> Przesyłanie rozwiązań wymaga członkostwa w grupie <strong>omj-validator-alpha</strong>.
+            <strong>ℹ</strong> Przesyłanie rozwiązań wymaga uprawnień nadanych przez administratora.
             Status członkostwa jest odświeżany automatycznie.
         </div>
         {% else %}
@@ -195,7 +195,7 @@
             <div class="submission-card">
                 <div class="submission-header">
                     <span class="submission-date">{{ sub.timestamp.strftime('%d.%m.%Y %H:%M') }}</span>
-                    <span class="submission-score score-{{ sub.score }}">{{ sub.score }}/6</span>
+                    <span class="submission-score score-{{ sub.score }}">{{ sub.score }}/{{ max_score }}</span>
                 </div>
                 <div class="submission-feedback">{{ sub.feedback }}</div>
                 {% if sub.images %}

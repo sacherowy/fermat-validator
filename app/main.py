@@ -575,6 +575,7 @@ async def etap_detail(request: Request, year: str, etap: str, db: Session = Depe
             "categories": task_info.categories,
             "submission_count": 0,
             "highest_score": None,
+            "max_score": get_max_points(etap, task_info.number),
         }
         if can_see_stats and user_id:
             submission_repo = SubmissionRepository(db)
@@ -656,6 +657,7 @@ async def task_detail(request: Request, year: str, etap: str, num: int, db: Sess
             "skills_required": skills_required,
             "skills_gained": skills_gained,
             "prerequisite_statuses": prerequisite_statuses,
+            "max_score": get_max_points(etap, num),
         },
     )
 
@@ -1050,6 +1052,7 @@ async def task_history(request: Request, year: str, etap: str, num: int, db: Ses
             "submissions": submissions,
             "is_authenticated": True,
             "user": user,
+            "max_score": get_max_points(etap, num) if task else None,
         },
     )
 

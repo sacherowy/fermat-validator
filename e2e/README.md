@@ -1,4 +1,4 @@
-# E2E Testing for OMJ Validator
+# E2E Testing for FerMat Validator
 
 Comprehensive end-to-end tests using Playwright that test the entire application stack including frontend, backend, database, and AI integration.
 

@@ -27,14 +27,14 @@ export function MockEtap2SetCard({ set, nodeMap }: MockEtap2SetCardProps) {
 
   // Calculate total score
   const totalScore = tasks.reduce((sum, task) => sum + task.best_score, 0);
-  const maxScore = tasks.length * 6; // 6 points per task
+  const maxScore = tasks.reduce((sum, task) => sum + task.max_score, 0);
 
   // Calculate progress percentage
   const progressPercent = maxScore > 0 ? (totalScore / maxScore) * 100 : 0;
 
-  // Check if task is mastered (score >= 5)
+  // Check if task is mastered
   const isTaskMastered = (task: GraphNode): boolean => {
-    const threshold = getMasteryThreshold(task.etap);
+    const threshold = getMasteryThreshold(task.max_score);
     return task.best_score >= threshold;
   };
 

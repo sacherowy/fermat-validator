@@ -289,7 +289,7 @@ POST /api/test/reset-all-submissions
 
 3. **FerMat Scoring** (from `config/scoring.yml`):
    - **Etap1**: Tasks 1–5 → max 2 pts, Tasks 6–10 → max 4 pts
-   - **Etap2**: Tasks 1–5 → max 2 pts, Tasks 6–10 → max 4 pts
+   - **Etap2**: Tasks 1–5 → max 4 pts
    - No etap3 for FerMat (unlike OMJ)
 
 4. **AI Integration**: Uses Gemini File API. Prompts are split by etap in `prompts/`. Abuse detection runs a separate prompt to flag wrong-task submissions and injection attempts.

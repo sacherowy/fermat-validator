@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Historia - Zadanie {{ num }} - {{ year }} - OMJ Validator{% endblock %}
+{% block title %}Historia - Zadanie {{ num }} - {{ year }} - FerMat Validator{% endblock %}
 
 {% block content %}
 <nav class="breadcrumb">
@@ -43,7 +43,7 @@
     <div class="submission-card">
         <div class="submission-header">
             <span class="submission-date">{{ sub.timestamp.strftime('%d.%m.%Y %H:%M') }}</span>
-            <span class="submission-score score-{{ sub.score }}">{{ sub.score }}/6</span>
+            <span class="submission-score score-{{ sub.score }}">{{ sub.score }}/{{ max_score }}</span>
         </div>
         <div class="submission-feedback">{{ sub.feedback }}</div>
         {% if sub.images %}
