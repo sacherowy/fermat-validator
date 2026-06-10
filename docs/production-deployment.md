@@ -72,6 +72,7 @@ nano .env.prod
 
 Required `.env.prod` variables:
 ```bash
+GHCR_OWNER=<your-github-username>   # owner of the ghcr.io images
 POSTGRES_PASSWORD=<secure-password>
 SESSION_SECRET_KEY=<generate-with: openssl rand -hex 32>
 GOOGLE_CLIENT_ID=<from-google-console>
@@ -114,14 +115,25 @@ echo YOUR_PAT | docker login ghcr.io -u YOUR_USERNAME --password-stdin
 
 ### Deploy from Local Machine
 
+Both scripts need to know your infrastructure — set the variables at the top
+of each script, or export them as environment variables:
+
+- `build-and-push.sh`: `GHCR_OWNER` (your GitHub username; must match
+  `GHCR_OWNER` in `.env.prod` on the server)
+- `deploy.sh`: `SSH_HOST` (e.g. `user@192.168.1.100`) and optionally `SSH_KEY`
+
+The scripts refuse to run until these are set, so you can't accidentally
+deploy to someone else's setup.
+
 ```bash
 # Build images locally and push to registry
-./build-and-push.sh
+GHCR_OWNER=your-github-username ./build-and-push.sh
 
 # Deploy to server (pulls images from ghcr.io)
-./deploy.sh
+SSH_HOST=user@your-server ./deploy.sh
 
-# Or both in one command
+# Or both in one go
+export GHCR_OWNER=your-github-username SSH_HOST=user@your-server
 ./build-and-push.sh && ./deploy.sh
 ```
 

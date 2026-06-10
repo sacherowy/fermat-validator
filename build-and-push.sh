@@ -9,10 +9,9 @@
 set -e
 cd "$(dirname "$0")"
 
-# Configuration
-REGISTRY="ghcr.io/rsokolowski"
-API_IMAGE="$REGISTRY/fermat-validator-api"
-FRONTEND_IMAGE="$REGISTRY/fermat-validator-frontend"
+# Configuration — GHCR_OWNER is your GitHub username or org
+# (set it here or export GHCR_OWNER before running; must match docker-compose.prod.yml)
+GHCR_OWNER="${GHCR_OWNER:-}"
 
 # Build args for frontend (must match production docker-compose)
 FASTAPI_URL="http://api:8100"
@@ -87,6 +86,17 @@ if [ "$BUILD_API" = false ] && [ "$BUILD_FRONTEND" = false ]; then
     BUILD_API=true
     BUILD_FRONTEND=true
 fi
+
+if [ -z "$GHCR_OWNER" ]; then
+    echo "Error: GHCR_OWNER is not set." >&2
+    echo "Edit the configuration at the top of build-and-push.sh or run with:" >&2
+    echo "  GHCR_OWNER=your-github-username ./build-and-push.sh" >&2
+    exit 1
+fi
+
+REGISTRY="ghcr.io/$GHCR_OWNER"
+API_IMAGE="$REGISTRY/fermat-validator-api"
+FRONTEND_IMAGE="$REGISTRY/fermat-validator-frontend"
 
 echo "=== FerMat Validator Image Build ==="
 echo ""

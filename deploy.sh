@@ -5,9 +5,9 @@
 set -e
 cd "$(dirname "$0")"
 
-# Configuration
-SSH_KEY="$HOME/.ssh/nuc/id_rsa"
-SSH_HOST="rsokolowski@192.168.86.68"
+# Configuration — set these for your server (or export env vars of the same name)
+SSH_KEY="${SSH_KEY:-$HOME/.ssh/id_rsa}"
+SSH_HOST="${SSH_HOST:-}"   # e.g. user@192.168.1.100
 REMOTE_DIR="~/fermat-validator"
 COMPOSE_FILE="docker-compose.prod.yml"
 ENV_FILE=".env.prod"
@@ -84,6 +84,13 @@ while [[ $# -gt 0 ]]; do
             ;;
     esac
 done
+
+if [ -z "$SSH_HOST" ]; then
+    echo "Error: SSH_HOST is not set." >&2
+    echo "Edit the configuration at the top of deploy.sh or run with:" >&2
+    echo "  SSH_HOST=user@your-server ./deploy.sh" >&2
+    exit 1
+fi
 
 echo "=== FerMat Validator Production Deployment ==="
 echo ""
